@@ -1,0 +1,18 @@
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+<link rel="stylesheet" href="default.css">
+<table style="width:100%;color:white;">
+{% if page.url == "/" %}
+    <tr class="trNav"><td><img src="images/fileIcon.png" class="navIC" id="landingF" width="20px"><a href="/" class="navLink" id="landing" onmouseover="navHovers(id)" onmouseout="fileDefault(id)"><u>L</u>anding</a></td></tr>
+    <tr class="trNav"><td><img src="images/fileIcon.png" class="navIC" id="aboutF" width="20px"><a href="about" class="navLink" id="about" onmouseover="navHovers(id)" onmouseout="fileDefault(id)"><u>A</u>bout</a></td></tr>
+    <tr class="trNav"><td><img src="images/folderIcon.png" class="navIC" width="26.4px">Records</td></tr>
+    <tr class="trNav"><td>&emsp;⤷<img src="images/folderIcon.png" class="navIC" id="writtenF" width="26.4px"><a href="written" class="navLink" id="written" onmouseover="navHovers(id)" onmouseout="folderDefault(id)"><u>W</u>ritten</a></td></tr>
+    <tr class="trNav"><td>&emsp;⤷<img src="images/folderIcon.png" class="navIC" id="visualF" width="26.4px"><a href="visual" class="navLink" id="visual" onmouseover="navHovers(id)" onmouseout="folderDefault(id)"><u>V</u>isual</a></td></tr>
+    <tr class="trNav"><td><img src="images/folderIcon.png" class="navIC" id="widgetsF" width="26.4px"><a href="widgets" class="navLink" id="widgets" onmouseover="navHovers(id)" onmouseout="folderDefault(id)"><u>W</u>idgets</a></td></tr>
+    <tr class="trNav"><td><img src="images/folderIcon.png" class="navIC" id="otherF" width="26.4px"><a href="other" class="navLink" id="other" onmouseover="navHovers(id)" onmouseout="folderDefault(id)"><u>O</u>ther</a></td></tr>
+{% endif %}
+{% if page.url == "/written.html" %}
+    <tr class="trNav"><td><img src="images/folderIcon.png" class="navIC" width="26.4px">Written</td></tr>
+    <tr class="trNav"><td>&emsp;⤷<img src="images/fileIcon.png" class="navIC" id="writtenF" width="26.4px"><a href="written" class="navLink" id="written" onmouseover="navHovers(id)" onmouseout="fileDefault(id)"><u>P</u>ersonal</a></td></tr>
+    <tr class="trNav"><td>&emsp;⤷<img src="images/fileIcon.png" class="navIC" id="visualF" width="26.4px"><a href="visual" class="navLink" id="visual" onmouseover="navHovers(id)" onmouseout="fileDefault(id)"><u>C</u>omputation theory</a></td></tr>
+{% endif %}
+</table>
