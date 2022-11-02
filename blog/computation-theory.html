@@ -1,0 +1,15 @@
+---
+layout: default
+title: <a href="/"><u>L</u>anding</a> > <a href="/blog"><u>B</u>log</a> > <b>Computation theory</b>
+permalink: /blog/computation-theory
+---
+{% for post in site.posts %}
+{% if post.categories contains "computationTheory" %}
+<article>
+  <h3>
+      {{ post.title }}
+  </h3>
+  {{ post.content }}
+</article>
+{% endif %}
+{% endfor %}

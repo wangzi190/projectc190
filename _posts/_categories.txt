@@ -1,0 +1,7 @@
+blog
+    personal
+    computationTheory
+    historyOfComputers
+other
+    reading
+    gaming

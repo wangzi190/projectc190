@@ -1,0 +1,17 @@
+---
+layout: default
+title: <a href="/"><u>L</u>anding</a> > <a href="/other"><u>O</u>ther</a> > <b>Reading</b>
+permalink: /other/reading
+---
+There are no posts in this category.
+{% for post in site.posts %}
+{% if post.categories contains "reading" %}
+<article>
+  <h3>
+      {{ post.title }}
+  </h3>
+  <time datetime="{{ post.date | date: "%Y-%m-%d" }}">{{ post.date | date_to_long_string }}</time>
+  {{ post.content }}
+</article>
+{% endif %}
+{% endfor %}
