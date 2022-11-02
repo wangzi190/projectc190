@@ -30,7 +30,7 @@
       value = value.replace(".png", "");
       value = parseInt(value);
       if (value == 9) {
-        document.getElementById(id).src = "0.png";
+        document.getElementById(id).src = "/images/abacus/0.png";
       } else {
         value++;
         value = value.toString();
@@ -48,6 +48,7 @@ NOTES TO SELF:
   Priority: About page, portfolio pages setups
 
   Consider: Make box fixed/add scrollbar OR add "Go to" autoscroller ?
+  Move JS code (abacus function) into pages where they are relevant for faster loading
 
   Add status.cafe status
     <div id="statuscafe"><div id="statuscafe-username"></div><div id="statuscafe-content"></div></div><script src="https://status.cafe/current-status.js?name=wangzi190" defer></script>
