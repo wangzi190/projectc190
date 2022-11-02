@@ -25,7 +25,7 @@
     }
     var incrementAbacus = function(id) {
       value = document.getElementById(id).getAttribute("src");
-      prefix = "/images/abacus/";
+      const prefix = "/images/abacus/";
       value = value.replace("/images/abacus/", "");
       value = value.replace(".png", "");
       value = parseInt(value);
