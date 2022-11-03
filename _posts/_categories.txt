@@ -1,7 +1,7 @@
 blog
     personal
     computationTheory
-    historyOfComputers
+    programming
 other
     reading
     gaming

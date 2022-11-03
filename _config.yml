@@ -24,6 +24,7 @@ baseurl: ""
 url: "https://projectc190.neocities.org/"
 plugins:
   - jekyll-feed
+  - jekyll-jupyter-notebook
 
 # Exclude from processing.
 # The following items will not be processed, by default.
