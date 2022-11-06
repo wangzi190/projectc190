@@ -2,6 +2,7 @@ add something for art!!
 
 blog
     personal
+    visualJournal
     computationTheory
     programming
 other
