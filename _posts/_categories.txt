@@ -1,5 +1,3 @@
-add something for art!!
-
 blog
     personal
     visualJournal
