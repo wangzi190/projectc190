@@ -12,3 +12,5 @@ Recently started reading Michael Sipser's <i>Introduction to the Theory of Compu
 * <b>Computability</b>: <i>What makes some problems solvable, and others unsolvable?</i>
 * <b>Automata</b>: (as defined by the book) <i>Automata theory deals with the definitions and properties of mathematical models of computation.</i>
     * <i>What is a computer?</i>
+
+More to come!
