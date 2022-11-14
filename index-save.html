@@ -1,0 +1,115 @@
+---
+layout: default
+title: Landing
+permalink: /
+---
+<style>
+    p {
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+</style>
+<script type="text/javascript" async>
+    var maxCol = 1;
+    var incrementAbacus = function(id) {
+        const prefix = "/images/abacus/";
+        const column = "column";
+        value = document.getElementById(id).getAttribute("src");
+        value = value.replace("/images/abacus/", "");
+        value = value.replace(".png", "");
+        value = parseInt(value);
+        repID = id.concat("t");
+        colNum = id.replace("column", "");
+        colNum = parseInt(colNum);
+        if (value == 9) {
+            document.getElementById(id).src = "/images/abacus/0.png";
+            document.getElementById(repID).textContent = "0";
+            if (colNum >= maxCol) {
+                let nonzero = false;
+                for (let i = colNum; i > 1; i--) {
+                    if (nonzero == false) {
+                        i = i.toString();
+                        temp = column.concat(i);
+                        anotherTemp = document.getElementById(temp).getAttribute("src");
+                        anotherTemp = anotherTemp.replace("/images/abacus/", "");
+                        anotherTemp = anotherTemp.replace(".png", "");
+                        anotherTemp = parseInt(anotherTemp);
+                        if (anotherTemp == 0) {
+                            temp = temp.concat("t");
+                            document.getElementById(temp).hidden = true;
+                        } else {
+                            nonzero = true;
+                        }
+                    } else {
+                        i = parseInt(i);
+                        i--;
+                        maxCol = i;
+                        break;
+                    }
+                }
+            }
+        } else {
+            value++;
+            value = value.toString();
+            document.getElementById(repID).textContent = value;
+            value = value.concat(".png");
+            document.getElementById(id).src = prefix.concat(value);
+            if (colNum > maxCol) {
+                for (let i = 1; i <= colNum; i++) {
+                    i = i.toString();
+                    temp = column.concat(i);
+                    temp = temp.concat("t");
+                    document.getElementById(temp).hidden = false;
+                    i = parseInt(i);
+                }
+                maxCol = colNum;
+            }
+        }
+        if (colNum <= maxCol) {
+            let nonzero = false;
+            for (let i = maxCol; i > colNum; i--) {
+                if (nonzero == false) {
+                    i = i.toString();
+                    temp = column.concat(i);
+                    anotherTemp = document.getElementById(temp).getAttribute("src");
+                    anotherTemp = anotherTemp.replace("/images/abacus/", "");
+                    anotherTemp = anotherTemp.replace(".png", "");
+                    anotherTemp = parseInt(anotherTemp);
+                    if (anotherTemp == 0) {
+                        temp = temp.concat("t");
+                        document.getElementById(temp).hidden = true;
+                    } else {
+                        nonzero = true;
+                    }
+                } else {
+                    i = parseInt(i);
+                    i--;
+                    maxCol = i;
+                    break;
+                }
+            }
+        }
+    }
+</script>
+Welcome <i>!</i><br>
+<img src="/images/abacus/L.png" height="120px" class="abacus" id="L"><img src="/images/abacus/0.png" height="120px" class="abacus" id="column13" onclick="incrementAbacus(id)"><img src="/images/abacus/0.png" height="120px" class="abacus" id="column12" onclick="incrementAbacus(id)"><img src="/images/abacus/0.png" height="120px" class="abacus" id="column11" onclick="incrementAbacus(id)"><img src="/images/abacus/0.png" height="120px" class="abacus" id="column10" onclick="incrementAbacus(id)"><img src="/images/abacus/0.png" height="120px" class="abacus" id="column9" onclick="incrementAbacus(id)"><img src="/images/abacus/0.png" height="120px" class="abacus" id="column8" onclick="incrementAbacus(id)"><img src="/images/abacus/0.png" height="120px" class="abacus" id="column7" onclick="incrementAbacus(id)"><img src="/images/abacus/0.png" height="120px" class="abacus" id="column6" onclick="incrementAbacus(id)"><img src="/images/abacus/0.png" height="120px" class="abacus" id="column5" onclick="incrementAbacus(id)"><img src="/images/abacus/0.png" height="120px" class="abacus" id="column4" onclick="incrementAbacus(id)"><img src="/images/abacus/0.png" height="120px" class="abacus" id="column3" onclick="incrementAbacus(id)"><img src="/images/abacus/0.png" height="120px" class="abacus" id="column2" onclick="incrementAbacus(id)"><img src="/images/abacus/0.png" height="120px" class="abacus" id="column1" onclick="incrementAbacus(id)"><img src="/images/abacus/R.png" height="120px" class="abacus"><br>
+<div style="display:flex;color:#7b8a48;">
+    <p>=</p>
+    <p id="column13t" hidden="true">0</p>
+    <p id="column12t" hidden="true">0</p>
+    <p id="column11t" hidden="true">0</p>
+    <p id="column10t" hidden="true">0</p>
+    <p id="column9t" hidden="true">0</p>
+    <p id="column8t" hidden="true">0</p>
+    <p id="column7t" hidden="true">0</p>
+    <p id="column6t" hidden="true">0</p>
+    <p id="column5t" hidden="true">0</p>
+    <p id="column4t" hidden="true">0</p>
+    <p id="column3t" hidden="true">0</p>
+    <p id="column2t" hidden="true">0</p>
+    <p id="column1t">0</p>
+</div>
+Select an option on the left to begin.
+<br><br>This site is still a huge work in progress; please look forward to updates!
+<br><br><a href="https://github.com/wangzi190/projectc190" target="_blank"><u>G</u>ithub repository</a>
+<br><a href="https://neocities.org/site/projectc190" target="_blank"><u>N</u>eocities profile</a>
