@@ -3,6 +3,11 @@ blog
     visualJournal
     computationTheory
     programming
+    ocsAndWorldBuilding
+    assemblyLanguage
+    apcsa
 other
-    reading
-    gaming
+    zhongli
+    honkai
+    punishingGrayRaven
+    jwqs
