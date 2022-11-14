@@ -1,6 +1,7 @@
 To-do:
     About page design/code
     Portfolio pages setup
+    Change wrongq image filenames from .PNG to .png (It's not working TT)
 
 Consider:
     (Make viewbox fixed and add scrollbar) OR (add "Go to" autoscroller)
