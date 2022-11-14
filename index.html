@@ -3,8 +3,50 @@ layout: default
 title: Landing
 permalink: /
 ---
+<style>
+    p {
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+</style>
+<script type="text/javascript" async>
+    var incrementAbacus = function(id) {
+        const prefix = "/images/abacus/";
+        value = document.getElementById(id).getAttribute("src");
+        value = value.replace("/images/abacus/", "");
+        value = value.replace(".png", "");
+        value = parseInt(value);
+        repID = id.concat("t");
+        if (value == 9) {
+            document.getElementById(id).src = "/images/abacus/0.png";
+            document.getElementById(repID).textContent = "0";
+        } else {
+            value++;
+            value = value.toString();
+            document.getElementById(repID).textContent = value;
+            value = value.concat(".png");
+            document.getElementById(id).src = prefix.concat(value);
+        }
+    }
+</script>
 Welcome <i>!</i><br>
-<img src="/images/abacus/L.png" height="120px" class="abacus" id="L"><img src="/images/abacus/0.png" height="120px" class="abacus" id="column13" onclick="incrementAbacus(id)"><img src="/images/abacus/0.png" height="120px" class="abacus" id="row12" onclick="incrementAbacus(id)"><img src="/images/abacus/0.png" height="120px" class="abacus" id="row11" onclick="incrementAbacus(id)"><img src="/images/abacus/0.png" height="120px" class="abacus" id="row10" onclick="incrementAbacus(id)"><img src="/images/abacus/0.png" height="120px" class="abacus" id="row9" onclick="incrementAbacus(id)"><img src="/images/abacus/0.png" height="120px" class="abacus" id="row8" onclick="incrementAbacus(id)"><img src="/images/abacus/0.png" height="120px" class="abacus" id="row7" onclick="incrementAbacus(id)"><img src="/images/abacus/0.png" height="120px" class="abacus" id="row6" onclick="incrementAbacus(id)"><img src="/images/abacus/0.png" height="120px" class="abacus" id="row5" onclick="incrementAbacus(id)"><img src="/images/abacus/0.png" height="120px" class="abacus" id="row4" onclick="incrementAbacus(id)"><img src="/images/abacus/0.png" height="120px" class="abacus" id="row3" onclick="incrementAbacus(id)"><img src="/images/abacus/0.png" height="120px" class="abacus" id="row2" onclick="incrementAbacus(id)"><img src="/images/abacus/0.png" height="120px" class="abacus" id="row1" onclick="incrementAbacus(id)"><img src="/images/abacus/R.png" height="120px" class="abacus"><br>
+<img src="/images/abacus/L.png" height="120px" class="abacus" id="L"><img src="/images/abacus/0.png" height="120px" class="abacus" id="column13" onclick="incrementAbacus(id)"><img src="/images/abacus/0.png" height="120px" class="abacus" id="column12" onclick="incrementAbacus(id)"><img src="/images/abacus/0.png" height="120px" class="abacus" id="column11" onclick="incrementAbacus(id)"><img src="/images/abacus/0.png" height="120px" class="abacus" id="column10" onclick="incrementAbacus(id)"><img src="/images/abacus/0.png" height="120px" class="abacus" id="column9" onclick="incrementAbacus(id)"><img src="/images/abacus/0.png" height="120px" class="abacus" id="column8" onclick="incrementAbacus(id)"><img src="/images/abacus/0.png" height="120px" class="abacus" id="column7" onclick="incrementAbacus(id)"><img src="/images/abacus/0.png" height="120px" class="abacus" id="column6" onclick="incrementAbacus(id)"><img src="/images/abacus/0.png" height="120px" class="abacus" id="column5" onclick="incrementAbacus(id)"><img src="/images/abacus/0.png" height="120px" class="abacus" id="column4" onclick="incrementAbacus(id)"><img src="/images/abacus/0.png" height="120px" class="abacus" id="column3" onclick="incrementAbacus(id)"><img src="/images/abacus/0.png" height="120px" class="abacus" id="column2" onclick="incrementAbacus(id)"><img src="/images/abacus/0.png" height="120px" class="abacus" id="column1" onclick="incrementAbacus(id)"><img src="/images/abacus/R.png" height="120px" class="abacus"><br>
+<div style="display:flex;color:#7b8a48;">
+    <p>=</p>
+    <p id="column13t">0</p>
+    <p id="column12t">0</p>
+    <p id="column11t">0</p>
+    <p id="column10t">0</p>
+    <p id="column9t">0</p>
+    <p id="column8t">0</p>
+    <p id="column7t">0</p>
+    <p id="column6t">0</p>
+    <p id="column5t">0</p>
+    <p id="column4t">0</p>
+    <p id="column3t">0</p>
+    <p id="column2t">0</p>
+    <p id="column1t">0</p>
+</div>
 Select an option on the left to begin.
 <br><br>This site is still a huge work in progress; please look forward to updates!
 <br><br><a href="https://github.com/wangzi190/projectc190" target="_blank"><u>G</u>ithub repository</a>

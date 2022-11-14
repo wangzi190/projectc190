@@ -2,9 +2,6 @@ body {
     font-family: "Lucida Console", monospace;
     background-image: url("images/background.png");
   }
-  table {
-    margin: auto;
-  }
   th {
     border: 0px;
     text-align: left;

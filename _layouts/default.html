@@ -23,39 +23,22 @@
       repImage = repImage.replace(".png", "_hover.png");
       document.getElementById(repID).src = repImage;
     }
-    var incrementAbacus = function(id) {
-      value = document.getElementById(id).getAttribute("src");
-      const prefix = "/images/abacus/";
-      value = value.replace("/images/abacus/", "");
-      value = value.replace(".png", "");
-      value = parseInt(value);
-      if (value == 9) {
-        document.getElementById(id).src = "/images/abacus/0.png";
-      } else {
-        value++;
-        value = value.toString();
-        value = value.concat(".png");
-        document.getElementById(id).src = prefix.concat(value);
-      }
-    }
   </script>
 </head>
   
 <body>
 <!--
 NOTES TO SELF:
-  Blog & Other sections are set up :)
   Priority: About page, portfolio pages setups
 
   Consider: Make box fixed/add scrollbar OR add "Go to" autoscroller ?
-  Move JS code (abacus function) into pages where they are relevant for faster loading
 
   Add status.cafe status
     <div id="statuscafe"><div id="statuscafe-username"></div><div id="statuscafe-content"></div></div><script src="https://status.cafe/current-status.js?name=wangzi190" defer></script>
 
   Reference "website 'file directory' plan"
 -->
-<table style="width:50%;height:100vh;">
+<table style="width:50%;height:100vh;margin:auto;">
   <tr height="9%">
     <th colspan="2"><img src="/images/title.png" width="300px" style="margin-top:5px;"></th>
   </tr>
