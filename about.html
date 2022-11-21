@@ -1,9 +1,107 @@
----
-layout: default
-title: <a href="/"><u>L</u>anding</a> > <b>About</b>
-permalink: /about
----
-Hi! This is my makeshift about page. I'm currently working on a fancy one; it'll be up in some time.
-<br><br>
-Anyways, I'm Soren and I like drawing, computers, and math :)<br>
-My Discord tag is 小王子#0164 (or, if you'd prefer, you can email me at <a href="mailto:projectc190@gmail.com" rel="EMAIL" target="_blank"><u>p</u>rojectc190@gmail.com</a>).
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>project c190</title>
+    <script type="text/javascript" async>
+        var i = 0;
+        function animate() {
+            document.getElementById("data").style.visibility = "hidden";
+            if (i == 0) {
+                i = 1;
+                var progress = document.getElementById("progress");
+                var width = 1;
+                function transition() {
+                    document.getElementById("loadingBar").hidden = "true";
+                    document.getElementById("data").style.visibility = "visible";
+                }
+                function frames() {
+                    if (width >= 100) {
+                        clearInterval(id);
+                        setTimeout(transition, 500);
+                        i = 0;
+                    } else {
+                        width++;
+                        var value = width + "%";
+                        progress.style.width = value;
+                        progressText.innerHTML = value;
+                    }
+                }
+                var id = setInterval(frames, 10);
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: "Lucida Console", monospace;
+            background-color: #0A0A0A;
+        }
+        th {
+            color: #7b8a48;
+            border: 0px;
+        }
+        td {
+          color: #7b8a48;
+          border: 2px solid;
+          border-color: #7b8a48;
+          padding: 5px;
+        }
+        #loadingBar {
+        width: 20%;
+        background-color: #0A0A0A;
+        margin: auto;
+        margin-top: 12rem;
+        }
+        .itemLB {
+            margin-top: 0.2rem;
+            margin-bottom: 0.2rem;
+            color: #7b8a48;
+        }
+        #progress {
+        width: 1%;
+        height: 30px;
+        background-color: #616e32;
+        }
+        #progressText {
+            text-align: right;
+        }
+        a {color: #7b8a48; text-decoration: none;}
+        a:hover {color: #7b8a48; text-decoration: underline;}
+    </style>
+</head>
+
+<body onload="animate()">
+    <div id="loadingBar">
+        <div class="itemLB">Loading data...</div>
+        <div class="itemLB" id="progress"></div>
+        <div class="itemLB" id="progressText">0%</div>
+    </div>
+    <table id="data" style="width:35%;margin:auto;margin-top:4rem;">
+        <th style="text-align:left;">project c190</th>
+        <tr>
+            <td>Hello <i>!</i> You can call me Soren.
+            <br><br>I grew up on the kids' coding website Scratch, where I published projects under the username Crafty190. Scratch gave me the means to develop my interests in drawing and computer programming throughout my childhood.
+            <br><br>I've created this website as a space to continue developing these interests, which have now expanded to drawing, all things computers, and math. You might see me introduce myself as Soren, who likes drawing, computers, and math.
+            <br><br>Aside from the aforementioned, you can also expect content about my life in general, fandom interests, etc.
+            <br><br>Other facts that you can't necessarily deduce from the content on my site include the following:
+            <ul>
+                <li>I'm an INTP 5w6.</li>
+                <li>I'm an Aquarius (born 16 February '05).</li>
+                <li>I have ADHD combined type.</li>
+                <li>My favorite drink is oolong tea.</li>
+                <li>My favorite band is Black Kirin.</li>
+                <li>I really like birds.</li>
+            </ul>
+            Okay, a few of these might be obvious, but it doesn't hurt to state them explicitly, no?
+            <br><br>Below is my contact info. Feel free to chat sometime.
+            <br><br>E-mail: <a href="mailto:projectc190@gmail.com" rel="EMAIL" target="_blank"><u>p</u>rojectc190@gmail.com</a>
+            <br>Discord: abacist#0164
+            <br><br><a href="/"><u>R</u>eturn</a>
+            </td>
+        </tr>
+      </table>
+</body>
+
+</html>
