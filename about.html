@@ -8,6 +8,7 @@
     <script type="text/javascript" async>
         var i = 0;
         function animate() {
+            document.getElementById("loadingBar").style.visibility = "visible";
             document.getElementById("data").style.visibility = "hidden";
             if (i == 0) {
                 i = 1;
@@ -37,7 +38,7 @@
         body {
             font-family: "Lucida Console", monospace;
             background-color: #0A0A0A;
-            overflow: clip;
+            /*overflow: clip;*/
         }
         th, td {
             color: #7b8a48;
