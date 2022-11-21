@@ -8,15 +8,15 @@
     <script type="text/javascript" async>
         var i = 0;
         function animate() {
-            document.getElementById("loadingBar").style.visibility = "visible";
-            document.getElementById("data").style.visibility = "hidden";
+            document.getElementById("loadingBar").hidden = false;
+            document.getElementById("data").hidden = true;
             if (i == 0) {
                 i = 1;
                 var progress = document.getElementById("progress");
                 var width = 1;
                 function transition() {
-                    document.getElementById("loadingBar").hidden = "true";
-                    document.getElementById("data").style.visibility = "visible";
+                    document.getElementById("loadingBar").hidden = true;
+                    document.getElementById("data").hidden = false;
                 }
                 function frames() {
                     if (width >= 100) {
@@ -80,34 +80,36 @@
         <div class="itemLB" id="progress"></div>
         <div class="itemLB" id="progressText">0%</div>
     </div>
-    <table id="data" style="width:35%;margin:auto;margin-top:4rem;">
-        <th style="text-align:left;">project c190</th>
-        <tr>
-            <td id="mainBox">Hello <i>!</i> You can call me Soren.
-            <br><br>I grew up on the kids' coding website Scratch, where I published projects under the username Crafty190. Scratch gave me the means to develop my interests in drawing and computer programming throughout my childhood.
-            <br><br>I've created this website as a space to continue developing these interests, which have now expanded to drawing, all things computers, and math. You might see me introduce myself as Soren, who likes drawing, computers, and math.
-            <br><br>Aside from the aforementioned, you can also expect content about my life in general, fandom interests, etc.
-            <br><br>Other facts that you can't necessarily deduce from the content on my site include the following:
-            <ul>
-                <li>I'm an INTP 5w6.</li>
-                <li>I'm an Aquarius (born 16 February '05).</li>
-                <li>I have ADHD combined type.</li>
-                <li>My favorite drink is oolong tea.</li>
-                <li>My favorite band is Black Kirin.</li>
-                <li>I really like birds.</li>
-            </ul>
-            Okay, a few of these might be obvious, but it doesn't hurt to state them explicitly, no?
-            <br><br>Below is my contact info. Feel free to chat sometime.
-            <br><br>E-mail: <a href="mailto:projectc190@gmail.com" rel="EMAIL" target="_blank"><u>p</u>rojectc190@gmail.com</a>
-            <br>Discord: abacist#0164
-            </td>
-        </tr>
-        <tr>
-            <td style="text-align:right;">
-                <a href="/"><u>C</u>lick here to return <i>!</i></a>
-            </td>
-        </tr>
-      </table>
+    <div id="data">
+        <table style="width:35%;margin:auto;margin-top:4rem;">
+            <th style="text-align:left;">project c190</th>
+            <tr>
+                <td id="mainBox">Hello <i>!</i> You can call me Soren.
+                <br><br>I grew up on the kids' coding website Scratch, where I published projects under the username Crafty190. Scratch gave me the means to develop my interests in drawing and computer programming throughout my childhood.
+                <br><br>I've created this website as a space to continue developing these interests, which have now expanded to drawing, all things computers, and math. You might see me introduce myself as Soren, who likes drawing, computers, and math.
+                <br><br>Aside from the aforementioned, you can also expect content about my life in general, fandom interests, etc.
+                <br><br>Other facts that you can't necessarily deduce from the content on my site include the following:
+                <ul>
+                    <li>I'm an INTP 5w6.</li>
+                    <li>I'm an Aquarius (born 16 February '05).</li>
+                    <li>I have ADHD combined type.</li>
+                    <li>My favorite drink is oolong tea.</li>
+                    <li>My favorite band is Black Kirin.</li>
+                    <li>I really like birds.</li>
+                </ul>
+                Okay, a few of these might be obvious, but it doesn't hurt to state them explicitly, no?
+                <br><br>Below is my contact info. Feel free to chat sometime.
+                <br><br>E-mail: <a href="mailto:projectc190@gmail.com" rel="EMAIL" target="_blank"><u>p</u>rojectc190@gmail.com</a>
+                <br>Discord: abacist#0164
+                </td>
+            </tr>
+            <tr>
+                <td style="text-align:right;">
+                    <a href="/"><u>C</u>lick here to return <i>!</i></a>
+                </td>
+            </tr>
+        </table>
+    </div>
 </body>
 
 </html>
