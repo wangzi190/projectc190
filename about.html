@@ -9,7 +9,6 @@
         var i = 0;
         function animate() {
             document.getElementById("loadingBar").hidden = false;
-            document.getElementById("data").hidden = true;
             if (i == 0) {
                 i = 1;
                 var progress = document.getElementById("progress");
@@ -80,7 +79,7 @@
         <div class="itemLB" id="progress"></div>
         <div class="itemLB" id="progressText">0%</div>
     </div>
-    <div id="data">
+    <div id="data" hidden="true">
         <table style="width:35%;margin:auto;margin-top:4rem;">
             <th style="text-align:left;">project c190</th>
             <tr>
