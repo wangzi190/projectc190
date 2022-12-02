@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Jupyter test
-categories: apcsa
+categories: removed
 ---
 Note (manually written): Jupyter to markdown conversion successful. However, the workflow isn't very smooth, and I'm not yet sure how to fix the styling problems.
 ```java
