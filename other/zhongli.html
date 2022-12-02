@@ -1,17 +1,35 @@
 ---
-layout: default
-title: <a href="/"><u>L</u>anding</a> > <a href="/other.html"><u>O</u>ther</a> > <b>Zhongli</b>
 permalink: /other/zhongli
 ---
-No content yet :')
-{% for post in site.posts %}
-{% if post.categories contains "zhongli" %}
-<article>
-  <h3>
-      {{ post.title }}
-  </h3>
-  <time datetime="{{ post.date | date: "%Y-%m-%d" }}">{{ post.date | date_to_long_string }}</time>
-  {{ post.content }}
-</article>
-{% endif %}
-{% endfor %}
+<style>
+  body {
+    font-family: "Lucida Console", monospace;
+    background-color: #b78e51;
+  }
+  body > table {
+    position: fixed;
+    top: 0;
+    left: 30%; right: 30%;
+  }
+  table {
+    background-color: white;
+    border: 0px;
+    border-collapse: collapse;
+  }
+  #namecardBackground {
+    background-image: url('/images/planet_befall.png');
+    background-repeat: no-repeat;
+  }
+  .notTitle {
+    padding: 5px;
+  }
+  a {color: #A07241; text-decoration: none;} a:hover {color: #A07241;; text-decoration: underline;}
+</style>
+<table style="width:40%;margin:auto;margin-top:0px;" cellpadding="0px" cellspacing="0px" >
+  <tr>
+    <td id="namecardBackground"><img src="/images/zhongli.png" id="zhongli" width="300px"></td>
+  </tr>
+  <tr>
+    <td class="notTitle"><p>This page is a work in progress.<br><a href="/"><u>R</u>eturn</a></p></td>
+  </tr>
+</table>
