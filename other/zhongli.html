@@ -25,9 +25,18 @@ permalink: /other/zhongli
   }
   a {color: #A07241; text-decoration: none;} a:hover {color: #A07241;; text-decoration: underline;}
 </style>
+<script type="text/javascript" async>
+  var wink = function() {
+    document.getElementById("zhongli").src = "/images/wink.png";
+  }
+  var revert = function() {
+    document.getElementById("zhongli").src = "/images/zhongli.png";
+  }
+</script>
 <table style="width:40%;margin:auto;margin-top:0px;" cellpadding="0px" cellspacing="0px" >
-  <tr>
-    <td id="namecardBackground"><img src="/images/zhongli.png" id="zhongli" width="300px"></td>
+  <tr id="namecardBackground">
+    <td><img src="/images/zhongli.png" id="zhongli" width="300px" onmouseover="wink()" onmouseout="revert()" onmouseout="quote()"></td>
+    <td class="notTitle" style="color:white;vertical-align:bottom;text-align:right;"><p id="quote" style="margin-left:0.5rem;">一份新的「契约」？好吧…虽然我还在度假，但也可以陪你走一趟。契约书上，该签什么名字呢？我有许多名字，度假期间的话…我会自称「钟离」。你呢，旅行者？你会签下什么名字？</p></td>
   </tr>
   <tr>
     <td class="notTitle" style="height:100vh;vertical-align:text-top;"><p style="margin-top:1rem;">This page is a work in progress.<br><a href="/other.html"><u>R</u>eturn</a></p></td>

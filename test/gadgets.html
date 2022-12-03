@@ -1,0 +1,123 @@
+---
+permalink: /test/gadgets
+---
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>project c190</title>
+    <script type="text/javascript" async>
+        var i = 0;
+        const temp = "/images/frames/floppy";
+        function animate() {
+            document.getElementById("loadingBar").hidden = false;
+            if (i == 0) {
+                i = 1;
+                var progress = document.getElementById("progress");
+                var width = 1;
+                function transition() {
+                    document.getElementById("loadingBar").hidden = true;
+                    document.getElementById("data").hidden = false;
+                }
+                function floppy() {
+                    value = document.getElementById("floppy").getAttribute("src");
+                    value = value.replace("/images/frames/floppy", "");
+                    value = value.replace(".png", "");
+                    value = parseInt(value);
+                    if (value != 5) {
+                        value++;
+                    } else {
+                        value = 1;
+                    }
+                    value.toString();
+                    value = temp.concat(value);
+                    value = value.concat(".png");
+                    document.getElementById("floppy").src = value;
+                }
+                function frames() {
+                    if (width >= 100) {
+                        clearInterval(id);
+                        setTimeout(transition, 500);
+                        setInterval(floppy, 200);
+                        i = 0;
+                    } else {
+                        width++;
+                        var value = width + "%";
+                        progress.style.width = value;
+                        progressText.innerHTML = value;
+                    }
+                }
+                var id = setInterval(frames, 10);
+            }
+        }
+        function stop(id) {
+            document.getElementById(id).src = "/images/frames/floppy1.png";
+        }
+    </script>
+    <style>
+        body {
+            font-family: "Lucida Console", monospace;
+            background-color: #0A0A0A;
+            /*overflow: clip;*/
+        }
+        th, td {
+            color: #7b8a48;
+            border: 0px;
+        }
+        #mainBox {
+          color: #7b8a48;
+          border: 2px solid;
+          border-color: #7b8a48;
+          padding: 5px;
+        }
+        #loadingBar {
+        width: 20%;
+        background-color: #0A0A0A;
+        margin: auto;
+        margin-top: 12rem;
+        }
+        .itemLB {
+            margin-top: 0.2rem;
+            margin-bottom: 0.2rem;
+            color: #7b8a48;
+        }
+        #progress {
+        width: 1%;
+        height: 30px;
+        background-color: #616e32;
+        }
+        #progressText {
+            text-align: right;
+        }
+        a {color: #7b8a48; text-decoration: none;}
+        a:hover {color: #7b8a48; text-decoration: underline;}
+        #floppy {
+            margin-right: 5px;
+        }
+    </style>
+</head>
+
+<body onload="animate()">
+    <div id="loadingBar">
+        <div class="itemLB">Loading data...</div>
+        <div class="itemLB" id="progress"></div>
+        <div class="itemLB" id="progressText">0%</div>
+    </div>
+    <div id="data" hidden="true">
+        <table style="width:35%;margin:auto;margin-top:4rem;">
+            <th style="text-align:left;">project c190</th>
+            <tr>
+                <td id="mainBox"><img src="/images/frames/floppy1.png" id="floppy" width="50px">Still working on this page</td>
+            </tr>
+            <tr>
+                <td style="text-align:right;">
+                    <a href="/"><u>C</u>lick here to return <i>!</i></a>
+                </td>
+            </tr>
+        </table>
+    </div>
+</body>
+
+</html>
