@@ -1,29 +1,22 @@
-  body {
-    font-family: "Lucida Console", monospace;
-    background-image: url("/images/background.png");
-  }
-  th {
-    border: 0px;
-    text-align: left;
-    padding: 5px;
-  }
-  td {
-    border: 0px;
-    padding: 5px;
-  }
-  .navIC {
-    margin-right: 3px;
-  }
-  a {color: white;} a:hover {color: white;}
-  .trNav:hover {background-color: #555f2e;}
-  .abacus {
-    margin-top: 5px;
-    margin-bottom: 5px;
-  }
-  table {
-    table-layout: fixed;
-  }
-  #titleSpacing {
-    padding-top: 15px;
-    padding-bottom: 10px;
-  }
+body {
+  font-family: "Lucida Console", monospace;
+  background-image: url("/images/background.png");
+}
+th {
+  border: 0px;
+  text-align: left;
+  padding: 5px;
+}
+td {
+  border: 0px;
+  padding: 5px;
+}
+.navIC {
+  margin-right: 3px;
+}
+a {color: white;} a:hover {color: white;}
+.trNav:hover {background-color: #555f2e;}
+.abacus {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
