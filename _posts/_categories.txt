@@ -1,12 +1,7 @@
-blog
     personal
     visualJournal
     computationTheory
     programming
     ocsAndWorldBuilding
     assemblyLanguage
-    //apcsa
-other
-    zhongli
-    honkai
-    jwqs
+    apcsa
