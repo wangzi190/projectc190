@@ -1,6 +1,7 @@
 To-do:
     Drawings and gadgets pages
     Mobile compatibility
+    Make "posts" layout so you can link individual posts
     Add devlog section to "Blog"
 
 Consider:
