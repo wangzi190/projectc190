@@ -2,8 +2,10 @@ To-do:
     Drawings and gadgets pages
     Mobile compatibility
     Add devlog section to "Blog"
-    Custom pages (e.g. fandom)
 
 Consider:
+    Interactive pigeon pet
+    Tappy fidget cube
+
     Add status.cafe status
     <div id="statuscafe"><div id="statuscafe-username"></div><div id="statuscafe-content"></div></div><script src="https://status.cafe/current-status.js?name=wangzi190" defer></script>
