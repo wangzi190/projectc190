@@ -2,11 +2,11 @@ To-do:
     Drawings and gadgets pages
     Mobile compatibility
     Make "posts" layout so you can link individual posts
-    Add devlog section to "Blog"
 
 Consider:
     Interactive pigeon pet
     Tappy fidget cube
+    Add devlog section to "Blog"
 
     Add status.cafe status
     <div id="statuscafe"><div id="statuscafe-username"></div><div id="statuscafe-content"></div></div><script src="https://status.cafe/current-status.js?name=wangzi190" defer></script>
