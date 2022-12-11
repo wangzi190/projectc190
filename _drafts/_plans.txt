@@ -1,12 +1,33 @@
-To-do:
-    Drawings and gadgets pages
-    Mobile compatibility
-    Make "posts" layout so you can link individual posts
+Site-specific
+    To-do [PRIORITY]:
+        Drawings and gadgets pages
+        Mobile compatibility
+        Make "posts" layout so you can link individual posts
+        Add guestbook
 
-Consider:
-    Interactive pigeon pet
-    Tappy fidget cube
-    Add devlog section to "Blog"
+    Secondary:
+        Revamp "About" page
+        Music box
+        Unique page designs
+        Tappy fidget cube
 
-    Add status.cafe status
-    <div id="statuscafe"><div id="statuscafe-username"></div><div id="statuscafe-content"></div></div><script src="https://status.cafe/current-status.js?name=wangzi190" defer></script>
+    Consider:
+        Interactive pigeon pet
+        Add devlog section to "Blog"
+
+        Add status.cafe status
+        <div id="statuscafe"><div id="statuscafe-username"></div><div id="statuscafe-content"></div></div><script src="https://status.cafe/current-status.js?name=wangzi190" defer></script>
+
+Projects
+    Programming [PRIORITY]:
+        Optimized control abacus
+        Sudoku online
+            Webpage (HTML/CSS/JS) w/ playable games
+            Sudoku puzzle solver in a diff. language ?
+        Advent of Code
+
+    Drawing [PRIORITY]:
+        MS Paint techniques
+
+    Other:
+        Crochet book cover for programming notebook
