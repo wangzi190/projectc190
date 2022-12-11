@@ -1,13 +1,13 @@
 Site-specific
     To-do [PRIORITY]:
         Drawings and gadgets pages
-        Mobile compatibility
         Make "posts" layout so you can link individual posts
-        Add guestbook
+        Mobile compatibility
 
     Secondary:
         Revamp "About" page
         Music box
+        Guestbook
         Unique page designs
         Tappy fidget cube
 
