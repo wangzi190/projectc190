@@ -3,6 +3,8 @@ Site-specific
         Drawings and gadgets pages
         Make "posts" layout so you can link individual posts
         Mobile compatibility
+            Shift navbar over content box/make navbar expand button and anim
+            Size images in terms of the content box
 
     Secondary:
         Revamp "About" page
