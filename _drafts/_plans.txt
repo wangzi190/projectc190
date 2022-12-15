@@ -5,10 +5,13 @@ Site-specific
         Mobile compatibility
             Shift navbar over content box/make navbar expand button and anim
             Size images in terms of the content box
+        More shit that moves
 
     Secondary:
+        Fill blog.html, other.html, etc.
         Revamp "About" page
         Music box
+        Show random background each page
         Guestbook
         Unique page designs
         Tappy fidget cube
