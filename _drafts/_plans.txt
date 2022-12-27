@@ -1,6 +1,5 @@
 Site-specific
     To-do [PRIORITY]:
-        Adjust main layout for device compatibility
         Drawings and gadgets pages
         Make "posts" layout so you can link individual posts
 
