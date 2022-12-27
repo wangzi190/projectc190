@@ -1,37 +1,30 @@
 Site-specific
     To-do [PRIORITY]:
+        Adjust main layout for device compatibility
         Drawings and gadgets pages
         Make "posts" layout so you can link individual posts
-        Mobile compatibility
-            Shift navbar over content box/make navbar expand button and anim
-            Size images in terms of the content box
-        More shit that moves
 
     Secondary:
-        Fill blog.html, other.html, etc.
         Revamp "About" page
-        Music box
-        Show random background each page
         Guestbook
-        Unique page designs
-        Tappy fidget cube
 
     Consider:
-        Interactive pigeon pet
         Add devlog section to "Blog"
-
-        Add status.cafe status
-        <div id="statuscafe"><div id="statuscafe-username"></div><div id="statuscafe-content"></div></div><script src="https://status.cafe/current-status.js?name=wangzi190" defer></script>
+        Show random background each page
+        Unique page designs
+        Music box
+        Fill blog.html, other.html, etc.
 
 Projects
-    Programming [PRIORITY]:
+    Programming:
+        Automata theory reading
         Optimized control abacus
         Sudoku online
             Webpage (HTML/CSS/JS) w/ playable games
             Sudoku puzzle solver in a diff. language ?
         Advent of Code
 
-    Drawing [PRIORITY]:
+    Drawing:
         MS Paint techniques
 
     Other:
