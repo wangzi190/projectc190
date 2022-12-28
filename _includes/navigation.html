@@ -9,6 +9,7 @@
     <tr class="trNav"><td><img src="/images/folderIcon.png" class="navIC" width="26.4px">Portfolio</td></tr>
     <tr class="trNav"><td>&emsp;⤷<img src="/images/folderIcon.png" class="navIC" id="drawingsF" width="26.4px"><a href="/drawings.html" class="navLink" id="drawings" onmouseover="navHovers(id)" onmouseout="folderDefault(id)"><u>D</u>rawings</a></td></tr>
     <tr class="trNav"><td>&emsp;⤷<img src="/images/folderIcon.png" class="navIC" id="gadgetsF" width="26.4px"><a href="/gadgets.html" class="navLink" id="gadgets" onmouseover="navHovers(id)" onmouseout="folderDefault(id)"><u>G</u>adgets</a></td></tr>
+    <tr class="trNav"><td><img src="/images/fileIcon.png" class="navIC" id="guestbookF" width="20px"><a href="https://abacist.123guestbook.com" class="navLink" id="guestbook" onmouseover="navHovers(id)" onmouseout="fileDefault(id)"><u>G</u>uestbook</a></td></tr>
     <tr class="trNav"><td><img src="/images/folderIcon.png" class="navIC" id="otherF" width="26.4px"><a href="/other.html" class="navLink" id="other" onmouseover="navHovers(id)" onmouseout="folderDefault(id)"><u>O</u>ther</a></td></tr>
 {% endif %}
 {% if page.url == "/drawings" %}
@@ -27,6 +28,7 @@
     <tr class="trNav"><td><img src="/images/folderIcon.png" class="navIC" width="26.4px">Portfolio</td></tr>
     <tr class="trNav"><td>&emsp;⤷<img src="/images/folderIcon.png" class="navIC" id="drawingsF" width="26.4px"><a href="/drawings.html" class="navLink" id="drawings" onmouseover="navHovers(id)" onmouseout="folderDefault(id)"><u>D</u>rawings</a></td></tr>
     <tr class="trNav"><td>&emsp;⤷<img src="/images/folderIcon.png" class="navIC" id="gadgetsF" width="26.4px"><a href="/gadgets.html" class="navLink" id="gadgets" onmouseover="navHovers(id)" onmouseout="folderDefault(id)"><u>G</u>adgets</a></td></tr>
+    <tr class="trNav"><td><img src="/images/fileIcon.png" class="navIC" id="guestbookF" width="20px"><a href="https://abacist.123guestbook.com" class="navLink" id="guestbook" onmouseover="navHovers(id)" onmouseout="fileDefault(id)"><u>G</u>uestbook</a></td></tr>
     <tr class="trNav"><td><img src="/images/folderIcon.png" class="navIC" id="otherF" width="26.4px"><a href="/other.html" class="navLink" id="other" onmouseover="navHovers(id)" onmouseout="folderDefault(id)"><u>O</u>ther</a></td></tr>
 {% endif %}
 {% if page.url == "/blog" %}
@@ -111,74 +113,26 @@
 {% endif %}
 {% if page.url == "/other" %}
     <tr class="trNav"><td><img src="/images/folderIcon.png" class="navIC" width="26.4px">Other</td></tr>
-    <tr class="trNav"><td>&emsp;⤷<img src="/images/folderIcon.png" class="navIC" width="26.4px">Fandom</td></tr>
-    <tr class="trNav"><td>&emsp;&emsp;&emsp;⤷<img src="/images/fileIcon.png" class="navIC" id="tamagotchiF" width="20px"><a href="/other/tamagotchi.html" class="navLink" id="tamagotchi" onmouseover="navHovers(id)" onmouseout="fileDefault(id)"><u>T</u>amagotchi</a></td></tr>
-    <tr class="trNav"><td>&emsp;&emsp;&emsp;⤷<img src="/images/fileIcon.png" class="navIC" id="neopetsF" width="20px"><a href="/other/neopets.html" class="navLink" id="neopets" onmouseover="navHovers(id)" onmouseout="fileDefault(id)"><u>N</u>eopets</a></td></tr>
-    <tr class="trNav"><td>&emsp;&emsp;&emsp;⤷<img src="/images/fileIcon.png" class="navIC" id="zhongliF" width="20px"><a href="/other/zhongli.html" class="navLink" id="zhongli" onmouseover="navHovers(id)" onmouseout="fileDefault(id)"><u>Z</u>hongli</a></td></tr>
-    <tr class="trNav"><td>&emsp;&emsp;&emsp;⤷<img src="/images/fileIcon.png" class="navIC" id="honkaiF" width="20px"><a href="/other/honkai.html" class="navLink" id="honkai" onmouseover="navHovers(id)" onmouseout="fileDefault(id)"><u>H</u>onkai</a></td></tr>
-    <tr class="trNav"><td>&emsp;⤷<img src="/images/folderIcon.png" class="navIC" width="26.4px">Collection</td></tr>
-    <tr class="trNav"><td>&emsp;&emsp;&emsp;⤷<img src="/images/fileIcon.png" class="navIC" id="articlesF" width="20px"><a href="/other/articles.html" class="navLink" id="articles" onmouseover="navHovers(id)" onmouseout="fileDefault(id)"><u>A</u>rticles</a></td></tr>
-    <tr class="trNav"><td>&emsp;&emsp;&emsp;⤷<img src="/images/fileIcon.png" class="navIC" id="adoptsF" width="20px"><a href="/other/adopts.html" class="navLink" id="adopts" onmouseover="navHovers(id)" onmouseout="fileDefault(id)"><u>A</u>dopts</a></td></tr>
-    <tr class="trNav"><td>&emsp;&emsp;&emsp;⤷<img src="/images/fileIcon.png" class="navIC" id="stampsF" width="20px"><a href="/other/stamps.html" class="navLink" id="stamps" onmouseover="navHovers(id)" onmouseout="fileDefault(id)"><u>S</u>tamps</a></td></tr>
+    <tr class="trNav"><td>&emsp;⤷<img src="/images/fileIcon.png" class="navIC" id="gamingF" width="20px"><a href="/other/gaming.html" class="navLink" id="gaming" onmouseover="navHovers(id)" onmouseout="fileDefault(id)"><u>G</u>aming</a></td></tr>
+    <tr class="trNav"><td>&emsp;⤷<img src="/images/fileIcon.png" class="navIC" id="adoptsAndStampsF" width="20px"><a href="/other/adopts-and-stamps.html" class="navLink" id="adoptsAndStamps" onmouseover="navHovers(id)" onmouseout="fileDefault(id)"><u>A</u>dopts and stamps</a></td></tr>
+    <tr class="trNav"><td>&emsp;⤷<img src="/images/fileIcon.png" class="navIC" id="linksF" width="20px"><a href="/other/links.html" class="navLink" id="links" onmouseover="navHovers(id)" onmouseout="fileDefault(id)"><u>L</u>inks</a></td></tr>
 {% endif %}
-{% if page.url == "/other/honkai" %}
-<tr class="trNav"><td><img src="/images/folderIcon.png" class="navIC" width="26.4px">Other</td></tr>
-<tr class="trNav"><td>&emsp;⤷<img src="/images/folderIcon.png" class="navIC" width="26.4px">Fandom</td></tr>
-<tr class="trNav"><td>&emsp;&emsp;&emsp;⤷<img src="/images/fileIcon.png" class="navIC" id="tamagotchiF" width="20px"><a href="/other/tamagotchi.html" class="navLink" id="tamagotchi" onmouseover="navHovers(id)" onmouseout="fileDefault(id)"><u>T</u>amagotchi</a></td></tr>
-<tr class="trNav"><td>&emsp;&emsp;&emsp;⤷<img src="/images/fileIcon.png" class="navIC" id="neopetsF" width="20px"><a href="/other/neopets.html" class="navLink" id="neopets" onmouseover="navHovers(id)" onmouseout="fileDefault(id)"><u>N</u>eopets</a></td></tr>
-<tr class="trNav"><td>&emsp;&emsp;&emsp;⤷<img src="/images/fileIcon.png" class="navIC" id="zhongliF" width="20px"><a href="/other/zhongli.html" class="navLink" id="zhongli" onmouseover="navHovers(id)" onmouseout="fileDefault(id)"><u>Z</u>hongli</a></td></tr>
-<tr class="trNav"><td>&emsp;&emsp;&emsp;⤷<img src="/images/fileIcon.png" class="navIC" id="honkaiF" width="20px"><a href="/other/honkai.html" class="navLink" id="honkai" onmouseover="navHovers(id)" onmouseout="fileDefault(id)"><u>H</u>onkai</a></td></tr>
-<tr class="trNav"><td>&emsp;⤷<img src="/images/folderIcon.png" class="navIC" width="26.4px">Collection</td></tr>
-<tr class="trNav"><td>&emsp;&emsp;&emsp;⤷<img src="/images/fileIcon.png" class="navIC" id="articlesF" width="20px"><a href="/other/articles.html" class="navLink" id="articles" onmouseover="navHovers(id)" onmouseout="fileDefault(id)"><u>A</u>rticles</a></td></tr>
-<tr class="trNav"><td>&emsp;&emsp;&emsp;⤷<img src="/images/fileIcon.png" class="navIC" id="adoptsF" width="20px"><a href="/other/adopts.html" class="navLink" id="adopts" onmouseover="navHovers(id)" onmouseout="fileDefault(id)"><u>A</u>dopts</a></td></tr>
-<tr class="trNav"><td>&emsp;&emsp;&emsp;⤷<img src="/images/fileIcon.png" class="navIC" id="stampsF" width="20px"><a href="/other/stamps.html" class="navLink" id="stamps" onmouseover="navHovers(id)" onmouseout="fileDefault(id)"><u>S</u>tamps</a></td></tr>
+{% if page.url == "/other/gaming" %}
+    <tr class="trNav"><td><img src="/images/folderIcon.png" class="navIC" width="26.4px">Other</td></tr>
+    <tr class="trNav"><td>&emsp;⤷<img src="/images/fileIcon.png" class="navIC" id="gamingF" width="20px"><a href="/other/gaming.html" class="navLink" id="gaming" onmouseover="navHovers(id)" onmouseout="fileDefault(id)"><u>G</u>aming</a></td></tr>
+    <tr class="trNav"><td>&emsp;⤷<img src="/images/fileIcon.png" class="navIC" id="adoptsAndStampsF" width="20px"><a href="/other/adopts-and-stamps.html" class="navLink" id="adoptsAndStamps" onmouseover="navHovers(id)" onmouseout="fileDefault(id)"><u>A</u>dopts and stamps</a></td></tr>
+    <tr class="trNav"><td>&emsp;⤷<img src="/images/fileIcon.png" class="navIC" id="linksF" width="20px"><a href="/other/links.html" class="navLink" id="links" onmouseover="navHovers(id)" onmouseout="fileDefault(id)"><u>L</u>inks</a></td></tr>
 {% endif %}
-{% if page.url == "/other/articles" %}
-<tr class="trNav"><td><img src="/images/folderIcon.png" class="navIC" width="26.4px">Other</td></tr>
-<tr class="trNav"><td>&emsp;⤷<img src="/images/folderIcon.png" class="navIC" width="26.4px">Fandom</td></tr>
-<tr class="trNav"><td>&emsp;&emsp;&emsp;⤷<img src="/images/fileIcon.png" class="navIC" id="tamagotchiF" width="20px"><a href="/other/tamagotchi.html" class="navLink" id="tamagotchi" onmouseover="navHovers(id)" onmouseout="fileDefault(id)"><u>T</u>amagotchi</a></td></tr>
-<tr class="trNav"><td>&emsp;&emsp;&emsp;⤷<img src="/images/fileIcon.png" class="navIC" id="neopetsF" width="20px"><a href="/other/neopets.html" class="navLink" id="neopets" onmouseover="navHovers(id)" onmouseout="fileDefault(id)"><u>N</u>eopets</a></td></tr>
-<tr class="trNav"><td>&emsp;&emsp;&emsp;⤷<img src="/images/fileIcon.png" class="navIC" id="zhongliF" width="20px"><a href="/other/zhongli.html" class="navLink" id="zhongli" onmouseover="navHovers(id)" onmouseout="fileDefault(id)"><u>Z</u>hongli</a></td></tr>
-<tr class="trNav"><td>&emsp;&emsp;&emsp;⤷<img src="/images/fileIcon.png" class="navIC" id="honkaiF" width="20px"><a href="/other/honkai.html" class="navLink" id="honkai" onmouseover="navHovers(id)" onmouseout="fileDefault(id)"><u>H</u>onkai</a></td></tr>
-<tr class="trNav"><td>&emsp;⤷<img src="/images/folderIcon.png" class="navIC" width="26.4px">Collection</td></tr>
-<tr class="trNav"><td>&emsp;&emsp;&emsp;⤷<img src="/images/fileIcon.png" class="navIC" id="articlesF" width="20px"><a href="/other/articles.html" class="navLink" id="articles" onmouseover="navHovers(id)" onmouseout="fileDefault(id)"><u>A</u>rticles</a></td></tr>
-<tr class="trNav"><td>&emsp;&emsp;&emsp;⤷<img src="/images/fileIcon.png" class="navIC" id="adoptsF" width="20px"><a href="/other/adopts.html" class="navLink" id="adopts" onmouseover="navHovers(id)" onmouseout="fileDefault(id)"><u>A</u>dopts</a></td></tr>
-<tr class="trNav"><td>&emsp;&emsp;&emsp;⤷<img src="/images/fileIcon.png" class="navIC" id="stampsF" width="20px"><a href="/other/stamps.html" class="navLink" id="stamps" onmouseover="navHovers(id)" onmouseout="fileDefault(id)"><u>S</u>tamps</a></td></tr>
+{% if page.url == "/other/adopts-and-stamps" %}
+    <tr class="trNav"><td><img src="/images/folderIcon.png" class="navIC" width="26.4px">Other</td></tr>
+    <tr class="trNav"><td>&emsp;⤷<img src="/images/fileIcon.png" class="navIC" id="gamingF" width="20px"><a href="/other/gaming.html" class="navLink" id="gaming" onmouseover="navHovers(id)" onmouseout="fileDefault(id)"><u>G</u>aming</a></td></tr>
+    <tr class="trNav"><td>&emsp;⤷<img src="/images/fileIcon.png" class="navIC" id="adoptsAndStampsF" width="20px"><a href="/other/adopts-and-stamps.html" class="navLink" id="adoptsAndStamps" onmouseover="navHovers(id)" onmouseout="fileDefault(id)"><u>A</u>dopts and stamps</a></td></tr>
+    <tr class="trNav"><td>&emsp;⤷<img src="/images/fileIcon.png" class="navIC" id="linksF" width="20px"><a href="/other/links.html" class="navLink" id="links" onmouseover="navHovers(id)" onmouseout="fileDefault(id)"><u>L</u>inks</a></td></tr>
 {% endif %}
-{% if page.url == "/other/adopts" %}
-<tr class="trNav"><td><img src="/images/folderIcon.png" class="navIC" width="26.4px">Other</td></tr>
-<tr class="trNav"><td>&emsp;⤷<img src="/images/folderIcon.png" class="navIC" width="26.4px">Fandom</td></tr>
-<tr class="trNav"><td>&emsp;&emsp;&emsp;⤷<img src="/images/fileIcon.png" class="navIC" id="tamagotchiF" width="20px"><a href="/other/tamagotchi.html" class="navLink" id="tamagotchi" onmouseover="navHovers(id)" onmouseout="fileDefault(id)"><u>T</u>amagotchi</a></td></tr>
-<tr class="trNav"><td>&emsp;&emsp;&emsp;⤷<img src="/images/fileIcon.png" class="navIC" id="neopetsF" width="20px"><a href="/other/neopets.html" class="navLink" id="neopets" onmouseover="navHovers(id)" onmouseout="fileDefault(id)"><u>N</u>eopets</a></td></tr>
-<tr class="trNav"><td>&emsp;&emsp;&emsp;⤷<img src="/images/fileIcon.png" class="navIC" id="zhongliF" width="20px"><a href="/other/zhongli.html" class="navLink" id="zhongli" onmouseover="navHovers(id)" onmouseout="fileDefault(id)"><u>Z</u>hongli</a></td></tr>
-<tr class="trNav"><td>&emsp;&emsp;&emsp;⤷<img src="/images/fileIcon.png" class="navIC" id="honkaiF" width="20px"><a href="/other/honkai.html" class="navLink" id="honkai" onmouseover="navHovers(id)" onmouseout="fileDefault(id)"><u>H</u>onkai</a></td></tr>
-<tr class="trNav"><td>&emsp;⤷<img src="/images/folderIcon.png" class="navIC" width="26.4px">Collection</td></tr>
-<tr class="trNav"><td>&emsp;&emsp;&emsp;⤷<img src="/images/fileIcon.png" class="navIC" id="articlesF" width="20px"><a href="/other/articles.html" class="navLink" id="articles" onmouseover="navHovers(id)" onmouseout="fileDefault(id)"><u>A</u>rticles</a></td></tr>
-<tr class="trNav"><td>&emsp;&emsp;&emsp;⤷<img src="/images/fileIcon.png" class="navIC" id="adoptsF" width="20px"><a href="/other/adopts.html" class="navLink" id="adopts" onmouseover="navHovers(id)" onmouseout="fileDefault(id)"><u>A</u>dopts</a></td></tr>
-<tr class="trNav"><td>&emsp;&emsp;&emsp;⤷<img src="/images/fileIcon.png" class="navIC" id="stampsF" width="20px"><a href="/other/stamps.html" class="navLink" id="stamps" onmouseover="navHovers(id)" onmouseout="fileDefault(id)"><u>S</u>tamps</a></td></tr>
-{% endif %}
-{% if page.url == "/other/stamps" %}
-<tr class="trNav"><td><img src="/images/folderIcon.png" class="navIC" width="26.4px">Other</td></tr>
-<tr class="trNav"><td>&emsp;⤷<img src="/images/folderIcon.png" class="navIC" width="26.4px">Fandom</td></tr>
-<tr class="trNav"><td>&emsp;&emsp;&emsp;⤷<img src="/images/fileIcon.png" class="navIC" id="tamagotchiF" width="20px"><a href="/other/tamagotchi.html" class="navLink" id="tamagotchi" onmouseover="navHovers(id)" onmouseout="fileDefault(id)"><u>T</u>amagotchi</a></td></tr>
-<tr class="trNav"><td>&emsp;&emsp;&emsp;⤷<img src="/images/fileIcon.png" class="navIC" id="neopetsF" width="20px"><a href="/other/neopets.html" class="navLink" id="neopets" onmouseover="navHovers(id)" onmouseout="fileDefault(id)"><u>N</u>eopets</a></td></tr>
-<tr class="trNav"><td>&emsp;&emsp;&emsp;⤷<img src="/images/fileIcon.png" class="navIC" id="zhongliF" width="20px"><a href="/other/zhongli.html" class="navLink" id="zhongli" onmouseover="navHovers(id)" onmouseout="fileDefault(id)"><u>Z</u>hongli</a></td></tr>
-<tr class="trNav"><td>&emsp;&emsp;&emsp;⤷<img src="/images/fileIcon.png" class="navIC" id="honkaiF" width="20px"><a href="/other/honkai.html" class="navLink" id="honkai" onmouseover="navHovers(id)" onmouseout="fileDefault(id)"><u>H</u>onkai</a></td></tr>
-<tr class="trNav"><td>&emsp;⤷<img src="/images/folderIcon.png" class="navIC" width="26.4px">Collection</td></tr>
-<tr class="trNav"><td>&emsp;&emsp;&emsp;⤷<img src="/images/fileIcon.png" class="navIC" id="articlesF" width="20px"><a href="/other/articles.html" class="navLink" id="articles" onmouseover="navHovers(id)" onmouseout="fileDefault(id)"><u>A</u>rticles</a></td></tr>
-<tr class="trNav"><td>&emsp;&emsp;&emsp;⤷<img src="/images/fileIcon.png" class="navIC" id="adoptsF" width="20px"><a href="/other/adopts.html" class="navLink" id="adopts" onmouseover="navHovers(id)" onmouseout="fileDefault(id)"><u>A</u>dopts</a></td></tr>
-<tr class="trNav"><td>&emsp;&emsp;&emsp;⤷<img src="/images/fileIcon.png" class="navIC" id="stampsF" width="20px"><a href="/other/stamps.html" class="navLink" id="stamps" onmouseover="navHovers(id)" onmouseout="fileDefault(id)"><u>S</u>tamps</a></td></tr>
-{% endif %}
-{% if page.url == "/other/tamagotchi" %}
-<tr class="trNav"><td><img src="/images/folderIcon.png" class="navIC" width="26.4px">Other</td></tr>
-<tr class="trNav"><td>&emsp;⤷<img src="/images/folderIcon.png" class="navIC" width="26.4px">Fandom</td></tr>
-<tr class="trNav"><td>&emsp;&emsp;&emsp;⤷<img src="/images/fileIcon.png" class="navIC" id="tamagotchiF" width="20px"><a href="/other/tamagotchi.html" class="navLink" id="tamagotchi" onmouseover="navHovers(id)" onmouseout="fileDefault(id)"><u>T</u>amagotchi</a></td></tr>
-<tr class="trNav"><td>&emsp;&emsp;&emsp;⤷<img src="/images/fileIcon.png" class="navIC" id="neopetsF" width="20px"><a href="/other/neopets.html" class="navLink" id="neopets" onmouseover="navHovers(id)" onmouseout="fileDefault(id)"><u>N</u>eopets</a></td></tr>
-<tr class="trNav"><td>&emsp;&emsp;&emsp;⤷<img src="/images/fileIcon.png" class="navIC" id="zhongliF" width="20px"><a href="/other/zhongli.html" class="navLink" id="zhongli" onmouseover="navHovers(id)" onmouseout="fileDefault(id)"><u>Z</u>hongli</a></td></tr>
-<tr class="trNav"><td>&emsp;&emsp;&emsp;⤷<img src="/images/fileIcon.png" class="navIC" id="honkaiF" width="20px"><a href="/other/honkai.html" class="navLink" id="honkai" onmouseover="navHovers(id)" onmouseout="fileDefault(id)"><u>H</u>onkai</a></td></tr>
-<tr class="trNav"><td>&emsp;⤷<img src="/images/folderIcon.png" class="navIC" width="26.4px">Collection</td></tr>
-<tr class="trNav"><td>&emsp;&emsp;&emsp;⤷<img src="/images/fileIcon.png" class="navIC" id="articlesF" width="20px"><a href="/other/articles.html" class="navLink" id="articles" onmouseover="navHovers(id)" onmouseout="fileDefault(id)"><u>A</u>rticles</a></td></tr>
-<tr class="trNav"><td>&emsp;&emsp;&emsp;⤷<img src="/images/fileIcon.png" class="navIC" id="adoptsF" width="20px"><a href="/other/adopts.html" class="navLink" id="adopts" onmouseover="navHovers(id)" onmouseout="fileDefault(id)"><u>A</u>dopts</a></td></tr>
-<tr class="trNav"><td>&emsp;&emsp;&emsp;⤷<img src="/images/fileIcon.png" class="navIC" id="stampsF" width="20px"><a href="/other/stamps.html" class="navLink" id="stamps" onmouseover="navHovers(id)" onmouseout="fileDefault(id)"><u>S</u>tamps</a></td></tr>
+{% if page.url == "/other/links" %}
+    <tr class="trNav"><td><img src="/images/folderIcon.png" class="navIC" width="26.4px">Other</td></tr>
+    <tr class="trNav"><td>&emsp;⤷<img src="/images/fileIcon.png" class="navIC" id="gamingF" width="20px"><a href="/other/gaming.html" class="navLink" id="gaming" onmouseover="navHovers(id)" onmouseout="fileDefault(id)"><u>G</u>aming</a></td></tr>
+    <tr class="trNav"><td>&emsp;⤷<img src="/images/fileIcon.png" class="navIC" id="adoptsAndStampsF" width="20px"><a href="/other/adopts-and-stamps.html" class="navLink" id="adoptsAndStamps" onmouseover="navHovers(id)" onmouseout="fileDefault(id)"><u>A</u>dopts and stamps</a></td></tr>
+    <tr class="trNav"><td>&emsp;⤷<img src="/images/fileIcon.png" class="navIC" id="linksF" width="20px"><a href="/other/links.html" class="navLink" id="links" onmouseover="navHovers(id)" onmouseout="fileDefault(id)"><u>L</u>inks</a></td></tr>
 {% endif %}
 </table>

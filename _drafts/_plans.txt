@@ -1,16 +1,11 @@
 Site-specific
     To-do [PRIORITY]:
-        Drawings and gadgets pages
-        Make "posts" layout so you can link individual posts
-
-    Secondary:
-        Revamp "About" page
-        Guestbook
+        [O] Drawings and gadgets pages
+        [O] Make "posts" layout so you can link individual posts
+        [O] Fix broken icon animations D:
 
     Consider:
-        Add devlog section to "Blog"
         Show random background each page
-        Unique page designs
         Music box
         Fill blog.html, other.html, etc.
 
