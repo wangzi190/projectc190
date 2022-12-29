@@ -1,7 +1,7 @@
 Site-specific
     To-do [PRIORITY]:
         [O] Drawings and gadgets pages
-        [O] Revamp "About" page
+        [O] Link embed/stamps
 
     Consider:
         Music box
