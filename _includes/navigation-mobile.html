@@ -1,0 +1,140 @@
+<!--
+    I know this looks awful but for some reason nested if statements were not working so
+-->
+<table style="width:100%;color:white;">
+{% if page.url == "/" %}
+    <tr class="trNav"><td><img src="/images/fileIcon.png" class="navIC" id="landingMF" width="20px"><a href="/" class="navLink" id="landingM" onmouseover="navHovers(id)" onmouseout="fileDefault(id)"><u>L</u>anding</a></td></tr>
+    <tr class="trNav"><td><img src="/images/fileIcon.png" class="navIC" id="aboutMF" width="20px"><a href="/about.html" class="navLink" id="aboutM" onmouseover="navHovers(id)" onmouseout="fileDefault(id)"><u>A</u>bout</a></td></tr>
+    <tr class="trNav"><td><img src="/images/folderIcon.png" class="navIC" id="blogMF" width="26.4px"><a href="/blog.html" class="navLink" id="blogM" onmouseover="navHovers(id)" onmouseout="folderDefault(id)"><u>B</u>log</a></td></tr>
+    <tr class="trNav"><td><img src="/images/folderIcon.png" class="navIC" width="26.4px">Portfolio</td></tr>
+    <tr class="trNav"><td>&emsp;⤷<img src="/images/folderIcon.png" class="navIC" id="drawingsMF" width="26.4px"><a href="/drawings.html" class="navLink" id="drawingsM" onmouseover="navHovers(id)" onmouseout="folderDefault(id)"><u>D</u>rawings</a></td></tr>
+    <tr class="trNav"><td>&emsp;⤷<img src="/images/folderIcon.png" class="navIC" id="gadgetsMF" width="26.4px"><a href="/gadgets.html" class="navLink" id="gadgetsM" onmouseover="navHovers(id)" onmouseout="folderDefault(id)"><u>G</u>adgets</a></td></tr>
+    <tr class="trNav"><td><img src="/images/fileIcon.png" class="navIC" id="guestbookMF" width="20px"><a href="https://abacist.123guestbook.com" class="navLink" id="guestbookM" onmouseover="navHovers(id)" onmouseout="fileDefault(id)"><u>G</u>uestbook</a></td></tr>
+    <tr class="trNav"><td><img src="/images/folderIcon.png" class="navIC" id="otherMF" width="26.4px"><a href="/other.html" class="navLink" id="otherM" onmouseover="navHovers(id)" onmouseout="folderDefault(id)"><u>O</u>ther</a></td></tr>
+{% endif %}
+{% if page.url == "/404" %}
+    <tr class="trNav"><td><img src="/images/fileIcon.png" class="navIC" id="landingMF" width="20px"><a href="/" class="navLink" id="landingM" onmouseover="navHovers(id)" onmouseout="fileDefault(id)"><u>L</u>anding</a></td></tr>
+    <tr class="trNav"><td><img src="/images/fileIcon.png" class="navIC" id="aboutMF" width="20px"><a href="/about.html" class="navLink" id="aboutM" onmouseover="navHovers(id)" onmouseout="fileDefault(id)"><u>A</u>bout</a></td></tr>
+    <tr class="trNav"><td><img src="/images/folderIcon.png" class="navIC" id="blogMF" width="26.4px"><a href="/blog.html" class="navLink" id="blogM" onmouseover="navHovers(id)" onmouseout="folderDefault(id)"><u>B</u>log</a></td></tr>
+    <tr class="trNav"><td><img src="/images/folderIcon.png" class="navIC" width="26.4px">Portfolio</td></tr>
+    <tr class="trNav"><td>&emsp;⤷<img src="/images/folderIcon.png" class="navIC" id="drawingsMF" width="26.4px"><a href="/drawings.html" class="navLink" id="drawingsM" onmouseover="navHovers(id)" onmouseout="folderDefault(id)"><u>D</u>rawings</a></td></tr>
+    <tr class="trNav"><td>&emsp;⤷<img src="/images/folderIcon.png" class="navIC" id="gadgetsMF" width="26.4px"><a href="/gadgets.html" class="navLink" id="gadgetsM" onmouseover="navHovers(id)" onmouseout="folderDefault(id)"><u>G</u>adgets</a></td></tr>
+    <tr class="trNav"><td><img src="/images/fileIcon.png" class="navIC" id="guestbookMF" width="20px"><a href="https://abacist.123guestbook.com" class="navLink" id="guestbookM" onmouseover="navHovers(id)" onmouseout="fileDefault(id)"><u>G</u>uestbook</a></td></tr>
+    <tr class="trNav"><td><img src="/images/folderIcon.png" class="navIC" id="otherMF" width="26.4px"><a href="/other.html" class="navLink" id="otherM" onmouseover="navHovers(id)" onmouseout="folderDefault(id)"><u>O</u>ther</a></td></tr>
+{% endif %}
+{% if page.url == "/blog" %}
+    <tr class="trNav"><td><img src="/images/folderIcon.png" class="navIC" width="26.4px">Blog</td></tr>
+    <tr class="trNav"><td>&emsp;⤷<img src="/images/fileIcon.png" class="navIC" id="personalMF" width="20px"><a href="/blog/personal.html" class="navLink" id="personalM" onmouseover="navHovers(id)" onmouseout="fileDefault(id)"><u>P</u>ersonal</a></td></tr>
+    <tr class="trNav"><td>&emsp;⤷<img src="/images/fileIcon.png" class="navIC" id="visualJournalMF" width="20px"><a href="/blog/visual-journal.html" class="navLink" id="visualJournalM" onmouseover="navHovers(id)" onmouseout="fileDefault(id)"><u>V</u>isual journal</a></td></tr>
+    <tr class="trNav"><td>&emsp;⤷<img src="/images/fileIcon.png" class="navIC" id="computationTheoryMF" width="20px"><a href="/blog/computation-theory.html" class="navLink" id="computationTheoryM" onmouseover="navHovers(id)" onmouseout="fileDefault(id)"><u>C</u>omputation theory</a></td></tr>
+    <tr class="trNav"><td>&emsp;⤷<img src="/images/fileIcon.png" class="navIC" id="programmingMF" width="20px"><a href="/blog/programming.html" class="navLink" id="programmingM" onmouseover="navHovers(id)" onmouseout="fileDefault(id)"><u>P</u>rogramming</a></td></tr>
+    <tr class="trNav"><td>&emsp;⤷<img src="/images/fileIcon.png" class="navIC" id="ocsAndWorldbuildingMF" width="20px"><a href="/blog/ocs-and-worldbuilding.html" class="navLink" id="ocsAndWorldbuildingM" onmouseover="navHovers(id)" onmouseout="fileDefault(id)"><u>O</u>Cs and worldbuilding</a></td></tr>
+    <tr class="trNav"><td>&emsp;⤷<img src="/images/fileIcon.png" class="navIC" id="assemblyLanguageMF" width="20px"><a href="/blog/assembly-language.html" class="navLink" id="assemblyLanguageM" onmouseover="navHovers(id)" onmouseout="fileDefault(id)"><u>A</u>ssembly language</a></td></tr>
+    <tr class="trNav"><td>&emsp;⤷<img src="/images/fileIcon.png" class="navIC" id="apcsaMF" width="20px"><a href="/blog/ap-csa.html" class="navLink" id="apcsaM" onmouseover="navHovers(id)" onmouseout="fileDefault(id)"><u>A</u>P CSA</a></td></tr>
+{% endif %}
+{% if page.url == "/blog/personal" %}
+    <tr class="trNav"><td><img src="/images/folderIcon.png" class="navIC" width="26.4px">Blog</td></tr>
+    <tr class="trNav"><td>&emsp;⤷<img src="/images/fileIcon.png" class="navIC" id="personalMF" width="20px"><a href="/blog/personal.html" class="navLink" id="personalM" onmouseover="navHovers(id)" onmouseout="fileDefault(id)"><u>P</u>ersonal</a></td></tr>
+    <tr class="trNav"><td>&emsp;⤷<img src="/images/fileIcon.png" class="navIC" id="visualJournalMF" width="20px"><a href="/blog/visual-journal.html" class="navLink" id="visualJournalM" onmouseover="navHovers(id)" onmouseout="fileDefault(id)"><u>V</u>isual journal</a></td></tr>
+    <tr class="trNav"><td>&emsp;⤷<img src="/images/fileIcon.png" class="navIC" id="computationTheoryMF" width="20px"><a href="/blog/computation-theory.html" class="navLink" id="computationTheoryM" onmouseover="navHovers(id)" onmouseout="fileDefault(id)"><u>C</u>omputation theory</a></td></tr>
+    <tr class="trNav"><td>&emsp;⤷<img src="/images/fileIcon.png" class="navIC" id="programmingMF" width="20px"><a href="/blog/programming.html" class="navLink" id="programmingM" onmouseover="navHovers(id)" onmouseout="fileDefault(id)"><u>P</u>rogramming</a></td></tr>
+    <tr class="trNav"><td>&emsp;⤷<img src="/images/fileIcon.png" class="navIC" id="ocsAndWorldbuildingMF" width="20px"><a href="/blog/ocs-and-worldbuilding.html" class="navLink" id="ocsAndWorldbuildingM" onmouseover="navHovers(id)" onmouseout="fileDefault(id)"><u>O</u>Cs and worldbuilding</a></td></tr>
+    <tr class="trNav"><td>&emsp;⤷<img src="/images/fileIcon.png" class="navIC" id="assemblyLanguageMF" width="20px"><a href="/blog/assembly-language.html" class="navLink" id="assemblyLanguageM" onmouseover="navHovers(id)" onmouseout="fileDefault(id)"><u>A</u>ssembly language</a></td></tr>
+    <tr class="trNav"><td>&emsp;⤷<img src="/images/fileIcon.png" class="navIC" id="apcsaMF" width="20px"><a href="/blog/ap-csa.html" class="navLink" id="apcsaM" onmouseover="navHovers(id)" onmouseout="fileDefault(id)"><u>A</u>P CSA</a></td></tr>
+{% endif %}
+{% if page.url == "/blog/visual-journal" %}
+    <tr class="trNav"><td><img src="/images/folderIcon.png" class="navIC" width="26.4px">Blog</td></tr>
+    <tr class="trNav"><td>&emsp;⤷<img src="/images/fileIcon.png" class="navIC" id="personalMF" width="20px"><a href="/blog/personal.html" class="navLink" id="personalM" onmouseover="navHovers(id)" onmouseout="fileDefault(id)"><u>P</u>ersonal</a></td></tr>
+    <tr class="trNav"><td>&emsp;⤷<img src="/images/fileIcon.png" class="navIC" id="visualJournalMF" width="20px"><a href="/blog/visual-journal.html" class="navLink" id="visualJournalM" onmouseover="navHovers(id)" onmouseout="fileDefault(id)"><u>V</u>isual journal</a></td></tr>
+    <tr class="trNav"><td>&emsp;⤷<img src="/images/fileIcon.png" class="navIC" id="computationTheoryMF" width="20px"><a href="/blog/computation-theory.html" class="navLink" id="computationTheoryM" onmouseover="navHovers(id)" onmouseout="fileDefault(id)"><u>C</u>omputation theory</a></td></tr>
+    <tr class="trNav"><td>&emsp;⤷<img src="/images/fileIcon.png" class="navIC" id="programmingMF" width="20px"><a href="/blog/programming.html" class="navLink" id="programmingM" onmouseover="navHovers(id)" onmouseout="fileDefault(id)"><u>P</u>rogramming</a></td></tr>
+    <tr class="trNav"><td>&emsp;⤷<img src="/images/fileIcon.png" class="navIC" id="ocsAndWorldbuildingMF" width="20px"><a href="/blog/ocs-and-worldbuilding.html" class="navLink" id="ocsAndWorldbuildingM" onmouseover="navHovers(id)" onmouseout="fileDefault(id)"><u>O</u>Cs and worldbuilding</a></td></tr>
+    <tr class="trNav"><td>&emsp;⤷<img src="/images/fileIcon.png" class="navIC" id="assemblyLanguageMF" width="20px"><a href="/blog/assembly-language.html" class="navLink" id="assemblyLanguageM" onmouseover="navHovers(id)" onmouseout="fileDefault(id)"><u>A</u>ssembly language</a></td></tr>
+    <tr class="trNav"><td>&emsp;⤷<img src="/images/fileIcon.png" class="navIC" id="apcsaMF" width="20px"><a href="/blog/ap-csa.html" class="navLink" id="apcsaM" onmouseover="navHovers(id)" onmouseout="fileDefault(id)"><u>A</u>P CSA</a></td></tr>
+{% endif %}
+{% if page.url == "/blog/computation-theory" %}
+    <tr class="trNav"><td><img src="/images/folderIcon.png" class="navIC" width="26.4px">Blog</td></tr>
+    <tr class="trNav"><td>&emsp;⤷<img src="/images/fileIcon.png" class="navIC" id="personalMF" width="20px"><a href="/blog/personal.html" class="navLink" id="personalM" onmouseover="navHovers(id)" onmouseout="fileDefault(id)"><u>P</u>ersonal</a></td></tr>
+    <tr class="trNav"><td>&emsp;⤷<img src="/images/fileIcon.png" class="navIC" id="visualJournalMF" width="20px"><a href="/blog/visual-journal.html" class="navLink" id="visualJournalM" onmouseover="navHovers(id)" onmouseout="fileDefault(id)"><u>V</u>isual journal</a></td></tr>
+    <tr class="trNav"><td>&emsp;⤷<img src="/images/fileIcon.png" class="navIC" id="computationTheoryMF" width="20px"><a href="/blog/computation-theory.html" class="navLink" id="computationTheoryM" onmouseover="navHovers(id)" onmouseout="fileDefault(id)"><u>C</u>omputation theory</a></td></tr>
+    <tr class="trNav"><td>&emsp;⤷<img src="/images/fileIcon.png" class="navIC" id="programmingMF" width="20px"><a href="/blog/programming.html" class="navLink" id="programmingM" onmouseover="navHovers(id)" onmouseout="fileDefault(id)"><u>P</u>rogramming</a></td></tr>
+    <tr class="trNav"><td>&emsp;⤷<img src="/images/fileIcon.png" class="navIC" id="ocsAndWorldbuildingMF" width="20px"><a href="/blog/ocs-and-worldbuilding.html" class="navLink" id="ocsAndWorldbuildingM" onmouseover="navHovers(id)" onmouseout="fileDefault(id)"><u>O</u>Cs and worldbuilding</a></td></tr>
+    <tr class="trNav"><td>&emsp;⤷<img src="/images/fileIcon.png" class="navIC" id="assemblyLanguageMF" width="20px"><a href="/blog/assembly-language.html" class="navLink" id="assemblyLanguageM" onmouseover="navHovers(id)" onmouseout="fileDefault(id)"><u>A</u>ssembly language</a></td></tr>
+    <tr class="trNav"><td>&emsp;⤷<img src="/images/fileIcon.png" class="navIC" id="apcsaMF" width="20px"><a href="/blog/ap-csa.html" class="navLink" id="apcsaM" onmouseover="navHovers(id)" onmouseout="fileDefault(id)"><u>A</u>P CSA</a></td></tr>
+{% endif %}
+{% if page.url == "/blog/programming" %}
+    <tr class="trNav"><td><img src="/images/folderIcon.png" class="navIC" width="26.4px">Blog</td></tr>
+    <tr class="trNav"><td>&emsp;⤷<img src="/images/fileIcon.png" class="navIC" id="personalMF" width="20px"><a href="/blog/personal.html" class="navLink" id="personalM" onmouseover="navHovers(id)" onmouseout="fileDefault(id)"><u>P</u>ersonal</a></td></tr>
+    <tr class="trNav"><td>&emsp;⤷<img src="/images/fileIcon.png" class="navIC" id="visualJournalMF" width="20px"><a href="/blog/visual-journal.html" class="navLink" id="visualJournalM" onmouseover="navHovers(id)" onmouseout="fileDefault(id)"><u>V</u>isual journal</a></td></tr>
+    <tr class="trNav"><td>&emsp;⤷<img src="/images/fileIcon.png" class="navIC" id="computationTheoryMF" width="20px"><a href="/blog/computation-theory.html" class="navLink" id="computationTheoryM" onmouseover="navHovers(id)" onmouseout="fileDefault(id)"><u>C</u>omputation theory</a></td></tr>
+    <tr class="trNav"><td>&emsp;⤷<img src="/images/fileIcon.png" class="navIC" id="programmingMF" width="20px"><a href="/blog/programming.html" class="navLink" id="programmingM" onmouseover="navHovers(id)" onmouseout="fileDefault(id)"><u>P</u>rogramming</a></td></tr>
+    <tr class="trNav"><td>&emsp;⤷<img src="/images/fileIcon.png" class="navIC" id="ocsAndWorldbuildingMF" width="20px"><a href="/blog/ocs-and-worldbuilding.html" class="navLink" id="ocsAndWorldbuildingM" onmouseover="navHovers(id)" onmouseout="fileDefault(id)"><u>O</u>Cs and worldbuilding</a></td></tr>
+    <tr class="trNav"><td>&emsp;⤷<img src="/images/fileIcon.png" class="navIC" id="assemblyLanguageMF" width="20px"><a href="/blog/assembly-language.html" class="navLink" id="assemblyLanguageM" onmouseover="navHovers(id)" onmouseout="fileDefault(id)"><u>A</u>ssembly language</a></td></tr>
+    <tr class="trNav"><td>&emsp;⤷<img src="/images/fileIcon.png" class="navIC" id="apcsaMF" width="20px"><a href="/blog/ap-csa.html" class="navLink" id="apcsaM" onmouseover="navHovers(id)" onmouseout="fileDefault(id)"><u>A</u>P CSA</a></td></tr>
+{% endif %}
+{% if page.url == "/blog/ocs-and-worldbuilding" %}
+    <tr class="trNav"><td><img src="/images/folderIcon.png" class="navIC" width="26.4px">Blog</td></tr>
+    <tr class="trNav"><td>&emsp;⤷<img src="/images/fileIcon.png" class="navIC" id="personalMF" width="20px"><a href="/blog/personal.html" class="navLink" id="personalM" onmouseover="navHovers(id)" onmouseout="fileDefault(id)"><u>P</u>ersonal</a></td></tr>
+    <tr class="trNav"><td>&emsp;⤷<img src="/images/fileIcon.png" class="navIC" id="visualJournalMF" width="20px"><a href="/blog/visual-journal.html" class="navLink" id="visualJournalM" onmouseover="navHovers(id)" onmouseout="fileDefault(id)"><u>V</u>isual journal</a></td></tr>
+    <tr class="trNav"><td>&emsp;⤷<img src="/images/fileIcon.png" class="navIC" id="computationTheoryMF" width="20px"><a href="/blog/computation-theory.html" class="navLink" id="computationTheoryM" onmouseover="navHovers(id)" onmouseout="fileDefault(id)"><u>C</u>omputation theory</a></td></tr>
+    <tr class="trNav"><td>&emsp;⤷<img src="/images/fileIcon.png" class="navIC" id="programmingMF" width="20px"><a href="/blog/programming.html" class="navLink" id="programmingM" onmouseover="navHovers(id)" onmouseout="fileDefault(id)"><u>P</u>rogramming</a></td></tr>
+    <tr class="trNav"><td>&emsp;⤷<img src="/images/fileIcon.png" class="navIC" id="ocsAndWorldbuildingMF" width="20px"><a href="/blog/ocs-and-worldbuilding.html" class="navLink" id="ocsAndWorldbuildingM" onmouseover="navHovers(id)" onmouseout="fileDefault(id)"><u>O</u>Cs and worldbuilding</a></td></tr>
+    <tr class="trNav"><td>&emsp;⤷<img src="/images/fileIcon.png" class="navIC" id="assemblyLanguageMF" width="20px"><a href="/blog/assembly-language.html" class="navLink" id="assemblyLanguageM" onmouseover="navHovers(id)" onmouseout="fileDefault(id)"><u>A</u>ssembly language</a></td></tr>
+    <tr class="trNav"><td>&emsp;⤷<img src="/images/fileIcon.png" class="navIC" id="apcsaMF" width="20px"><a href="/blog/ap-csa.html" class="navLink" id="apcsaM" onmouseover="navHovers(id)" onmouseout="fileDefault(id)"><u>A</u>P CSA</a></td></tr>
+{% endif %}
+{% if page.url == "/blog/assembly-language" %}
+    <tr class="trNav"><td><img src="/images/folderIcon.png" class="navIC" width="26.4px">Blog</td></tr>
+    <tr class="trNav"><td>&emsp;⤷<img src="/images/fileIcon.png" class="navIC" id="personalMF" width="20px"><a href="/blog/personal.html" class="navLink" id="personalM" onmouseover="navHovers(id)" onmouseout="fileDefault(id)"><u>P</u>ersonal</a></td></tr>
+    <tr class="trNav"><td>&emsp;⤷<img src="/images/fileIcon.png" class="navIC" id="visualJournalMF" width="20px"><a href="/blog/visual-journal.html" class="navLink" id="visualJournalM" onmouseover="navHovers(id)" onmouseout="fileDefault(id)"><u>V</u>isual journal</a></td></tr>
+    <tr class="trNav"><td>&emsp;⤷<img src="/images/fileIcon.png" class="navIC" id="computationTheoryMF" width="20px"><a href="/blog/computation-theory.html" class="navLink" id="computationTheoryM" onmouseover="navHovers(id)" onmouseout="fileDefault(id)"><u>C</u>omputation theory</a></td></tr>
+    <tr class="trNav"><td>&emsp;⤷<img src="/images/fileIcon.png" class="navIC" id="programmingMF" width="20px"><a href="/blog/programming.html" class="navLink" id="programmingM" onmouseover="navHovers(id)" onmouseout="fileDefault(id)"><u>P</u>rogramming</a></td></tr>
+    <tr class="trNav"><td>&emsp;⤷<img src="/images/fileIcon.png" class="navIC" id="ocsAndWorldbuildingMF" width="20px"><a href="/blog/ocs-and-worldbuilding.html" class="navLink" id="ocsAndWorldbuildingM" onmouseover="navHovers(id)" onmouseout="fileDefault(id)"><u>O</u>Cs and worldbuilding</a></td></tr>
+    <tr class="trNav"><td>&emsp;⤷<img src="/images/fileIcon.png" class="navIC" id="assemblyLanguageMF" width="20px"><a href="/blog/assembly-language.html" class="navLink" id="assemblyLanguageM" onmouseover="navHovers(id)" onmouseout="fileDefault(id)"><u>A</u>ssembly language</a></td></tr>
+    <tr class="trNav"><td>&emsp;⤷<img src="/images/fileIcon.png" class="navIC" id="apcsaMF" width="20px"><a href="/blog/ap-csa.html" class="navLink" id="apcsaM" onmouseover="navHovers(id)" onmouseout="fileDefault(id)"><u>A</u>P CSA</a></td></tr>
+{% endif %}
+{% if page.url == "/blog/ap-csa" %}
+    <tr class="trNav"><td><img src="/images/folderIcon.png" class="navIC" width="26.4px">Blog</td></tr>
+    <tr class="trNav"><td>&emsp;⤷<img src="/images/fileIcon.png" class="navIC" id="personalMF" width="20px"><a href="/blog/personal.html" class="navLink" id="personalM" onmouseover="navHovers(id)" onmouseout="fileDefault(id)"><u>P</u>ersonal</a></td></tr>
+    <tr class="trNav"><td>&emsp;⤷<img src="/images/fileIcon.png" class="navIC" id="visualJournalMF" width="20px"><a href="/blog/visual-journal.html" class="navLink" id="visualJournalM" onmouseover="navHovers(id)" onmouseout="fileDefault(id)"><u>V</u>isual journal</a></td></tr>
+    <tr class="trNav"><td>&emsp;⤷<img src="/images/fileIcon.png" class="navIC" id="computationTheoryMF" width="20px"><a href="/blog/computation-theory.html" class="navLink" id="computationTheoryM" onmouseover="navHovers(id)" onmouseout="fileDefault(id)"><u>C</u>omputation theory</a></td></tr>
+    <tr class="trNav"><td>&emsp;⤷<img src="/images/fileIcon.png" class="navIC" id="programmingMF" width="20px"><a href="/blog/programming.html" class="navLink" id="programmingM" onmouseover="navHovers(id)" onmouseout="fileDefault(id)"><u>P</u>rogramming</a></td></tr>
+    <tr class="trNav"><td>&emsp;⤷<img src="/images/fileIcon.png" class="navIC" id="ocsAndWorldbuildingMF" width="20px"><a href="/blog/ocs-and-worldbuilding.html" class="navLink" id="ocsAndWorldbuildingM" onmouseover="navHovers(id)" onmouseout="fileDefault(id)"><u>O</u>Cs and worldbuilding</a></td></tr>
+    <tr class="trNav"><td>&emsp;⤷<img src="/images/fileIcon.png" class="navIC" id="assemblyLanguageMF" width="20px"><a href="/blog/assembly-language.html" class="navLink" id="assemblyLanguageM" onmouseover="navHovers(id)" onmouseout="fileDefault(id)"><u>A</u>ssembly language</a></td></tr>
+    <tr class="trNav"><td>&emsp;⤷<img src="/images/fileIcon.png" class="navIC" id="apcsaMF" width="20px"><a href="/blog/ap-csa.html" class="navLink" id="apcsaM" onmouseover="navHovers(id)" onmouseout="fileDefault(id)"><u>A</u>P CSA</a></td></tr>
+{% endif %}
+{% if page.url == "/other" %}
+    <tr class="trNav"><td><img src="/images/folderIcon.png" class="navIC" width="26.4px">Other</td></tr>
+    <tr class="trNav"><td>&emsp;⤷<img src="/images/fileIcon.png" class="navIC" id="gamingMF" width="20px"><a href="/other/gaming.html" class="navLink" id="gamingM" onmouseover="navHovers(id)" onmouseout="fileDefault(id)"><u>G</u>aming</a></td></tr>
+    <tr class="trNav"><td>&emsp;⤷<img src="/images/fileIcon.png" class="navIC" id="tamagotchiCollectionMF" width="20px"><a href="/other/tamagotchi-collection.html" class="navLink" id="tamagotchiCollectionM" onmouseover="navHovers(id)" onmouseout="fileDefault(id)"><u>T</u>amagotchi collection</a></td></tr>
+    <tr class="trNav"><td>&emsp;⤷<img src="/images/fileIcon.png" class="navIC" id="adoptsAndStampsMF" width="20px"><a href="/other/adopts-and-stamps.html" class="navLink" id="adoptsAndStampsM" onmouseover="navHovers(id)" onmouseout="fileDefault(id)"><u>A</u>dopts and stamps</a></td></tr>
+    <tr class="trNav"><td>&emsp;⤷<img src="/images/fileIcon.png" class="navIC" id="linksMF" width="20px"><a href="/other/links.html" class="navLink" id="linksM" onmouseover="navHovers(id)" onmouseout="fileDefault(id)"><u>L</u>inks</a></td></tr>
+{% endif %}
+{% if page.url == "/other/gaming" %}
+    <tr class="trNav"><td><img src="/images/folderIcon.png" class="navIC" width="26.4px">Other</td></tr>
+    <tr class="trNav"><td>&emsp;⤷<img src="/images/fileIcon.png" class="navIC" id="gamingMF" width="20px"><a href="/other/gaming.html" class="navLink" id="gamingM" onmouseover="navHovers(id)" onmouseout="fileDefault(id)"><u>G</u>aming</a></td></tr>
+    <tr class="trNav"><td>&emsp;⤷<img src="/images/fileIcon.png" class="navIC" id="tamagotchiCollectionMF" width="20px"><a href="/other/tamagotchi-collection.html" class="navLink" id="tamagotchiCollectionM" onmouseover="navHovers(id)" onmouseout="fileDefault(id)"><u>T</u>amagotchi collection</a></td></tr>
+    <tr class="trNav"><td>&emsp;⤷<img src="/images/fileIcon.png" class="navIC" id="adoptsAndStampsMF" width="20px"><a href="/other/adopts-and-stamps.html" class="navLink" id="adoptsAndStampsM" onmouseover="navHovers(id)" onmouseout="fileDefault(id)"><u>A</u>dopts and stamps</a></td></tr>
+    <tr class="trNav"><td>&emsp;⤷<img src="/images/fileIcon.png" class="navIC" id="linksMF" width="20px"><a href="/other/links.html" class="navLink" id="linksM" onmouseover="navHovers(id)" onmouseout="fileDefault(id)"><u>L</u>inks</a></td></tr>
+{% endif %}
+{% if page.url == "/other/tamagotchi-collection" %}
+    <tr class="trNav"><td><img src="/images/folderIcon.png" class="navIC" width="26.4px">Other</td></tr>
+    <tr class="trNav"><td>&emsp;⤷<img src="/images/fileIcon.png" class="navIC" id="gamingMF" width="20px"><a href="/other/gaming.html" class="navLink" id="gamingM" onmouseover="navHovers(id)" onmouseout="fileDefault(id)"><u>G</u>aming</a></td></tr>
+    <tr class="trNav"><td>&emsp;⤷<img src="/images/fileIcon.png" class="navIC" id="tamagotchiCollectionMF" width="20px"><a href="/other/tamagotchi-collection.html" class="navLink" id="tamagotchiCollectionM" onmouseover="navHovers(id)" onmouseout="fileDefault(id)"><u>T</u>amagotchi collection</a></td></tr>
+    <tr class="trNav"><td>&emsp;⤷<img src="/images/fileIcon.png" class="navIC" id="adoptsAndStampsMF" width="20px"><a href="/other/adopts-and-stamps.html" class="navLink" id="adoptsAndStampsM" onmouseover="navHovers(id)" onmouseout="fileDefault(id)"><u>A</u>dopts and stamps</a></td></tr>
+    <tr class="trNav"><td>&emsp;⤷<img src="/images/fileIcon.png" class="navIC" id="linksMF" width="20px"><a href="/other/links.html" class="navLink" id="linksM" onmouseover="navHovers(id)" onmouseout="fileDefault(id)"><u>L</u>inks</a></td></tr>
+{% endif %}
+{% if page.url == "/other/adopts-and-stamps" %}
+    <tr class="trNav"><td><img src="/images/folderIcon.png" class="navIC" width="26.4px">Other</td></tr>
+    <tr class="trNav"><td>&emsp;⤷<img src="/images/fileIcon.png" class="navIC" id="gamingMF" width="20px"><a href="/other/gaming.html" class="navLink" id="gamingM" onmouseover="navHovers(id)" onmouseout="fileDefault(id)"><u>G</u>aming</a></td></tr>
+    <tr class="trNav"><td>&emsp;⤷<img src="/images/fileIcon.png" class="navIC" id="tamagotchiCollectionMF" width="20px"><a href="/other/tamagotchi-collection.html" class="navLink" id="tamagotchiCollectionM" onmouseover="navHovers(id)" onmouseout="fileDefault(id)"><u>T</u>amagotchi collection</a></td></tr>
+    <tr class="trNav"><td>&emsp;⤷<img src="/images/fileIcon.png" class="navIC" id="adoptsAndStampsMF" width="20px"><a href="/other/adopts-and-stamps.html" class="navLink" id="adoptsAndStampsM" onmouseover="navHovers(id)" onmouseout="fileDefault(id)"><u>A</u>dopts and stamps</a></td></tr>
+    <tr class="trNav"><td>&emsp;⤷<img src="/images/fileIcon.png" class="navIC" id="linksMF" width="20px"><a href="/other/links.html" class="navLink" id="linksM" onmouseover="navHovers(id)" onmouseout="fileDefault(id)"><u>L</u>inks</a></td></tr>
+{% endif %}
+{% if page.url == "/other/links" %}
+    <tr class="trNav"><td><img src="/images/folderIcon.png" class="navIC" width="26.4px">Other</td></tr>
+    <tr class="trNav"><td>&emsp;⤷<img src="/images/fileIcon.png" class="navIC" id="gamingMF" width="20px"><a href="/other/gaming.html" class="navLink" id="gamingM" onmouseover="navHovers(id)" onmouseout="fileDefault(id)"><u>G</u>aming</a></td></tr>
+    <tr class="trNav"><td>&emsp;⤷<img src="/images/fileIcon.png" class="navIC" id="tamagotchiCollectionMF" width="20px"><a href="/other/tamagotchi-collection.html" class="navLink" id="tamagotchiCollectionM" onmouseover="navHovers(id)" onmouseout="fileDefault(id)"><u>T</u>amagotchi collection</a></td></tr>
+    <tr class="trNav"><td>&emsp;⤷<img src="/images/fileIcon.png" class="navIC" id="adoptsAndStampsMF" width="20px"><a href="/other/adopts-and-stamps.html" class="navLink" id="adoptsAndStampsM" onmouseover="navHovers(id)" onmouseout="fileDefault(id)"><u>A</u>dopts and stamps</a></td></tr>
+    <tr class="trNav"><td>&emsp;⤷<img src="/images/fileIcon.png" class="navIC" id="linksMF" width="20px"><a href="/other/links.html" class="navLink" id="linksM" onmouseover="navHovers(id)" onmouseout="fileDefault(id)"><u>L</u>inks</a></td></tr>
+{% endif %}
+</table>

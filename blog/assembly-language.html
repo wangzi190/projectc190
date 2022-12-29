@@ -3,6 +3,11 @@ layout: default
 title: <a href="/"><u>L</u>anding</a> > <a href="/blog.html"><u>B</u>log</a> > <b>Assembly language</b>
 permalink: /blog/assembly-language
 ---
+<style>
+  #postLink {color: #7b8a48;}
+  #postLink:hover {color: #7b8a48;}
+</style>
+
 There are no posts in this category.
 {% for post in site.posts %}
 {% if post.categories contains "assemblyLanguage" %}
@@ -10,7 +15,7 @@ There are no posts in this category.
   <h3>
       {{ post.title }}
   </h3>
-  <time datetime="{{ post.date | date: "%Y-%m-%d" }}">{{ post.date | date_to_long_string }}</time>
+  <time datetime="{{ post.date | date: "%Y-%m-%d" }}">{{ post.date | date_to_long_string }}</time> <a href="{{ post.url }}" target="_blank" id="postLink"><u>L</u>ink this post</a>
   {{ post.content }}
 </article>
 {% endif %}

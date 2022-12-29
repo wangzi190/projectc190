@@ -37,42 +37,43 @@
     <style>
         body {
             font-family: "Lucida Console", monospace;
-            background-color: #0A0A0A;
+            background-image: url("/images/background4.png");
+            background-size: 500px;
+            /* background-color: #0A0A0A; */
             /*overflow: clip;*/
         }
         th, td {
-            color: #7b8a48;
-            border: 0px;
+            color: #262626;
         }
         #mainBox {
-          color: #7b8a48;
+          color: #262626;
           border: 2px solid;
-          border-color: #7b8a48;
+          border-color: #262626;
           padding: 5px;
+          background-color: #e6e6e6;
         }
         #loadingBar {
         width: 20%;
-        background-color: #0A0A0A;
         margin: auto;
         margin-top: 12rem;
         }
         .itemLB {
             margin-top: 0.2rem;
             margin-bottom: 0.2rem;
-            color: #7b8a48;
+            color: #262626;
         }
         #progress {
         width: 1%;
         height: 30px;
-        background-color: #616e32;
+        background-color: #262626;
         }
         #progressText {
             text-align: right;
         }
-        a {color: #7b8a48; text-decoration: none;}
-        a:hover {color: #7b8a48; text-decoration: underline;}
+        a {color: #262626; text-decoration: none;}
+        a:hover {color: #262626; text-decoration: underline;}
         .item {
-            margin-left: 5px;
+            margin-left: 10px;
         }
     </style>
 </head>
@@ -84,23 +85,31 @@
         <div class="itemLB" id="progressText">0%</div>
     </div>
     <div id="data" hidden="true">
-        <table style="width:35%;margin:auto;margin-top:6vh;">
-            <th style="text-align:left;" colspan="2">project c190</th>
+        <table style="width:35%;margin:auto;margin-top:6vh;margin-bottom:6vh;">
+            <tr height="1%">
+                <th colspan="2"><img src="/images/title-bw.png" width="400px" id="title" style="margin-bottom:5px;">
+                <br><img src="/images/mind.png" width="400px" style="margin-bottom:10px;"></th>
+            </tr>
             <tr>
-                <td id="mainBox">Hello <i>!</i> You can call me <a href="https://pronouny.xyz/u/wangzi190" target="_blank"><u>S</u>oren</a>.
-                <br><br>I grew up on the kids' coding website Scratch, where I published projects under the username Crafty190. Scratch gave me the means to develop my interests in drawing and computer programming throughout my childhood.
-                <br><br>I've created this website as a space to continue working on these interests, which have now expanded to drawing, all things computers, and math (You might see me introduce myself as Soren, who likes drawing, computers, and math.).
-                <br><br>Aside from the aforementioned, you can also expect content about my life in general, like how school's going, or what video games I've been playing.
-                <br><br>Below is my contact info; feel free to chat sometime.
-                <br><br>E-mail: <a href="mailto:projectc190@gmail.com" rel="EMAIL" target="_blank"><u>p</u>rojectc190@gmail.com</a>
-                <br>Discord: abacist#0164
-                </td>
-                <td>
-                    <img src="/images/abacus.png" class="item" width="105px">
-                    <br><img src="/images/drawing_supps.png" class="item" width="125px">
-                    <br><img src="/images/pencil_eraser.png" class="item" width="45px">
-                    <br><img src="/images/sketch_comp.png" class="item" width="150px">
-                    <br><img src="/images/piyo.png" class="item" width="115px">
+                <td id="mainBox">
+                <table><tr>
+                    <td><br><b>Hello</b> <i>!</i> You can call me <a href="https://pronouny.xyz/u/wangzi190" target="_blank"><u>S</u>oren</a>.
+                        <br><br>I grew up on the kids' coding website Scratch, where I published projects under the username Crafty190. Scratch gave me the means to develop my interests in drawing and computer programming throughout my childhood.
+                        <br><br>I've created this website as a space to continue working on these interests, which have now expanded to drawing, all things computers, and math (You might see me introduce myself as Soren, who likes drawing, computers, and math.).
+                        <br><br>Aside from the aforementioned, you can also expect content about my life in general, like how school's going, or what video games I've been playing.
+                        <br><br>Below is my contact info; feel free to chat sometime.
+                        <br><br>E-mail: <a href="mailto:projectc190@gmail.com" rel="EMAIL" target="_blank"><u>p</u>rojectc190@gmail.com</a>
+                        <br>Discord: abacist#0164
+                        <br><span style="color:#e6e6e6">..</span>
+                    </td>
+                    <td>
+                        <img src="/images/abacus.png" class="item" width="105px">
+                        <br><img src="/images/drawing_supps.png" class="item" width="125px">
+                        <br><img src="/images/pencil_eraser.png" class="item" width="45px">
+                        <br><img src="/images/sketch_comp.png" class="item" width="150px">
+                        <br><img src="/images/piyo.png" class="item" width="115px">
+                    </td>
+                </tr></table>
                 </td>
             </tr>
             <tr>

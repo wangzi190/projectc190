@@ -3,6 +3,11 @@ layout: default
 title: <a href="/"><u>L</u>anding</a> > <a href="/blog.html"><u>B</u>log</a> > <b>AP CSA</b>
 permalink: /blog/ap-csa
 ---
+<style>
+  #postLink {color: #7b8a48;}
+  #postLink:hover {color: #7b8a48;}
+</style>
+
 <img src="/images/code_code_code.png">
 <br>For AP CSA.
 <br><b>NOTE:</b> This is the only section of my blog where posts are not ordered in reverse chronological order.
@@ -13,6 +18,7 @@ permalink: /blog/ap-csa
   <h3>
       {{ post.title }}
   </h3>
+  <a href="{{ post.url }}" target="_blank" id="postLink"><u>L</u>ink this post</a>
   {{ post.content }}
 </article>
 {% endif %}

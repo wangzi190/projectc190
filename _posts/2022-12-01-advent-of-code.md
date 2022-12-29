@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: posts
 title: Advent of Code 2022
 categories: programming
 ---

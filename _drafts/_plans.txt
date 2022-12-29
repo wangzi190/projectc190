@@ -1,11 +1,9 @@
 Site-specific
     To-do [PRIORITY]:
         [O] Drawings and gadgets pages
-        [O] Make "posts" layout so you can link individual posts
-        [O] Fix broken icon animations D:
+        [O] Revamp "About" page
 
     Consider:
-        Show random background each page
         Music box
         Fill blog.html, other.html, etc.
 

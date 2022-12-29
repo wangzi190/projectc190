@@ -1,6 +1,3 @@
----
-permalink: /test/drawings
----
 <!DOCTYPE html>
 <html>
 
@@ -60,40 +57,42 @@ permalink: /test/drawings
     <style>
         body {
             font-family: "Lucida Console", monospace;
-            background-color: #0A0A0A;
+            background-image: url("/images/background4.png");
+            background-size: 500px;
+            /* background-color: #0A0A0A; */
             /*overflow: clip;*/
         }
         th, td {
-            color: #7b8a48;
+            color: #262626;
             border: 0px;
         }
         #mainBox {
-          color: #7b8a48;
+          color: #262626;
           border: 2px solid;
-          border-color: #7b8a48;
+          border-color: #262626;
           padding: 5px;
+          background-color: #e6e6e6;
         }
         #loadingBar {
         width: 20%;
-        background-color: #0A0A0A;
         margin: auto;
         margin-top: 12rem;
         }
         .itemLB {
             margin-top: 0.2rem;
             margin-bottom: 0.2rem;
-            color: #7b8a48;
+            color: #262626;
         }
         #progress {
         width: 1%;
         height: 30px;
-        background-color: #616e32;
+        background-color: #262626;
         }
         #progressText {
             text-align: right;
         }
-        a {color: #7b8a48; text-decoration: none;}
-        a:hover {color: #7b8a48; text-decoration: underline;}
+        a {color: #262626; text-decoration: none;}
+        a:hover {color: #262626; text-decoration: underline;}
         #floppy {
             margin-right: 5px;
         }
@@ -107,14 +106,25 @@ permalink: /test/drawings
         <div class="itemLB" id="progressText">0%</div>
     </div>
     <div id="data" hidden="true">
-        <table style="width:35%;margin:auto;margin-top:6vh;">
-            <th style="text-align:left;">project c190</th>
+        <table style="width:35%;margin:auto;margin-top:6vh;margin-bottom:6vh;">
+            <tr height="1%">
+                <th><img src="/images/title-bw.png" width="400px" id="title" style="margin-bottom:5px;">
+                <br><img src="/images/mind.png" width="400px" style="margin-bottom:10px;"></th>
+            </tr>
             <tr>
-                <td id="mainBox"><img src="/images/frames/floppy1.png" id="floppy" width="50px">Still working on this page</td>
+                <td id="mainBox">
+                    <article>
+                        <h3>
+                            {{ page.title }}
+                        </h3>
+                        <time datetime="{{ page.date | date: "%Y-%m-%d" }}">{{ page.date | date_to_long_string }}</time>
+                            {{ content }}
+                    </article>
+                </td>
             </tr>
             <tr>
                 <td style="text-align:right;">
-                    <a href="/"><u>C</u>lick here to return <i>!</i></a>
+                    This is just 1 post.<br><a href="/"><u>R</u>eturn to the main website?</a>
                 </td>
             </tr>
         </table>

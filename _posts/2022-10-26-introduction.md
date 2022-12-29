@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: posts
 title: An introduction
 categories: computationTheory
 ---
