@@ -1,23 +1,74 @@
-Site-specific
+> Site-specific
+---------------------------------------------------------------!
     To-do [PRIORITY]:
-        [O] Drawings and gadgets pages
-        [O] Link embed/stamps
+        Fill all "drawings" data into drawings.html
+
+        Page layout for individual drawings
+
+        Fill all "gadgets" data into gadgets.html
+
+        'Inserting floppy disk' animation
+
+    ^ Spinning floppy disk icon will link to the individual drawing/gadgets' page
+---------------------------------------------------------------!
 
     Consider:
+        Stamps so websurfers can link to your site
         Music box
-        Fill blog.html, other.html, etc.
+        Add content to blog.html, other.html, etc.
 
-Projects
+> Projects
     Programming:
         Automata theory reading
+        Sudoku puzzle generator and solver
         Optimized control abacus
-        Sudoku online
-            Webpage (HTML/CSS/JS) w/ playable games
-            Sudoku puzzle solver in a diff. language ?
-        Advent of Code
 
     Drawing:
-        MS Paint techniques
+        Portfolio pieces !! <
 
-    Other:
-        Crochet book cover for programming notebook
+        "Tyto albot" species
+        "Should machines think?"
+
+
+
+
+
+
+
+
+
+
+    Concept details:
+    1)
+        Alien barn owl people send mechanical barn owls to drive out/compromise
+        Earth's barn owls to gather intel on humans
+
+        Point: Show viewers something so wacky that it makes them uncomfortable with
+        anything resembling it in modern day (i.e. barn owl people angry that
+        humans don't like their more "efficient" machine barn owls; barn owl
+        people insisting that it is better to replace barn owls with machines for
+        the sake of efficiency/profit)
+        (Insisting Earths barn owls are weak, useless)
+
+            The barn owls have begun to show strange behaviors. We caught one to research the other day.
+            On the lab security footage, it appears to have spun its head multiple times in the same direction.
+            It is equally as active in the day as it is at night.
+
+            The tyto albot is a bird species documented by Ornis Technology researchers
+            in 1990. Though the species closely resembles the barn owl, it has shown behaviors
+            anomalous enough to be classi
+
+            It turns out that the sharp decrease in the barn owl population is
+            due to a strange new bird species in the area. Though the species appears
+            similar to the barn owl, it has shown behaviors anomalous enough to give
+            scientist a reason to suspect it is something entirely different. 
+            
+            Dubbed the "tyto albot" by
+            locals, it resembles the barn owl (tyto alba), but its behaviors are so
+            (?? Idk rambling but these are things you could write on the piece i guess)
+
+    2)
+        Users of a certain mobile app report amnesic(?) symptoms even if not
+        predisposed to amnesia
+
+        "Resetting your brain" fearing you are no longer yourself; wanting to start again

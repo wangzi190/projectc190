@@ -1,7 +1,11 @@
+blog
     personal
     visualJournal
     computationTheory
     programming
     ocsAndWorldBuilding
     assemblyLanguage
-    apcsa
+
+portfolio
+    drawings 
+    gadgets

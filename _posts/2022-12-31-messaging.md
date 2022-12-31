@@ -1,0 +1,7 @@
+---
+layout: posts
+title: Messaging in art
+categories: visualJournal
+---
+I really dislike artwork whose message is so direct it seems almost propagandistic. For example, the other day I saw a drawing of a TV with an outstretched hand protruding from its screen, and I felt almost like it was a waste of the artists' skill to draw something like that (I know this seems overly critical, but it's probably more of a reflection of my own taste rather than somebody else's artistry. The piece is simply something I personally would not want to draw.). I want to create pieces that move people in such a way that it prompts them to think in multiple perspectives. I think the concepts that I'm playing with at the moment might be able to achieve that. I don't want to put them out for people to see yet, but they involve elements of dereality, animal allegory, and science fiction—things I like and have considered before, strung together in a way I have never yet considered.<br>
+I don't even know if this even makes sense, but I guess what I'm getting at is all sides of an argument exist for a reason. Often, there is "objectively true" logic to every argument, but the premises on which the logic is built upon are why somebody would disagree with that argument. I don't want to put out a piece that frames a situation so specifically it leaves no room for questioning and critical thought.
