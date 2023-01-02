@@ -10,6 +10,8 @@
         'Inserting floppy disk' animation
 
     ^ Spinning floppy disk icon will link to the individual drawing/gadgets' page
+
+        Transfer notebook files to a public repo/deal with repo visibility thing
 ---------------------------------------------------------------!
 
     Consider:
@@ -39,9 +41,55 @@
 
 
     Concept details:
-    1)
+    IN A NUTSHELL: HIGHLY TECHNOLOGICALLY ADVANCED ALIEN OWL-HUMANOIDS FUCK UP THEIR
+    PLANET BECAUSE OF THEIR LACK OF UNDERSTANDING OF ETHICS. THEY BEGIN LOOKING FOR 
+    RESOURCES AND GATHERING INTEL ON HUMANS ON EARTH.
+
+    ILLUSTRATIONS SHOULD DETAIL PECULIAR EVENTS THAT HAPPEN BECAUSE OF THE ALIEN ACTIVITY
+
+    OWLS ALREADY HAVE SUCH AN ALIEN-LIKE QUALITY.. WHAT IF THEY WERE REALLY ALIENS
+    FROM ANOTHER WORLD? WHAT ARE THEIR PHILOSOPHIES, MORALS? WHAT CAN WE LEARN FROM THEM?
+
+    Piece ideas (!!!!):
+    Mediums : Crayon for texture (and bright or otherwise unconventional colors?) +sketch
+    Add cutouts to make a scrap book ish look (Imitation game cutouts!!)
+--------------------------------------------------------------------------------------------
+    Anthropomorphized owl in suit to develop design
+
+    Anthropomorphized owl (ominous, unsettling look) captioned "The less he spoke, the more he heard"
+
+    Anthropomorphized owl shaking hands with businessman captioned "Why can't we
+    all be like that wise old bird?"
+
+    Anthropomorphized pigeon admiring artworks in a museum
+
+    Owl/bird sketchpages with notes detailing the strange happenings due to alien activity
+--------------------------------------------------------------------------------------------
+
+
+
+
+    Brainstorming stuff :
         Alien barn owl people send mechanical barn owls to drive out/compromise
         Earth's barn owls to gather intel on humans
+
+        WHAT IF THE ALIENS ARE ALL BIRD PEOPLE AND THE BARN OWL ALIENS ARE THE ONES
+        TASKED TO DESIGN BARN OWL MACHINES TO GATHER RESOURCES (BECAUSE
+        THEIR PLANET IS RUNNING OUT OF THEM) AND INTEL ON HUMANS 
+
+        AND BECAUSE OWLS ARE SUCH EFFICIENT HUNTERS THE ROBOT BARN OWLS END UP OUTHUNTING
+        EARTH'S BARN OWLS AND DRIVING DOWN ITS POPULATION
+
+        WHAT IF THE ALIEN BIRD PEOPLE ARE HIGHLY INTELLIGENT ONLY WITH LITTLE TO NO 
+        UNDERSTANDING OF DESIGN ETHICS ULTIMATELY CAUSING DESTRUCTION TO THE PLANETS
+        THEY INHABIT
+
+        NO WAIT THE ALIEN BIRD PEOPLE SHOULD JUST BE OWLS BECAUSE THEY ARE
+        REGARDED AS HIGHLY INTELLIGENT BY MANY BUT ARE ONLY VERY EFFICIENT 
+        AT THINGS LIKE HUNTING, ETC. AND DO NOT HAVE MUCH BRAINSPACE TO USE ON 
+        OTHER COGNITIVE FUNCTIONS. WHICH IS WHY THE ALIEN OWLS DONT KNOW SHIT ABOUT
+        ETHICS AND END UP DESTROYING THE PLANETS THEY INHABIT THE MORE ADVANCED
+        THEY BECOME
 
         Point: Show viewers something so wacky that it makes them uncomfortable with
         anything resembling it in modern day (i.e. barn owl people angry that
@@ -72,3 +120,7 @@
         predisposed to amnesia
 
         "Resetting your brain" fearing you are no longer yourself; wanting to start again
+
+        Barn owl aliens so dizzy with influences from human technology that they want to reset their minds?
+        Human developer pirates the software the barn owl aliens use to reset their minds, and publishes
+        it in their own name? Other humans who download and use the software get their minds reset?
