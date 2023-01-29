@@ -98,6 +98,49 @@ permalink: /drawings
         #floppy {
             margin-right: 5px;
         }
+        .flex-container {
+            display: flex;
+            flex-direction: row;
+            text-align: center;
+        }
+        .flex-left {
+            color: #7b8a48;
+            background-color: #0A0A0A;
+            padding: 10px;
+            border: 2px solid;
+            border-color: #7b8a48;
+            flex: 100%;
+            max-width: 445px;
+            margin-right: 5px;
+            margin-left: auto;
+        }
+        .flex-right {
+            color: #7b8a48;
+            background-color: #0A0A0A;
+            padding: 10px;
+            border: 2px solid;
+            border-color: #7b8a48;
+            flex: 100%;
+            max-width: 445px;
+            margin-right: auto;
+            margin-left: 5px;
+        }
+        @media (max-width: 900px) {
+            .flex-container {
+                flex-direction: column;
+            }
+            .flex-left {
+                width: 400px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            .flex-right {
+                width: 400px;
+                margin-top: 10px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
     </style>
 </head>
 
@@ -108,19 +151,64 @@ permalink: /drawings
         <div class="itemLB" id="progressText">0%</div>
     </div>
     <div id="data" hidden="true">
-        <table style="width:100%;max-width:660px;min-width:400px;margin-left:auto;margin-right:auto;margin-top:3vh;margin-bottom:6vh;">
+        <table style="width:100%;max-width:900px;min-width:400px;margin-left:auto;margin-right:auto;margin-top:3vh;margin-bottom:6vh;">
             <tr height="1%">
                 <th><img src="/images/title_dark.png" width="400px" id="title" style="margin-bottom:10px;"></th>
             </tr>
-            <tr>
-                <td id="mainBox"><img src="/images/frames/floppy1.png" id="floppy" width="50px">Still working on this page</td>
-            </tr>
-            <tr>
-                <td style="text-align:right;">
-                    <a href="/"><u>C</u>lick here to return <i>!</i></a>
-                </td>
-            </tr>
-        </table>
+        <tr><td>
+        <div class="flex-container">
+            <div class="flex-left">
+                <table>
+                <tr>
+                    <td>
+                        <img src="https://user-images.githubusercontent.com/57303754/133536372-e53bbd13-c249-4a7c-a2d0-24a7d1799b3f.png" width="100%">
+                    </td>
+                </tr>
+                <tr>
+                    <td style="text-align:left;">
+                        <img src="/images/frames/floppy1.png" id="floppy" width="50px">
+                    </td>
+                </tr>
+                </table>
+            </div>
+            <div class="flex-right">
+                <table>
+                <tr>
+                    <td style="color:#0A0A0A;text-align:left;">
+                        -
+                    </td>
+                </tr>
+                <tr><td style="text-align:center;">
+                    <div style="overflow-x:hidden;overflow-y:auto;height:600px;">
+                        <img src="https://user-images.githubusercontent.com/57303754/150660097-636fa712-7659-4195-8a83-3ae048190fde.png" width="150px">
+                        <img src="https://user-images.githubusercontent.com/57303754/133536372-e53bbd13-c249-4a7c-a2d0-24a7d1799b3f.png" width="150px">
+                        <img src="https://user-images.githubusercontent.com/57303754/102111072-ca439380-3dea-11eb-8f5b-a2bc435c19c3.png" width="150px">
+                        <img src="https://user-images.githubusercontent.com/57303754/104417703-aa5ad900-552a-11eb-8206-aa96fd51cb77.png" width="150px">
+                        <img src="https://user-images.githubusercontent.com/57303754/150660097-636fa712-7659-4195-8a83-3ae048190fde.png" width="150px">
+                        <img src="https://user-images.githubusercontent.com/57303754/133536372-e53bbd13-c249-4a7c-a2d0-24a7d1799b3f.png" width="150px">
+                        <img src="https://user-images.githubusercontent.com/57303754/102111072-ca439380-3dea-11eb-8f5b-a2bc435c19c3.png" width="150px">
+                        <img src="https://user-images.githubusercontent.com/57303754/104417703-aa5ad900-552a-11eb-8206-aa96fd51cb77.png" width="150px">
+                        <img src="https://user-images.githubusercontent.com/57303754/150660097-636fa712-7659-4195-8a83-3ae048190fde.png" width="150px">
+                        <img src="https://user-images.githubusercontent.com/57303754/133536372-e53bbd13-c249-4a7c-a2d0-24a7d1799b3f.png" width="150px">
+                        <img src="https://user-images.githubusercontent.com/57303754/102111072-ca439380-3dea-11eb-8f5b-a2bc435c19c3.png" width="150px">
+                        <img src="https://user-images.githubusercontent.com/57303754/104417703-aa5ad900-552a-11eb-8206-aa96fd51cb77.png" width="150px">
+                    </div>
+                </td></tr>
+                <tr>
+                    <td style="color:#0A0A0A;text-align:left;">
+                        -
+                    </td>
+                </tr>
+                </table>
+            </div>
+        </div>
+        </td></tr>
+        <tr>
+            <td style="text-align:right;">
+                <a href="/"><u>C</u>lick here to return <i>!</i></a>
+            </td>
+        </tr>
+    </table>
     </div>
 </body>
 
