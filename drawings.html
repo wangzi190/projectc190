@@ -56,6 +56,16 @@ permalink: /drawings
         function stop(id) {
             document.getElementById(id).src = "/images/frames/floppy1.png";
         }
+        /* function switchGallery(id) {
+        }
+        function drawingClicked(id) {
+            selected = document.getElementById(id).getAttribute("src");
+            selected = selected.replace("/images/drawings/", "/images/drawing_thumbnails/");
+            document.getElementById(display).src = selected;
+        }
+        > add drawingHover(id) function
+        > change img brightness when hovered over
+        */ 
     </script>
     <style>
         body {
@@ -161,7 +171,7 @@ permalink: /drawings
                 <table>
                 <tr>
                     <td>
-                        <img src="https://user-images.githubusercontent.com/57303754/133536372-e53bbd13-c249-4a7c-a2d0-24a7d1799b3f.png" width="100%">
+                        <img src="https://user-images.githubusercontent.com/57303754/133536372-e53bbd13-c249-4a7c-a2d0-24a7d1799b3f.png" id="display" width="100%">
                     </td>
                 </tr>
                 <tr>
@@ -181,7 +191,7 @@ permalink: /drawings
                 </tr>
                 <tr><td style="text-align:center;">
                     <div style="overflow-x:hidden;overflow-y:auto;height:600px;">
-                        <img src="https://user-images.githubusercontent.com/57303754/150660097-636fa712-7659-4195-8a83-3ae048190fde.png" width="150px">
+                        <img src="https://user-images.githubusercontent.com/57303754/150660097-636fa712-7659-4195-8a83-3ae048190fde.png" id="fox" width="150px" onclick="drawingClicked(id)">
                         <img src="https://user-images.githubusercontent.com/57303754/133536372-e53bbd13-c249-4a7c-a2d0-24a7d1799b3f.png" width="150px">
                         <img src="https://user-images.githubusercontent.com/57303754/102111072-ca439380-3dea-11eb-8f5b-a2bc435c19c3.png" width="150px">
                         <img src="https://user-images.githubusercontent.com/57303754/104417703-aa5ad900-552a-11eb-8206-aa96fd51cb77.png" width="150px">
