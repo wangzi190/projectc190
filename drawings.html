@@ -56,16 +56,28 @@ permalink: /drawings
         function stop(id) {
             document.getElementById(id).src = "/images/frames/floppy1.png";
         }
-        /* function switchGallery(id) {
+        var openedDrawing = "null";
+        function drawingClick(id) {
+            if (id == openedDrawing) {
+                document.getElementById("display").src = "";
+                openedDrawing = "null";
+            } else {
+                openedDrawing = id;
+                if (id.includes("_same")) {
+                    document.getElementById("display").src = document.getElementById(id).getAttribute("src");
+                } else {
+                    value = document.getElementById(id).getAttribute("src");
+                    value = value.replace("drawing_thumbnails", "drawings");
+                    document.getElementById("display").src = value;
+                }
+            }
         }
-        function drawingClicked(id) {
-            selected = document.getElementById(id).getAttribute("src");
-            selected = selected.replace("/images/drawings/", "/images/drawing_thumbnails/");
-            document.getElementById(display).src = selected;
+        function drawingHover(id) {
+            document.getElementById(id).style.filter = "brightness(80%)";
         }
-        > add drawingHover(id) function
-        > change img brightness when hovered over
-        */ 
+        function drawingRelease(id) {
+            document.getElementById(id).style.filter = "brightness(100%)";
+        }
     </script>
     <style>
         body {
@@ -167,49 +179,28 @@ permalink: /drawings
             </tr>
         <tr><td>
         <div class="flex-container">
-            <div class="flex-left">
+            <div class="flex-left" style="overflow-x:hidden;overflow-y:auto;height:650px;">
                 <table>
                 <tr>
                     <td>
-                        <img src="https://user-images.githubusercontent.com/57303754/133536372-e53bbd13-c249-4a7c-a2d0-24a7d1799b3f.png" id="display" width="100%">
+                        <img src="" id="display" width="100%">
                     </td>
                 </tr>
-                <tr>
-                    <td style="text-align:left;">
-                        <img src="/images/frames/floppy1.png" id="floppy" width="50px"> This is a work in progress!!
-                        <br>For now, enjoy the random drawings of mine I picked to test out this page.
-                    </td>
-                </tr>
+                <tr><td style="text-align:left;">
+                    <img src="/images/frames/floppy1.png" id="floppy" width="50px"> This is a work in progress!!
+                    <br>For now, enjoy the random drawings of mine I picked to test out this page.
+                    <br><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet rutrum felis, nec sollicitudin magna. Phasellus turpis nisi, ornare et euismod id, euismod eu lectus. Integer suscipit eu purus ut commodo. Nam placerat aliquam augue, in ultrices odio luctus bibendum. Aliquam turpis neque, dignissim quis condimentum nec, commodo sed sapien. Vestibulum sit amet interdum lectus. Praesent ac hendrerit mauris. Vestibulum convallis neque vel placerat consequat. Curabitur venenatis lorem quis est pretium accumsan. Cras aliquet rutrum leo nec porttitor. Sed vitae aliquam mi.
+                </td></tr>
                 </table>
             </div>
-            <div class="flex-right">
+            <div class="flex-right" style="overflow-x:hidden;overflow-y:auto;height:650px;">
                 <table>
-                <tr>
-                    <td style="color:#0A0A0A;text-align:left;">
-                        -
-                    </td>
-                </tr>
                 <tr><td style="text-align:center;">
-                    <div style="overflow-x:hidden;overflow-y:auto;height:600px;">
-                        <img src="https://user-images.githubusercontent.com/57303754/150660097-636fa712-7659-4195-8a83-3ae048190fde.png" id="fox" width="150px" onclick="drawingClicked(id)">
-                        <img src="https://user-images.githubusercontent.com/57303754/133536372-e53bbd13-c249-4a7c-a2d0-24a7d1799b3f.png" width="150px">
-                        <img src="https://user-images.githubusercontent.com/57303754/102111072-ca439380-3dea-11eb-8f5b-a2bc435c19c3.png" width="150px">
-                        <img src="https://user-images.githubusercontent.com/57303754/104417703-aa5ad900-552a-11eb-8206-aa96fd51cb77.png" width="150px">
-                        <img src="https://user-images.githubusercontent.com/57303754/150660097-636fa712-7659-4195-8a83-3ae048190fde.png" width="150px">
-                        <img src="https://user-images.githubusercontent.com/57303754/133536372-e53bbd13-c249-4a7c-a2d0-24a7d1799b3f.png" width="150px">
-                        <img src="https://user-images.githubusercontent.com/57303754/102111072-ca439380-3dea-11eb-8f5b-a2bc435c19c3.png" width="150px">
-                        <img src="https://user-images.githubusercontent.com/57303754/104417703-aa5ad900-552a-11eb-8206-aa96fd51cb77.png" width="150px">
-                        <img src="https://user-images.githubusercontent.com/57303754/150660097-636fa712-7659-4195-8a83-3ae048190fde.png" width="150px">
-                        <img src="https://user-images.githubusercontent.com/57303754/133536372-e53bbd13-c249-4a7c-a2d0-24a7d1799b3f.png" width="150px">
-                        <img src="https://user-images.githubusercontent.com/57303754/102111072-ca439380-3dea-11eb-8f5b-a2bc435c19c3.png" width="150px">
-                        <img src="https://user-images.githubusercontent.com/57303754/104417703-aa5ad900-552a-11eb-8206-aa96fd51cb77.png" width="150px">
-                    </div>
-                </td></tr>
-                <tr>
-                    <td style="color:#0A0A0A;text-align:left;">
-                        -
-                    </td>
-                </tr>
+                        <img src="/images/drawing_thumbnails/big_guy_flowers.png" id="big_guy_flowers" width="150px" onmousedown="drawingClick(id)" onmouseover="drawingHover(id)" onmouseout="drawingRelease(id)">
+                        <img src="/images/drawings/mixedMed_flower_pink.png" id="mixedMed_flower_pink_same" width="150px" onmousedown="drawingClick(id)" onmouseover="drawingHover(id)" onmouseout="drawingRelease(id)">
+                        <img src="" width="150px">
+                        <img src="" width="150px">
+                    </td></tr>
                 </table>
             </div>
         </div>
