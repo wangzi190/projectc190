@@ -1,7 +1,7 @@
 ---
 layout: default
-title: <a href="/"><u>L</u>anding</a> > <a href="/blog.html"><u>B</u>log</a> > <b>Personal</b>
-permalink: /blog/personal
+title: <a href="/"><u>L</u>anding</a> > <a href="/blog.html"><u>B</u>log</a> > <b>Thoughts</b>
+permalink: /blog/thoughts
 ---
 <style>
   #postLink {color: #7b8a48;}
@@ -9,7 +9,7 @@ permalink: /blog/personal
 </style>
 
 {% for post in site.posts %}
-{% if post.categories contains "personal" %}
+{% if post.categories contains "thoughts" %}
 <article>
   <h3>
       {{ post.title }}

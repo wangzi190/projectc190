@@ -1,7 +1,7 @@
 ---
 layout: posts
 title: Turing portrait; general progress
-categories: visualJournal
+categories: sketchbook
 ---
 Here's what I worked on today!<br>
 <img src="/images/for-posts/turing_wip_EYES!!.png" width="400px">

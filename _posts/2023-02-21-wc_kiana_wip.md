@@ -1,7 +1,7 @@
 ---
 layout: posts
 title: Kiana Kaslana cameo
-categories: visualJournal
+categories: sketchbook
 ---
 It's fun stitching a bunch of references together instead of drawing directly off of one. The face is pretty much all improv, which I guess is pretty good given that I struggle with less-than-realistic faces. I don't know; I tend to find realism or semi-realism easier because it entails making careful observations of what you can already see.
 <br><img src="/images/for-posts/wc_kiana_wip.png" width="400px">
