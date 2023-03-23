@@ -13,48 +13,38 @@ permalink: /drawings
         var i = 0;
         const temp = "/images/frames/floppy";
         function animate() {
-            document.getElementById("loadingBar").hidden = false;
+            document.getElementById("loading").hidden = false;
             if (i == 0) {
                 i = 1;
-                var progress = document.getElementById("progress");
-                var width = 1;
+                var frames = 0;
                 function transition() {
-                    document.getElementById("loadingBar").hidden = true;
+                    document.getElementById("loading").hidden = true;
                     document.getElementById("data").hidden = false;
                 }
                 function floppy() {
-                    value = document.getElementById("floppy").getAttribute("src");
-                    value = value.replace("/images/frames/floppy", "");
-                    value = value.replace(".png", "");
-                    value = parseInt(value);
-                    if (value != 5) {
-                        value++;
+                    if (frames < 10) {
+                        frames++;
+                        value = document.getElementById("floppy").getAttribute("src");
+                        value = value.replace("/images/frames/floppy", "");
+                        value = value.replace(".png", "");
+                        value = parseInt(value);
+                        if (value != 5) {
+                            value++;
+                        } else {
+                            value = 1;
+                        }
+                        value.toString();
+                        value = temp.concat(value);
+                        value = value.concat(".png");
+                        document.getElementById("floppy").src = value;
                     } else {
-                        value = 1;
-                    }
-                    value.toString();
-                    value = temp.concat(value);
-                    value = value.concat(".png");
-                    document.getElementById("floppy").src = value;
-                }
-                function frames() {
-                    if (width >= 100) {
                         clearInterval(id);
                         setTimeout(transition, 500);
-                        setInterval(floppy, 200);
                         i = 0;
-                    } else {
-                        width++;
-                        var value = width + "%";
-                        progress.style.width = value;
-                        progressText.innerHTML = value;
                     }
                 }
-                var id = setInterval(frames, 10);
+                var id = setInterval(floppy, 200);
             }
-        }
-        function stop(id) {
-            document.getElementById(id).src = "/images/frames/floppy1.png";
         }
         var openedDrawing = "null";
         function drawingClick(id) {
@@ -104,23 +94,13 @@ permalink: /drawings
           padding: 5px;
           background-color: #0A0A0A;
         }
-        #loadingBar {
+        #loading {
         width: 20%;
         margin: auto;
         margin-top: 12rem;
         }
-        .itemLB {
-            margin-top: 0.2rem;
-            margin-bottom: 0.2rem;
+        #loadingData {   
             color: #7b8a48;
-        }
-        #progress {
-        width: 1%;
-        height: 30px;
-        background-color: #616e32;
-        }
-        #progressText {
-            text-align: right;
         }
         a {color: #7b8a48; text-decoration: none;}
         a:hover {color: #7b8a48; text-decoration: underline;}
@@ -174,10 +154,9 @@ permalink: /drawings
 </head>
 
 <body onload="animate()">
-    <div id="loadingBar">
-        <div class="itemLB">Loading data...</div>
-        <div class="itemLB" id="progress"></div>
-        <div class="itemLB" id="progressText">0%</div>
+    <div id="loading">
+        <div><img src="/images/frames/floppy1.png" id="floppy" width="50px"></div>
+        <div id="loadingData">Loading data...</div>
     </div>
     <div id="data" hidden="true">
         <table style="width:100%;max-width:900px;min-width:400px;margin-left:auto;margin-right:auto;margin-top:3vh;margin-bottom:6vh;">
@@ -194,7 +173,7 @@ permalink: /drawings
                     </td>
                 </tr>
                 <tr><td style="text-align:left;">
-                    <img src="/images/frames/floppy1.png" id="floppy" width="50px"> This is a work in progress!!
+                    This is a work in progress!!
                     <br>For now, enjoy the random drawings of mine I picked to test out this page.
                     <br><br>I'm probably also going to make an OCs page so look forward to that too :]
                     <br><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet rutrum felis, nec sollicitudin magna. Phasellus turpis nisi, ornare et euismod id, euismod eu lectus. Integer suscipit eu purus ut commodo. Nam placerat aliquam augue, in ultrices odio luctus bibendum. Aliquam turpis neque, dignissim quis condimentum nec, commodo sed sapien. Vestibulum sit amet interdum lectus. Praesent ac hendrerit mauris. Vestibulum convallis neque vel placerat consequat. Curabitur venenatis lorem quis est pretium accumsan. Cras aliquet rutrum leo nec porttitor. Sed vitae aliquam mi.

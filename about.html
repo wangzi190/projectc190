@@ -6,34 +6,6 @@
     <meta name="viewport" content="width=device-width">
     <link rel="icon" href="/images/test.png">
     <title>project c190</title>
-    <script type="text/javascript" async>
-        var i = 0;
-        function animate() {
-            document.getElementById("loadingBar").hidden = false;
-            if (i == 0) {
-                i = 1;
-                var progress = document.getElementById("progress");
-                var width = 1;
-                function transition() {
-                    document.getElementById("loadingBar").hidden = true;
-                    document.getElementById("data").hidden = false;
-                }
-                function frames() {
-                    if (width >= 100) {
-                        clearInterval(id);
-                        setTimeout(transition, 500);
-                        i = 0;
-                    } else {
-                        width++;
-                        var value = width + "%";
-                        progress.style.width = value;
-                        progressText.innerHTML = value;
-                    }
-                }
-                var id = setInterval(frames, 10);
-            }
-        }
-    </script>
     <style>
         @font-face {
             font-family: 'Mx437 IBM VGA 9x16';
@@ -59,24 +31,6 @@
           padding: 5px;
           background-color: #e6e6e6;
         }
-        #loadingBar {
-        width: 20%;
-        margin: auto;
-        margin-top: 12rem;
-        }
-        .itemLB {
-            margin-top: 0.2rem;
-            margin-bottom: 0.2rem;
-            color: #262626;
-        }
-        #progress {
-        width: 1%;
-        height: 30px;
-        background-color: #262626;
-        }
-        #progressText {
-            text-align: right;
-        }
         a {color: #262626; text-decoration: none;}
         a:hover {color: #262626; text-decoration: underline;}
         .item {
@@ -87,13 +41,8 @@
     </style>
 </head>
 
-<body onload="animate()">
-    <div id="loadingBar">
-        <div class="itemLB">Loading data...</div>
-        <div class="itemLB" id="progress"></div>
-        <div class="itemLB" id="progressText">0%</div>
-    </div>
-    <div id="data" hidden="true">
+<body>
+    <div id="data">
         <table style="width:100%;max-width:660px;min-width:400px;margin-left:auto;margin-right:auto;margin-top:3vh;margin-bottom:6vh;">
             <tr height="1%">
                 <th colspan="2"><img src="/images/title-bw.png" width="400px" id="title" style="margin-bottom:5px;">
