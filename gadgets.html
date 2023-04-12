@@ -55,6 +55,17 @@ permalink: /gadgets
             font-style: normal;
             font-display: swap;
         }
+        @keyframes titleWiggle {
+            from {content: url("/images/title_dark.png");}
+            to {content: url("/images/title_dark2.png");
+            height: 41.25px;}
+        }
+        #title {
+            animation-name: titleWiggle;
+            animation-duration: 1.5s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+        }
         body {
             font-family: 'Mx437 IBM VGA 9x16';
             background-image: url("/images/background3.png");

@@ -25,19 +25,10 @@
       document.getElementById(repID).src = repImage;
     }
   </script>
-  <style>
-    .flex-container {
-      display: flex;
-      height: 720px;
-      justify-content: space-around;
-      flex-direction: row;
-      align-content: stretch;
-    }
-  </style>
 </head>
 
 <body>
-  <table style="width:100%;max-width:1000px;min-width:400px;margin-right:auto;margin-left:auto;">
+  <table style="width:100%;max-width:1010px;margin-right:auto;margin-left:auto;">
     <tr height="1%">
       <th style="text-align:center;"><a href="/"><img src="/images/title.png" width="400px" id="title" style="padding-top:15px; margin-bottom:10px;"></a></th>
     </tr>
@@ -50,7 +41,7 @@
               <td style="color:white;background-color:#545e2d;" id="navTitle"><b>Navigation</b></td>
             </tr>
             <tr style="vertical-align:top;">
-              <td width="20%" style="background-color:#616e32;" id="navMenu">
+              <td style="background-color:#616e32;" id="navMenu">
                 {% include navigation.html %}
               </td>
             </tr>
@@ -58,14 +49,14 @@
               <td style="color:white;background-color:#545e2d;">Stamps</td>
             </tr>
             <tr style="height:100%;vertical-align:top;">
-              <td width="20%" style="color:white;background-color:#616e32;">
+              <td style="color:white;background-color:#616e32;">
                 <marquee direction="right" onmouseover="this.setAttribute('scrollamount',0);" onmouseout="this.setAttribute('scrollamount',5);">
                   <img src="/images/stamps/12-10_cat.png">
                   <img src="/images/stamps/5w6.png">
                   <img src="/images/stamps/mspaint_fan.png">
                   <img src="/images/stamps/pastel_tamagotchi.png">
                 </marquee>
-                <br><p style="text-align:right;"><a href="/miscellaneous/stamps-and-blinkies.html"><u>S</u>ee more</a></p>
+                <br><div style="display:flex;justify-content:right;"><a href="/miscellaneous/stamps-and-blinkies.html"><u>S</u>ee more</a></div>
               </td>
             </tr>
           </table>
@@ -77,7 +68,7 @@
               <td style="color:white;background-color:#293016;">{{ page.title }}</td>
             </tr>
             <tr>
-              <td width="60%" style="color:white;background-color:#464927;vertical-align:top;"><div style="overflow-x:hidden;overflow-y:auto;height:670px;">{{ content }}</div></td>
+              <td style="color:white;background-color:#464927;vertical-align:top;"><div style="overflow-x:hidden;overflow-y:auto;height:670px;">{{ content }}</div></td>
             </tr>
           </table>
         </div>
@@ -85,16 +76,32 @@
         <div style="flex-basis: 200px;">
           <table style="height:100%;width:100%;margin-right:auto;margin-left:auto;">
             <tr height="1%">
-              <td style="color:white;background-color:#545e2d;">Text</td>
+              <td style="color:white;background-color:#545e2d;">Artwork</td>
             </tr>
             <tr style="vertical-align:top;">
-              <td width="20%" style="color:white;background-color:#616e32;">Text</td>
+              <td style="color:white;background-color:#616e32;">
+
+                <div style="display:flex;justify-content:center;">
+                  <div class="artwork" id="img4"><img src="/images/drawings/mixedMed_flower_pink.png" width="190px"></div>
+                  <div class="artwork" id="img3"><img src="/images/drawing_thumbnails/big_guy_flowers.png" width="190px"></div>
+                  <div class="artwork" id="img2"><img src="/images/drawing_thumbnails/turing_mspaint.png" width="190px"></div>
+                  <div class="artwork" id="img1"><img src="/images/drawing_thumbnails/bird_mspaint.png" width="190px"></div>
+                </div>
+
+                <div style="display:flex;justify-content:right;"><a href="/drawings.html" id="seeMoreArt"><u>S</u>ee more</a></div>
+              </td>
             </tr>
             <tr height="1%">
-              <td style="color:white;background-color:#545e2d;">Text</td>
+              <td style="color:white;background-color:#545e2d;">Links</td>
+            </tr>
+            <tr style="vertical-align:top;">
+              <td style="color:white;background-color:#616e32;"><a href="https://neocities.org/site/projectc190" target="_blank"><u>N</u>eocities</a></td>
+            </tr>
+            <tr height="1%">
+              <td style="color:white;background-color:#545e2d;">Guestbook</td>
             </tr>
             <tr style="height:100%;vertical-align:top;">
-              <td width="20%" style="color:white;background-color:#616e32;">Text</td>
+              <td style="color:white;background-color:#616e32;"><a href="https://abacist.123guestbook.com"><u>L</u>eave a message ?</a></td>
             </tr>
           </table>
         </div>
@@ -105,38 +112,6 @@
       <td colspan="3" height="5%" style="text-align:center;vertical-align:bottom;" id="bottomText">project c190 © 2022-2023</td>
     </tr>
   </table>
-
-<script type="text/javascript" async>
-  /* var ECstate = 0;
-  function expandCollapse() {
-    if (ECstate == 0) {
-      document.getElementById("menu").hidden = false;
-      document.getElementById("toggle").innerHTML = "<u>C</u>OLLAPSE";
-      ECstate = 1;
-    } else if (ECstate == 1) {
-      document.getElementById("menu").hidden = true;
-      document.getElementById("toggle").innerHTML = "<u>E</u>XPAND";
-      ECstate = 0;
-    }
-  }
-  function mobile(x) {
-    if (x.matches) {
-      document.getElementById("navTitle").hidden = true;
-      document.getElementById("navMenu").hidden = true;
-      document.getElementById("showForMobile").hidden = false;
-    } else {
-      document.getElementById("navTitle").hidden = false;
-      document.getElementById("navMenu").hidden = false;
-      document.getElementById("showForMobile").hidden = true;
-      document.getElementById("menu").hidden = true;
-      document.getElementById("toggle").innerHTML = "<u>E</u>XPAND";
-      ECstate = 0;
-    }
-  }
-  var x = window.matchMedia("(max-width: 1000px)")
-  mobile(x)
-  x.addListener(mobile) */
-</script>
 </body>
 
 </html>
