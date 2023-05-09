@@ -2,6 +2,7 @@
 layout: posts
 title: Reworking that one bird piece
 categories: sketchbook
+caturl: "/blog/sketchbook.html"
 ---
 Was trying to salvage <a href="/sketchbook/2022/12/08/bird_test.html" target="_blank"><u>t</u>his</a> drawing from December 2022. Here's what I got.
 <br><img src="/images/for-posts/bird_test_mspaint_re.png" width="400px">

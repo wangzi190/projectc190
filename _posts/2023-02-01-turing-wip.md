@@ -2,6 +2,7 @@
 layout: posts
 title: Turing portrait; general progress
 categories: sketchbook
+caturl: "/blog/sketchbook.html"
 ---
 Here's what I worked on today!<br>
 <img src="/images/for-posts/turing_wip_EYES!!.png" width="400px">

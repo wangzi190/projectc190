@@ -83,3 +83,23 @@ a {color: white;} a:hover {color: white;}
     opacity: 1;
   }
 }
+@media (max-width: 1010px) {
+  /*.flex-container {
+    flex-direction: column;
+  }*/
+  .flex-left {
+    width: 200px;
+    /*margin-left: auto;
+    margin-right: auto;*/
+  }
+  .flex-middle {
+    width: 600px;
+    /*margin-left: auto;
+    margin-right: auto;*/
+  }
+  .flex-right {
+    width: 200px;
+    /*margin-left: auto;
+    margin-right: auto;*/
+  }
+}

@@ -2,6 +2,7 @@
 layout: posts
 title: Boolean Functions and Gate Logic
 categories: projectJournal
+caturl: "/blog/project-journal.html"
 ---
 ➤ NAND2TETRIS PART 1 PROJECT 1
 <br><br><b>Concept Notes</b>
