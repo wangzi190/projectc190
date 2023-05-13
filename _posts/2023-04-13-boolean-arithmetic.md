@@ -4,7 +4,9 @@ title: Boolean Arithmetic and the ALU
 categories: projectJournal
 caturl: "/blog/project-journal.html"
 ---
-➤ NAND2TETRIS PART 1 PROJECT 2
+➤ NAND2TETRIS <a href="https://github.com/wangzi190/nand2tetris/tree/master/02" target="_blank"><u>P</u>ROJECT 02</a>
+<br><br>Concept Notes
+<br><b>[tag] ^ WRITE SHORT DESCRIPTION</b>
 <br><br>No concept notes, since I already have good background for this part (Shoutout to MIPS assembly language). Instead, here is a follow-up of the inquiry from my <a href="/projectjournal/2023/03/28/boolean-functions.html" target="_blank"><u>p</u>revious post</a>, <i>Boolean Functions and Gate Logic</i>.
 <br><br>
 Boolean Algebra Equivalents (Cont.)
@@ -12,10 +14,11 @@ Boolean Algebra Equivalents (Cont.)
 I was a little confused by the posts I'd read, which implied that a truth table can directly make clear the simplest way to notate a Boolean function. After searching around online, I found that a Karnaugh map, or <i>k-map</i>, is probably the "truth table" people were talking about. The k-map technique involves drawing out 2D representations of Boolean functions so that logical adjacencies become visually evident. As an example, here is how I simplified DMux using the technique.
 <br><br><a href="/images/for-posts/simplify_dmux.png" target="_blank"><img src="/images/for-posts/simplify_dmux.png" width="500px"></a>
 <br><br>Because I have both built its compenents as minimally as possible, and used the k-map technique to further simplify it, this seems to be the most minimal way to build DMux.
+<br><br><b>[tag] SIMPLIFY XOR AND MUX</b>
 <br><br>
 <b>Project Notes</b>
 <br><br>
-The following describes major ideas I considered while writing the HDL for the adder, incrementer, and ALU chips specified in <a href="https://www.nand2tetris.org/project02" target="_blank"><u>N</u>and2Tetris Project 2</a>.
+The following describes major ideas I considered while writing the HDL for the adder, incrementer, and ALU chips specified in <a href="https://www.nand2tetris.org/project02" target="_blank"><u>N</u>and2Tetris Project 02</a>.
 <br><br>Definition of NAND
 <br><br>Briefly had this misconstrued while building FullAdder.
 NAND is NOT(A AND B), not (NOT A) AND (NOT B).

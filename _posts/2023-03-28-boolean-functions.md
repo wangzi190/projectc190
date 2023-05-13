@@ -4,7 +4,7 @@ title: Boolean Functions and Gate Logic
 categories: projectJournal
 caturl: "/blog/project-journal.html"
 ---
-➤ NAND2TETRIS PART 1 PROJECT 1
+➤ NAND2TETRIS <a href="https://github.com/wangzi190/nand2tetris/tree/master/01" target="_blank"><u>P</u>ROJECT 01</a>
 <br><br><b>Concept Notes</b>
 <br><br>
 All boolean functions can be represented by "listing" every combination of inputs that result in an output of 1, like so:
@@ -14,7 +14,7 @@ All boolean functions can be represented by "listing" every combination of input
 <br><br>
 <b>Project Notes</b>
 <br><br>
-The following describes major ideas I considered while writing the HDL for the 15 chips listed in <a href="https://www.nand2tetris.org/project01" target="_blank"><u>N</u>and2Tetris Project 1</a>.
+The following describes major ideas I considered while writing the HDL for the 15 chips listed in <a href="https://www.nand2tetris.org/project01" target="_blank"><u>N</u>and2Tetris Project 01</a>.
 <br><br>
 From AND to AND16
 <br>Is using 16 AND gates to build the AND16 operation the most efficient approach?
