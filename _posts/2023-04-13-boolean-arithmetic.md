@@ -5,9 +5,15 @@ categories: projectJournal
 caturl: "/blog/project-journal.html"
 ---
 ➤ NAND2TETRIS <a href="https://github.com/wangzi190/nand2tetris/tree/master/02" target="_blank"><u>P</u>ROJECT 02</a>
-<br><br>Concept Notes
-<br><b>[tag] ^ WRITE SHORT DESCRIPTION</b>
-<br><br>No concept notes, since I already have good background for this part (Shoutout to MIPS assembly language). Instead, here is a follow-up of the inquiry from my <a href="/projectjournal/2023/03/28/boolean-functions.html" target="_blank"><u>p</u>revious post</a>, <i>Boolean Functions and Gate Logic</i>.
+<br><br><b>Concept Notes</b>
+<br><br>The arithmetic logic unit (ALU) is a computer chip that performs arithmetic and bitwise operations on integers represented in binary.
+<br><br>Most computer systems represent signed integers using a method called 2's complement, where, in a fixed number of bits, negative integers are represented using the negation of their absolute value plus 1. This method is convenient for a number of reasons:
+<ul>
+    <li>Negative integers can seamlessly be included in binary addition operations.</li>
+    <li>There is only one possible representation of 0.</li>
+    <li>The most significant bit of any integer indicates its sign (0 for positive integers, and 1 for negative integers).</li>
+</ul>
+Not much of this is new information to me, so below is a follow-up of an inquiry from my <a href="/projectjournal/2023/03/28/boolean-functions.html" target="_blank"><u>p</u>revious post</a> (It's listed under "Topics for further investigation."). I would still say it is relevant, because Project 02 also involves logic design.
 <br><br>
 Boolean Algebra Equivalents (Cont.)
 <br><br>
