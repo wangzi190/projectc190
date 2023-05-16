@@ -23,6 +23,25 @@
       repImage = repImage.replace(".png", "_hover.png");
       document.getElementById(repID).src = repImage;
     }
+  
+    let imgs = [
+      "/images/pc190_stamp_0.gif",
+      "/images/pc190_stamp_1.gif"
+    ]
+    preload = async(images) => {
+      let load = imgs.map(async a => {
+        let img = new Image()
+        img.src = a
+        return await new Promise(res => {
+          img.onload = () => res(img)
+        }
+      )
+      })
+
+      const results = await Promise.all(load)
+    }
+
+    preload(imgs)
   </script>
 </head>
 
