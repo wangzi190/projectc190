@@ -21,6 +21,7 @@ I was a little confused by the posts I'd read, which implied that a truth table 
 <br><br><a href="/images/for-posts/simplify_dmux.png" target="_blank"><img src="/images/for-posts/simplify_dmux.png" width="500px"></a>
 <br><br>Because I have both built its compenents as minimally as possible, and used the k-map technique to further simplify it, this seems to be the most minimal way to build DMux.
 <br><br><b>[tag] SIMPLIFY XOR AND MUX</b>
+<br><img src="/images/for-posts/xor_breakdown.png" width="500px">
 <br><br>
 <b>Project Notes</b>
 <br><br>
