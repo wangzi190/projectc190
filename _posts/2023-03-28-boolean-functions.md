@@ -37,9 +37,9 @@ Think it's worth mentioning that I had the most fun figuring this one out :)
 <br><br>
 Topics for further investigation:
 <br><br>
-Boolean Algebra Equivalents
+Simplifying Circuits
 <br><br>
-I read on EE StackExchange that someone used truth tables and DeMorgan's laws to simplify all the gates as much as possible, and want to figure out the specifics of how to do that.
+I read on EE StackExchange that someone used truth tables and DeMorgan's laws to simplify all the chips as much as possible, and want to figure out the specifics of how to do that.
 <br><br>
 NAND vs NOR
 <br><br>I'd like to rewrite the basic boolean operations I constructed from NAND gates in NOR gates to see which is more efficient. I figure if the OR operation could be done in 2 NOR gates instead of 3 NAND gates, there might also be better ways to write the other operations. However, the Nand2Tetris software suite doesn't come with a built-in NOR the way it has built in NANDs, so I'll see if I can come back to this once I'm familiar enough with the Nand2Tetris software to set it up myself.

@@ -6,24 +6,14 @@ caturl: "/blog/project-journal.html"
 ---
 ➤ NAND2TETRIS <a href="https://github.com/wangzi190/nand2tetris/tree/master/02" target="_blank"><u>P</u>ROJECT 02</a>
 <br><br><b>Concept Notes</b>
-<br><br>The arithmetic logic unit (ALU) is a computer chip that performs arithmetic and bitwise operations on integers represented in binary.
 <br><br>Most computer systems represent signed integers using a method called 2's complement, where, in a fixed number of bits, negative integers are represented using the negation of their absolute value plus 1. This method is convenient for a number of reasons:
 <ul>
     <li>Negative integers can seamlessly be included in binary addition operations.</li>
     <li>There is only one possible representation of 0.</li>
     <li>The most significant bit of any integer indicates its sign (0 for positive integers, and 1 for negative integers).</li>
 </ul>
-Not much of this is new information to me, so below is a follow-up of an inquiry from my <a href="/projectjournal/2023/03/28/boolean-functions.html" target="_blank"><u>p</u>revious post</a> (It's listed under "Topics for further investigation."). I would still say it is relevant, because Project 02 also involves logic design.
-<br><br>
-Boolean Algebra Equivalents (Cont.)
-<br><br>
-I was a little confused by the posts I'd read, which implied that a truth table can directly make clear the simplest way to notate a Boolean function. After searching around online, I found that a Karnaugh map, or <i>k-map</i>, is probably the "truth table" people were talking about. The k-map technique involves drawing out 2D representations of Boolean functions so that logical adjacencies become visually evident. As an example, here is how I simplified DMux using the technique.
-<br><br><a href="/images/for-posts/simplify_dmux.png" target="_blank"><img src="/images/for-posts/simplify_dmux.png" width="500px"></a>
-<br><br>Because I have both built its compenents as minimally as possible, and used the k-map technique to further simplify it, this seems to be the most minimal way to build DMux.
-<br><br><b>[tag] SIMPLIFY XOR AND MUX</b>
-<br><img src="/images/for-posts/xor_breakdown.png" width="500px">
-<br><br>
-<b>Project Notes</b>
+The arithmetic logic unit (ALU) is a computer chip that performs arithmetic and bitwise operations on integers represented in 2's complement.
+<br><br><b>Project Notes</b>
 <br><br>
 The following describes major ideas I considered while writing the HDL for the adder, incrementer, and ALU chips specified in <a href="https://www.nand2tetris.org/project02" target="_blank"><u>N</u>and2Tetris Project 02</a>.
 <br><br>Definition of NAND
