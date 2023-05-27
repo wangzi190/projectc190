@@ -46,8 +46,90 @@ permalink: /gadgets
                 var id = setInterval(floppy, 200);
             }
         }
+        var folDefault = function(id) {
+            repID = id.concat("F");
+            document.getElementById(repID).src = "/images/folder_dark1.png";
+        }
+        var dirHovers = function(id) {
+            repID = id.concat("F");
+            repImage = document.getElementById(repID).src;
+            repImage = repImage.replace("_dark1.png", "_dark2.png");
+            document.getElementById(repID).src = repImage;
+        }
+        function drawingHover(id) {
+            document.getElementById(id).style.filter = "brightness(80%)";
+        }
+        function drawingRelease(id) {
+            document.getElementById(id).style.filter = "brightness(100%)";
+        }
     </script>
     <style>
+        @keyframes flicker {
+            0% {
+                opacity: 0.63604;
+            }
+            10% {
+                opacity: 0.50626;
+            }
+            20% {
+                opacity: 0.78128;
+            }
+            30% {
+                opacity: 0.83891;
+            }
+            40% {
+                opacity: 0.75583;
+            }
+            50% {
+                opacity: 0.87807;
+            }
+            60% {
+                opacity: 0.76559;
+            }
+            70% {
+                opacity: 0.64693;
+            }
+            80% {
+                opacity: 0.96019;
+            }
+            90% {
+                opacity: 0.89594;
+            }
+            100% {
+                opacity: 0.70603;
+            }
+        }
+        body::after {
+            content: " ";
+            display: block;
+            position: fixed;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            background: rgba(18, 16, 16, 0.1);
+            opacity: 0;
+            z-index: 2;
+            pointer-events: none;
+            animation: flicker 0.15s infinite;
+        }
+        body::before {
+            content: " ";
+            display: block;
+            position: fixed;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+            z-index: 2;
+            background-size: 100% 2px, 3px 100%;
+            pointer-events: none;
+        }
+        /* .drawing {
+            position: relative;
+            z-index: 10;
+        } */
         @font-face {
             font-family: 'Mx437 IBM VGA 9x16';
             src: url('/font/Mx437_IBM_VGA_9x16.woff2') format('woff2'), url('/font/Mx437_IBM_VGA_9x16.woff') format('woff');
@@ -68,24 +150,13 @@ permalink: /gadgets
         }
         body {
             font-family: 'Mx437 IBM VGA 9x16';
-            background-image: url("/images/background3.png");
-            /* background-color: #0A0A0A; */
-            /*overflow: clip;*/
-        }
-        th, td {
-            color: #7b8a48;
-            border: 0px;
+            background-color: #0A0A0A;
         }
         #mainBox {
           color: #7b8a48;
           border: 2px solid;
           border-color: #7b8a48;
-          padding: 5px;
           background-color: #0A0A0A;
-        }
-        #wipText {
-            margin-top: 15px;
-            margin-bottom: 15x;
         }
         #loading {
         width: 20%;
@@ -100,6 +171,38 @@ permalink: /gadgets
         #floppy {
             margin-right: 5px;
         }
+        .flex-container {
+            display: flex;
+            flex-direction: row;
+            text-align: center;
+        }
+        .flex-left {
+            color: #7b8a48;
+            background-color: #0A0A0A;
+            border: 2px solid;
+            border-color: #7b8a48;
+            flex: 100%;
+            max-width: 200px;
+            margin-right: 7.5px;
+            margin-left: auto;
+        }
+        .flex-right {
+            color: #7b8a48;
+            background-color: #0A0A0A;
+            flex: 100%;
+            max-width: 800px;
+            margin-right: auto;
+            margin-left: 7.5px;
+        }
+        .drawing {
+            margin-left: 2.5px;
+            margin-right: 2.5px;
+            margin-top: 2.5px;
+            margin-bottom: 2.5px;
+        }
+        table {
+            border-collapse: collapse;
+        }
     </style>
 </head>
 
@@ -108,20 +211,40 @@ permalink: /gadgets
         <div><img src="/images/frames/floppy1.png" id="floppy" width="50px"></div>
         <div id="loadingData">Loading data...</div>
     </div>
-    <div id="data" hidden="true">
-        <table style="width:100%;max-width:660px;min-width:400px;margin-left:auto;margin-right:auto;margin-top:3vh;margin-bottom:6vh;">
-            <tr height="1%">
-                <th><img src="/images/title_dark.png" width="400px" id="title" style="margin-bottom:10px;"></th>
+    <div id="data" style="width:100%; height:100%;" hidden="true">
+        <table style="width:100%;max-width:900px;margin-left:auto;margin-right:auto;">
+            <tr height="1%" style="text-align:left;">
+                <td><img src="/images/title_dark.png" width="400px" id="title" style="margin-bottom:10px;margin-top:3vh;"></td>
             </tr>
-            <tr>
-                <td id="mainBox"><p id="wipText">Work in progress</p></td>
-            </tr>
-            <tr>
-                <td style="text-align:right;">
-                    <a href="/"><u>C</u>lick here to return</a>
-                </td>
-            </tr>
-        </table>
+        <tr><td>
+        <div class="flex-container" style="width:100%;">
+            <div class="flex-left">
+                <table width="100%">
+                <tr style="background-color:#7b8a48;color:#0A0A0A;padding:0px;"><td style="text-align:left;">Directory</td></tr>
+                <tr><td style="text-align:left;">
+                    <table style="width:100%;color:white;">
+                        <tr><td><img src="/images/folder_dark1.png" class="dirIC" id="mainF" width="26.4px"><a href="#" id="main" onmouseover="dirHovers(id)" onmouseout="folDefault(id)"><u>F</u>older</a></td></tr>
+                        <tr><td><img src="/images/folder_dark1.png" class="dirIC" id="sketchesF" width="26.4px"><a href="#" id="sketches" onmouseover="dirHovers(id)" onmouseout="folDefault(id)"><u>F</u>older</a></td></tr>
+                    </table>
+                </td></tr>
+                </table>
+            </div>
+            <div class="flex-right">
+                <table width="100%">
+                <tr style="background-color:#7b8a48;color:#0A0A0A;padding:0px; border: 1px solid; border-color: #7b8a48;"><td style="text-align:left;">Files</td></tr>
+                <tr><td style="text-align:left;">
+                    <div style="overflow-x:hidden;overflow-y:auto;height:650px;">
+                        THIS IS A WORK IN PROGRESS
+                    </div>
+                </td></tr>
+                </table>
+            </div>
+        </div>
+        </td></tr>
+        <tr>
+            <td style="text-align:right;"><a href="/"><u>C</u>lick here to return</a></td>
+        </tr>
+    </table>
     </div>
 </body>
 

@@ -46,21 +46,15 @@ permalink: /drawings
                 var id = setInterval(floppy, 200);
             }
         }
-        var openedDrawing = "null";
-        function drawingClick(id) {
-            if (id == openedDrawing) {
-                document.getElementById("display").src = "";
-                openedDrawing = "null";
-            } else {
-                openedDrawing = id;
-                if (id.includes("_same")) {
-                    document.getElementById("display").src = document.getElementById(id).getAttribute("src");
-                } else {
-                    value = document.getElementById(id).getAttribute("src");
-                    value = value.replace("drawing_thumbnails", "drawings");
-                    document.getElementById("display").src = value;
-                }
-            }
+        var folDefault = function(id) {
+            repID = id.concat("F");
+            document.getElementById(repID).src = "/images/folder_dark1.png";
+        }
+        var dirHovers = function(id) {
+            repID = id.concat("F");
+            repImage = document.getElementById(repID).src;
+            repImage = repImage.replace("_dark1.png", "_dark2.png");
+            document.getElementById(repID).src = repImage;
         }
         function drawingHover(id) {
             document.getElementById(id).style.filter = "brightness(80%)";
@@ -70,6 +64,72 @@ permalink: /drawings
         }
     </script>
     <style>
+        @keyframes flicker {
+            0% {
+                opacity: 0.63604;
+            }
+            10% {
+                opacity: 0.50626;
+            }
+            20% {
+                opacity: 0.78128;
+            }
+            30% {
+                opacity: 0.83891;
+            }
+            40% {
+                opacity: 0.75583;
+            }
+            50% {
+                opacity: 0.87807;
+            }
+            60% {
+                opacity: 0.76559;
+            }
+            70% {
+                opacity: 0.64693;
+            }
+            80% {
+                opacity: 0.96019;
+            }
+            90% {
+                opacity: 0.89594;
+            }
+            100% {
+                opacity: 0.70603;
+            }
+        }
+        body::after {
+            content: " ";
+            display: block;
+            position: fixed;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            background: rgba(18, 16, 16, 0.1);
+            opacity: 0;
+            z-index: 2;
+            pointer-events: none;
+            animation: flicker 0.15s infinite;
+        }
+        body::before {
+            content: " ";
+            display: block;
+            position: fixed;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+            z-index: 2;
+            background-size: 100% 2px, 3px 100%;
+            pointer-events: none;
+        }
+        /* .drawing {
+            position: relative;
+            z-index: 10;
+        } */
         @font-face {
             font-family: 'Mx437 IBM VGA 9x16';
             src: url('/font/Mx437_IBM_VGA_9x16.woff2') format('woff2'), url('/font/Mx437_IBM_VGA_9x16.woff') format('woff');
@@ -90,19 +150,12 @@ permalink: /drawings
         }
         body {
             font-family: 'Mx437 IBM VGA 9x16';
-            background-image: url("/images/background3.png");
-            /* background-color: #0A0A0A; */
-            /*overflow: clip;*/
-        }
-        th, td {
-            color: #7b8a48;
-            border: 0px;
+            background-color: #0A0A0A;
         }
         #mainBox {
           color: #7b8a48;
           border: 2px solid;
           border-color: #7b8a48;
-          padding: 5px;
           background-color: #0A0A0A;
         }
         #loading {
@@ -126,46 +179,29 @@ permalink: /drawings
         .flex-left {
             color: #7b8a48;
             background-color: #0A0A0A;
-            padding: 10px;
             border: 2px solid;
             border-color: #7b8a48;
             flex: 100%;
-            max-width: 445px;
-            margin-right: 5px;
+            max-width: 200px;
+            margin-right: 7.5px;
             margin-left: auto;
         }
         .flex-right {
             color: #7b8a48;
             background-color: #0A0A0A;
-            padding: 10px;
-            border: 2px solid;
-            border-color: #7b8a48;
             flex: 100%;
-            max-width: 445px;
+            max-width: 800px;
             margin-right: auto;
-            margin-left: 5px;
-        }
-        @media (max-width: 900px) {
-            .flex-container {
-                flex-direction: column;
-            }
-            .flex-left {
-                width: 400px;
-                margin-left: auto;
-                margin-right: auto;
-            }
-            .flex-right {
-                width: 400px;
-                margin-top: 10px;
-                margin-left: auto;
-                margin-right: auto;
-            }
+            margin-left: 7.5px;
         }
         .drawing {
             margin-left: 2.5px;
             margin-right: 2.5px;
             margin-top: 2.5px;
             margin-bottom: 2.5px;
+        }
+        table {
+            border-collapse: collapse;
         }
     </style>
 </head>
@@ -175,44 +211,56 @@ permalink: /drawings
         <div><img src="/images/frames/floppy1.png" id="floppy" width="50px"></div>
         <div id="loadingData">Loading data...</div>
     </div>
-    <div id="data" hidden="true">
-        <table style="width:100%;max-width:900px;min-width:400px;margin-left:auto;margin-right:auto;margin-top:3vh;margin-bottom:6vh;">
-            <tr height="1%">
-                <th><img src="/images/title_dark.png" width="400px" id="title" style="margin-bottom:10px;"></th>
+    <div id="data" style="width:100%; height:100%;" hidden="true">
+        <table style="width:100%;max-width:900px;margin-left:auto;margin-right:auto;">
+            <tr height="1%" style="text-align:left;">
+                <td><img src="/images/title_dark.png" width="400px" id="title" style="margin-bottom:10px;margin-top:3vh;"></td>
             </tr>
         <tr><td>
-        <div class="flex-container">
-            <div class="flex-left" style="overflow-x:hidden;overflow-y:auto;height:650px;">
-                <table>
-                <tr>
-                    <td>
-                        <img src="" id="display" width="100%">
-                    </td>
-                </tr>
+        <div class="flex-container" style="width:100%;">
+            <div class="flex-left">
+                <table width="100%">
+                <tr style="background-color:#7b8a48;color:#0A0A0A;padding:0px;"><td style="text-align:left;">Directory</td></tr>
                 <tr><td style="text-align:left;">
-                    THIS IS A WORK IN PROGRESS !!!!
-                    <br><br>For now, enjoy the drawings of mine I picked to test out this page.
-                    <br><br>I'm probably also going to make an OCs page so look forward to that too :]
-                    <br><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet rutrum felis, nec sollicitudin magna. Phasellus turpis nisi, ornare et euismod id, euismod eu lectus. Integer suscipit eu purus ut commodo. Nam placerat aliquam augue, in ultrices odio luctus bibendum. Aliquam turpis neque, dignissim quis condimentum nec, commodo sed sapien. Vestibulum sit amet interdum lectus. Praesent ac hendrerit mauris. Vestibulum convallis neque vel placerat consequat. Curabitur venenatis lorem quis est pretium accumsan. Cras aliquet rutrum leo nec porttitor. Sed vitae aliquam mi.
+                    <table style="width:100%;color:white;">
+                        <tr><td><img src="/images/folder_dark1.png" class="dirIC" id="mainF" width="26.4px"><a href="#" id="main" onmouseover="dirHovers(id)" onmouseout="folDefault(id)"><u>M</u>ain</a></td></tr>
+                        <tr><td><img src="/images/folder_dark1.png" class="dirIC" id="sketchesF" width="26.4px"><a href="#" id="sketches" onmouseover="dirHovers(id)" onmouseout="folDefault(id)"><u>S</u>ketches</a></td></tr>
+                        <tr><td><img src="/images/folder_dark1.png" class="dirIC" id="fanworkF" width="26.4px"><a href="#" id="fanwork" onmouseover="dirHovers(id)" onmouseout="folDefault(id)"><u>F</u>anwork</a></td></tr>
+                        <tr><td><img src="/images/folder_dark1.png" class="dirIC" id="charactersF" width="26.4px"><a href="#" id="characters" onmouseover="dirHovers(id)" onmouseout="folDefault(id)"><u>C</u>haracters</a></td></tr>
+                    </table>
                 </td></tr>
                 </table>
             </div>
-            <div class="flex-right" style="overflow-x:hidden;overflow-y:auto;height:650px;">
-                <table>
+            <div class="flex-right">
+                <table width="100%">
+                <tr style="background-color:#7b8a48;color:#0A0A0A;padding:0px; border: 1px solid; border-color: #7b8a48;"><td style="text-align:left;">Files</td></tr>
                 <tr><td style="text-align:center;">
+                    <div style="text-align:left;">
+                        THIS IS A WORK IN PROGRESS
+                    </div>
+                    <div style="overflow-x:hidden;overflow-y:auto;height:650px;">
                         <img src="/images/drawing_thumbnails/bird_mspaint.png" class="drawing" id="bird_mspaint" width="190px" onmousedown="drawingClick(id)" onmouseover="drawingHover(id)" onmouseout="drawingRelease(id)">
                         <img src="/images/drawing_thumbnails/turing_mspaint.png" class="drawing" id="turing_mspaint" width="190px" onmousedown="drawingClick(id)" onmouseover="drawingHover(id)" onmouseout="drawingRelease(id)">
                         <img src="/images/drawing_thumbnails/big_guy_flowers.png" class="drawing below" id="big_guy_flowers" width="190px" onmousedown="drawingClick(id)" onmouseover="drawingHover(id)" onmouseout="drawingRelease(id)">
-                        <img src="/images/drawings/mixedMed_flower_pink.png" class="drawing below" id="mixedMed_flower_pink_same" width="190px" onmousedown="drawingClick(id)" onmouseover="drawingHover(id)" onmouseout="drawingRelease(id)">
-                    </td></tr>
+                        <img src="/images/drawings/mixedMed_flower_pink.png" class="drawing below" id="mixedMed_flower_pink_same" width="190px" onmousedown="drawingClick(id)" onmouseover="drawingHover(id)" onmouseout="drawingRelease(id)" style="text-align:left;">
+
+                        <img src="/images/drawing_thumbnails/bird_mspaint.png" class="drawing" id="bird_mspaint1" width="190px" onmousedown="drawingClick(id)" onmouseover="drawingHover(id)" onmouseout="drawingRelease(id)">
+                        <img src="/images/drawing_thumbnails/turing_mspaint.png" class="drawing" id="turing_mspaint1" width="190px" onmousedown="drawingClick(id)" onmouseover="drawingHover(id)" onmouseout="drawingRelease(id)">
+                        <img src="/images/drawing_thumbnails/big_guy_flowers.png" class="drawing below" id="big_guy_flowers1" width="190px" onmousedown="drawingClick(id)" onmouseover="drawingHover(id)" onmouseout="drawingRelease(id)">
+                        <img src="/images/drawings/mixedMed_flower_pink.png" class="drawing below" id="mixedMed_flower_pink_same1" width="190px" onmousedown="drawingClick(id)" onmouseover="drawingHover(id)" onmouseout="drawingRelease(id)" style="text-align:left;">
+
+                        <img src="/images/drawing_thumbnails/bird_mspaint.png" class="drawing" id="bird_mspaint0" width="190px" onmousedown="drawingClick(id)" onmouseover="drawingHover(id)" onmouseout="drawingRelease(id)">
+                        <img src="/images/drawing_thumbnails/turing_mspaint.png" class="drawing" id="turing_mspaint0" width="190px" onmousedown="drawingClick(id)" onmouseover="drawingHover(id)" onmouseout="drawingRelease(id)">
+                        <img src="/images/drawing_thumbnails/big_guy_flowers.png" class="drawing below" id="big_guy_flowers0" width="190px" onmousedown="drawingClick(id)" onmouseover="drawingHover(id)" onmouseout="drawingRelease(id)">
+                        <img src="/images/drawings/mixedMed_flower_pink.png" class="drawing below" id="mixedMed_flower_pink_same0" width="190px" onmousedown="drawingClick(id)" onmouseover="drawingHover(id)" onmouseout="drawingRelease(id)" style="text-align:left;">
+                    </div>
+                </td></tr>
                 </table>
             </div>
         </div>
         </td></tr>
         <tr>
-            <td style="text-align:right;">
-                <a href="/"><u>C</u>lick here to return</a>
-            </td>
+            <td style="text-align:right;"><a href="/"><u>C</u>lick here to return</a></td>
         </tr>
     </table>
     </div>

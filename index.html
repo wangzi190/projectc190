@@ -16,6 +16,11 @@ permalink: /
         margin-left: auto;
         margin-right: auto;
     }
+    .linkIC {
+        margin-top: 2px;
+        margin-bottom: 2px;
+        margin-left: 20px;
+    }
 </style>
 <script type="text/javascript" async>
     var incrementAbacus = function(id) {
@@ -84,25 +89,34 @@ permalink: /
             I like to draw, I'm a massive geek about computers and math, and this is where I put the stuff I make. Feel free to click around.
             <br><br><a href="https://projectc190.neocities.org" target="_blank"><img src="/images/pc190_stamp_0.gif"></a> <a href="https://projectc190.neocities.org" target="_blank"><img src="/images/pc190_stamp_1.gif"></a>
         </td>
-        <td style="vertical-align:bottom;"><span title="A small, pigeon-like creature. Its body seems to be filled with... tea?"><img src="/images/cadet_spr_1.png" width="150px" style="margin-left:5px;margin-right:5px;"></span></td>
+        <td style="vertical-align:bottom;"><span title="A small, pigeon-like creature. Its body seems to be filled with... tea?"><img src="/images/cadet_spr_1.png" id="cadet" width="150px" style="margin-left:5px;margin-right:5px;"></span></td>
     </tr>
 </table>
-<br><img src="/images/abacus/L.png" height="120px" id="L"><img src="/images/abacus/0.png" height="120px" class="abacus" id="column13" onclick="incrementAbacus(id)"><img src="/images/abacus/0.png" height="120px" class="abacus" id="column12" onclick="incrementAbacus(id)"><img src="/images/abacus/0.png" height="120px" class="abacus" id="column11" onclick="incrementAbacus(id)"><img src="/images/abacus/0.png" height="120px" class="abacus" id="column10" onclick="incrementAbacus(id)"><img src="/images/abacus/0.png" height="120px" class="abacus" id="column9" onclick="incrementAbacus(id)"><img src="/images/abacus/0.png" height="120px" class="abacus" id="column8" onclick="incrementAbacus(id)"><img src="/images/abacus/0.png" height="120px" class="abacus" id="column7" onclick="incrementAbacus(id)"><img src="/images/abacus/0.png" height="120px" class="abacus" id="column6" onclick="incrementAbacus(id)"><img src="/images/abacus/0.png" height="120px" class="abacus" id="column5" onclick="incrementAbacus(id)"><img src="/images/abacus/0.png" height="120px" class="abacus" id="column4" onclick="incrementAbacus(id)"><img src="/images/abacus/0.png" height="120px" class="abacus" id="column3" onclick="incrementAbacus(id)"><img src="/images/abacus/0.png" height="120px" class="abacus" id="column2" onclick="incrementAbacus(id)"><img src="/images/abacus/0.png" height="120px" class="abacus" id="column1" onclick="incrementAbacus(id)"><img src="/images/abacus/R.png" height="120px">
 <br>
-<div style="display:flex;color:#7b8a48;">
-    <p>=</p>
-    <p id="column13t" hidden="true">0</p>
-    <p id="column12t" hidden="true">0</p>
-    <p id="column11t" hidden="true">0</p>
-    <p id="column10t" hidden="true">0</p>
-    <p id="column9t" hidden="true">0</p>
-    <p id="column8t" hidden="true">0</p>
-    <p id="column7t" hidden="true">0</p>
-    <p id="column6t" hidden="true">0</p>
-    <p id="column5t" hidden="true">0</p>
-    <p id="column4t" hidden="true">0</p>
-    <p id="column3t" hidden="true">0</p>
-    <p id="column2t" hidden="true">0</p>
-    <p id="column1t">0</p>
-</div>
-<a href="https://neocities.org/site/projectc190" target="_blank"><u>N</u>eocities</a> • <a href="https://github.com/wangzi190" target="_blank"><u>G</u>ithub</a>
+<table><tr>
+<td>
+    <img src="/images/abacus/L.png" height="120px" id="L"><img src="/images/abacus/0.png" height="120px" class="abacus" id="column13" onclick="incrementAbacus(id)"><img src="/images/abacus/0.png" height="120px" class="abacus" id="column12" onclick="incrementAbacus(id)"><img src="/images/abacus/0.png" height="120px" class="abacus" id="column11" onclick="incrementAbacus(id)"><img src="/images/abacus/0.png" height="120px" class="abacus" id="column10" onclick="incrementAbacus(id)"><img src="/images/abacus/0.png" height="120px" class="abacus" id="column9" onclick="incrementAbacus(id)"><img src="/images/abacus/0.png" height="120px" class="abacus" id="column8" onclick="incrementAbacus(id)"><img src="/images/abacus/0.png" height="120px" class="abacus" id="column7" onclick="incrementAbacus(id)"><img src="/images/abacus/0.png" height="120px" class="abacus" id="column6" onclick="incrementAbacus(id)"><img src="/images/abacus/0.png" height="120px" class="abacus" id="column5" onclick="incrementAbacus(id)"><img src="/images/abacus/0.png" height="120px" class="abacus" id="column4" onclick="incrementAbacus(id)"><img src="/images/abacus/0.png" height="120px" class="abacus" id="column3" onclick="incrementAbacus(id)"><img src="/images/abacus/0.png" height="120px" class="abacus" id="column2" onclick="incrementAbacus(id)"><img src="/images/abacus/0.png" height="120px" class="abacus" id="column1" onclick="incrementAbacus(id)"><img src="/images/abacus/R.png" height="120px">
+    <br>
+    <div style="display:flex;color:#7b8a48;">
+        <p>=</p>
+        <p id="column13t" hidden="true">0</p>
+        <p id="column12t" hidden="true">0</p>
+        <p id="column11t" hidden="true">0</p>
+        <p id="column10t" hidden="true">0</p>
+        <p id="column9t" hidden="true">0</p>
+        <p id="column8t" hidden="true">0</p>
+        <p id="column7t" hidden="true">0</p>
+        <p id="column6t" hidden="true">0</p>
+        <p id="column5t" hidden="true">0</p>
+        <p id="column4t" hidden="true">0</p>
+        <p id="column3t" hidden="true">0</p>
+        <p id="column2t" hidden="true">0</p>
+        <p id="column1t">0</p>
+    </div>
+</td>
+<td>
+    <img src="/images/neocities.png" class="linkIC" width="25.4px"> <a href="https://neocities.org/site/projectc190" target="_blank"><u>N</u>eocities</a>
+    <br><img src="/images/github.png" class="linkIC" width="25.5px"> <a href="https://github.com/wangzi190" target="_blank"><u>G</u>ithub</a>
+    <br><img src="/images/spacehey.png" class="linkIC" width="26.2px"> <a href="https://spacehey.com/abacist" target="_blank"><u>S</u>paceHey</a>
+</td>
+</tr></table>
