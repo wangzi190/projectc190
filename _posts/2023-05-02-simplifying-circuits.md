@@ -4,7 +4,7 @@ title: Simplifying Circuits
 categories: projectJournal
 caturl: "/blog/project-journal.html"
 ---
-Here's a follow-up of my "Simplifying Circuits" inquiry from my <a href="/projectjournal/2023/03/28/boolean-functions.html" target="_blank"><u>N</u>and2Tetris Project 01</a> post.
+Here's a follow-up of the "Simplifying Circuits" inquiry from my <a href="/projectjournal/2023/03/28/boolean-functions.html" target="_blank"><u>N</u>and2Tetris Project 01</a> post.
 <br><br>
 So, I was a little confused by the posts I'd read, which implied that a truth table can directly make clear the simplest way to notate a Boolean function. After searching around online, I found that a Karnaugh map, or <i>k-map</i>, is probably the "truth table" people were referring to. The k-map technique involves drawing out 2D representations of Boolean functions so that logical adjacencies become visually evident. Here is how I simplified DMux using the technique.
 <br><br><a href="/images/for-posts/simplify_dmux.png" target="_blank"><img src="/images/for-posts/simplify_dmux.png" width="500px"></a>
