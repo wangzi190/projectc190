@@ -62,32 +62,13 @@ permalink: /
             i = parseInt(i);
         }
     }
-
-    let imgs = [
-      "/images/pc190_stamp_0.gif",
-      "/images/pc190_stamp_1.gif"
-    ]
-    preload = async(images) => {
-      let load = imgs.map(async a => {
-        let img = new Image()
-        img.src = a
-        return await new Promise(res => {
-          img.onload = () => res(img)
-        }
-      )
-      })
-
-      const results = await Promise.all(load)
-    }
-
-    preload(imgs)
 </script>
 <table>
     <tr>
         <td>
             Welcome to the homepage of my website, <i>Project C190</i>.
             I like to draw, I'm a massive geek about computers and math, and this is where I put the stuff I make. Feel free to click around! Best viewed on desktop.
-            <br><br><a href="https://projectc190.neocities.org" target="_blank"><img src="/images/pc190_stamp_0.gif"></a> <a href="https://projectc190.neocities.org" target="_blank"><img src="/images/pc190_stamp_1.gif"></a>
+            <br><br><a href="/stampcode.txt" target="_blank"><img src="/images/frames/stamp1_d.png" id="stampDark" width="88px" height="31px"></a> <a href="/stampcode.txt" target="_blank"><img src="/images/frames/stamp1_l.png" id="stampLight" width="88px" height="31px"></a> <a href="/stampcode.txt" target="_blank"><img src="/images/frames/stamp1_d.png" id="stampDark" width="88px" height="31px"></a> <a href="/stampcode.txt" target="_blank"><img src="/images/frames/stamp1_l.png" id="stampLight" width="88px" height="31px"></a>
         </td>
         <td style="vertical-align:bottom;"><span title="A small, pigeon-like creature. Its body seems to be filled with... tea?"><img src="/images/cadet_spr_1.png" id="cadet" width="150px" style="margin-left:5px;margin-right:5px;"></span></td>
     </tr>
@@ -95,7 +76,7 @@ permalink: /
 <br>
 <table><tr>
 <td>
-    <img src="/images/abacus/L.png" height="120px" id="L"><img src="/images/abacus/0.png" height="120px" class="abacus" id="column13" onclick="incrementAbacus(id)"><img src="/images/abacus/0.png" height="120px" class="abacus" id="column12" onclick="incrementAbacus(id)"><img src="/images/abacus/0.png" height="120px" class="abacus" id="column11" onclick="incrementAbacus(id)"><img src="/images/abacus/0.png" height="120px" class="abacus" id="column10" onclick="incrementAbacus(id)"><img src="/images/abacus/0.png" height="120px" class="abacus" id="column9" onclick="incrementAbacus(id)"><img src="/images/abacus/0.png" height="120px" class="abacus" id="column8" onclick="incrementAbacus(id)"><img src="/images/abacus/0.png" height="120px" class="abacus" id="column7" onclick="incrementAbacus(id)"><img src="/images/abacus/0.png" height="120px" class="abacus" id="column6" onclick="incrementAbacus(id)"><img src="/images/abacus/0.png" height="120px" class="abacus" id="column5" onclick="incrementAbacus(id)"><img src="/images/abacus/0.png" height="120px" class="abacus" id="column4" onclick="incrementAbacus(id)"><img src="/images/abacus/0.png" height="120px" class="abacus" id="column3" onclick="incrementAbacus(id)"><img src="/images/abacus/0.png" height="120px" class="abacus" id="column2" onclick="incrementAbacus(id)"><img src="/images/abacus/0.png" height="120px" class="abacus" id="column1" onclick="incrementAbacus(id)"><img src="/images/abacus/R.png" height="120px">
+    <img src="/images/abacus/L.png" height="120px" id="L"><img src="/images/abacus/0.png" height="120px" class="abacus" id="column13" onclick="incrementAbacus(id)"><img src="/images/abacus/0.png" height="120px" class="abacus" id="column12" onclick="incrementAbacus(id)"><img src="/images/abacus/0.png" height="120px" class="abacus" id="column11" onclick="incrementAbacus(id)"><img src="/images/abacus/0.png" height="120px" class="abacus" id="column10" onclick="incrementAbacus(id)"><img src="/images/abacus/0.png" height="120px" class="abacus" id="column9" onclick="incrementAbacus(id)"><img src="/images/abacus/0.png" height="120px" class="abacus" id="column8" onclick="incrementAbacus(id)"><img src="/images/abacus/0.png" height="120px" class="abacus" id="column7" onclick="incrementAbacus(id)"><img src="/images/abacus/0.png" height="120px" class="abacus" id="column6" onclick="incrementAbacus(id)"><img src="/images/abacus/0.png" height="120px" class="abacus" id="column5" onclick="incrementAbacus(id)"><img src="/images/abacus/0.png" height="120px" class="abacus" id="column4" onclick="incrementAbacus(id)"><img src="/images/abacus/1.png" height="120px" class="abacus" id="column3" onclick="incrementAbacus(id)"><img src="/images/abacus/9.png" height="120px" class="abacus" id="column2" onclick="incrementAbacus(id)"><img src="/images/abacus/0.png" height="120px" class="abacus" id="column1" onclick="incrementAbacus(id)"><img src="/images/abacus/R.png" height="120px">
     <br>
     <div style="display:flex;color:#7b8a48;">
         <p>=</p>
@@ -109,8 +90,8 @@ permalink: /
         <p id="column6t" hidden="true">0</p>
         <p id="column5t" hidden="true">0</p>
         <p id="column4t" hidden="true">0</p>
-        <p id="column3t" hidden="true">0</p>
-        <p id="column2t" hidden="true">0</p>
+        <p id="column3t">1</p>
+        <p id="column2t">9</p>
         <p id="column1t">0</p>
     </div>
 </td>

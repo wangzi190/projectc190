@@ -23,25 +23,6 @@
       repImage = repImage.replace(".png", "_hover.png");
       document.getElementById(repID).src = repImage;
     }
-  
-    let imgs = [
-      "/images/pc190_stamp_0.gif",
-      "/images/pc190_stamp_1.gif"
-    ]
-    preload = async(images) => {
-      let load = imgs.map(async a => {
-        let img = new Image()
-        img.src = a
-        return await new Promise(res => {
-          img.onload = () => res(img)
-        }
-      )
-      })
-
-      const results = await Promise.all(load)
-    }
-
-    preload(imgs)
   </script>
 </head>
 
@@ -134,7 +115,7 @@
             </tr>
             <tr style="vertical-align:top;">
               <td style="color:white;background-color:#616e32;">
-                <a href="https://projectc190.neocities.org" target="_blank"><img src="/images/pc190_stamp_0.gif"></a> <a href="https://projectc190.neocities.org" target="_blank"><img src="/images/pc190_stamp_1.gif"></a>
+                <a href="/stampcode.txt" target="_blank"><img src="/images/frames/stamp1_d.png" id="stampDark" width="88px" height="31px"></a> <a href="/stampcode.txt" target="_blank"><img src="/images/frames/stamp1_l.png" id="stampLight" width="88px" height="31px"></a>
                 <br>Link back ?
               </td>
             </tr>
