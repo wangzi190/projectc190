@@ -1,5 +1,5 @@
 ---
-permalink: /drawings
+permalink: /drawings-test
 ---
 <!DOCTYPE html>
 <html>
@@ -48,7 +48,7 @@ permalink: /drawings
         }
 
         var folder = "main";
-        var drawing = null;
+        var varDrawing = null;
 
         var folDefault = function(id) {
             if (id != folder) {
@@ -84,8 +84,69 @@ permalink: /drawings
             document.getElementById(idFol).hidden = false;
         }
         function selectDrawing(id) {
-            drawing = id;
+            varDrawing = id;
+            openFolder = folder.concat("Fol");
+            document.getElementById(openFolder).hidden = true;
+            document.getElementById("selected").hidden = false;
+            document.getElementById("clickReturn").href = "#";
+            document.getElementById("clickReturn").setAttribute("onclick","returnToFolder()")
         }
+
+        function returnToFolder() {
+            document.getElementById("selected").hidden = true;
+            openFolder = folder.concat("Fol");
+            document.getElementById(openFolder).hidden = false;
+            const delay = setTimeout(resetHref, 5);
+        }
+        function resetHref() {
+            document.getElementById("clickReturn").href = "/";
+        }
+
+        fetch('drawings.json')
+        .then( response => {
+            if (!response.ok) {
+                throw new Error(`HTTP error: ${response.status}`);
+            }
+            return response.json();
+        })
+        .then( json => initialize(json) )
+        .catch( err => console.error(`Fetch problem: ${err.message}`) );
+
+        function initialize(drawings) {
+            fileName = varDrawing.concat(".png");
+            toOpen = drawings.filter( drawing => drawing.image === fileName);
+            updateDisplay();
+
+            function updateDisplay() {
+                function fetchBlob(drawing) {
+                    const url = `/images/drawings/${drawing.image}`;
+                    fetch(url)
+                    .then( response => {
+                        if (!response.ok) {
+                        throw new Error(`HTTP error: ${response.status}`);
+                        }
+                        return response.blob();
+                    })
+                    .then( blob => showDrawing(blob, drawing) )
+                    .catch( err => console.error(`Fetch problem: ${err.message}`) );
+                }
+
+                fetchBlob(toOpen);
+                /* for (const drawing of toOpen) {
+                    fetchBlob(drawing);
+                } */
+            }
+
+            function showDrawing(blob, drawing) {
+                const objectURL = URL.createObjectURL(blob);
+                document.getElementById("selectedDrawing").src = objectURL;
+                document.getElementById("name").innerHTML = drawing.name;
+                document.getElementById("name").alt = drawing.name;
+                document.getElementById("year").innerHTML = drawing.year;
+                document.getElementById("medium").innerHTML = drawing.medium;
+                document.getElementById("notes").innerHTML = drawing.notes;
+            }
+        };
     </script>
     <style>
         @keyframes flicker {
@@ -219,6 +280,7 @@ permalink: /drawings
             margin-left: 7.5px;
         }
         .drawing {
+            width: 190px;
             margin-left: 2.5px;
             margin-right: 2.5px;
             margin-top: 2.5px;
@@ -252,7 +314,7 @@ permalink: /drawings
                 <table width="100%">
                 <tr style="background-color:#7b8a48;color:#0A0A0A;padding:0px;"><td style="text-align:left;">Directory</td></tr>
                 <tr><td style="text-align:left;">
-                    <table style="width:100%;color:white;">
+                    <table style="width:100%;">
                         <tr><td><img src="/images/folder_dark2.png" class="dirIC" id="mainIC" width="26.4px"><a href="#" id="main" onmouseover="dirHovers(id)" onmouseout="folDefault(id)" onclick="selectFolder(id)"><u>M</u>ain</a></td></tr>
                         <tr><td><img src="/images/folder_dark1.png" class="dirIC" id="sketchesIC" width="26.4px"><a href="#" id="sketches" onmouseover="dirHovers(id)" onmouseout="folDefault(id)" onclick="selectFolder(id)"><u>S</u>ketches</a></td></tr>
                         <tr><td><img src="/images/folder_dark1.png" class="dirIC" id="fanworkIC" width="26.4px"><a href="#" id="fanwork" onmouseover="dirHovers(id)" onmouseout="folDefault(id)" onclick="selectFolder(id)"><u>F</u>anwork</a></td></tr>
@@ -270,36 +332,38 @@ permalink: /drawings
                     </div>
                     <div style="overflow-x:hidden;overflow-y:auto;height:650px;">
                         <div id="selected" hidden="true">
-                            <img src="/images/drawings/big_guy_flowers.png" width="100%" id="selectedDrawing" style="position: relative; z-index: 10;">
-                            <!-- <table>
+                            <img src="/images/drawings/large_pink_flower.png" width="100%" id="selectedDrawing" style="position: relative; z-index: 10;">
+                            <table>
                                 <tr>
-                                    <td>
-
+                                    <td width="50%" style="vertical-align:text-top; text-align:left;">
+                                        <b>Details</b>
+                                        <br><br><div id="name">Large Pink Flowers</div>
+                                        <div id="year">2019</div>
+                                        <div id="medium">Colored pencil</div>
+                                    </td>
+                                    <td width="50%" style="vertical-align:text-top; text-align:left">
+                                        <b>Additional Notes</b>
+                                        <br><br><div id="notes">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus.</div>
                                     </td>
                                 </tr>
-                                <tr>
-                                    <td>
-
-                                    </td>
-                                </tr>
-                            </table> -->
-                            <p id="description" style="text-align:left;">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus.</p>
+                            </table>
+                            <p id="description" style="text-align:left;"></p>
                         </div>
                         <div id="mainFol">
-                            <img src="/images/drawing_thumbnails/bird_mspaint.png" class="drawing" id="bird_mspaint" width="190px" onmousedown="drawingClick(id)" onmouseover="drawingHover(id)" onmouseout="drawingRelease(id)">
-                            <img src="/images/drawing_thumbnails/turing_mspaint.png" class="drawing" id="turing_mspaint" width="190px" onmousedown="drawingClick(id)" onmouseover="drawingHover(id)" onmouseout="drawingRelease(id)">
-                            <img src="/images/drawing_thumbnails/big_guy_flowers.png" class="drawing" id="big_guy_flowers" width="190px" onmousedown="drawingClick(id)" onmouseover="drawingHover(id)" onmouseout="drawingRelease(id)">
-                            <img src="/images/drawings/mixedMed_flower_pink.png" class="drawing" id="mixedMed_flower_pink_same" width="190px" onmousedown="drawingClick(id)" onmouseover="drawingHover(id)" onmouseout="drawingRelease(id)" style="text-align:left;">
+                            <img src="/images/drawing_thumbnails/bird_mspaint.png" class="drawing" id="bird_mspaint" width="190px" onmousedown="selectDrawing(id)" onmouseover="drawingHover(id)" onmouseout="drawingRelease(id)">
+                            <img src="/images/drawing_thumbnails/turing_mspaint.png" class="drawing" id="turing_mspaint" width="190px" onmousedown="selectDrawing(id)" onmouseover="drawingHover(id)" onmouseout="drawingRelease(id)">
+                            <img src="/images/drawing_thumbnails/large_pink_flower.png" class="drawing" id="large_pink_flower" width="190px" onmousedown="selectDrawing(id)" onmouseover="drawingHover(id)" onmouseout="drawingRelease(id)">
+                            <img src="/images/drawings/small_pink_flower.png" class="drawing" id="small_pink_flower" width="190px" onmousedown="selectDrawing(id)" onmouseover="drawingHover(id)" onmouseout="drawingRelease(id)" style="text-align:left;">
 
-                            <img src="/images/drawing_thumbnails/bird_mspaint.png" class="drawing" id="bird_mspaint1" width="190px" onmousedown="drawingClick(id)" onmouseover="drawingHover(id)" onmouseout="drawingRelease(id)">
-                            <img src="/images/drawing_thumbnails/turing_mspaint.png" class="drawing" id="turing_mspaint1" width="190px" onmousedown="drawingClick(id)" onmouseover="drawingHover(id)" onmouseout="drawingRelease(id)">
-                            <img src="/images/drawing_thumbnails/big_guy_flowers.png" class="drawing" id="big_guy_flowers1" width="190px" onmousedown="drawingClick(id)" onmouseover="drawingHover(id)" onmouseout="drawingRelease(id)">
-                            <img src="/images/drawings/mixedMed_flower_pink.png" class="drawing" id="mixedMed_flower_pink_same1" width="190px" onmousedown="drawingClick(id)" onmouseover="drawingHover(id)" onmouseout="drawingRelease(id)" style="text-align:left;">
+                            <img src="/images/drawing_thumbnails/bird_mspaint.png" class="drawing" id="bird_mspaint1" width="190px" onmousedown="selectDrawing(id)" onmouseover="drawingHover(id)" onmouseout="drawingRelease(id)">
+                            <img src="/images/drawing_thumbnails/turing_mspaint.png" class="drawing" id="turing_mspaint1" width="190px" onmousedown="selectDrawing(id)" onmouseover="drawingHover(id)" onmouseout="drawingRelease(id)">
+                            <img src="/images/drawing_thumbnails/large_pink_flower.png" class="drawing" id="large_pink_flower1" width="190px" onmousedown="selectDrawing(id)" onmouseover="drawingHover(id)" onmouseout="drawingRelease(id)">
+                            <img src="/images/drawings/small_pink_flower.png" class="drawing" id="small_pink_flower1" width="190px" onmousedown="selectDrawing(id)" onmouseover="drawingHover(id)" onmouseout="drawingRelease(id)" style="text-align:left;">
 
-                            <img src="/images/drawing_thumbnails/bird_mspaint.png" class="drawing" id="bird_mspaint0" width="190px" onmousedown="drawingClick(id)" onmouseover="drawingHover(id)" onmouseout="drawingRelease(id)">
-                            <img src="/images/drawing_thumbnails/turing_mspaint.png" class="drawing" id="turing_mspaint0" width="190px" onmousedown="drawingClick(id)" onmouseover="drawingHover(id)" onmouseout="drawingRelease(id)">
-                            <img src="/images/drawing_thumbnails/big_guy_flowers.png" class="drawing" id="big_guy_flowers0" width="190px" onmousedown="drawingClick(id)" onmouseover="drawingHover(id)" onmouseout="drawingRelease(id)">
-                            <img src="/images/drawings/mixedMed_flower_pink.png" class="drawing" id="mixedMed_flower_pink_same0" width="190px" onmousedown="drawingClick(id)" onmouseover="drawingHover(id)" onmouseout="drawingRelease(id)" style="text-align:left;">
+                            <img src="/images/drawing_thumbnails/bird_mspaint.png" class="drawing" id="bird_mspaint0" width="190px" onmousedown="selectDrawing(id)" onmouseover="drawingHover(id)" onmouseout="drawingRelease(id)">
+                            <img src="/images/drawing_thumbnails/turing_mspaint.png" class="drawing" id="turing_mspaint0" width="190px" onmousedown="selectDrawing(id)" onmouseover="drawingHover(id)" onmouseout="drawingRelease(id)">
+                            <img src="/images/drawing_thumbnails/large_pink_flower.png" class="drawing" id="large_pink_flower0" width="190px" onmousedown="selectDrawing(id)" onmouseover="drawingHover(id)" onmouseout="drawingRelease(id)">
+                            <img src="/images/drawings/small_pink_flower.png" class="drawing" id="small_pink_flower0" width="190px" onmousedown="selectDrawing(id)" onmouseover="drawingHover(id)" onmouseout="drawingRelease(id)" style="text-align:left;">
                         </div>
                         <div id="sketchesFol" hidden="true">
                             <div style="text-align:left;">Sketches</div>
@@ -317,7 +381,7 @@ permalink: /drawings
         </div>
         </td></tr>
         <tr>
-            <td style="text-align:right;"><a href="/"><u>C</u>lick here to return</a></td>
+            <td style="text-align:right;"><a href="/" id="clickReturn"><u>C</u>lick here to return</a></td>
         </tr>
     </table>
     </div>
