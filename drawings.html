@@ -104,7 +104,12 @@ permalink: /drawings
             document.getElementById("clickReturn").href = "/";
         }
 
-        fetch('drawings.json')
+        async function openDrawing() {
+            const requestURL = 'https://projectc190.neocities.org/drawings.json';
+            const request = new Request(requestURL);
+
+        }
+        /* fetch('drawings.json')
         .then( response => {
             if (!response.ok) {
                 throw new Error(`HTTP error: ${response.status}`);
@@ -149,7 +154,7 @@ permalink: /drawings
                 document.getElementById("medium").innerHTML = drawing.medium;
                 document.getElementById("notes").innerHTML = drawing.notes;
             }
-        };
+        }; */
     </script>
     <style>
         @keyframes flicker {
