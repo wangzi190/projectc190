@@ -1,7 +1,7 @@
 ---
 layout: default
-title: <a href="/"><u>L</u>anding</a> > <a href="/blog.html"><u>B</u>log</a> > <b>Project journal</b>
-permalink: /blog/project-journal
+title: <a href="/"><u>L</u>anding</a> > <a href="/blog.html"><u>B</u>log</a> > <b>Project log</b>
+permalink: /blog/project-log
 ---
 <style>
   #postLink {color: #7b8a48;}
@@ -9,7 +9,7 @@ permalink: /blog/project-journal
 </style>
 
 {% for post in site.posts %}
-{% if post.categories contains "projectJournal" %}
+{% if post.categories contains "projectLog" %}
 <article>
   <h3>
       {{ post.title }}

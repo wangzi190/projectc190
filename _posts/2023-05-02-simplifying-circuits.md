@@ -1,8 +1,8 @@
 ---
 layout: posts
 title: Simplifying Circuits
-categories: projectJournal
-caturl: "/blog/project-journal.html"
+categories: projectLog
+caturl: "/blog/project-log.html"
 ---
 Here's a follow-up of the "Simplifying Circuits" inquiry from my <a href="/projectjournal/2023/03/28/boolean-functions.html" target="_blank"><u>N</u>and2Tetris Project 01</a> post.
 <br><br>

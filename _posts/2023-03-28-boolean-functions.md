@@ -1,8 +1,8 @@
 ---
 layout: posts
 title: Boolean Functions and Gate Logic
-categories: projectJournal
-caturl: "/blog/project-journal.html"
+categories: projectLog
+caturl: "/blog/project-log.html"
 ---
 ➤ NAND2TETRIS <a href="https://github.com/wangzi190/nand2tetris/tree/master/01" target="_blank"><u>P</u>ROJECT 01</a>
 <br><br><b>Concept Notes</b>
