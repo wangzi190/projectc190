@@ -16,74 +16,94 @@
         }
         body {
             font-family: 'Mx437 IBM VGA 9x16';
-            background-image: url("/images/background4.png");
-            background-size: 500px;
-            /* background-color: #0A0A0A; */
-            /*overflow: clip;*/
+            background-image: url("/images/checkers_mov.png");
+            background-color: #CDD6B0;
         }
-        th, td {
-            color: #262626;
+        a {color: #0A0A0A; text-decoration: none;}
+        a:hover {color: #0A0A0A; text-decoration: underline;}
+        .flex-container {
+            display: flex;
+            flex-direction: row;
+            text-align: center;
         }
-        #mainBox {
-          color: #262626;
-          border: 2px solid;
-          border-color: #262626;
-          padding: 5px;
-          background-color: #e6e6e6;
+        .flex-left {
+            color: #7b8a48;
+            background-color: #0A0A0A;
+            flex: 100%;
+            max-width: 400px;
+            margin-right: 5px;
+            margin-left: auto;
         }
-        a {color: #262626; text-decoration: none;}
-        a:hover {color: #262626; text-decoration: underline;}
-        .item {
-            margin-left: 10px;
-            margin-top: 5px;
-            margin-bottom: 5px;
+        .flex-right {
+            color: #7b8a48;
+            background-color: #0A0A0A;
+            flex: 100%;
+            max-width: 190px;
+            margin-right: auto;
+            margin-left: 5px;
+        }
+        table {
+            border-collapse: collapse;
         }
     </style>
 </head>
 
 <body>
-    <div id="data">
-        <table style="width:100%;max-width:660px;min-width:400px;margin-left:auto;margin-right:auto;margin-top:3vh;margin-bottom:6vh;">
-            <tr height="1%">
-                <th colspan="2"><img src="/images/title-bw.png" width="400px" id="title" style="margin-bottom:5px;">
-                <br><img src="/images/mind.png" width="400px" style="margin-bottom:10px;"></th>
-            </tr>
-            <tr>
-                <td id="mainBox">
-                <table><tr>
-                    <td><br>Hello <i>!</i> I'm Hui.
-                        <br><br>I grew up on the kids' coding website Scratch, where I published projects under the username Crafty190. Creating on Scratch had an incredible formative effect on my interests in drawing and computer programming, and by extension, the person I am now.
-                        <br><br>I've created this website, <i>Project C190</i>, as a means to continue indulging in these interests, which have since expanded to drawing, all things computers, and mathematics.
-                        <br><br>Other details:
-                        <ul>
-                            <li>My favorite music genres are Chinese folk rock and metal (<a href="https://open.spotify.com/playlist/50vJyRQEqtTrofxhWkiwM9?si=5a73fde32cdb41cf" target="_blank"><u>W</u>anna listen</a>?).</li>
-                            <li>My caffeine source of choice is black coffee (microwaved). As a drink I like oolong tea the best, though.</li>
-                            <li>I like Alan Turing and Leonardo Da Vinci a normal amount!!!!</li>
-                            <li>I'm an INTP 5w6</li>
-                            <li>I did the graphics on this site with a mouse on Scratch bitmap.</li>
-                        </ul>
-                        Below is my contact info. Feel free to chat sometime.
-                        <br><br>E-mail: <a href="mailto:projectc190@gmail.com" rel="EMAIL" target="_blank"><u>p</u>rojectc190@gmail.com</a>
-                        <br>Matrix: @abacist:matrix.org
-                        <br><span style="color:#e6e6e6">-</span>
-                    </td>
+    <table style="width:100%;max-width:600px;margin-left:auto;margin-right:auto;padding:0px;">
+        <tr><td>
+            <table style="color:#7b8a48; width:602px;">
+                <tr>
                     <td>
-                        <img src="/images/abacus.png" class="item" width="105px">
-                        <br><img src="/images/drawing_supps.png" class="item" width="125px">
-                        <br><img src="/images/pencil_eraser.png" class="item" width="45px">
-                        <br><img src="/images/sketch_comp.png" class="item" width="150px">
-                        <br><a href="https://anirollz.com/collections/plush/products/anirollz-large-15-plush?variant=40302838382776" target="_blank"><img src="/images/piyo.png" class="item" width="115px"></a>
+                        <img src="/images/portrait_test.png" width="190px" style="margin-right:7px;">
                     </td>
-                </tr></table>
-                </td>
-            </tr>
-            <tr>
-                <td style="text-align:right;">
-                    <a href="/"><u>C</u>lick here to return</a>
-                </td>
-            </tr>
-        </table>
-    </div>
+                    <td style="color:#0A0A0A;">
+                        <img src="/images/hui_.png" width="100px"> <img src="/images/b_l.png">
+                        <br><b>'05</b> 🧮 <b>he</b>/him/she/her ✏️ INTP 5w6 🐦<br><b>Chinese</b> Canadian-American
+                        <br><br><u>Likes</u>: Drawing, computers, math, sci-fi, video games, fidget toys, niche history, birds, cats, & spicy food <span title="I LOVE MY GIRLFRIEND!!!!!!!!"><img src="/images/kibdy.gif" width="30px"></span>
+                    </td>
+                </tr>
+            </table>
+        <tr><td>
+        <div class="flex-container" style="width:100%;">
+            <div class="flex-left">
+                <table width="100%" style="margin-top:5px;margin-left:5px;">
+                    <tr style="background-color:#778748;color:#0A0A0A;"><td style="text-align:left;">File</td></tr>
+                    <tr><td style="text-align:left;">
+                        <div style="overflow-x:hidden;overflow-y:auto;height:590px;">
+                            <br>I can't remember any point in my life where I wasn't distinctively into drawing. That, reading, and playing flash games were pretty much all I did when I was really little.
+                            <br><br>At age 9, I started messing around on kids' programming website Scratch, publishing my work under the username Crafty190. From that point on, coding joined art on my roster of brain chemistry altering interests.
+                            <br><br>Before I knew it, I went from making Warrior Cats RPGs in blocks to dabbling in stuff like assembly language, and now I'm studying computer science in college.
+                            <br><br>Despite all this, I'm honestly not sure what I want to do in life. I like what I'm learning, but I don't want to light another match and toss it into the cesspool that is modern technology. Maybe I'll become a hacker or something.
+                            <br><br>Anyways, this website is named "Project C190" after "Crafty190", and most of the graphics are drawn with a mouse on Scratch as a tribute to the early days.
+                            <br><br>Thanks for visiting.
+                            <br><br>E-mail: projectc190@gmail.com
+                            <br>Discord: @abacist
+                            <!--<br><br>Kins:
+                            <br><span title="Dr MEI - Honkai Impact 3rd"><img src="/images/kin_drMEI.png" width="70px"></span> <span title="Croque - GFL: Neural Cloud"><img src="/images/kin_croque.png" width="70px"></span>
+                            -->
+                            <br><br>
+                        </div>
+                    </td></tr>
+                </table>
+            </div>
+            <div class="flex-right">
+                <table width="100%" style="margin-top:5px;margin-left:5px;">
+                    <tr style="background-color:#778748;color:#0A0A0A;"><td style="text-align:left;">Inventory</td></tr>
+                    <tr><td style="text-align:middle;">
+                        <span title="Japanese abacus"><img src="/images/abacus.png" class="item" width="102px" style="margin-right:5px;margin-top:15px;margin-bottom:5px"></span>
+                        <br><span title="Crayons and colored pencils"><img src="/images/drawing_supps.png" class="item" width="130px" style="margin-right:5px;"></span>
+                        <br><span title="Pencil and eraser"><img src="/images/pencil_eraser.png" class="item" width="60px" style="margin-right:5px;"></span>
+                        <br><span title="Sketchbook and computer"><img src="/images/sketch_comp.png" class="item" width="153px" style="margin-right:5px;"></span>
+                        <br><span title="Chicken plush"><img src="/images/piyo.png" style="margin-right:5px;margin-top:5px;" class="item" width="124px"></span>
+                    </td></tr>
+                </table>
+            </div>
+        </div>
+        </td></tr>
+        <tr>
+            <td style="text-align:right;"><a href="/"><u>C</u>lick here to return</a></td>
+        </tr>
+    </table>
 </body>
 
 </html>
