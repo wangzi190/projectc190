@@ -1,8 +1,14 @@
 Hui's ongoing projects
 
-> Nand2Tetris (See '/blog/project-log'. No particular deadline.)
+Tech
+> Hacking shit I guess
+> Nand2Tetris (See '/blog/project-log'.)
+
+Drawing
 > Gift drawing (Deadline: 10/06/23)
+> Outrageous number of WIPs
 
-> [Site] Scripts for portfolio page (Shelved until I finish more stuff I'm proud of.)
+Shelved
+> [Site] Scripts for portfolio pages
 
-+school T__T
++ School, my biggest priority T__T
