@@ -1,8 +1,8 @@
 ---
 layout: posts
 title: "Computer History Museum visit"
-categories: blog-miscellaneous
-caturl: "/blog/miscellaneous.html"
+categories: other
+caturl: "/blog/other.html"
 ---
 I've been wanting to see the Computer History Museum in-person for a while now, so this was super exciting :D
 <br><br>Here are a couple takeaways:

@@ -1,14 +1,14 @@
 ---
 layout: default
-title: <a href="/"><u>L</u>anding</a> > <a href="/blog.html"><u>B</u>log</a> > <b>Miscellaneous</b>
-permalink: /blog/miscellaneous
+title: <a href="/"><u>L</u>anding</a> > Blog > <b>Other</b>
+permalink: /blog/other
 ---
 <style>
   #postLink {color: #7b8a48;}
   #postLink:hover {color: #7b8a48;}
 </style>
 {% for post in site.posts %}
-{% if post.categories contains "blog-miscellaneous" %}
+{% if post.categories contains "other" %}
 <article>
   <h3>
       {{ post.title }}

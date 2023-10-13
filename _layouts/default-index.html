@@ -9,19 +9,77 @@
   <link rel="stylesheet" href="/default.css">
   
   <script type="text/javascript" async>
+    var menuOpened = "null";
+    var openMenu = function(id) {
+      var items;
+      var iconID;
+      if (menuOpened == "null") {
+        items = document.getElementsByClassName(id);
+        for (var i = 0; i < items.length; i++) { 
+          items[i].hidden = false;
+        }
+        iconID = id.concat("F");
+        document.getElementById(iconID).src = "/images/folderIcon_hover.png";
+        menuOpened = id;
+      } else if (menuOpened == id) {
+        items = document.getElementsByClassName(id);
+        for (var i = 0; i < items.length; i++) { 
+          items[i].hidden = true;
+        }
+        iconID = id.concat("F");
+        document.getElementById(iconID).src = "/images/folderIcon.png";
+        menuOpened = "null";
+      } else if (menuOpened != "null" && menuOpened != id) {
+        if (id == "blog") {
+          items = document.getElementsByClassName("miscellaneous");
+          for (var i = 0; i < items.length; i++) { 
+            items[i].hidden = true;
+          }
+          items = document.getElementsByClassName(id);
+          for (var i = 0; i < items.length; i++) { 
+            items[i].hidden = false;
+          }
+          iconID = id.concat("F");
+          document.getElementById(iconID).src = "/images/folderIcon_hover.png";
+          document.getElementById("miscellaneousF").src = "/images/folderIcon.png";
+          menuOpened = id;
+        } else {
+          items = document.getElementsByClassName("blog");
+          for (var i = 0; i < items.length; i++) { 
+            items[i].hidden = true;
+          }
+          items = document.getElementsByClassName(id);
+          for (var i = 0; i < items.length; i++) { 
+            items[i].hidden = false;
+          }
+          iconID = id.concat("F");
+          document.getElementById(iconID).src = "/images/folderIcon_hover.png";
+          document.getElementById("blogF").src = "/images/folderIcon.png";
+          menuOpened = id;
+        }
+      }
+    }
     var fileDefault = function(id) {
       repID = id.concat("F");
       document.getElementById(repID).src = "/images/fileIcon.png";
     }
     var folderDefault = function(id) {
-      repID = id.concat("F");
-      document.getElementById(repID).src = "/images/folderIcon.png";
+      if (id != menuOpened) {
+        repID = id.concat("F");
+        document.getElementById(repID).src = "/images/folderIcon.png";
+      }
     }
     var navHovers = function(id) {
       repID = id.concat("F");
       repImage = document.getElementById(repID).src;
       repImage = repImage.replace(".png", "_hover.png");
       document.getElementById(repID).src = repImage;
+    }
+    var navHoversAlt = function(id) {
+      if (id != menuOpened) {
+        repID = id.concat("F");
+        document.getElementById(repID).src = "/images/folderIcon_hover.png";
+      }
     }
   </script>
 </head>
@@ -31,7 +89,6 @@
     <tr height="1%">
       <th style="text-align:center;"><a href="/"><img src="/images/title.png" width="400px" id="title" style="padding-top:15px; margin-bottom:10px;"></a></th>
     </tr>
-
     <tr><td>
       <div class="flex-container" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
         <div class="flex-left" style="flex-basis: 200px;">
@@ -41,7 +98,23 @@
             </tr>
             <tr style="vertical-align:top;">
               <td style="background-color:#616e32;" id="navMenu">
-                {% include navigation.html %}
+                <table style="width:100%;color:white;">
+                  <tr class="trNav"><td><img src="/images/fileIcon.png" class="navIC" id="landingF" width="20px"><a href="/" class="navLink" id="landing" onmouseover="navHovers(id)" onmouseout="fileDefault(id)"><u>L</u>anding</a></td></tr>
+                  <tr class="trNav"><td><img src="/images/fileIcon.png" class="navIC" id="aboutF" width="20px"><a href="/about.html" class="navLink" id="about" onmouseover="navHovers(id)" onmouseout="fileDefault(id)"><u>A</u>bout</a></td></tr>
+                  <tr class="trNav"><td><img src="/images/folderIcon.png" class="navIC" id="blogF" width="26.4px"><span id="blog" onmouseover="navHoversAlt(id)" onmouseout="folderDefault(id)" onclick="openMenu(id)"><u>B</u>log</span></td></tr>
+                  <tr class="blog" hidden="true"><td>&emsp;⤷<img src="/images/fileIcon.png" class="navIC" id="projectLogF" width="20px"><a href="/blog/project-log.html" class="navLink" id="projectLog" onmouseover="navHovers(id)" onmouseout="fileDefault(id)"><u>P</u>roject log</a></td></tr>
+                  <tr class="blog" hidden="true"><td>&emsp;⤷<img src="/images/fileIcon.png" class="navIC" id="sketchbookF" width="20px"><a href="/blog/sketchbook.html" class="navLink" id="sketchbook" onmouseover="navHovers(id)" onmouseout="fileDefault(id)"><u>S</u>ketchbook</a></td></tr>
+                  <tr class="blog" hidden="true"><td>&emsp;⤷<img src="/images/fileIcon.png" class="navIC" id="readingLogF" width="20px"><a href="/blog/reading-log.html" class="navLink" id="readingLog" onmouseover="navHovers(id)" onmouseout="fileDefault(id)"><u>R</u>eading log</a></td></tr>
+                  <tr class="blog" hidden="true"><td>&emsp;⤷<img src="/images/fileIcon.png" class="navIC" id="otherF" width="20px"><a href="/blog/other.html" class="navLink" id="other" onmouseover="navHovers(id)" onmouseout="fileDefault(id)"><u>O</u>ther</a></td></tr>
+                  <tr class="trNav"><td><img src="/images/folderIcon_hover.png" class="navIC" width="26.4px">Portfolio</td></tr>
+                  <tr class="trNav"><td>&emsp;⤷<img src="/images/folderIcon.png" class="navIC" id="drawingsF" width="26.4px"><a href="/drawings.html" class="navLink" id="drawings" onmouseover="navHovers(id)" onmouseout="folderDefault(id)"><u>D</u>rawings</a></td></tr>
+                  <tr class="trNav"><td>&emsp;⤷<img src="/images/folderIcon.png" class="navIC" id="gadgetsF" width="26.4px"><a href="/gadgets.html" class="navLink" id="gadgets" onmouseover="navHovers(id)" onmouseout="folderDefault(id)"><u>G</u>adgets</a></td></tr>
+                  <tr class="trNav"><td><img src="/images/folderIcon.png" class="navIC" id="miscellaneousF" width="26.4px"><span id="miscellaneous" onmouseover="navHoversAlt(id)" onmouseout="folderDefault(id)" onclick="openMenu(id)"><u>M</u>iscellaneous</span></td></tr>
+                  <tr class="miscellaneous" hidden="true"><td>&emsp;⤷<img src="/images/fileIcon.png" class="navIC" id="linksF" width="20px"><a href="/miscellaneous/outlinks.html" class="navLink" id="links" onmouseover="navHovers(id)" onmouseout="fileDefault(id)"><u>O</u>utlinks</a></td></tr>
+                  <tr class="miscellaneous" hidden="true"><td>&emsp;⤷<img src="/images/fileIcon.png" class="navIC" id="gamingF" width="20px"><a href="/miscellaneous/gaming.html" class="navLink" id="gaming" onmouseover="navHovers(id)" onmouseout="fileDefault(id)"><u>G</u>aming</a></td></tr>
+                  <tr class="miscellaneous" hidden="true"><td>&emsp;⤷<img src="/images/fileIcon.png" class="navIC" id="digitalPetsF" width="20px"><a href="/miscellaneous/digital-pets.html" class="navLink" id="digitalPets" onmouseover="navHovers(id)" onmouseout="fileDefault(id)"><u>D</u>igital pets</a></td></tr>
+                  <tr class="miscellaneous" hidden="true"><td>&emsp;⤷<img src="/images/fileIcon.png" class="navIC" id="webStuffF" width="20px"><a href="/miscellaneous/web-stuff.html" class="navLink" id="webStuff" onmouseover="navHovers(id)" onmouseout="fileDefault(id)"><u>W</u>eb stuff</a></td></tr>
+                </table>
               </td>
             </tr>
             <tr height="1%">
