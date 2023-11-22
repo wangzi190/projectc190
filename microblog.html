@@ -47,8 +47,28 @@
             </tr>
             <tr>
                 <td id="mainBox">
-                    <iframe name="rssfeed_frame" width="100%" height="500px" frameborder="0" src="https://feed.surfing-waves.com/php/rssfeed.php?rssfeed[url][0]=https://status.cafe/users/wangzi190.atom&rssfeed[type]=&rssfeed[frame_width]=100%&rssfeed[frame_height]=100%&rssfeed[target]=_blank&rssfeed[item_title_length]=11&rssfeed[item_border_bottom]=on&rssfeed[item_source_icon]=off&rssfeed[item_date]=on&rssfeed[item_description]=on&rssfeed[item_description_length]=150&rssfeed[cache]=ed379348efb85a1b5038ee168d0a71cc"></iframe>
-                    Powered by <a href="https://status.cafe/" target="_blank"><u>s</u>tatus.cafe</a> and <a href="https://surfing-waves.com" target="_blank"><u>S</u>urfing Waves</a>
+                    <div id='feed-reader' style="overflow-x:hidden;overflow-y:auto;height:510px;"></div>
+                    <script>
+                      const feedURL = 'https://status.cafe/users/wangzi190.atom';
+                      fetch(feedURL)
+                        .then(response => response.text())
+                        .then(str => new window.DOMParser().parseFromString(str, "text/xml"))
+                        .then(data => {
+                        const entries = data.querySelectorAll("entry");
+                        let html = ``;
+                        for (i = 0; i < 15; i++) {
+                            let title = entries[i].querySelector("title").innerHTML.slice(10, 12).trim();
+                            let content = entries[i].querySelector("content").textContent.trim();
+                            let dateString = entries[i].querySelector("published").innerHTML.slice(0,10);
+                            html += `
+                                <span>${title} hui > ${dateString}</span><br>
+                                <span>${content}</span><br><br>
+                            `;
+                        }
+                        html += `<a href="https://status.cafe/users/wangzi190" target="_blank"><u>S</u>ee more</a>`;
+                        document.getElementById("feed-reader").innerHTML = html;
+                        })
+                    </script>
                 </td>
             </tr>
             <tr>
