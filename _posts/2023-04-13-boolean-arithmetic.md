@@ -1,6 +1,6 @@
 ---
 layout: posts
-title: Boolean Arithmetic and the ALU
+title: Nand2Tetris / Boolean Arithmetic and the ALU
 categories: projectLog
 caturl: "/blog/project-log.html"
 ---
@@ -15,7 +15,7 @@ caturl: "/blog/project-log.html"
 The arithmetic logic unit (ALU) is a computer chip that performs arithmetic and bitwise operations on integers represented in 2's complement.
 <br><br><b>Project Notes</b>
 <br><br>
-The following describes major ideas I considered while writing the HDL for the adder, incrementer, and ALU chips specified in <a href="https://www.nand2tetris.org/project02" target="_blank"><u>N</u>and2Tetris Project 02</a>.
+The following describes major ideas I considered while writing the HDL for the adder, incrementer, and ALU chips specified in <a href="https://www.nand2tetris.org/project02" target="_blank"><u>P</u>roject 02</a>.
 <br><br>Definition of NAND
 <br><br>Briefly had this misconstrued while building FullAdder.
 NAND is NOT(A AND B), not (NOT A) AND (NOT B).

@@ -1,6 +1,6 @@
 ---
 layout: posts
-title: Boolean Functions and Gate Logic
+title: Nand2Tetris / Boolean Functions and Gate Logic
 categories: projectLog
 caturl: "/blog/project-log.html"
 ---
@@ -14,7 +14,7 @@ All boolean functions can be represented by "listing" every combination of input
 <br><br>
 <b>Project Notes</b>
 <br><br>
-The following describes major ideas I considered while writing the HDL for the 15 chips listed in <a href="https://www.nand2tetris.org/project01" target="_blank"><u>N</u>and2Tetris Project 01</a>.
+The following describes major ideas I considered while writing the HDL for the 15 chips listed in <a href="https://www.nand2tetris.org/project01" target="_blank"><u>P</u>roject 01</a>.
 <br><br>
 From AND to AND16
 <br>Is using 16 AND gates to build the AND16 operation the most efficient approach?

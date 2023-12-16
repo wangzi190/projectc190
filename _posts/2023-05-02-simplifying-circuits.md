@@ -1,6 +1,6 @@
 ---
 layout: posts
-title: Simplifying Circuits
+title: Nand2Tetris - Inquiry / Simplifying Circuits
 categories: projectLog
 caturl: "/blog/project-log.html"
 ---
