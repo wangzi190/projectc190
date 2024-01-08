@@ -7,6 +7,17 @@
     <link rel="icon" href="/images/test.png">
     <title>project c190</title>
     <style>
+        @keyframes titleWiggle {
+            from {content: url("/images/title-bw.png");}
+            to {content: url("/images/title-bw2.png");
+            height: 41.2px;}
+        }
+        #title {
+            animation-name: titleWiggle;
+            animation-duration: 1.5s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+        }
         @font-face {
             font-family: 'Mx437 IBM VGA 9x16';
             src: url('/font/Mx437_IBM_VGA_9x16.woff2') format('woff2'), url('/font/Mx437_IBM_VGA_9x16.woff') format('woff');
@@ -19,43 +30,51 @@
             background-image: url("/images/background4.png");
             background-size: 500px;
         }
-        th, td {
-            color: #262626;
-            border: 0px;
+        div.box {
+            margin: auto;
+            position: relative;
+            top: 0px; bottom: 0px;
+            right: 0px; left: 0px;
+            height: 785px;
+            width: 600px;
+            background-image: url("/images/sketchbook_base.png");
+            background-size: 600px;
+            filter: drop-shadow(2px 2px 4px #666666);
         }
-        #mainBox {
-          color: #262626;
-          border: 4px solid;
-          border-color: #262626;
-          padding: 5px;
-          background-color: #e6e6e6;
+        div.data {
+            position: absolute;
+            top: 0px; bottom: 0px;
+            right: 0px; left: 78px;
+            margin: auto;
+            overflow: scroll; overflow-x: hidden;
+            position: absolute;
+            width: 450px;
         }
         a {color: #262626; text-decoration: none;}
         a:hover {color: #262626; text-decoration: underline;}
-        #floppy {
-            margin-right: 5px;
-        }
     </style>
 </head>
 
 <body>
-    <div id="data">
-        <table style="width:100%;max-width:660px;min-width:400px;margin-left:auto;margin-right:auto;margin-top:3vh;margin-bottom:6vh;">
-            <tr height="1%">
-                <th><a href="/"><img src="/images/title-bw.png" width="400px" id="title" style="margin-bottom:5px;"></a>
-                <br><img src="/images/mind.png" width="400px" style="margin-bottom:10px;"></th>
-            </tr>
-            <tr>
-                <td id="mainBox">
-                    <div id='feed-reader' style="overflow-x:hidden;overflow-y:auto;height:510px;"></div>
-                    <script>
-                      const feedURL = 'https://status.cafe/users/wangzi190.atom';
-                      fetch(feedURL)
-                        .then(response => response.text())
-                        .then(str => new window.DOMParser().parseFromString(str, "text/xml"))
-                        .then(data => {
+    <table style="margin:auto;">
+        <tr>
+            <td style="text-align:center;"><a href="/"><img src="/images/title-bw.png" width="400px" id="title" style="margin-top:10px;margin-left:30px;"></a></td>
+        </tr>
+
+        <tr><td>
+            <div class="box">
+                <div id="feed-reader" class="data" style="overflow-x:hidden;overflow-y:auto;height:738px;"></div>
+            </div>
+            <script>
+                const feedURL = 'https://status.cafe/users/wangzi190.atom';
+                fetch(feedURL)
+                    .then(response => response.text())
+                    .then(str => new window.DOMParser().parseFromString(str, "text/xml"))
+                    .then(data => {
                         const entries = data.querySelectorAll("entry");
                         let html = ``;
+                        html += `My Microblog (｡•̀ᴗ-)✧<br>`;
+                        html += `<span style="color:#808080;">(Auto-updated)</span><br><br>`;
                         for (i = 0; i < 15; i++) {
                             let title = entries[i].querySelector("title").innerHTML.slice(10, 12).trim();
                             let content = entries[i].querySelector("content").textContent.trim();
@@ -67,17 +86,14 @@
                         }
                         html += `<a href="https://status.cafe/users/wangzi190" target="_blank"><u>S</u>ee more</a>`;
                         document.getElementById("feed-reader").innerHTML = html;
-                        })
-                    </script>
-                </td>
-            </tr>
-            <tr>
-                <td style="text-align:right;">
-                    <a href="/"><u>C</u>lick here to return</a>
-                </td>
-            </tr>
-        </table>
-    </div>
+                    })
+            </script>
+        </td></tr>
+
+        <tr>
+            <td style="text-align:right;"><a href="/" style="margin-right:18px;"><u>C</u>lick here to return</a></td>
+        <tr>
+    </table>
 </body>
 
 </html>
