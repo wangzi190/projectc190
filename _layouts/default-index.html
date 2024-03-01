@@ -21,6 +21,9 @@
         }
         iconID = id.concat("F");
         document.getElementById(iconID).src = "/images/folderIcon_hover.png";
+        if (id == "blog") {
+          document.getElementById("hideWhenBlog").hidden = true;
+        }
         menuOpened = id;
       } else if (menuOpened == id) {
         items = document.getElementsByClassName(id);
@@ -29,6 +32,9 @@
         }
         iconID = id.concat("F");
         document.getElementById(iconID).src = "/images/folderIcon.png";
+        if (id == "blog") {
+          document.getElementById("hideWhenBlog").hidden = false;
+        }
         menuOpened = "null";
       } else if (menuOpened != "null" && menuOpened != id) {
         /* items = document.getElementsByClassName(id);
@@ -61,6 +67,7 @@
           document.getElementById(iconID).src = "/images/folderIcon_hover.png";
           document.getElementById("shrinesF").src = "/images/folderIcon.png";
           document.getElementById("miscellaneousF").src = "/images/folderIcon.png";
+          document.getElementById("hideWhenBlog").hidden = true;
           menuOpened = id;
         } else if (id == "shrines") {
           items = document.getElementsByClassName("blog");
@@ -79,6 +86,7 @@
           document.getElementById(iconID).src = "/images/folderIcon_hover.png";
           document.getElementById("blogF").src = "/images/folderIcon.png";
           document.getElementById("miscellaneousF").src = "/images/folderIcon.png";
+          document.getElementById("hideWhenBlog").hidden = false;
           menuOpened = id;
         } else {
           items = document.getElementsByClassName("blog");
@@ -97,6 +105,7 @@
           document.getElementById(iconID).src = "/images/folderIcon_hover.png";
           document.getElementById("blogF").src = "/images/folderIcon.png";
           document.getElementById("shrinesF").src = "/images/folderIcon.png";
+          document.getElementById("hideWhenBlog").hidden = false;
           menuOpened = id;
         }
       }
@@ -150,20 +159,21 @@
                   <tr class="blog" hidden="true"><td>&emsp;⤷<img src="/images/fileIcon.png" class="navIC" id="mediaLogF" width="20px"><a href="/blog/media-log.html" class="navLink" id="mediaLog" onmouseover="navHovers(id)" onmouseout="fileDefault(id)"><u>M</u>edia log</a></td></tr>
                   <tr class="blog" hidden="true"><td>&emsp;⤷<img src="/images/fileIcon.png" class="navIC" id="otherF" width="20px"><a href="/blog/other.html" class="navLink" id="other" onmouseover="navHovers(id)" onmouseout="fileDefault(id)"><u>O</u>ther</a></td></tr>
                   <tr class="trNav"><td><img src="/images/folderIcon_hover.png" class="navIC" width="26.4px">Portfolio</td></tr>
-                  <tr class="trNav"><td>&emsp;⤷<img src="/images/folderIcon.png" class="navIC" id="drawingsF" width="26.4px"><a href="/drawings.html" class="navLink" id="drawings" onmouseover="navHovers(id)" onmouseout="folderDefault(id)"><u>D</u>rawings</a></td></tr>
-                  <tr class="trNav"><td>&emsp;⤷<img src="/images/folderIcon.png" class="navIC" id="gadgetsF" width="26.4px"><a href="/gadgets.html" class="navLink" id="gadgets" onmouseover="navHovers(id)" onmouseout="folderDefault(id)"><u>G</u>adgets</a></td></tr>
+                  <tr class="trNav"><td>&emsp;⤷<img src="/images/fileIcon.png" class="navIC" id="drawingsF" width="20px"><a href="/drawings.html" class="navLink" id="drawings" onmouseover="navHovers(id)" onmouseout="fileDefault(id)"><u>D</u>rawings</a></td></tr>
+                  <tr class="trNav"><td>&emsp;⤷<img src="/images/fileIcon.png" class="navIC" id="gadgetsF" width="20px"><a href="/gadgets.html" class="navLink" id="gadgets" onmouseover="navHovers(id)" onmouseout="fileDefault(id)"><u>G</u>adgets</a></td></tr>
                   <tr class="trNav"><td><img src="/images/folderIcon.png" class="navIC" id="shrinesF" width="26.4px"><span id="shrines" onmouseover="navHoversAlt(id)" onmouseout="folderDefault(id)" onclick="openMenu(id)"><u>S</u>hrines</span></td></tr>
                   <tr class="shrines" hidden="true"><td>&emsp;⤷<img src="/images/fileIcon.png" class="navIC" id="calculusF" width="20px"><a href="/shrines/calculus.html" class="navLink" id="calculus" onmouseover="navHovers(id)" onmouseout="fileDefault(id)"><u>C</u>alculus</a></td></tr>
                   <tr class="trNav"><td><img src="/images/folderIcon.png" class="navIC" id="miscellaneousF" width="26.4px"><span id="miscellaneous" onmouseover="navHoversAlt(id)" onmouseout="folderDefault(id)" onclick="openMenu(id)"><u>M</u>iscellaneous</span></td></tr>
-                  <tr class="miscellaneous" hidden="true"><td>&emsp;⤷<img src="/images/fileIcon.png" class="navIC" id="linksF" width="20px"><a href="/miscellaneous/outlinks.html" class="navLink" id="links" onmouseover="navHovers(id)" onmouseout="fileDefault(id)"><u>O</u>utlinks</a></td></tr>
                   <tr class="miscellaneous" hidden="true"><td>&emsp;⤷<img src="/images/fileIcon.png" class="navIC" id="gamingF" width="20px"><a href="/miscellaneous/gaming.html" class="navLink" id="gaming" onmouseover="navHovers(id)" onmouseout="fileDefault(id)"><u>G</u>aming</a></td></tr>
                   <tr class="miscellaneous" hidden="true"><td>&emsp;⤷<img src="/images/fileIcon.png" class="navIC" id="virtualPetsF" width="20px"><a href="/miscellaneous/virtual-pets.html" class="navLink" id="virtualPets" onmouseover="navHovers(id)" onmouseout="fileDefault(id)"><u>V</u>irtual pets</a></td></tr>
                   <tr class="miscellaneous" hidden="true"><td>&emsp;⤷<img src="/images/fileIcon.png" class="navIC" id="webStuffF" width="20px"><a href="/miscellaneous/web-stuff.html" class="navLink" id="webStuff" onmouseover="navHovers(id)" onmouseout="fileDefault(id)"><u>W</u>eb stuff</a></td></tr>
+                  <tr class="miscellaneous" hidden="true"><td>&emsp;⤷<img src="/images/fileIcon.png" class="navIC" id="memesF" width="20px"><a href="/miscellaneous/memes.html" class="navLink" id="memes" onmouseover="navHovers(id)" onmouseout="fileDefault(id)"><u>M</u>emes etc.</a></td></tr>
+                  <tr class="trNav"><td><img src="/images/fileIcon.png" class="navIC" id="linksF" width="20px"><a href="/outlinks.html" class="navLink" id="links" onmouseover="navHovers(id)" onmouseout="fileDefault(id)"><u>O</u>utlinks</a></td></tr>
                 </table>
               </td>
             </tr>
             <tr height="1%">
-              <td style="color:white;background-color:#545e2d;"><marquee>FREE PALESTINE, FREE DRC, FREE SUDAN</marquee></td>
+              <td style="color:white;background-color:#545e2d;"><marquee>FREE PALESTINE, FREE D.R. CONGO, FREE SUDAN</marquee></td>
             </tr>
             <tr style="vertical-align:top;">
               <td style="color:white;background-color:#616e32;">
@@ -183,7 +193,7 @@
                   <img src="/images/stamps/mspaint_fan.png">
                   <img src="/images/stamps/puterheart.png">
                 </marquee>
-                <br><div style="display:flex;justify-content:right;"><a href="/miscellaneous/web-stuff.html"><u>S</u>ee more</a></div>
+                <br><div style="display:flex;justify-content:right;" id="hideWhenBlog"><a href="/miscellaneous/web-stuff.html"><u>S</u>ee more</a></div>
               </td>
             </tr>
           </table>
