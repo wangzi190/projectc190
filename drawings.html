@@ -78,16 +78,31 @@ permalink: /drawings
             }
             category = id;
         }
+
         function selectDrawing(id) {
             var all = document.getElementsByClassName("drawing");
             for (var i = 0; i < all.length; i++) {
                     all[i].hidden = true;
             }
-            // openDrawing(id);
-            document.getElementById("selected").hidden = false;
-            drawingOpen = true;
-            document.getElementById("clickReturn").href = "#";
-            document.getElementById("clickReturn").setAttribute("onclick","returnToCategory()");
+            fetch('/drawings.json')
+            .then(res => res.json())
+            .then((data) => {
+                drawingsArray = data;
+                index = parseInt(id.replace("index",""));
+
+                document.getElementById("selectedDrawing").src = "/images/drawings/".concat(drawingsArray[index].image);
+                document.getElementById("selectedDrawing").style.width = drawingsArray[index].width;
+                
+                document.getElementById("name").innerHTML = drawingsArray[index].name;
+                document.getElementById("year").innerHTML = drawingsArray[index].year;
+                document.getElementById("medium").innerHTML = drawingsArray[index].medium;
+                document.getElementById("notes").innerHTML = drawingsArray[index].notes;
+
+                document.getElementById("selected").hidden = false;
+                drawingOpen = true;
+                document.getElementById("clickReturn").href = "#";
+                document.getElementById("clickReturn").setAttribute("onclick","returnToCategory()");
+            }).catch(err => console.error(err));
         }
 
         function returnToCategory() {
@@ -120,57 +135,6 @@ permalink: /drawings
         function resetHref() {
             document.getElementById("clickReturn").href = "/";
         }
-
-        async function openDrawing() {
-            const requestURL = 'https://projectc190.neocities.org/drawings.json';
-            const request = new Request(requestURL);
-        }
-        /* fetch('drawings.json')
-        .then( response => {
-            if (!response.ok) {
-                throw new Error(`HTTP error: ${response.status}`);
-            }
-            return response.json();
-        })
-        .then( json => initialize(json) )
-        .catch( err => console.error(`Fetch problem: ${err.message}`) );
-
-        function initialize(drawings) {
-            fileName = varDrawing.concat(".png");
-            var toOpen = [];
-            toOpen = drawings.filter( drawings => drawings.image === fileName);
-            updateDisplay();
-
-            function updateDisplay() {
-                function fetchBlob(drawing) {
-                    const url = `/images/drawings/${drawing.image}`;
-                    fetch(url)
-                    .then( response => {
-                        if (!response.ok) {
-                        throw new Error(`HTTP error: ${response.status}`);
-                        }
-                        return response.blob();
-                    })
-                    .then( blob => showDrawing(blob, drawing) )
-                    .catch( err => console.error(`Fetch problem: ${err.message}`) );
-                }
-
-                // fetchBlob(toOpen);
-                for (const drawing of toOpen) {
-                    fetchBlob(drawing);
-                }
-            }
-
-            function showDrawing(blob, drawing) {
-                const objectURL = URL.createObjectURL(blob);
-                document.getElementById("selectedDrawing").src = objectURL;
-                document.getElementById("name").innerHTML = drawing.name;
-                document.getElementById("name").alt = drawing.name;
-                document.getElementById("year").innerHTML = drawing.year;
-                document.getElementById("medium").innerHTML = drawing.medium;
-                document.getElementById("notes").innerHTML = drawing.notes;
-            }
-        }; */
     </script>
     <style>
         body::after {
@@ -348,20 +312,20 @@ permalink: /drawings
                             <p id="description" style="text-align:left;"></p>
                         </div>
                         <div id="drawings">
-                            <img src="/images/drawing_thumbnails/bird_mspaint.png" class="digital drawing" id="bird_mspaint" width="190px" onmousedown="selectDrawing(id)" onmouseover="drawingHover(id)" onmouseout="drawingRelease(id)">
-                            <img src="/images/drawing_thumbnails/turing_mspaint.png" class="digital drawing" id="turing_mspaint" width="190px" onmousedown="selectDrawing(id)" onmouseover="drawingHover(id)" onmouseout="drawingRelease(id)">
-                            <img src="/images/drawing_thumbnails/large_pink_flower.png" class="traditional drawing" id="large_pink_flower" width="190px" onmousedown="selectDrawing(id)" onmouseover="drawingHover(id)" onmouseout="drawingRelease(id)">
-                            <img src="/images/drawings/small_pink_flower.png" class="traditional drawing" id="small_pink_flower" width="190px" onmousedown="selectDrawing(id)" onmouseover="drawingHover(id)" onmouseout="drawingRelease(id)" style="text-align:left;">
+                            <img src="/images/drawing_thumbnails/bird_mspaint.png" class="digital drawing" id="index0" width="190px" onmousedown="selectDrawing(id)" onmouseover="drawingHover(id)" onmouseout="drawingRelease(id)">
+                            <img src="/images/drawing_thumbnails/turing_mspaint.png" class="digital drawing" id="index1" width="190px" onmousedown="selectDrawing(id)" onmouseover="drawingHover(id)" onmouseout="drawingRelease(id)">
+                            <img src="/images/drawing_thumbnails/large_pink_flower.png" class="traditional drawing" id="index2" width="190px" onmousedown="selectDrawing(id)" onmouseover="drawingHover(id)" onmouseout="drawingRelease(id)">
+                            <img src="/images/drawings/small_pink_flower.png" class="traditional drawing" id="index3" width="190px" onmousedown="selectDrawing(id)" onmouseover="drawingHover(id)" onmouseout="drawingRelease(id)" style="text-align:left;">
 
-                            <img src="/images/drawing_thumbnails/bird_mspaint.png" class="digital drawing" id="bird_mspaint1" width="190px" onmousedown="selectDrawing(id)" onmouseover="drawingHover(id)" onmouseout="drawingRelease(id)">
-                            <img src="/images/drawing_thumbnails/turing_mspaint.png" class="digital drawing" id="turing_mspaint1" width="190px" onmousedown="selectDrawing(id)" onmouseover="drawingHover(id)" onmouseout="drawingRelease(id)">
-                            <img src="/images/drawing_thumbnails/large_pink_flower.png" class="traditional drawing" id="large_pink_flower1" width="190px" onmousedown="selectDrawing(id)" onmouseover="drawingHover(id)" onmouseout="drawingRelease(id)">
-                            <img src="/images/drawings/small_pink_flower.png" class="traditional drawing" id="small_pink_flower1" width="190px" onmousedown="selectDrawing(id)" onmouseover="drawingHover(id)" onmouseout="drawingRelease(id)" style="text-align:left;">
+                            <img src="/images/drawing_thumbnails/bird_mspaint.png" class="digital drawing" id="index4" width="190px" onmousedown="selectDrawing(id)" onmouseover="drawingHover(id)" onmouseout="drawingRelease(id)">
+                            <img src="/images/drawing_thumbnails/turing_mspaint.png" class="digital drawing" id="index5" width="190px" onmousedown="selectDrawing(id)" onmouseover="drawingHover(id)" onmouseout="drawingRelease(id)">
+                            <img src="/images/drawing_thumbnails/large_pink_flower.png" class="traditional drawing" id="index6" width="190px" onmousedown="selectDrawing(id)" onmouseover="drawingHover(id)" onmouseout="drawingRelease(id)">
+                            <img src="/images/drawings/small_pink_flower.png" class="traditional drawing" id="index7" width="190px" onmousedown="selectDrawing(id)" onmouseover="drawingHover(id)" onmouseout="drawingRelease(id)" style="text-align:left;">
 
-                            <img src="/images/drawing_thumbnails/bird_mspaint.png" class="digital drawing" id="bird_mspaint0" width="190px" onmousedown="selectDrawing(id)" onmouseover="drawingHover(id)" onmouseout="drawingRelease(id)">
-                            <img src="/images/drawing_thumbnails/turing_mspaint.png" class="digital drawing" id="turing_mspaint0" width="190px" onmousedown="selectDrawing(id)" onmouseover="drawingHover(id)" onmouseout="drawingRelease(id)">
-                            <img src="/images/drawing_thumbnails/large_pink_flower.png" class="traditional drawing" id="large_pink_flower0" width="190px" onmousedown="selectDrawing(id)" onmouseover="drawingHover(id)" onmouseout="drawingRelease(id)">
-                            <img src="/images/drawings/small_pink_flower.png" class="traditional drawing" id="small_pink_flower0" width="190px" onmousedown="selectDrawing(id)" onmouseover="drawingHover(id)" onmouseout="drawingRelease(id)" style="text-align:left;">
+                            <img src="/images/drawing_thumbnails/bird_mspaint.png" class="digital drawing" id="index8" width="190px" onmousedown="selectDrawing(id)" onmouseover="drawingHover(id)" onmouseout="drawingRelease(id)">
+                            <img src="/images/drawing_thumbnails/turing_mspaint.png" class="digital drawing" id="index9" width="190px" onmousedown="selectDrawing(id)" onmouseover="drawingHover(id)" onmouseout="drawingRelease(id)">
+                            <img src="/images/drawing_thumbnails/large_pink_flower.png" class="traditional drawing" id="index10" width="190px" onmousedown="selectDrawing(id)" onmouseover="drawingHover(id)" onmouseout="drawingRelease(id)">
+                            <img src="/images/drawings/small_pink_flower.png" class="traditional drawing" id="index11" width="190px" onmousedown="selectDrawing(id)" onmouseover="drawingHover(id)" onmouseout="drawingRelease(id)" style="text-align:left;">
                         </div>
                     </div>
                 </td></tr>

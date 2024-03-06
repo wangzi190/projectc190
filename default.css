@@ -24,6 +24,9 @@ td {
 }
 a {color: white;} a:hover {color: white;}
 .trNav:hover {background-color: #555f2e;}
+.folderCat:hover {
+  cursor: pointer;
+}
 .abacus {
   margin-top: 5px;
   margin-bottom: 5px;
