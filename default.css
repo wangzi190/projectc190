@@ -9,6 +9,16 @@ body {
   font-family: 'Mx437 IBM VGA 9x16';
   background-image: url("/images/background.png");
 }
+#content {
+  line-height: 1.5;
+}
+.headerSpacing {
+  margin-top: 2.5px;
+  margin-bottom: 2.5px;
+}
+table {
+  border-collapse: collapse;
+}
 th {
   border: 0px;
   text-align: left;
@@ -20,9 +30,8 @@ td {
 }
 .navIC {
   margin-right: 3px;
-  position: relative;
 }
-a {color: white;} a:hover {color: white;}
+a {color: white; text-decoration: none;} a:hover {color: white; text-decoration: underline;}
 .trNav:hover {background-color: #555f2e;}
 .folderCat:hover {
   cursor: pointer;
@@ -33,8 +42,7 @@ a {color: white;} a:hover {color: white;}
 }
 @keyframes titleWiggle {
   from {content: url("/images/title.png");}
-  to {content: url("/images/title2.png");
-  height: 56.25px;}
+  to {content: url("/images/title2.png");}
 }
 #title {
   animation-name: titleWiggle;
