@@ -26,15 +26,15 @@
 </head>
 
 <body>
-  <table style="width:100%;max-width:1010px;margin-right:auto;margin-left:auto;">
-    <tr height="1%">
-      <th style="text-align:center;"><a href="/"><img src="/images/title.png" width="400px" height="41.25px" id="title" style="padding-top:7px; margin-bottom:7px;"></a></th>
-    </tr>
+  <div class="flex-container" style="width:100%;max-width:1000px;margin:auto;flex-direction:column;">
+    <div class="flex-top header" style="text-align:center;margin-top:17px; margin-bottom:12px;">
+      <a href="/"><img src="/images/title.png" width="400px" height="41.25px" id="title"></a>
+    </div>
 
-    <tr><td>
-      <div class="flex-container" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+    <div class="flex-middle">
+      <div class="main flex-container" style="width:100%;max-width:1000px;margin:auto;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
         <div class="flex-left" style="flex-basis: 200px;">
-          <table style="height:100%;width:100%;margin-right:auto;margin-left:auto;">
+          <table style="height:100%;width:100%;margin:auto;">
             <tr height="1%">
               <td style="color:white;background-color:#545e2d;" id="navTitle"><div class="headerSpacing"><b>Navigation</b></div></td>
             </tr>
@@ -70,8 +70,8 @@
           </table>
         </div>
 
-        <div class="flex-middle" style="flex-basis: 600px;">
-          <table style="height:100%;width:100%;margin-right:auto;margin-left:auto;">
+        <div class="flex-center" style="flex-basis: 600px;">
+          <table style="height:100%;width:100%;margin:auto;">
             <tr height="1%">
               <td style="color:white;background-color:#293016;"><div class="headerSpacing">{{ page.title }}</div></td>
             </tr>
@@ -82,7 +82,7 @@
         </div>
 
         <div class="flex-right" style="flex-basis: 200px;">
-          <table style="height:100%;width:100%;margin-right:auto;margin-left:auto;">
+          <table style="height:100%;width:100%;margin:auto;">
             <tr height="1%">
               <td style="color:white;background-color:#545e2d;"><div class="headerSpacing">Artwork</div></td>
             </tr>
@@ -90,10 +90,10 @@
               <td style="color:white;background-color:#616e32;">
 
                 <div style="display:flex;justify-content:center;">
-                  <div class="artwork" id="img4"><img src="/images/drawings/small_pink_flower.png" width="190px"></div>
-                  <div class="artwork" id="img3"><img src="/images/drawing_thumbnails/large_pink_flower.png" width="190px"></div>
-                  <div class="artwork" id="img2"><img src="/images/drawing_thumbnails/turing_mspaint.png" width="190px"></div>
-                  <div class="artwork" id="img1"><img src="/images/drawing_thumbnails/bird_mspaint.png" width="190px"></div>
+                  <div class="artwork" id="img4"><img src="/images/drawing_thumbnails/small_pink_flower.jpg" width="190px"></div>
+                  <div class="artwork" id="img3"><img src="/images/drawing_thumbnails/large_pink_flower.jpg" width="190px"></div>
+                  <div class="artwork" id="img2"><img src="/images/drawing_thumbnails/turing_mspaint.jpg" width="190px"></div>
+                  <div class="artwork" id="img1"><img src="/images/drawing_thumbnails/bird_mspaint.jpg" width="190px"></div>
                 </div>
 
                 <div style="display:flex;justify-content:right;"><a href="/drawings.html" id="seeMoreArt"><u>S</u>ee more</a></div>
@@ -122,12 +122,12 @@
           </table>
         </div>
       </div>
-    </td></tr>
-
-    <tr>
-      <td colspan="3" height="5%" style="text-align:center;vertical-align:bottom;" id="bottomText">project c190 © 2022-2024</td>
-    </tr>
-  </table>
+    </div>
+    
+    <div class="flex-bottom footer" style="text-align:center;margin-top:12px;">
+      project c190 © 2022-2024
+    </div>
+  </div>
 </body>
 
 </html>

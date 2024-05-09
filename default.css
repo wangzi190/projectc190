@@ -7,7 +7,7 @@
 }
 body {
   font-family: 'Mx437 IBM VGA 9x16';
-  background-image: url("/images/background.png");
+  background-image: url("/images/background.jpg");
 }
 #content {
   line-height: 1.5;
@@ -32,7 +32,16 @@ td {
   margin-right: 3px;
 }
 a {color: white; text-decoration: none;} a:hover {color: white; text-decoration: underline;}
+.trNav {
+  margin-top:4px;
+  margin-bottom:4px;
+}
 .trNav:hover {background-color: #555f2e;}
+.trNavMin {
+  margin-top:6px;
+  margin-bottom:6px;
+}
+.trNavMin:hover {background-color: #555f2e;}
 .folderCat:hover {
   cursor: pointer;
 }
@@ -52,8 +61,10 @@ a {color: white; text-decoration: none;} a:hover {color: white; text-decoration:
 }
 .flex-container {
   display: flex;
-  height: 720px;
+}
+.main {
   flex-direction: row;
+  height: 720px;
 }
 .artwork {
   position: absolute;
@@ -115,23 +126,47 @@ a {color: white; text-decoration: none;} a:hover {color: white; text-decoration:
   animation-iteration-count: infinite;
   animation-duration: 1s;
 }
-@media (max-width: 1010px) {
-  /*.flex-container {
+.flex-left {
+  width: 200px;
+  flex-shrink: 0;
+}
+.flex-center {
+  width: 600px;
+  flex-shrink: 0;
+}
+.flex-right {
+  width: 200px;
+  flex-shrink: 0;
+}
+.flex-top {
+  width: 1000px;
+  flex-shrink: 0;
+}
+.flex-middle {
+  width: 1000px;
+  flex-shrink: 0;
+}
+.flex-bottom {
+  width: 1000px;
+  flex-shrink: 0;
+}
+/* @media (max-width: 500px) {
+  .flex-container {
     flex-direction: column;
-  }*/
+  }
   .flex-left {
-    width: 200px;
-    /*margin-left: auto;
-    margin-right: auto;*/
+    width: 600px;
+    margin-left: auto;
+    margin-right: auto;
   }
   .flex-middle {
     width: 600px;
-    /*margin-left: auto;
-    margin-right: auto;*/
+    margin-left: auto;
+    margin-right: auto;
   }
   .flex-right {
-    width: 200px;
-    /*margin-left: auto;
-    margin-right: auto;*/
+    width: 600px;
+    margin-left: auto;
+    margin-right: auto;
   }
-}
+} */
