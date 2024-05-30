@@ -89,7 +89,8 @@ permalink: /drawings
             .then((data) => {
                 drawingsArray = data;
                 index = parseInt(id.replace("index",""));
-
+                
+                document.getElementById("selectedDrawing").src = "";
                 document.getElementById("selectedDrawing").src = "/images/drawings/".concat(drawingsArray[index].image);
                 document.getElementById("selectedDrawing").style.width = drawingsArray[index].width;
                 

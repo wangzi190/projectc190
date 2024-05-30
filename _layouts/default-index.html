@@ -9,7 +9,7 @@
   
   <script type="text/javascript" async>
     var menuOpened = "null";
-    // var openableFolders = ["blog", "shrines", "miscellaneous"];
+
     var openMenu = function(id) {
       var items;
       var iconID;
@@ -20,12 +20,6 @@
         }
         iconID = id.concat("F");
         document.getElementById(iconID).src = "/images/folderIcon_hover.png";
-        if (id == "blog" || id == "miscellaneous") {
-          stampsHide = document.getElementsByClassName("hideToFit");
-          for (var i = 0; i < stampsHide.length; i++) { 
-            stampsHide[i].hidden = true;
-          }
-        }
         menuOpened = id;
       } else if (menuOpened == id) {
         items = document.getElementsByClassName(id);
@@ -34,32 +28,9 @@
         }
         iconID = id.concat("F");
         document.getElementById(iconID).src = "/images/folderIcon.png";
-        if (id == "blog" || id == "miscellaneous") {
-          stampsHide = document.getElementsByClassName("hideToFit");
-          for (var i = 0; i < stampsHide.length; i++) { 
-            stampsHide[i].hidden = false;
-          }
-        }
         menuOpened = "null";
       } else if (menuOpened != "null" && menuOpened != id) {
-        /* items = document.getElementsByClassName(id);
-        for (var i = 0; i < items.length; i++) { 
-          items[i].hidden = false;
-        }
-        var toClose = openableFolders.filter(e => e !== id);
-        var elementsToClose = [];
-        for (var i = 0; i < toClose.length; i++) {
-          elementsToClose = document.getElementsByClassName(toClose[i]);
-          for (var j = 0; j < elementsToClose.length; j++) {
-            elementsToClose[i].hidden = true;
-          }
-        }
-        menuOpened = id; */
-        if (id == "blog") {
-          items = document.getElementsByClassName("shrines");
-          for (var i = 0; i < items.length; i++) { 
-            items[i].hidden = true;
-          }
+        if (id == "shrines") {
           items = document.getElementsByClassName("miscellaneous");
           for (var i = 0; i < items.length; i++) { 
             items[i].hidden = true;
@@ -70,40 +41,9 @@
           }
           iconID = id.concat("F");
           document.getElementById(iconID).src = "/images/folderIcon_hover.png";
-          document.getElementById("shrinesF").src = "/images/folderIcon.png";
           document.getElementById("miscellaneousF").src = "/images/folderIcon.png";
-          stampsHide = document.getElementsByClassName("hideToFit");
-          for (var i = 0; i < stampsHide.length; i++) { 
-            stampsHide[i].hidden = true;
-          }
-          menuOpened = id;
-        } else if (id == "shrines") {
-          items = document.getElementsByClassName("blog");
-          for (var i = 0; i < items.length; i++) { 
-            items[i].hidden = true;
-          }
-          items = document.getElementsByClassName("miscellaneous");
-          for (var i = 0; i < items.length; i++) { 
-            items[i].hidden = true;
-          }
-          items = document.getElementsByClassName(id);
-          for (var i = 0; i < items.length; i++) { 
-            items[i].hidden = false;
-          }
-          iconID = id.concat("F");
-          document.getElementById(iconID).src = "/images/folderIcon_hover.png";
-          document.getElementById("blogF").src = "/images/folderIcon.png";
-          document.getElementById("miscellaneousF").src = "/images/folderIcon.png";
-          stampsHide = document.getElementsByClassName("hideToFit");
-          for (var i = 0; i < stampsHide.length; i++) { 
-            stampsHide[i].hidden = false;
-          }
           menuOpened = id;
         } else {
-          items = document.getElementsByClassName("blog");
-          for (var i = 0; i < items.length; i++) { 
-            items[i].hidden = true;
-          }
           items = document.getElementsByClassName("shrines");
           for (var i = 0; i < items.length; i++) { 
             items[i].hidden = true;
@@ -114,16 +54,12 @@
           }
           iconID = id.concat("F");
           document.getElementById(iconID).src = "/images/folderIcon_hover.png";
-          document.getElementById("blogF").src = "/images/folderIcon.png";
           document.getElementById("shrinesF").src = "/images/folderIcon.png";
-          stampsHide = document.getElementsByClassName("hideToFit");
-          for (var i = 0; i < stampsHide.length; i++) { 
-            stampsHide[i].hidden = true;
-          }
           menuOpened = id;
         }
       }
     }
+
     var fileDefault = function(id) {
       repID = id.concat("F");
       document.getElementById(repID).src = "/images/fileIcon.png";
@@ -174,9 +110,8 @@
                   <div class="shrines" hidden="true">&emsp;⤷<img src="/images/fileIcon.png" class="navIC" id="calculusF" width="20px"><a href="/shrines/calculus.html" class="navLink" id="calculus" onmouseover="navHovers(id)" onmouseout="fileDefault(id)"><u>C</u>alculus</a></div>
                   <div class="trNav"><img src="/images/folderIcon.png" class="navIC" id="miscellaneousF" width="26.4px"><span class="folderCat" id="miscellaneous" onmouseover="navHoversAlt(id)" onmouseout="folderDefault(id)" onclick="openMenu(id)"><u>M</u>iscellaneous</span></div>
                   <div class="trNav miscellaneous" hidden="true">&emsp;⤷<img src="/images/fileIcon.png" class="navIC" id="gamingF" width="20px"><a href="/miscellaneous/gaming.html" class="navLink" id="gaming" onmouseover="navHovers(id)" onmouseout="fileDefault(id)"><u>G</u>aming</a></div>
-                  <div class="trNav miscellaneous" hidden="true">&emsp;⤷<img src="/images/fileIcon.png" class="navIC" id="virtualPetsF" width="20px"><a href="/miscellaneous/virtual-pets.html" class="navLink" id="virtualPets" onmouseover="navHovers(id)" onmouseout="fileDefault(id)"><u>V</u>irtual pets</a></div>
                   <div class="trNav miscellaneous" hidden="true">&emsp;⤷<img src="/images/fileIcon.png" class="navIC" id="webStuffF" width="20px"><a href="/miscellaneous/web-stuff.html" class="navLink" id="webStuff" onmouseover="navHovers(id)" onmouseout="fileDefault(id)"><u>W</u>eb stuff</a></div>
-                  <div class="trNav miscellaneous" hidden="true">&emsp;⤷<img src="/images/fileIcon.png" class="navIC" id="memesF" width="20px"><a href="/miscellaneous/memes.html" class="navLink" id="memes" onmouseover="navHovers(id)" onmouseout="fileDefault(id)"><u>M</u>emes etc.</a></div>
+                  <div class="trNav miscellaneous" hidden="true">&emsp;⤷<img src="/images/fileIcon.png" class="navIC" id="memesF" width="20px"><a href="/miscellaneous/memes.html" class="navLink" id="memes" onmouseover="navHovers(id)" onmouseout="fileDefault(id)"><u>M</u>emes</a></div>
                   <div class="trNav"><img src="/images/fileIcon.png" class="navIC" id="linksF" width="20px"><a href="/outlinks.html" class="navLink" id="links" onmouseover="navHovers(id)" onmouseout="fileDefault(id)"><u>O</u>utlinks</a></div>
                 </td>
               </tr>
@@ -190,18 +125,18 @@
                   <a href="https://eyesonsudan.net" target="_blank"><img src="/images/support/sudan.png" width="37px"></a>
                 </td>
               </tr>
-              <tr height="1%" class="hideToFit">
+              <tr height="1%">
                 <td style="color:white;background-color:#545e2d;"><div class="headerSpacing">Stamps</div></td>
               </tr>
               <tr style="height:100%;vertical-align:top;">
                 <td style="color:white;background-color:#616e32;">
-                  <marquee onmouseover="this.setAttribute('scrollamount',0);" onmouseout="this.setAttribute('scrollamount',5);" class="hideToFit">
+                  <marquee onmouseover="this.setAttribute('scrollamount',0);" onmouseout="this.setAttribute('scrollamount',5);">
                     <img src="/images/stamps/i_heart_birds.png">
                     <img src="/images/stamps/5w6.png">
                     <img src="/images/stamps/mspaint_fan.png">
                     <img src="/images/stamps/puterheart.png">
                   </marquee>
-                  <br><div style="display:flex;justify-content:right;"><a href="/miscellaneous/web-stuff.html" class="hideToFit"><u>S</u>ee more</a></div>
+                  <br><div style="display:flex;justify-content:right;"><a href="/miscellaneous/web-stuff.html"><u>S</u>ee more</a></div>
                 </td>
               </tr>
             </table>
