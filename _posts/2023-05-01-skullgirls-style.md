@@ -2,7 +2,6 @@
 layout: posts
 title: Skullgirls style emulation
 categories: sketchbook
-caturl: "/blog/sketchbook.html"
 ---
 <a href="/images/for-posts/parasoul_wip_1.png" target="_blank"><img src="/images/for-posts/parasoul_wip_1.png" width="260px"></a> <a href="/images/for-posts/parasoul_wip_2.png" target="_blank"><img src="/images/for-posts/parasoul_wip_2.png" width="260px"></a>
 <br>Above are two work-in-progress shots of my drawing of Parasoul from Skullgirls. You can click either one to view it in full.

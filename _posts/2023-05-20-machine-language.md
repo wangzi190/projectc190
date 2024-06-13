@@ -2,7 +2,6 @@
 layout: posts
 title: Nand2Tetris / Machine Language
 categories: projectLog
-caturl: "/blog/project-log.html"
 ---
 <a href="https://www.nand2tetris.org/project04" target="_blank">Project information</a> | <a href="https://github.com/wangzi190/nand2tetris/tree/master/04" target="_blank">My work</a>
 <br><br><b>Concepts</b>

@@ -2,7 +2,6 @@
 layout: posts
 title: Nand2Tetris / Boolean Arithmetic and the ALU
 categories: projectLog
-caturl: "/blog/project-log.html"
 ---
 <a href="https://www.nand2tetris.org/project02" target="_blank">Project information</a> | <a href="https://github.com/wangzi190/nand2tetris/tree/master/02" target="_blank">My work</a>
 <br><br><b>Concepts</b>
