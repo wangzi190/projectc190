@@ -8,6 +8,9 @@ permalink: /
         margin-left: 5px;
         margin-right: 5px;
     }
+    .abacus {
+        margin-top: 12px;
+    }
     .abacus:hover {
         cursor: pointer;
     }
@@ -15,9 +18,6 @@ permalink: /
         display: block;
         margin-left: auto;
         margin-right: auto;
-    }
-    .linkIC {
-        margin-left: 15px;
     }
 </style>
 <script type="text/javascript" async>
@@ -67,19 +67,13 @@ permalink: /
 <div class="flex-container" style="flex-direction:row;">
     <div>
         <span>
-            Welcome to my corner of the 'net. I'm an artist, compsci student, and math enthusiast, and this site is an amalgamation of stuff I make and stuff I generally like. I hope you enjoy your stay.
+            Welcome to my corner of the 'net. I'm an artist, compsci student, and math enthusiast, and this site is an amalgam of stuff I make and stuff I generally like. If you're on mobile, I'd suggest you to switch to landscape mode. Otherwise, enjoy your stay :)
         </span>
-        <br><img src="/images/education.png" height="31px" style="margin-top:15px;"> <a href="/stampcode.txt" target="_blank"><img src="/images/frames/stamp1_d.png" id="stampDark" width="88px" height="31px" style="margin-top:15px;"></a> <a href="/stampcode.txt" target="_blank"><img src="/images/frames/stamp1_l.png" id="stampLight" width="88px" height="31px" style="margin-top:15px;"></a>
-    </div>
-    <div style="text-align:center;">
-    <img src="/images/celadon.png" width="167px" style="margin-left:5px;">
-    </div>
-</div>
-
-<div class="flex-container" style="flex-direction:row;">
-    <div>
-        <img src="/images/abacus/L.png" height="120px" class="abacus" id="L"><img src="/images/abacus/0.png" height="120px" class="abacus" id="column13" onclick="incrementAbacus(id)"><img src="/images/abacus/0.png" height="120px" class="abacus" id="column12" onclick="incrementAbacus(id)"><img src="/images/abacus/0.png" height="120px" class="abacus" id="column11" onclick="incrementAbacus(id)"><img src="/images/abacus/0.png" height="120px" class="abacus" id="column10" onclick="incrementAbacus(id)"><img src="/images/abacus/0.png" height="120px" class="abacus" id="column9" onclick="incrementAbacus(id)"><img src="/images/abacus/0.png" height="120px" class="abacus" id="column8" onclick="incrementAbacus(id)"><img src="/images/abacus/0.png" height="120px" class="abacus" id="column7" onclick="incrementAbacus(id)"><img src="/images/abacus/0.png" height="120px" class="abacus" id="column6" onclick="incrementAbacus(id)"><img src="/images/abacus/0.png" height="120px" class="abacus" id="column5" onclick="incrementAbacus(id)"><img src="/images/abacus/0.png" height="120px" class="abacus" id="column4" onclick="incrementAbacus(id)"><img src="/images/abacus/1.png" height="120px" class="abacus" id="column3" onclick="incrementAbacus(id)"><img src="/images/abacus/9.png" height="120px" class="abacus" id="column2" onclick="incrementAbacus(id)"><img src="/images/abacus/0.png" height="120px" class="abacus" id="column1" onclick="incrementAbacus(id)"><img src="/images/abacus/R.png" class="abacus" height="120px">
-        <span style="display:flex;color:#7b8a48;">
+        <br>
+        <span style="margin-left:22px;">
+            <img src="/images/abacus/L.png" height="120px" class="abacus" id="L"><img src="/images/abacus/0.png" height="120px" class="abacus" id="column13" onclick="incrementAbacus(id)"><img src="/images/abacus/0.png" height="120px" class="abacus" id="column12" onclick="incrementAbacus(id)"><img src="/images/abacus/0.png" height="120px" class="abacus" id="column11" onclick="incrementAbacus(id)"><img src="/images/abacus/0.png" height="120px" class="abacus" id="column10" onclick="incrementAbacus(id)"><img src="/images/abacus/0.png" height="120px" class="abacus" id="column9" onclick="incrementAbacus(id)"><img src="/images/abacus/0.png" height="120px" class="abacus" id="column8" onclick="incrementAbacus(id)"><img src="/images/abacus/0.png" height="120px" class="abacus" id="column7" onclick="incrementAbacus(id)"><img src="/images/abacus/0.png" height="120px" class="abacus" id="column6" onclick="incrementAbacus(id)"><img src="/images/abacus/0.png" height="120px" class="abacus" id="column5" onclick="incrementAbacus(id)"><img src="/images/abacus/0.png" height="120px" class="abacus" id="column4" onclick="incrementAbacus(id)"><img src="/images/abacus/1.png" height="120px" class="abacus" id="column3" onclick="incrementAbacus(id)"><img src="/images/abacus/9.png" height="120px" class="abacus" id="column2" onclick="incrementAbacus(id)"><img src="/images/abacus/0.png" height="120px" class="abacus" id="column1" onclick="incrementAbacus(id)"><img src="/images/abacus/R.png" class="abacus" height="120px">
+        </span>
+        <span style="display:flex;color:#7b8a48; margin-top:-10px;margin-left:22px;">
             <span style="margin-right:10px;">=</span>
             <span style="margin-left:5px;margin-right:5px;" id="column13t" hidden="true">0</span>
             <span style="margin-left:5px;margin-right:5px;" id="column12t" hidden="true">0</span>
@@ -96,16 +90,23 @@ permalink: /
             <span style="margin-left:5px;margin-right:5px;" id="column1t">0</span>
         </span>
     </div>
-
-    <div>
-        <img src="/images/neocities.png" class="linkIC" width="25.4px" style="margin-left:17px;"> <a href="https://neocities.org/site/projectc190" target="_blank"><u>N</u>eocities</a>
-        <br><img src="/images/github.png" class="linkIC" width="25.5px" style="margin-left:17px;"> <a href="https://github.com/wangzi190" target="_blank"><u>G</u>ithub</a>
-        <br><br><a href="https://www.mozilla.org/en-US/firefox/new" target="_blank"><img src="/images/stamps/getfirefox.gif" style="margin-left:17px;"></a> <a href="https://duckduckgo.com" target="_blank"><img src="/images/stamps/duckduckgo.png"></a>
-        <br><a href="https://www.vim.org" target="_blank"><img src="/images/vim_edited_blue.png" align="right" style="margin-top: 7px;"></a>
+    <div style="text-align:center;">
+    <img src="/images/huicat.png" width="162px" style="margin-right:3px;">
     </div>
 </div>
 
-<div class="flex-container" style="flex-direction:row;">
+<div class="flex-container" style="flex-direction:row;margin-top:4px;">
+    <div>
+        <img src="/images/education.png" height="31px">
+        <a href="/stampcode.txt" target="_blank"><img src="/images/frames/stamp1_d.png" id="stampDark" width="88px" height="31px"></a>
+        <a href="https://duckduckgo.com" target="_blank"><img src="/images/stamps/duckduckgo.png"></a>
+        <a href="https://www.mozilla.org/en-US/firefox/new" target="_blank"><img src="/images/stamps/getfirefox.gif"></a>
+        <a href="https://neocities.org/site/projectc190" target="_blank"><img src="/images/neocities.png" style="margin-left: 15px;" width="25.4px"></a>
+        <a href="https://github.com/wangzi190" target="_blank"><img src="/images/github.png" width="25.5px"></a>
+    </div>
+</div>
+
+<div class="flex-container" style="flex-direction:row;margin-top:10px;">
     <div style="text-align:center;width:200px;">
         <img src="/images/compu_test.png" width="135px" style="margin-top:17px;margin-right:10px;">
         <a href="/microblog.html"><img src="/images/microblog.gif" style="margin-top:3px;margin-right:10px;"></a>
@@ -118,7 +119,9 @@ permalink: /
             </tr>
             <tr height="150px" style="background-color:#3e4123;vertical-align:top;">
                 <td><div style="overflow-x:hidden;overflow-y:auto;height:150px;">
-                    <b>06/12/24:</b> Published posts "Nand2Tetris / Computer Architecture" and "May 2024".
+                    <b>06/17/24:</b> Revamped index page.
+                    <br><b>06/15/24:</b> Added new art to /drawings.html; published posts "Renaissance Art in MSP, and a Pigeon" and "Stuff from January".
+                    <br><b>06/12/24:</b> Published posts "Nand2Tetris / Computer Architecture" and "May 2024".
                     <br><b>05/31/24:</b> Edited blog posts, slowed marquee scroll speed, and added new guestbook.
                     <br><b>05/28/24:</b> Redid blog layout for simplicity.
                     <br><b>05/09/24:</b> Compressed and resized large images, and made some layout adjustments.
@@ -146,5 +149,6 @@ permalink: /
         </table>
     </div>
 </div>
+
 </td></tr>
 </table>
