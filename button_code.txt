@@ -1,4 +1,4 @@
-Spinny disk stamps for your website, if you'd like :)
+Spinny disk buttons for your website, if you'd like :)
 
 Dark:
 <a href="https://projectc190.neocities.org" target="_blank"><img src="https://user-images.githubusercontent.com/57303754/278845965-f2f5943f-0ed2-4025-8cb1-1f9163894103.gif"></a>
