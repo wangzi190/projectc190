@@ -1,9 +1,11 @@
 ---
 layout: posts
-title: Nand2Tetris / Computer Architecture
+title: Nand2Tetris - 05 | Computer Architecture
 categories: projectLog
 ---
-<a href="https://www.nand2tetris.org/project05" target="_blank">Project information</a> | <a href="https://github.com/wangzi190/nand2tetris/tree/master/05" target="_blank">My work</a>
+Building the memory and CPU of the Nand2Tetris Hack computer and completing its hardware platform using components from the previous projects. 
+<br><br>
+<a href="https://www.nand2tetris.org/project05" target="_blank">Project specifications</a> | <a href="https://github.com/wangzi190/nand2tetris/tree/master/05" target="_blank">My work</a>
 <br><br><u>Note</u>: I've decided to focus for the most part on completing each project to the best of my abilities, instead of getting sidetracked thinking about what more I could be learning about each concept (Because, well, there's always more). I'll still make note of what I'm still thinking or wondering about at the end, but won't give myself pressure to do a deep-dive on everything.
 <br><br><b>Concepts</b>
 <br><br>The typical computer hardware platform is made up of a CPU, which is made up of an ALU, registers, and a control unit, main memory unit(s), which store information pertaining to data and instructions, and a ROM unit, which contains critical resources such as start-up instruction data. Despite the fixed nature of the hardware platform, the computer is able to perform an immense variety of tasks by executing the instructions stored in its memory chips in different ways.

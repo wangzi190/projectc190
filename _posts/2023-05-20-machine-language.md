@@ -1,9 +1,11 @@
 ---
 layout: posts
-title: Nand2Tetris / Machine Language
+title: Nand2Tetris - 04 | Machine Language
 categories: projectLog
 ---
-<a href="https://www.nand2tetris.org/project04" target="_blank">Project information</a> | <a href="https://github.com/wangzi190/nand2tetris/tree/master/04" target="_blank">My work</a>
+Writing two Hack assembly language programs, one which multiplies two values and another which blackens the screen when a key is pressed and clears it otherwise.
+<br><br>
+<a href="https://www.nand2tetris.org/project04" target="_blank">Project specifications</a> | <a href="https://github.com/wangzi190/nand2tetris/tree/master/04" target="_blank">My work</a>
 <br><br><b>Concepts</b>
 <br><br>
 Whereas commands in high level languages such as Java or Python embody logical concepts (e.g. "if [this event] occurs, execute [this code]"), assembly language machine instructions correlate directly to the functions of a processor chip. So, assembly machine instructions can be directly translated into the sequences of 1s and 0s read by the computer processor, called <i>machine language</i>. The data involved in assembly programs are also sequences of 1s and 0s, generally notated in hexadecimal for the sake of readability.

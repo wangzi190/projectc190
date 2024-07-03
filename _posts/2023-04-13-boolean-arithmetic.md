@@ -1,9 +1,11 @@
 ---
 layout: posts
-title: Nand2Tetris / Boolean Arithmetic and the ALU
+title: Nand2Tetris - 02 | Boolean Arithmetic
 categories: projectLog
 ---
-<a href="https://www.nand2tetris.org/project02" target="_blank">Project information</a> | <a href="https://github.com/wangzi190/nand2tetris/tree/master/02" target="_blank">My work</a>
+Building an incrementer, half adder, full adder, and ALU using the gates from the <a href="/projectlog/2023/03/28/boolean-logic.html">previous project</a>.
+<br><br>
+<a href="https://www.nand2tetris.org/project02" target="_blank">Project specifications</a> | <a href="https://github.com/wangzi190/nand2tetris/tree/master/02" target="_blank">My work</a>
 <br><br><b>Concepts</b>
 <br><br>Most computer systems represent signed integers using a method called 2's complement, where, in a fixed number of bits, negative integers are represented using the negation of their absolute value plus 1. This method is convenient for a number of reasons:
 <ul>
