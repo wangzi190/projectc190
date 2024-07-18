@@ -151,31 +151,3 @@ a {color: white; text-decoration: none;} a:hover {color: white; text-decoration:
   width: 1000px;
   flex-shrink: 0;
 }
-/* @media (max-width: 600px) {
-  .flex-top {
-    text-align: left;
-  }
-  .flex-bottom {
-    text-align: left;
-  }
-  .main {
-    width: 600px;
-    height: 200px;
-    flex-direction: column;
-  }
-  .flex-left {
-    width: 600px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  .flex-middle {
-    width: 600px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  .flex-right {
-    width: 600px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-} */

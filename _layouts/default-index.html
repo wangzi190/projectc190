@@ -7,6 +7,52 @@
   <link rel="icon" href="/images/test.png">
   <link rel="stylesheet" href="/default.css">
   
+  <style>
+    @media (max-width: 600px) {
+      .flex-top {
+        width: 600px;
+      }
+      .flex-middle {
+        width: 600px;
+        height:1566px;
+      }
+      .flex-bottom {
+        width: 600px;
+      }
+      .main {
+        width: 600px;
+        height: 200px;
+        flex-direction: column;
+      }
+      .flex-left {
+        width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .flex-middle {
+        width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .flex-right {
+        width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .center4Mob {
+        text-align:center;
+      }
+      .flexWhenMob {
+        display: flex;
+        flex-direction: row;
+      }
+      .navCenter {
+        margin-left: 25px;
+        margin-right: 30px;
+      }
+    }
+  </style>
+
   <script type="text/javascript" async>
     var menuOpened = "null";
 
@@ -100,19 +146,29 @@
               </tr>
               <tr style="vertical-align:top;">
                 <td style="background-color:#616e32;color:white;" id="navMenu">
-                  <div class="trNav" style="width:100%;"><img src="/images/fileIcon.png" class="navIC" id="landingF" width="20px"><a href="/" class="navLink" id="landing" onmouseover="navHovers(id)" onmouseout="fileDefault(id)"><u>L</u>anding</a></div>
-                  <div class="trNav" style="width:100%;"><img src="/images/fileIcon.png" class="navIC" id="aboutF" width="20px"><a href="/about.html" class="navLink" id="about" onmouseover="navHovers(id)" onmouseout="fileDefault(id)"><u>A</u>bout</a></div>
-                  <div class="trNav" style="width:100%;"><img src="/images/folderIcon.png" class="navIC" id="blogF" width="26.4px"><a href="/blog.html" class="folderCat" id="blog" onmouseover="navHoversAlt(id)" onmouseout="folderDefault(id)"><u>B</u>log</span></a></div>
-                  <div class="trNav"><img src="/images/folderIcon_hover.png" class="navIC" width="26.4px">Portfolio</div>
-                  <div class="trNav">&emsp;⤷<img src="/images/fileIcon.png" class="navIC" id="drawingsF" width="20px"><a href="/drawings.html" class="navLink" id="drawings" onmouseover="navHovers(id)" onmouseout="fileDefault(id)"><u>D</u>rawings</a></div>
-                  <div class="trNav">&emsp;⤷<img src="/images/fileIcon.png" class="navIC" id="gadgetsF" width="20px"><a href="/gadgets.html" class="navLink" id="gadgets" onmouseover="navHovers(id)" onmouseout="fileDefault(id)"><u>G</u>adgets</a></div>
-                  <div class="trNav"><img src="/images/folderIcon.png" class="navIC" id="shrinesF" width="26.4px"><span class="folderCat" id="shrines" onmouseover="navHoversAlt(id)" onmouseout="folderDefault(id)" onclick="openMenu(id)"><u>S</u>hrines</span></div>
-                  <div class="shrines" hidden="true">&emsp;⤷<img src="/images/fileIcon.png" class="navIC" id="mathF" width="20px"><a href="/shrines/math.html" class="navLink" id="math" onmouseover="navHovers(id)" onmouseout="fileDefault(id)"><u>M</u>athematics</a></div>
-                  <div class="trNav"><img src="/images/folderIcon.png" class="navIC" id="miscellaneousF" width="26.4px"><span class="folderCat" id="miscellaneous" onmouseover="navHoversAlt(id)" onmouseout="folderDefault(id)" onclick="openMenu(id)"><u>M</u>iscellaneous</span></div>
-                  <div class="trNav miscellaneous" hidden="true">&emsp;⤷<img src="/images/fileIcon.png" class="navIC" id="gamingF" width="20px"><a href="/miscellaneous/gaming.html" class="navLink" id="gaming" onmouseover="navHovers(id)" onmouseout="fileDefault(id)"><u>G</u>aming</a></div>
-                  <div class="trNav miscellaneous" hidden="true">&emsp;⤷<img src="/images/fileIcon.png" class="navIC" id="webStuffF" width="20px"><a href="/miscellaneous/web-stuff.html" class="navLink" id="webStuff" onmouseover="navHovers(id)" onmouseout="fileDefault(id)"><u>W</u>eb stuff</a></div>
-                  <div class="trNav miscellaneous" hidden="true">&emsp;⤷<img src="/images/fileIcon.png" class="navIC" id="memesF" width="20px"><a href="/miscellaneous/memes.html" class="navLink" id="memes" onmouseover="navHovers(id)" onmouseout="fileDefault(id)"><u>M</u>emes</a></div>
-                  <div class="trNav"><img src="/images/fileIcon.png" class="navIC" id="linksF" width="20px"><a href="/outlinks.html" class="navLink" id="links" onmouseover="navHovers(id)" onmouseout="fileDefault(id)"><u>O</u>utlinks</a></div>
+                  <span class="flexWhenMob">
+                    <span class="navLeft">
+                    <div class="trNav" style="width:100%;"><img src="/images/fileIcon.png" class="navIC" id="landingF" width="20px"><a href="/" class="navLink" id="landing" onmouseover="navHovers(id)" onmouseout="fileDefault(id)"><u>L</u>anding</a></div>
+                    <div class="trNav" style="width:100%;"><img src="/images/fileIcon.png" class="navIC" id="aboutF" width="20px"><a href="/about.html" class="navLink" id="about" onmouseover="navHovers(id)" onmouseout="fileDefault(id)"><u>A</u>bout</a></div>
+                    <div class="trNav" style="width:100%;"><img src="/images/folderIcon.png" class="navIC" id="blogF" width="26.4px"><a href="/blog.html" class="folderCat" id="blog" onmouseover="navHoversAlt(id)" onmouseout="folderDefault(id)"><u>B</u>log</span></a></div>
+                    </span>
+
+                    <span class="navCenter">
+                    <div class="trNav"><img src="/images/folderIcon_hover.png" class="navIC" width="26.4px">Portfolio</div>
+                    <div class="trNav">&emsp;⤷<img src="/images/fileIcon.png" class="navIC" id="drawingsF" width="20px"><a href="/drawings.html" class="navLink" id="drawings" onmouseover="navHovers(id)" onmouseout="fileDefault(id)"><u>D</u>rawings</a></div>
+                    <div class="trNav">&emsp;⤷<img src="/images/fileIcon.png" class="navIC" id="gadgetsF" width="20px"><a href="/gadgets.html" class="navLink" id="gadgets" onmouseover="navHovers(id)" onmouseout="fileDefault(id)"><u>G</u>adgets</a></div>
+                    </span>
+
+                    <span class="navRight">
+                    <div class="trNav"><img src="/images/folderIcon.png" class="navIC" id="shrinesF" width="26.4px"><span class="folderCat" id="shrines" onmouseover="navHoversAlt(id)" onmouseout="folderDefault(id)" onclick="openMenu(id)"><u>S</u>hrines</span></div>
+                    <div class="shrines" hidden="true">&emsp;⤷<img src="/images/fileIcon.png" class="navIC" id="mathF" width="20px"><a href="/shrines/math.html" class="navLink" id="math" onmouseover="navHovers(id)" onmouseout="fileDefault(id)"><u>M</u>athematics</a></div>
+                    <div class="trNav"><img src="/images/folderIcon.png" class="navIC" id="miscellaneousF" width="26.4px"><span class="folderCat" id="miscellaneous" onmouseover="navHoversAlt(id)" onmouseout="folderDefault(id)" onclick="openMenu(id)"><u>M</u>iscellaneous</span></div>
+                    <div class="trNav miscellaneous" hidden="true">&emsp;⤷<img src="/images/fileIcon.png" class="navIC" id="gamingF" width="20px"><a href="/miscellaneous/gaming.html" class="navLink" id="gaming" onmouseover="navHovers(id)" onmouseout="fileDefault(id)"><u>G</u>aming</a></div>
+                    <div class="trNav miscellaneous" hidden="true">&emsp;⤷<img src="/images/fileIcon.png" class="navIC" id="webStuffF" width="20px"><a href="/miscellaneous/web-stuff.html" class="navLink" id="webStuff" onmouseover="navHovers(id)" onmouseout="fileDefault(id)"><u>W</u>eb stuff</a></div>
+                    <div class="trNav miscellaneous" hidden="true">&emsp;⤷<img src="/images/fileIcon.png" class="navIC" id="memesF" width="20px"><a href="/miscellaneous/memes.html" class="navLink" id="memes" onmouseover="navHovers(id)" onmouseout="fileDefault(id)"><u>M</u>emes</a></div>
+                    <div class="trNav"><img src="/images/fileIcon.png" class="navIC" id="linksF" width="20px"><a href="/outlinks.html" class="navLink" id="links" onmouseover="navHovers(id)" onmouseout="fileDefault(id)"><u>O</u>utlinks</a></div>
+                    </span>
+                  </span>
                 </td>
               </tr>
               <tr height="1%">
@@ -120,9 +176,11 @@
               </tr>
               <tr style="vertical-align:top;">
                 <td style="color:white;background-color:#616e32;">
-                  <a href="https://palipunk.tumblr.com/post/698216767541133313/palestine-masterlist-introduction-to-palestine" target="_blank"><img src="/images/support/palestine.png" width="37px"></a>
-                  <a href="https://friendsofthecongo.org/campaigns" target="_blank"><img src="/images/support/congo.png" width="37px"></a>
-                  <a href="https://eyesonsudan.net" target="_blank"><img src="/images/support/sudan.png" width="37px"></a>
+                  <div class="center4Mob">
+                    <a href="https://palipunk.tumblr.com/post/698216767541133313/palestine-masterlist-introduction-to-palestine" target="_blank"><img src="/images/support/palestine.png" width="37px"></a>
+                    <a href="https://friendsofthecongo.org/campaigns" target="_blank"><img src="/images/support/congo.png" width="37px"></a>
+                    <a href="https://eyesonsudan.net" target="_blank"><img src="/images/support/sudan.png" width="37px"></a>
+                  </div>
                 </td>
               </tr>
               <tr height="1%">
@@ -175,7 +233,11 @@
                 <td style="color:white;background-color:#545e2d;"><div class="headerSpacing">Guestbook</div></td>
               </tr>
               <tr height="1%">
-                <td style="color:white;background-color:#616e32;"><a href="/guestbook.html"><u>L</u>eave a message</a> <img src="/images/puter_kitty_icon.gif" style="vertical-align:bottom;"></td>
+                <td style="color:white;background-color:#616e32;">
+                  <div class="center4Mob">
+                    <a href="/guestbook.html"><u>L</u>eave a message</a> <img src="/images/puter_kitty_icon.gif" style="vertical-align:bottom;">
+                  </div>
+                </td>
               </tr>
               <tr height="1%">
                 <td style="color:white;background-color:#545e2d;"><div class="headerSpacing">Favorites</div></td>
@@ -192,7 +254,7 @@
         </div>
       </div>
 
-      <div class="flex-bottom footer" style="text-align:center;margin-top:12px;">
+      <div class="flex-bottom footer" style="text-align:center;margin-top:12px;margin-bottom:5px;">
         project c190 © 2022-2024
       </div>
   </div>
