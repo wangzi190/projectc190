@@ -9,6 +9,7 @@ body {
   font-family: 'Mx437 IBM VGA 9x16';
   background-image: url("/images/background.jpg");
   margin:0px !important;
+  padding:0px !important;
 }
 #content {
   line-height: 1.5;

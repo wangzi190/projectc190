@@ -186,6 +186,7 @@ permalink: /drawings
         body {
             font-family: 'Mx437 IBM VGA 9x16';
             background-color: #0A0A0A;
+            margin:5px !important;
         }
         #mainBox {
           color: #7b8a48;
@@ -245,7 +246,18 @@ permalink: /drawings
         .drawing:hover {
             cursor: pointer;
         }
-        /* @media (max-width: 600px) {} */
+        @media (max-width: 600px) {
+            .flex-container {
+                flex-direction: column;
+            }
+            .flex-left {
+                max-width: 600px;
+            }
+            .flex-right {
+                margin-top:10px;
+                max-width: 600px;
+            }
+        }
     </style>
 </head>
 
@@ -288,6 +300,7 @@ permalink: /drawings
                             <span style="color:#0A0A0A">Please do not use my artwork without my express permission.</span>
                         </td></tr>
                     </table>
+                    <br>
                 </td></tr>
                 </table>
             </div>
@@ -341,7 +354,7 @@ permalink: /drawings
         </div>
         </td></tr>
         <tr>
-            <td style="text-align:right;"><a href="/" id="clickReturn"><u>C</u>lick here to return</a></td>
+            <td style="text-align:right;margin-bottom:10px;"><a href="/" id="clickReturn"><u>C</u>lick here to return</a></td>
         </tr>
     </table>
     </div>
