@@ -14,6 +14,16 @@ permalink: /drawings
         const temp = "/images/frames/floppy";
         function animate() {
             document.getElementById("loading").hidden = false;
+            const quotes = [
+                "<br>\"Start copying what you love. Copy copy copy copy. At the end of the copy, you will find yourself.\"<br><br>—Yohji Yamamoto",
+                "<br>\"Study the science of art; study the art of science. Learn how to see. Realize that everything connects to everything else.\"<br><br>—Leonardo Da Vinci",
+                "<br>\"The smallest feline is a masterpiece.\"<br><br>—Leonardo Da Vinci",
+                "<br>\"Because when someone writes about the rustic gutter and the water pouring through it onto the muddy grass, the real pours into the room. And it's thrilling. We're all enlivened by it.\"<br><br>—Mary Howe",
+                "<br>\"I try to look out for these bits of beauty, and some days, when I'm not distracted, it seems, everywhere I look, I can't help thinking—<i>That's beautiful. That's beautiful. That's beautiful. That's beautiful.</i>\"<br><br>—Jordan Bolton"
+            ];
+            var quoteNum = Math.floor(Math.random() * quotes.length);
+            document.getElementById("loadingQuote").innerHTML = quotes[quoteNum];
+            var numRotations = getNumRotations(quoteNum);
             if (i == 0) {
                 i = 1;
                 var frames = 0;
@@ -22,7 +32,7 @@ permalink: /drawings
                     document.getElementById("data").hidden = false;
                 }
                 function floppy() {
-                    if (frames < 10) {
+                    if (frames < numRotations * 5) {
                         frames++;
                         value = document.getElementById("floppy").getAttribute("src");
                         value = value.replace("/images/frames/floppy", "");
@@ -45,6 +55,18 @@ permalink: /drawings
                 }
                 var id = setInterval(floppy, 200);
             }
+        }
+
+        function getNumRotations(quoteNum) {
+            var numRotations;
+            if (quoteNum == 2) {
+                numRotations = 3;
+            } else if (quoteNum == 0 || quoteNum == 1) {
+                numRotations = 4;
+            } else if (quoteNum == 3 || quoteNum == 4) {
+                numRotations = 6;
+            }
+            return numRotations;
         }
 
         var category = "all";
@@ -195,11 +217,14 @@ permalink: /drawings
           background-color: #0A0A0A;
         }
         #loading {
-        width: 20%;
-        margin: auto;
-        margin-top: 12rem;
+            width: 350px;
+            margin-left: auto;
+            margin-right:auto;
+            margin-top: 10rem;
         }
-        #loadingQuote {   
+        #loadingQuote {
+            text-align:left;
+            width: 350px;
             color: #7b8a48;
         }
         a {color: #7b8a48; text-decoration: none;}
@@ -257,6 +282,9 @@ permalink: /drawings
                 margin-top:10px;
                 max-width: 600px;
             }
+            #loading, #loadingQuote {
+                width: 100%;
+            }
         }
     </style>
 </head>
@@ -290,11 +318,12 @@ permalink: /drawings
                             <br>/drawings.html
                         </td></tr>
                         <tr><td style="text-align:left; padding:5px;">
-                            <br>Welcome to my drawings page! This is where I compile the best of my artwork.
-                            <br><br>I generally like to draw things I find visually interesting. Hope you enjoy.
+                            <br>Welcome to the drawings page :)
+                            <br><br>This is where I compile my favorites out of the drawings I've made. I draw whatever I find visually interesting.
+                            <br><br>For sketches and WIPs, see the "Sketchbook" category of my <a href="/blog.html"><u>b</u>log</a>.
                             <br><br>
                         </td></tr>
-                        <tr><td style="background-color: #7b8a48; padding:4px;">
+                        <tr><td style="background-color: #5e6b34; padding:4px;">
                             <span style="color:#0A0A0A">Please do not use my artwork without my express permission.</span>
                         </td></tr>
                     </table>
