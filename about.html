@@ -7,104 +7,76 @@
     <link rel="icon" href="/images/test.png">
     <title>project c190</title>
     <style>
-        @font-face {
-            font-family: 'Mx437 IBM VGA 9x16';
-            src: url('/font/Mx437_IBM_VGA_9x16.woff2') format('woff2'), url('/font/Mx437_IBM_VGA_9x16.woff') format('woff');
-            font-weight: normal;
-            font-style: normal;
-            font-display: swap;
-        }
         body {
-            font-family: 'Mx437 IBM VGA 9x16';
-            background-image: url("/images/checkers_mov.png");
-            background-color: #CDD6B0;
+            font-family: Serif;
+            font-size: 14px;
             margin:0px !important;
+            background: rgb(51, 171, 226);
         }
-        a {color: #0A0A0A; text-decoration: none;}
-        a:hover {color: #0A0A0A; text-decoration: underline;}
-        .flex-container {
-            display: flex;
-            flex-direction: row;
-            text-align: center;
+        #container {
+            background: rgb(51, 171, 226);
+            width: 740px;
+            min-height:100vh;
+            margin: auto;
         }
-        .flex-left {
-            color: #7b8a48;
-            background-color: #0A0A0A;
-            flex: 100%;
-            max-width: 400px;
-            margin-right: 5px;
-            margin-left: auto;
+        #title {
+            background: rgb(51, 171, 226);
+            min-height:15vh;
         }
-        .flex-right {
-            color: #7b8a48;
-            background-color: #0A0A0A;
-            flex: 100%;
-            max-width: 190px;
-            margin-right: auto;
-            margin-left: 5px;
+        #body {
+            background: rgb(255, 255, 255);
         }
-        table {
-            border-collapse: collapse;
-        }
-        .auto:hover {
-            cursor: auto;
-        }
+        a {color: white; text-decoration: none;} a:hover {color: white; text-decoration: underline;}
     </style>
 </head>
 
 <body>
-    <table style="width:100%;max-width:600px;margin-left:auto;margin-right:auto;margin-top:10px;margin-bottom:10px;padding:0px;">
-        <tr><td>
-            <table style="color:#7b8a48; width:602px;">
-                <tr>
-                    <td>
-                        <img src="/images/hwoy.jpg" width="190px" style="margin-right:7px;">
-                    </td>
-                    <td style="color:#0A0A0A;">
-                        <img src="/images/hui_.png" width="100px">
-                        <br><b>'05</b> 🧮 INTP 5w6 ✏️ <br>Chinese American
-                        <br><br><u>Likes</u>: Drawing, computers, math, video games, reading, cats, birds, classical music, folk metal, & spicy food <a href="/shrines/val.html" class="auto"><img src="/images/kibdy.gif" width="30px"></a>
-                    </td>
-                </tr>
-            </table>
-        <tr><td>
-        <div class="flex-container" style="width:100%;">
-            <div class="flex-left">
-                <table width="100%" style="margin-top:5px;margin-left:5px;">
-                    <tr style="background-color:#778C2B;color:#0A0A0A;"><td style="text-align:left;"><a href="/"><u>L</u>anding</a> > <b>About</b></td></tr>
-                    <tr><td style="text-align:left;">
-                        <div style="overflow-x:hidden;overflow-y:auto;height:590px;">
-                            <br>I can't remember any point in my life where I wasn't distinctively into drawing. That, reading, and playing Flash games were pretty much all I did when I was really little.
-                            <br><br>At age 9, I started messing around on kids' programming website Scratch, publishing my work under the username Crafty190. From that point on, coding joined art on my roster of brain chemistry altering interests.
-                            <br><br>Before I knew it, I went from making Warrior Cats RPGs in blocks to dabbling in stuff like assembly language, and now I'm studying computer science in college.
-                            <br><br>Despite all this, I'm honestly not sure what I want to do in life. I like what I'm learning, but I don't want to light another match and toss it into the cesspool that is modern technology. Maybe I'll become a hacker or something.
-                            <br><br>Anyways, this website is named "Project C190" after "Crafty190", and it's a repository for all things <i>Hui</i>. Also, fun fact, most of the graphics are drawn with a mouse on Scratch as a tribute to how much Scratch has shaped my interests.
-                            <br><br>Thanks for visiting.
-                            <br><br>E-mail and XMPP: abacist@disroot.org
-                            <br>Discord: @abacist
-                            <br><br>
-                        </div>
-                    </td></tr>
-                </table>
-            </div>
-            <div class="flex-right">
-                <table width="100%" style="margin-top:5px;margin-left:5px;">
-                    <tr style="background-color:#778C2B;color:#0A0A0A;"><td style="text-align:left;">Inventory</td></tr>
-                    <tr><td style="text-align:middle;">
-                        <span title="Japanese abacus"><img src="/images/abacus.png" class="item" width="102px" style="margin-right:5px;margin-top:15px;margin-bottom:5px"></span>
-                        <br><span title="Crayons and colored pencils"><img src="/images/drawing_supps.png" class="item" width="130px" style="margin-right:5px;"></span>
-                        <br><span title="Pencil and eraser"><img src="/images/pencil_eraser.png" class="item" width="60px" style="margin-right:5px;"></span>
-                        <br><span title="Sketchbook and computer"><img src="/images/sketch_comp.png" class="item" width="153px" style="margin-right:5px;"></span>
-                        <br><span title="Chicken plush"><img src="/images/piyo.png" style="margin-right:5px;margin-top:5px;" class="item" width="124px"></span>
-                    </td></tr>
-                </table>
-            </div>
+
+    <div id="container">
+        <div id="title" style="padding: 5px; vertical-align:middle;">
+        <center>
+            <span title="Crayons and colored pencils"><img src="/images/drawing_supps.png" class="item" width="130px" style="margin-top:5px;margin-right:5px;"></span>
+            <span title="Chicken plush"><img src="/images/piyo.png" style="margin-right:5px;margin-top:10px;" class="item" width="124px"></span>
+            <span title="Pencil and eraser"><img src="/images/pencil_eraser.png" class="item" width="60px" style="margin-top:5px;margin-right:5px;"></span>
+            <span title="Sketchbook and computer"><img src="/images/sketch_comp.png" class="item" width="153px" style="margin-top:5px;margin-right:2px;"></span>
+            <span title="Japanese abacus"><img src="/images/abacus.png" class="item" width="102px" style="margin-right:5px;margin-top:20px;margin-bottom:5px"></span>
+        </center>
         </div>
-        </td></tr>
-        <tr>
-            <td style="text-align:right;"><a href="/"><u>C</u>lick here to return</a></td>
-        </tr>
-    </table>
+        <div id="body" style="padding:5px;">
+            <div>
+                <br>Hi, my name's Hui and I'm the creator of this website.
+                I like a lot of computery stuff amateurly and I am striving to one day like a lot of computery stuff expertly.
+                My friends would describe me as passionate, intelligent, and chill, socially anyway.
+                <br><br>Since I don't know how to introduce myself without reiterating anything along the lines of being an "artist, compsci student, and math enthusiast", here's a big list of my interests to maybe give you a better idea of what kind of person I am.
+            </div>
+            <br><div>
+                <b>General:</b> Drawing, computers, low-level programming, mathematics, video games, 2000s web, cryptography, abrasive music, library ambience
+                <br>
+                <b>Music:</b> Nine Inch Nails, Black Kirin (黑麒麟), Secondhand Rose (二手玫瑰), Acne (暗疮乐队), Tengger Cavalry, Poppy, The Pretty Reckless, Kino (Кино)
+                <br>
+                <b>Books:</b> The Annotated Turing, The Age of Surveillance Capitalism, How to Prove It, Algorithms to Live By, The Metamorphosis, Moth Flight's Vision
+                <br>
+                <b>Foods:</b> Sichuan cuisine, poke, Lao Gan Ma, jiuniang, chicken curry, tzatziki sauce, lamb chops, Cheez-Its, black coffee, oolong tea, salmon skin chips
+                <br>
+                <b>Games:</b> Stardew Valley, VA-11 Hall-A, Petz 4, riichi mahjong, 2000s web and Flash, retro arcade
+                <br>
+                <b>Animals:</b> House cats, rock pigeons, chickens, oriental frill pigeons, barn owls, crows, dinosaurs (archaeopteryx, oviraptor), lemon sharks
+            </div>
+            <br>Some other, probably more important information is that I am American Chinese and born in 2005.
+            <br><br>If you'd like to contact me, my e-mail and XMPP is abacist@disroot.org, and my Discord is @abacist.
+            <br><br>
+            <hr>
+            <br><div>
+                What does “Project C190” mean?
+                <br><br>
+                At age 9, I started messing around on kids' programming website Scratch, publishing my work under the username Crafty190. Before I knew it, I went from making Warrior Cats RPGs in blocks to dabbling in stuff like assembly language, and now I'm studying computer science in college. This website is named "Project C190" after "Crafty190" as a tribute to how my time on Scratch has shaped my interests. Also, fun fact, many of the graphics are drawn in Scratch with a mouse!
+                <br>
+            </div>
+            <br>
+        </div>
+        <div style="text-align:right;"><a href="/"><b>Click here to return</b></a></div>
+    </div>
+
 </body>
 
 </html>
