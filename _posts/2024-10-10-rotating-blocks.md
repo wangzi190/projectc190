@@ -29,6 +29,7 @@ To reduce the complications of this task, I marked out the pixels whose position
 
 Here's what I sketched to figure this out, if you're so inclined.
 <br><img src="/images/for-posts/mirrored_blocks.jpg" width="475px">
+<!--<br>EXPLAIN HOW YOU CALCULATED THE OFFSETS-->
 <br><br>And, just for the record, here are my diagrams of the remaining two rotatable blocks. The I block looks relatively uninteresting, and the T block I pretty much had to hardcode, so I almost didn't include these until I realized that they'd probably still help someone understand my code better.
 <br><img src="/images/for-posts/I_and_T.jpg" width="475px">
 
@@ -44,4 +45,4 @@ The rotation function was not technically difficult to code. I'd say just planni
 
 <b>What Next?</b>
 
-I think I had some awareness that the way I implemented some of the program logic was a little cursed, but that has since been very surely confirmed when I learnt about the details of pipelined MIPS implementations and realized that my program requires a horrific number of stalls. I figure I should probably reorder and rewrite some sections of my program to make it more efficient before moving on to write a function to detect whether a block should stop falling. As for that function, though, I had the foresight to pick my background and block hex color values in a way that makes it very easy to make the distinction between background and block, so hopefully it will not be too difficult to program <img src="/images/emotes/nukoNerd2.gif" class="emote">
+I think I had some awareness that the way I implemented some of the program logic was a little cursed, but that has since been very surely confirmed when I learnt about the details of pipelined MIPS implementations and realized that my program requires a horrific number of stalls. I figure I should probably reorder and rewrite some sections of my program to make it more efficient before moving on to the sensible next step of the project—writing a function to detect whether a block should stop falling. As for that function, though, I had the foresight to pick my background and block hex color values in a way that makes it fairly easy to make the distinction between background and block, so hopefully it will not be too difficult to program <img src="/images/emotes/nukoNerd2.gif" class="emote">

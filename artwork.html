@@ -1,5 +1,5 @@
 ---
-permalink: /drawings
+permalink: /artwork
 ---
 <!DOCTYPE html>
 <html>
@@ -107,7 +107,7 @@ permalink: /drawings
             for (var i = 0; i < all.length; i++) {
                     all[i].hidden = true;
             }
-            fetch('/drawings.json')
+            fetch('/artwork.json')
             .then(res => res.json())
             .then((data) => {
                 drawingsArray = data;
@@ -195,7 +195,8 @@ permalink: /drawings
             font-display: swap;
         }
         @keyframes titleWiggle {
-            from {content: url("/images/title_dark.png");}
+            from {content: url("/images/title_dark.png");
+            height: 41.25px;}
             to {content: url("/images/title_dark2.png");
             height: 41.25px;}
         }
@@ -315,10 +316,10 @@ permalink: /drawings
                     <table style="width:100%;">
                         <tr><td style="text-align:center;">
                             <img src="/images/puter_260.gif" style="margin-top:10px;">
-                            <br>/drawings.html
+                            <br>/artwork.html
                         </td></tr>
                         <tr><td style="text-align:left; padding:5px;">
-                            <br>Welcome to the drawings page :)
+                            <br>Welcome to the artwork page :)
                             <br><br>This is where I compile my favorites out of the drawings I've made. I draw whatever I find visually interesting.
                             <br><br>For sketches and WIPs, see the "Sketchbook" category of my <a href="/blog.html"><u>b</u>log</a>.
                             <br><br>
