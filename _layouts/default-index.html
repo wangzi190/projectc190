@@ -47,8 +47,11 @@
         flex-direction: row;
       }
       .navCenter {
-        margin-left: 25px;
-        margin-right: 30px;
+        margin-left:5px;
+        margin-right:5px;
+      }
+      .navLeft, .navCenter, .navRight {
+        width: 100%;
       }
     }
   </style>
@@ -76,32 +79,52 @@
         document.getElementById(iconID).src = "/images/folderIcon.png";
         menuOpened = "null";
       } else if (menuOpened != "null" && menuOpened != id) {
-        if (id == "shrines") {
-          items = document.getElementsByClassName("miscellaneous");
-          for (var i = 0; i < items.length; i++) { 
-            items[i].hidden = true;
-          }
-          items = document.getElementsByClassName(id);
-          for (var i = 0; i < items.length; i++) { 
-            items[i].hidden = false;
-          }
-          iconID = id.concat("F");
-          document.getElementById(iconID).src = "/images/folderIcon_hover.png";
-          document.getElementById("miscellaneousF").src = "/images/folderIcon.png";
-          menuOpened = id;
-        } else {
+        if (id == "artworkNav") {
           items = document.getElementsByClassName("shrines");
           for (var i = 0; i < items.length; i++) { 
             items[i].hidden = true;
           }
-          items = document.getElementsByClassName(id);
+          items = document.getElementsByClassName("miscellaneous");
           for (var i = 0; i < items.length; i++) { 
-            items[i].hidden = false;
+            items[i].hidden = true;
           }
           iconID = id.concat("F");
           document.getElementById(iconID).src = "/images/folderIcon_hover.png";
           document.getElementById("shrinesF").src = "/images/folderIcon.png";
+          document.getElementById("miscellaneousF").src = "/images/folderIcon.png";
           menuOpened = id;
+        } else if (id == "shrines") {
+          items = document.getElementsByClassName("artworkNav");
+          for (var i = 0; i < items.length; i++) { 
+            items[i].hidden = true;
+          }
+          items = document.getElementsByClassName("miscellaneous");
+          for (var i = 0; i < items.length; i++) { 
+            items[i].hidden = true;
+          }
+          iconID = id.concat("F");
+          document.getElementById(iconID).src = "/images/folderIcon_hover.png";
+          document.getElementById("artworkNavF").src = "/images/folderIcon.png";
+          document.getElementById("miscellaneousF").src = "/images/folderIcon.png";
+          menuOpened = id;
+        } else if (id == "miscellaneous") {
+          items = document.getElementsByClassName("shrines");
+          for (var i = 0; i < items.length; i++) { 
+            items[i].hidden = true;
+          }
+          items = document.getElementsByClassName("artworkNav");
+          for (var i = 0; i < items.length; i++) { 
+            items[i].hidden = true;
+          }
+          iconID = id.concat("F");
+          document.getElementById(iconID).src = "/images/folderIcon_hover.png";
+          document.getElementById("shrinesF").src = "/images/folderIcon.png";
+          document.getElementById("artworkNavF").src = "/images/folderIcon.png";
+          menuOpened = id;
+        }
+        items = document.getElementsByClassName(id);
+          for (var i = 0; i < items.length; i++) { 
+            items[i].hidden = false;
         }
       }
     }
@@ -153,8 +176,10 @@
                     </span>
 
                     <span class="navCenter">
-                    <div class="trNav" style="width:100%;"><img src="/images/folderIcon.png" class="navIC" id="blogF" width="26.4px"><a href="/blog.html" class="folderCat" id="blog" onmouseover="navHoversAlt(id)" onmouseout="folderDefault(id)"><u>B</u>log</span></a></div>
-                    <div class="trNav"><img src="/images/folderIcon.png" class="navIC" id="drawingsF" width="26.4px"><a href="/artwork.html" class="navLink" id="drawings" onmouseover="navHoversAlt(id)" onmouseout="folderDefault(id)"><u>A</u>rtwork</a></div>
+                    <div class="trNav" style="width:100%;"><img src="/images/folderIcon.png" class="navIC" id="journalF" width="26.4px"><a href="/journal.html" class="folderCat" id="journal" onmouseover="navHoversAlt(id)" onmouseout="folderDefault(id)"><u>J</u>ournal</span></a></div>
+                    <div class="trNav"><img src="/images/folderIcon.png" class="navIC" id="artworkNavF" width="26.4px"><span class="folderCat" id="artworkNav" onmouseover="navHoversAlt(id)" onmouseout="folderDefault(id)" onclick="openMenu(id)"><u>A</u>rtwork</span></div>
+                    <div class="trNav artworkNav" hidden="true">&emsp;&ensp;<img src="/images/fileIcon.png" class="navIC" id="galleryF" width="20px"><a href="/artwork/gallery.html" class="navLink" id="gallery" onmouseover="navHovers(id)" onmouseout="fileDefault(id)"><u>G</u>allery</a></div>
+                    <div class="trNav artworkNav" hidden="true">&emsp;&ensp;<img src="/images/fileIcon.png" class="navIC" id="sketchbookF" width="20px"><a href="/artwork/sketchbook.html" class="navLink" id="sketchbook" onmouseover="navHovers(id)" onmouseout="fileDefault(id)"><u>S</u>ketchbook</a></div>
                     <!--
                     <div class="trNav"><img src="/images/folderIcon_hover.png" class="navIC" width="26.4px">Portfolio</div>
                     <div class="trNav">&emsp;⤷<img src="/images/fileIcon.png" class="navIC" id="drawingsF" width="20px"><a href="/drawings.html" class="navLink" id="drawings" onmouseover="navHovers(id)" onmouseout="fileDefault(id)"><u>D</u>rawings</a></div>
@@ -164,10 +189,14 @@
 
                     <span class="navRight">
                     <div class="trNav"><img src="/images/folderIcon.png" class="navIC" id="shrinesF" width="26.4px"><span class="folderCat" id="shrines" onmouseover="navHoversAlt(id)" onmouseout="folderDefault(id)" onclick="openMenu(id)"><u>S</u>hrines</span></div>
-                    <div class="shrines" hidden="true">&emsp;⤷<img src="/images/fileIcon.png" class="navIC" id="mathF" width="20px"><a href="/shrines/math.html" class="navLink" id="math" onmouseover="navHovers(id)" onmouseout="fileDefault(id)"><u>M</u>athematics</a></div>
+                    <div class="shrines" hidden="true">&emsp;&ensp;<img src="/images/fileIcon.png" class="navIC" id="mathF" width="20px"><a href="/shrines/math.html" class="navLink" id="math" onmouseover="navHovers(id)" onmouseout="fileDefault(id)"><u>M</u>athematics</a></div>
                     <div class="trNav"><img src="/images/folderIcon.png" class="navIC" id="miscellaneousF" width="26.4px"><span class="folderCat" id="miscellaneous" onmouseover="navHoversAlt(id)" onmouseout="folderDefault(id)" onclick="openMenu(id)"><u>M</u>iscellaneous</span></div>
-                    <div class="trNav miscellaneous" hidden="true">&emsp;⤷<img src="/images/fileIcon.png" class="navIC" id="webStuffF" width="20px"><a href="/misc/web-stuff.html" class="navLink" id="webStuff" onmouseover="navHovers(id)" onmouseout="fileDefault(id)"><u>W</u>eb stuff</a></div>
-                    <div class="trNav miscellaneous" hidden="true">&emsp;⤷<img src="/images/fileIcon.png" class="navIC" id="memesF" width="20px"><a href="/misc/memes.html" class="navLink" id="memes" onmouseover="navHovers(id)" onmouseout="fileDefault(id)"><u>M</u>emes</a></div>
+                    <!--
+                    <div class="trNav miscellaneous" hidden="true">&emsp;⤷<img src="/images/fileIcon.png" class="navIC" id="stardewF" width="20px"><a href="/stardew.html" class="navLink" id="stardew" onmouseover="navHovers(id)" onmouseout="fileDefault(id)"><u>S</u>tardew</a></div>
+                    <div class="trNav miscellaneous" hidden="true">&emsp;⤷<img src="/images/fileIcon.png" class="navIC" id="petz4F" width="20px"><a href="/#" class="navLink" id="petz4" onmouseover="navHovers(id)" onmouseout="fileDefault(id)"><u>P</u>etz 4</a></div>
+                    -->
+                    <div class="trNav miscellaneous" hidden="true">&emsp;&ensp;<img src="/images/fileIcon.png" class="navIC" id="webStuffF" width="20px"><a href="/misc/web-stuff.html" class="navLink" id="webStuff" onmouseover="navHovers(id)" onmouseout="fileDefault(id)"><u>W</u>eb stuff</a></div>
+                    <div class="trNav miscellaneous" hidden="true">&emsp;&ensp;<img src="/images/fileIcon.png" class="navIC" id="memesF" width="20px"><a href="/misc/memes.html" class="navLink" id="memes" onmouseover="navHovers(id)" onmouseout="fileDefault(id)"><u>M</u>emes</a></div>
                     <div class="trNav"><img src="/images/fileIcon.png" class="navIC" id="linksF" width="20px"><a href="/outlinks.html" class="navLink" id="links" onmouseover="navHovers(id)" onmouseout="fileDefault(id)"><u>O</u>utlinks</a></div>
                     </span>
                   </span>
@@ -216,7 +245,7 @@
           <div class="flex-right">
             <table style="height:100%;width:100%;margin:auto;">
               <tr height="1%">
-                <td style="color:white;background-color:#545e2d;"><div class="headerSpacing">Artwork</div></td>
+                <td style="color:white;background-color:#545e2d;"><div class="headerSpacing">Gallery</div></td>
               </tr>
               <tr style="vertical-align:top;">
                 <td style="color:white;background-color:#616e32;">
@@ -228,7 +257,7 @@
                     <div class="artwork" id="img1"><img src="/images/drawing_thumbnails/bird_mspaint.jpg" width="190px"></div>
                   </div>
 
-                  <div style="display:flex;justify-content:right;"><a href="/artwork.html" id="seeMoreArt"><u>S</u>ee more</a></div>
+                  <div style="display:flex;justify-content:right;"><a href="/artwork/gallery.html" id="seeMoreArt"><u>S</u>ee more</a></div>
                 </td>
               </tr>
               <tr height="1%">
