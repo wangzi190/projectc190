@@ -1,7 +1,7 @@
 ---
 layout: posts
 title: "Nand2Tetris - 07 | VM I: Stack Arithmetic"
-categories: projectLog
+categories: computer-projects
 ---
 Writing a program that translates the arithmetic and memory access instructions of an intermediate, stack-based VM language into Hack assembly. This will later become the backend tier of a compiler for the high-level language Jack.
 <br><br>

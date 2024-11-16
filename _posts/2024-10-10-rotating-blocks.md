@@ -1,7 +1,7 @@
 ---
 layout: posts
 title: Spotting patterns and rotating blocks
-categories: projectLog
+categories: computer-projects
 ---
 <style>
     .emote {
@@ -27,11 +27,13 @@ After writing out the aforementioned function, I was ready to start banging out 
 
 To reduce the complications of this task, I marked out the pixels whose positions are the same irrespective of a block's rotational position, so I know what not to worry about. Next, I was able to spot some patterns in the offsets for the pixels in blocks which were mirror images of each other, that is, the S and Z blocks and the L and J blocks. The offsets for the moving pixels of the S and Z blocks can be calculated with the exact same formula, which means I can simply write one function and apply it to either block. As for L and J, the offsets for two of the three moving pixels can be calculated with the same formula, but I couldn't find a way to cleverly reconcile the last one, so frankly the code for that looks a bit awkward.
 
-Here's what I sketched to figure this out, if you're so inclined.
+Here's what I sketched to figure this out.
 <br><img src="/images/for-posts/mirrored_blocks.jpg" width="475px">
-<!--<br>EXPLAIN HOW YOU CALCULATED THE OFFSETS-->
-<br><br>And, just for the record, here are my diagrams of the remaining two rotatable blocks. The I block looks relatively uninteresting, and the T block I pretty much had to hardcode, so I almost didn't include these until I realized that they'd probably still help someone understand my code better.
+<br>(The arrows indicate the calculated offset for the pixel that matches its color. So, green pixel to green arrow, blue pixel to blue arrow, and so on. If you're colorblind, I'm sorry for my negligence, and I'm sure it'd help you to know that the arrows are ordered pixel 2, pixel 3, pixel 4.)
+<br><br>It's pretty easy to determine what offsets will move pixels in what ways if you draw out diagrams and know a few details about MIPS addressing and the MARS bitmap display. Basically, each pixel in the display correlates to one 32-bit word stored in the memory at a certain location. The 32-bit word indicates the color of the pixel, and the memory location of the word indicates the position of the pixel on the display. Because MIPS is byte-addressed, the next 32-bit word in memory is stored at address [current address] + 4. Therefore, adding 4 to the memory address at which one pixel color value is stored indicates the pixel to the right, and inversely, subtracting 4 from the memory address indicates the pixel to the left. Because I configured the bitmap display to have 16 pixels per row, adding 16*4 = 64 to the memory address indicates the pixel below the one correlated to the original address, and inversely, subtracting 64 from the memory address indicates the pixel above. Take pixel 2 in block L for example. To move it from position 0 to position 1, you'll need to move it up one by subtracting 64, and right one by adding 4. -64 + 4 = -60, which is the offset indicated by the green arrow going from position 0 to position 1.
+<br><br>Oh, also, here are my diagrams of the remaining two rotatable blocks, the I and T blocks. I felt that these looked less interesting (for one, I pretty much <i>had</i> to hardcode them), so I almost decided against including them until I realized that they'd probably still help people understand my code better.
 <br><img src="/images/for-posts/I_and_T.jpg" width="475px">
+(Like before, the arrows indicate the calculated offset for the pixel that matches its color. However, now the arrows are ordered pixel 4, pixel 3, pixel 2 for the I block, and pixel 4, pixel 3 for the T block.)
 
 <b>The Overarching Logic</b>
 

@@ -1,7 +1,7 @@
 ---
 layout: posts
 title: "Madoka Magica (Main Series & Rebellion)"
-categories: mediaLog
+categories: media-shelf
 ---
 <style>
     .emote {

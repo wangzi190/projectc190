@@ -1,7 +1,7 @@
 ---
 layout: posts
 title: "Algorithms to Live By: The Computer Science of Human Decisions"
-categories: mediaLog
+categories: media-shelf
 ---
 <style>
     .emote {

@@ -1,7 +1,7 @@
 ---
 layout: posts
 title: What goes up must come down
-categories: journal
+categories: updates
 ---
 I might've overdone it the other week.
 

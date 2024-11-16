@@ -1,7 +1,7 @@
 ---
 layout: posts
 title: "Computers: The Life Story of a Technology"
-categories: mediaLog
+categories: media-shelf
 ---
 I found this book on the history of computers among depricated tech books my school library was giving away for free.
 <br><br><img src="/images/for-posts/computers-life-story.png" width="412px">
