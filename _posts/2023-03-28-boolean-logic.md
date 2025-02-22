@@ -1,7 +1,7 @@
 ---
-layout: posts
+layout: project-post
 title: Nand2Tetris - 01 | Boolean Logic
-categories: computer-projects
+categories: projects
 ---
 Building a set of elementary logic gates and their bitwise counterparts.
 <br><br>

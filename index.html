@@ -1,25 +1,99 @@
----
-layout: default-index
-title: Landing
-permalink: /
----
-<style>
-    p {
-        margin-left: 5px;
-        margin-right: 5px;
-    }
-    .abacus {
-        margin-top: 12px;
-    }
-    .abacus:hover {
-        cursor: pointer;
-    }
-    .center {
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-    }
-</style>
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+
+    <link rel="icon" href="/images/favicon.png">
+    <title>project c190</title>
+    <style>
+        @font-face {
+            font-family: 'Mx437 IBM VGA 9x16';
+            src: url('/font/Mx437_IBM_VGA_9x16.woff2') format('woff2'), url('/font/Mx437_IBM_VGA_9x16.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @keyframes titleWiggle {
+            from {content: url("/images/title.png");}
+            to {content: url("/images/title2.png");}
+        }
+        #title {
+            position: absolute;
+            left: 5px;
+            bottom: 5px;
+            animation-name: titleWiggle;
+            animation-duration: 1.5s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+        }
+        body {
+            font-family: sans-serif;
+            font-size: 14px;
+            background-image: url("/images/tile_background.png");
+            margin:0px !important;
+            padding:0px !important;
+            width:100%;
+            height: calc(100vh-20);
+        }
+        #container {
+            position:relative;
+            margin-top:20px !important;
+            width: 600px !important;
+            margin:auto;
+        }
+        #header {
+            position: relative;
+            height: 110px;
+            width: 100%;
+            background: #72803f;
+            margin: auto;
+        }
+        #site-body {
+            background-color: rgb(255, 255, 255);
+            padding: 5px;
+        }
+        mark {
+            background-color:#72803f;
+            color: white;
+        }
+        #material {
+            margin-top:5px;
+            height: 650px;
+            overflow-x:hidden;
+            overflow-y:auto;
+        }
+        a {
+            text-decoration: none;
+        }
+        .abacus:hover {
+            cursor: pointer;
+        }
+        @media (max-width: 450px) {
+            #container {
+                width: 100% !important;
+                margin-top:0px !important;
+            }
+            #site-body {
+                height: 100%;
+            }
+            .abacus {
+                height: calc(4.5*(100vw/15));
+            }
+            #pageart {
+                width: 85%;
+            }
+            #title {
+                width: 90vw !important;
+                height: calc((36/350)*90vw) !important;
+            }
+        }
+        @media (max-width: 900px) {
+            #pagedoll {
+                display: none;
+            }
+        }
+    </style>
 <script type="text/javascript" async>
     var incrementAbacus = function(id) {
         const prefix = "/images/abacus/";
@@ -61,109 +135,67 @@ permalink: /
         }
     }
 </script>
+</head>
 
-<table>
-<tr><td>
-<div class="flex-container" style="flex-direction:row;">
-    <div>
-        <span>
-            Welcome to my corner of the 'net. I'm an artist, compsci student, and math enthusiast, and this site is an amalgam of stuff I make and stuff I generally like. Though it's reasonably mobile friendly, I'd recommend the desktop view. Enjoy your stay :)
-        </span>
-        <br>
-        <span style="margin-left:22px;">
-            <img src="/images/abacus/L.png" height="120px" class="abacus" id="L"><img src="/images/abacus/0.png" height="120px" class="abacus" id="column13" onclick="incrementAbacus(id)"><img src="/images/abacus/0.png" height="120px" class="abacus" id="column12" onclick="incrementAbacus(id)"><img src="/images/abacus/0.png" height="120px" class="abacus" id="column11" onclick="incrementAbacus(id)"><img src="/images/abacus/0.png" height="120px" class="abacus" id="column10" onclick="incrementAbacus(id)"><img src="/images/abacus/0.png" height="120px" class="abacus" id="column9" onclick="incrementAbacus(id)"><img src="/images/abacus/0.png" height="120px" class="abacus" id="column8" onclick="incrementAbacus(id)"><img src="/images/abacus/0.png" height="120px" class="abacus" id="column7" onclick="incrementAbacus(id)"><img src="/images/abacus/0.png" height="120px" class="abacus" id="column6" onclick="incrementAbacus(id)"><img src="/images/abacus/0.png" height="120px" class="abacus" id="column5" onclick="incrementAbacus(id)"><img src="/images/abacus/0.png" height="120px" class="abacus" id="column4" onclick="incrementAbacus(id)"><img src="/images/abacus/1.png" height="120px" class="abacus" id="column3" onclick="incrementAbacus(id)"><img src="/images/abacus/9.png" height="120px" class="abacus" id="column2" onclick="incrementAbacus(id)"><img src="/images/abacus/0.png" height="120px" class="abacus" id="column1" onclick="incrementAbacus(id)"><img src="/images/abacus/R.png" class="abacus" height="120px">
-        </span>
-        <span style="display:flex;color:#7b8a48; margin-top:-10px;margin-left:22px;">
-            <span style="margin-right:10px;">=</span>
-            <span style="margin-left:5px;margin-right:5px;" id="column13t" hidden="true">0</span>
-            <span style="margin-left:5px;margin-right:5px;" id="column12t" hidden="true">0</span>
-            <span style="margin-left:5px;margin-right:5px;" id="column11t" hidden="true">0</span>
-            <span style="margin-left:5px;margin-right:5px;" id="column10t" hidden="true">0</span>
-            <span style="margin-left:5px;margin-right:5px;" id="column9t" hidden="true">0</span>
-            <span style="margin-left:5px;margin-right:5px;" id="column8t" hidden="true">0</span>
-            <span style="margin-left:5px;margin-right:5px;" id="column7t" hidden="true">0</span>
-            <span style="margin-left:5px;margin-right:5px;" id="column6t" hidden="true">0</span>
-            <span style="margin-left:5px;margin-right:5px;" id="column5t" hidden="true">0</span>
-            <span style="margin-left:5px;margin-right:5px;" id="column4t" hidden="true">0</span>
-            <span style="margin-left:5px;margin-right:5px;" id="column3t">1</span>
-            <span style="margin-left:5px;margin-right:5px;" id="column2t">9</span>
-            <span style="margin-left:5px;margin-right:5px;" id="column1t">0</span>
-        </span>
+<body>
+    <div id="container">
+        <div id="header">
+            <a href="/"><img src="/images/title.png" id="title" width="350px" height="36px"></a>
+        </div>
+        <div id="site-body">
+            <div id="nav">
+                <a href="/index"><mark style="color:white;background-color: #393f34;">&nbsp;Index&nbsp;</mark></a>&nbsp;
+                <a href="/about"><mark>&nbsp;About&nbsp;</mark></a>&nbsp;
+                <a href="/projects"><mark>&nbsp;Projects&nbsp;</mark></a>&nbsp;
+                <a href="/artwork"><mark>&nbsp;Artwork&nbsp;</mark></a>&nbsp;
+                <a href="/journal"><mark>&nbsp;Journal&nbsp;</mark></a>&nbsp;
+                <a href="/goodies"><mark>&nbsp;Goodies&nbsp;</mark></a>&nbsp;
+                <a href="https://abacist.atabook.org/"><mark>&nbsp;Guestbook&nbsp;</mark></a>&nbsp;
+                <a href="/outlinks"><mark>&nbsp;Outlinks&nbsp;</mark></a>&nbsp;
+            </div>
+            <div id="material">
+                <img id="pageart" src="/images/birds.png" width="300px">
+                <br>
+                Welcome to my website! Here I document my computer projects and share my artwork, among other things.
+                I do not collect data of any kind from visitors, so I'd encourage you to make sure JavaScript is enabled for the full experience.
+                <hr>
+                <span>
+                    <img src="/images/abacus/L.png" height="120px" class="abacus" id="L"><img src="/images/abacus/0.png" height="120px" class="abacus" id="column13" onclick="incrementAbacus(id)"><img src="/images/abacus/0.png" height="120px" class="abacus" id="column12" onclick="incrementAbacus(id)"><img src="/images/abacus/0.png" height="120px" class="abacus" id="column11" onclick="incrementAbacus(id)"><img src="/images/abacus/0.png" height="120px" class="abacus" id="column10" onclick="incrementAbacus(id)"><img src="/images/abacus/0.png" height="120px" class="abacus" id="column9" onclick="incrementAbacus(id)"><img src="/images/abacus/0.png" height="120px" class="abacus" id="column8" onclick="incrementAbacus(id)"><img src="/images/abacus/0.png" height="120px" class="abacus" id="column7" onclick="incrementAbacus(id)"><img src="/images/abacus/0.png" height="120px" class="abacus" id="column6" onclick="incrementAbacus(id)"><img src="/images/abacus/0.png" height="120px" class="abacus" id="column5" onclick="incrementAbacus(id)"><img src="/images/abacus/0.png" height="120px" class="abacus" id="column4" onclick="incrementAbacus(id)"><img src="/images/abacus/1.png" height="120px" class="abacus" id="column3" onclick="incrementAbacus(id)"><img src="/images/abacus/9.png" height="120px" class="abacus" id="column2" onclick="incrementAbacus(id)"><img src="/images/abacus/0.png" height="120px" class="abacus" id="column1" onclick="incrementAbacus(id)"><img src="/images/abacus/R.png" class="abacus" height="120px">
+                </span>
+                <span style="display:flex;margin-top:-5px;">
+                    <span style="margin-right:10px;">=</span>
+                    <span style="margin-left:2px;margin-right:2px;" id="column13t" hidden="true">0</span>
+                    <span style="margin-left:2px;margin-right:2px;" id="column12t" hidden="true">0</span>
+                    <span style="margin-left:2px;margin-right:2px;" id="column11t" hidden="true">0</span>
+                    <span style="margin-left:2px;margin-right:2px;" id="column10t" hidden="true">0</span>
+                    <span style="margin-left:2px;margin-right:2px;" id="column9t" hidden="true">0</span>
+                    <span style="margin-left:2px;margin-right:2px;" id="column8t" hidden="true">0</span>
+                    <span style="margin-left:2px;margin-right:2px;" id="column7t" hidden="true">0</span>
+                    <span style="margin-left:2px;margin-right:2px;" id="column6t" hidden="true">0</span>
+                    <span style="margin-left:2px;margin-right:2px;" id="column5t" hidden="true">0</span>
+                    <span style="margin-left:2px;margin-right:2px;" id="column4t" hidden="true">0</span>
+                    <span style="margin-left:2px;margin-right:2px;" id="column3t">1</span>
+                    <span style="margin-left:2px;margin-right:2px;" id="column2t">9</span>
+                    <span style="margin-left:2px;margin-right:2px;" id="column1t">0</span>
+                </span>
+                <hr style="margin-top:-0.1px;">
+                Updates (<a href="#" style="color: #779608;text-decoration:underline;">View all</a>)
+                <div>
+                    [02.21.25] The new site overhaul is finally live! I decided to go for a clean, focused look, where I am free to write as much as I like without having to worry about annoying textcutoffs or whatnot. I hope that lessening the emphasis on the design of the site by making it more of a container for my work than anything else will enable me to focus more on activities that matter to me.
+                    You can view an archived version of the old index page <a href="/archive/index.html" style="color: #779608;text-decoration:underline;">here</a>, just note that the links have been removed.
+                    <br>[00.00.00] Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                </div>
+            </div>
+        </div>
+        <div id="buttons" style="width:100%;margin-top:20px;margin-bottom:20px;">
+            <a href="https://linuxmint.com" target="_blank"><img src="/images/web-stuff/linux_mint.gif" style="margin-right:2.5px;"></a>
+            <a href="https://www.stardewvalley.net" target="_blank"><img src="/images/web-stuff/stardew_button.gif" style="margin-right:2.5px;margin-left:2.5px;"></a>
+            <a href="https://archive.org" target="_blank"><img src="/images/web-stuff/internet_archive.gif" style="margin-right:2.5px;margin-left:2.5px;"></a>
+            <a href="https://duckduckgo.com" target="_blank"><img src="/images/web-stuff/duckduckgo.png" style="margin-right:2.5px;margin-left:2.5px;"></a>
+            <a href="https://www.mozilla.org/en-US/firefox/new" target="_blank"><img src="/images/web-stuff/getfirefox.gif" style="margin-left:2.5px;"></a>
+        </div>
+        <img src="/images/pagedoll.png" width="310px" id="pagedoll" style="position:relative;bottom:425px;margin-bottom:-425px;left:530px;">
     </div>
-    <div style="text-align:center;">
-    <img src="/images/huicat.png" width="164px" style="margin-right:3px;">
-    </div>
-</div>
+</body>
 
-<div class="flex-container" style="flex-direction:row;margin-top:3px;">
-    <div>
-        <img src="/images/worthwhile.gif" height="31px" style="margin-right:2px;"><a href="https://linuxmint.com" target="_blank"><img src="/images/web-stuff/linux_mint.gif" style="margin-left:2px;margin-right:2px;"></a><a href="/button_code.txt" target="_blank"><img src="/images/frames/stamp1_d.png" id="stampDark" width="88px" height="31px" style="margin-left:2px;margin-right:2px;"></a><a href="https://archive.org" target="_blank"><img src="/images/web-stuff/internet_archive.gif" style="margin-left:2px;"></a><a href="https://neocities.org/site/projectc190" target="_blank"><img src="/images/neocities.png" style="margin-left: 15px;margin-right:2px;" width="25.4px"></a><a href="https://github.com/wangzi190" target="_blank"><img src="/images/github.png" width="25.5px" style="margin-left:3px;margin-right:3px;"></a><a href="https://bookshelf.town/user/abacist" target="_blank"><img src="/images/bookshelf_town.png" width="26" style="margin-left:2px;"></a>
-    </div>
-</div>
-
-<div class="flex-container" style="flex-direction:row;margin-top:10px;">
-    <div style="text-align:center;width:200px;">
-        <img src="/images/compu_test.png" width="135px" style="margin-top:17px;margin-right:10px;">
-        <img src="/images/my_puter.gif" style="margin-top:3px;margin-right:10px;">
-    </div>
-    
-    <div>
-        <table width="100%">
-            <tr style="background-color:#383a1f">
-                <td>Changelog</td>
-            </tr>
-            <tr height="150px" style="background-color:#3e4123;vertical-align:top;">
-                <td><div style="overflow-x:hidden;overflow-y:auto;height:150px;">
-                    <b>01/02/25:</b> <u>On indefinite hiatus.</u>
-                    <br><b>11/13/24:</b> New post "What comes up must go down". Also, I'm changing things up a bit, so some links may be broken for now, sorry<img src="/images/emotes/nukoForcedLaugh.gif" style="vertical-align:middle; width:18px;">
-                    <br><b>11/09/24:</b> Made many frankly purely semantic changes to make myself feel better.
-                    <br><b>11/03/24:</b> Published post "Spotting patterns and rotating blocks", the 2nd in my ongoing series about making Tetris in assembly.
-                    <br><b>10/26/24:</b> New journal post "School, research, exhaustion, and Halloween".
-                    <br><b>10/07/24:</b> Uploaded some new web graphics.
-                    <br><b>09/22/24:</b> New post "Falling blocks, movement keys, & MARS hackfixes" under "Tetris in MIPS and MARS" (Linux post soon I swear)
-                    <br><b>09/06/24:</b> My math shrine is finally not barren, though it's still a WIP.
-                    <br><b>08/15/24:</b> Drawings.html now shows random quote about art with "loading" animation.
-                    <br><b>08/05/24:</b> Added a sitemap/guide.
-                    <br><b>8/02/24:</b> New media log post where I rave about <i>Madoka Magica</i>, plus an addendum to my post on <i>Algorithms to Live By</i>.
-                    <br><b>07/20/24:</b> Uploaded emotes for my blog <img src="/images/emotes/nukoHappyDance.gif" style="vertical-align:middle; width:18px;">
-                    <br><b>07/18/24:</b> Added a mobile view of the main layout. Hopefully it's not too shabby..
-                    <br><b>07/16/24:</b> Finally did my June post x_x
-                    <br><b>07/15/24:</b> Published post "Nand2Tetris - 07 | VM I: Stack Arithmetic".
-                    <br><b>07/07/24:</b> Published post "Nand2Tetris - 06 | Assembler"; added bookshelf.town link.
-                    <br><b>07/03/24:</b> Renamed and added brief descriptions to existing Nand2Tetris blog posts for more clarity.
-                    <br><b>06/24/24:</b> Wrote up long overdue post for the book <i>Algorithms to Live By</i>.
-                    <br><b>06/17/24:</b> Decluttered index page and revamped fursona character sprite.
-                    <br><b>06/15/24:</b> Added new art to /drawings.html; published posts "Renaissance Art in MSP, and a Pigeon" and "Stuff from January".
-                    <br><b>06/12/24:</b> Published posts "Nand2Tetris - 05 | Computer Architecture" and "May 2024".
-                    <br><b>05/31/24:</b> Edited blog posts, slowed marquee scroll speed, and added new guestbook.
-                    <br><b>05/28/24:</b> Redid blog layout for simplicity.
-                    <br><b>05/09/24:</b> Compressed and resized large images, and made some layout adjustments.
-                    <br><b>05/06/24:</b> Published post "April 2024" and removed Bootstrap from the site.
-                    <br><b>04/01/24:</b> Published post "March 2024".
-                    <br><b>03/25/24:</b> Added Stardew Valley game log.
-                    <br><b>03/06/24:</b> Drawings.html scripts complete.
-                    <br><b>03/04/24:</b> New post "February 2024".
-                    <br><b>03/01/24:</b> Reorganized; added memes page.
-                    <br><b>01/31/24:</b> New post "January 2024".
-                    <br><b>01/27/24:</b> Edited 'Drawings' page layout.
-                    <br><b>01/07/24:</b> New post "Pochacco in Womp 3D".
-                    <br><b>12/15/23:</b> Published posts on Nand2Tetris projects 03 and 04.
-                    <br><b>10/14/23:</b> Changed character on landing page to new fursona.
-                    <br><b>10/13/23:</b> Updated landing page navigation bar to drop down on click.
-                    <br><b>09/30/23:</b> Added microblog.
-                    <br><b>09/15/23:</b> Rewrote bio.
-                    <br><b>09/09/23:</b> Revamped 'About' page layout.
-                    <br><b>08/29/23:</b> Added ongoing projects list and HoF Kiana count-up timer.
-                    <br><b>08/26/23:</b> Replaced tiled circuit board background with collage.
-                    <br><b>08/22/23:</b> Redid a few sketchbook blog posts to include better WIP images.
-                    <br><b>08/20/23:</b> Added updates box and computer graphic to landing page.
-                </div></td>
-            </tr>
-        </table>
-    </div>
-</div>
-
-<div style="margin-top:10px;text-align:right;"><img src="/images/areyoulostbbg.gif" style="vertical-align:middle;width:18px;"> Lost? No worries, <a href="/sitemap.html"><u>t</u>ake a sitemap</a>.</div>
-
-</td></tr>
-</table>
+</html>

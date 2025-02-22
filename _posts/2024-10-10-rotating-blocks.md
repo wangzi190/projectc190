@@ -1,7 +1,7 @@
 ---
-layout: posts
+layout: project-post
 title: Spotting patterns and rotating blocks
-categories: computer-projects
+categories: projects
 ---
 <style>
     .emote {

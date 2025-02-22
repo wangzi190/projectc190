@@ -1,7 +1,7 @@
 ---
-layout: posts
+layout: project-post
 title: "Nand2Tetris - Follow-up: Simplifying Circuits"
-categories: computer-projects
+categories: projects
 ---
 This is a follow-up of the "Simplifying Circuits" inquiry from "<a href="/projectlog/2023/03/28/boolean-logic.html">01 | Boolean Logic</a>".
 <br><br>

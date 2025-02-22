@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="icon" href="/images/test.png">
+    <title>project c190</title>
+    <script type="text/javascript" async>
+        var i = 0;
+        const temp = "/images/frames/floppy";
+        function animate() {
+            document.getElementById("loading").hidden = false;
+            const quotes = [
+                "<br>\"Start copying what you love. Copy copy copy copy. At the end of the copy, you will find yourself.\"<br><br>—Yohji Yamamoto",
+                "<br>\"Study the science of art; study the art of science. Learn how to see.\"<br><br>—Leonardo Da Vinci",
+                "<br>\"The smallest feline is a masterpiece.\"<br><br>—Leonardo Da Vinci",
+                "<br>\"The best way to get over creative block is to simply place some constraints on yourself.\"<br><br>—Austin Kleon"
+            ];
+            var quoteNum = Math.floor(Math.random() * quotes.length);
+            document.getElementById("loadingQuote").innerHTML = quotes[quoteNum];
+            var numRotations = getNumRotations(quoteNum);
+            if (i == 0) {
+                i = 1;
+                var frames = 0;
+                function transition() {
+                    document.getElementById("loading").hidden = true;
+                    document.getElementById("data").hidden = false;
+                }
+                function floppy() {
+                    if (frames < numRotations * 5) {
+                        frames++;
+                        value = document.getElementById("floppy").getAttribute("src");
+                        value = value.replace("/images/frames/floppy", "");
+                        value = value.replace(".png", "");
+                        value = parseInt(value);
+                        if (value != 5) {
+                            value++;
+                        } else {
+                            value = 1;
+                        }
+                        value.toString();
+                        value = temp.concat(value);
+                        value = value.concat(".png");
+                        document.getElementById("floppy").src = value;
+                    } else {
+                        clearInterval(id);
+                        setTimeout(transition, 500);
+                        i = 0;
+                    }
+                }
+                var id = setInterval(floppy, 200);
+            }
+        }
+
+        function getNumRotations(quoteNum) {
+            var numRotations;
+            if (quoteNum == 2) {
+                numRotations = 3;
+            } else if (quoteNum == 1) {
+                numRotations = 4;
+            } else if (quoteNum == 0 || quoteNum == 3) {
+                numRotations = 5;
+            }
+            return numRotations;
+        }
+
+        var category = "all";
+        var drawingOpen = false;
+
+        function drawingHover(id) {
+            document.getElementById(id).style.filter = "brightness(80%)";
+        }
+        function drawingRelease(id) {
+            document.getElementById(id).style.filter = "brightness(100%)";
+        }
+
+        function selectCategory(id) {
+            drawingOpen = false;
+            document.getElementById("selected").hidden = true;
+            var all = document.getElementsByClassName("drawing");
+            if (id == "all") {
+                for (var i = 0; i < all.length; i++) {
+                    all[i].hidden = false;
+                }
+                const delay = setTimeout(resetHref, 5);
+            } else {
+                for (var i = 0; i < all.length; i++) {
+                    all[i].hidden = true;
+                }
+                var show = document.getElementsByClassName(id);
+                for (var i = 0; i < show.length; i++) {
+                    show[i].hidden = false;
+                }
+                document.getElementById("clickReturn").href = "#";
+                document.getElementById("clickReturn").setAttribute("onclick","returnToCategory()");
+            }
+            category = id;
+        }
+
+        function selectDrawing(id) {
+            var all = document.getElementsByClassName("drawing");
+            for (var i = 0; i < all.length; i++) {
+                    all[i].hidden = true;
+            }
+            fetch('/artwork.json')
+            .then(res => res.json())
+            .then((data) => {
+                drawingsArray = data;
+                index = parseInt(id.replace("index",""));
+                
+                document.getElementById("selectedDrawing").src = "";
+                document.getElementById("selectedDrawing").src = "/images/drawings/".concat(drawingsArray[index].image);
+                document.getElementById("selectedDrawing").style.width = drawingsArray[index].width;
+                
+                document.getElementById("name").innerHTML = drawingsArray[index].name;
+                document.getElementById("year").innerHTML = drawingsArray[index].year;
+                document.getElementById("medium").innerHTML = drawingsArray[index].medium;
+                document.getElementById("notes").innerHTML = drawingsArray[index].notes;
+
+                document.getElementById("selected").hidden = false;
+                drawingOpen = true;
+                document.getElementById("clickReturn").href = "#";
+                document.getElementById("clickReturn").setAttribute("onclick","returnToCategory()");
+            }).catch(err => console.error(err));
+        }
+
+        function returnToCategory() {
+            document.getElementById("selected").hidden = true;
+            if (drawingOpen) {
+                if (category == "all") {
+                    var all = document.getElementsByClassName("drawing");
+                    for (var i = 0; i < all.length; i++) {
+                        all[i].hidden = false;
+                    }
+                    const delay = setTimeout(resetHref, 5);
+                } else {
+                    var all = document.getElementsByClassName(category);
+                    for (var i = 0; i < all.length; i++) {
+                        all[i].hidden = false;
+                    }
+                }
+            } else {
+                if (category != "all") {
+                    var all = document.getElementsByClassName("drawing");
+                    for (var i = 0; i < all.length; i++) {
+                        all[i].hidden = false;
+                    }
+                    category = "all";
+                    const delay = setTimeout(resetHref, 5);
+                }
+            }
+            drawingOpen = false;
+        }
+        function resetHref() {
+            document.getElementById("clickReturn").href = "/";
+        }
+    </script>
+    <style>
+        @font-face {
+            font-family: 'Mx437 IBM VGA 9x16';
+            src: url('/font/Mx437_IBM_VGA_9x16.woff2') format('woff2'), url('/font/Mx437_IBM_VGA_9x16.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+        }
+        @keyframes titleWiggle {
+            from {content: url("/images/title_dark.png");
+            height: 41.25px;}
+            to {content: url("/images/title_dark2.png");
+            height: 41.25px;}
+        }
+        #title {
+            animation-name: titleWiggle;
+            animation-duration: 1.5s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+        }
+        body {
+            font-family: 'Mx437 IBM VGA 9x16';
+            background-color: #0A0A0A;
+            margin:5px !important;
+        }
+        #mainBox {
+          color: #7b8a48;
+          border: 2px solid;
+          border-color: #7b8a48;
+          background-color: #0A0A0A;
+        }
+        #loading {
+            width: 350px;
+            margin-left: auto;
+            margin-right:auto;
+            margin-top: 10rem;
+        }
+        #loadingQuote {
+            text-align:left;
+            width: 370px;
+            color: #7b8a48;
+        }
+        a {color: #7b8a48; text-decoration: none;}
+        a:hover {color: #7b8a48; text-decoration: underline;}
+        #floppy {
+            margin-right: 5px;
+        }
+        .drawing {
+            width: 190px;
+            margin-left: 2.5px;
+            margin-right: 2.5px;
+            margin-top: 2.5px;
+            margin-bottom: 2.5px;
+        }
+        table {
+            border-collapse: collapse;
+        }
+        td {
+            padding:0px !important;
+        }
+        .category:hover {
+            cursor: pointer;
+        }
+        .drawing:hover {
+            cursor: pointer;
+        }
+        #page-contents {
+            width:600px;
+            margin:auto;
+        }
+        #displayBox {
+            height:650px;
+            width: 100%;
+            overflow-x:hidden;
+            overflow-y:auto;
+        }
+        @media (max-width: 600px) {
+            #page-contents {
+                width: 100%;
+            }
+            #loading, #loadingQuote {
+                width: 100%;
+            }
+        }
+        @media (max-width: 300px) {
+            #title {
+                width: 90vw !important;
+                height: calc((36/350)*90vw) !important;
+            }
+        }
+    </style>
+</head>
+
+<body onload="animate()">
+    <div id="loading">
+        <div hidden="true">
+            <img src="/images/frames/floppy2.png">
+            <img src="/images/frames/floppy3.png">
+            <img src="/images/frames/floppy4.png">
+            <img src="/images/frames/floppy5.png">
+        </div>
+        <div><img src="/images/frames/floppy1.png" id="floppy" width="50px"></div>
+        <div id="loadingQuote"><br>Please enable JavaScript in your browser settings to view this page.</div>
+    </div>
+    <div id="data" style="width:100%; height:100%;" hidden="true">
+    <div id="page-contents">
+        <a href="/"><img src="/images/title_dark.png" width="400px" id="title" style="margin-bottom:10px;margin-top:3vh;"></a>
+        <br><span style="color:#7b8a48"><span id="all" class="category" onclick="selectCategory(id)"><u>A</u>LL</span> / <span id="traditional" class="category" onclick="selectCategory(id)"><u>T</u>RADITIONAL</span> / <span id="digital" class="category" onclick="selectCategory(id)"><u>D</u>IGITAL</span></span>
+
+        <div id="displayBox">
+            <div id="selected" hidden="true" style="text-align:center;">
+                <img src="" width="100%" id="selectedDrawing" style="z-index: 50;">
+                <table style="color:#7b8a48"><tr>
+                    <td width="50%" style="vertical-align:text-top; text-align:left;">
+                        <b>Details</b>
+                        <br><br><div id="name">Large Pink Flowers</div>
+                        <div id="year">2019</div>
+                        <div id="medium">Colored pencil</div>
+                        <img src="/images/paint_5.gif" style="margin-top:15px;">
+                    </td>
+                    <td width="50%" style="vertical-align:text-top; text-align:left">
+                        <b>Additional Notes</b>
+                        <br><br><div id="notes">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus.</div>
+                    </td>
+                </tr></table>
+                <p id="description" style="text-align:left;"></p>
+            </div>
+            <div id="drawings" style="text-align:left;margin-left:-5px;">
+                <img src="/images/drawing_thumbnails/bird_mspaint.jpg" class="digital drawing" id="index0" width="190px" height="190px" onmousedown="selectDrawing(id)" onmouseover="drawingHover(id)" onmouseout="drawingRelease(id)">
+                <img src="/images/drawing_thumbnails/turing_mspaint.jpg" class="digital drawing" id="index1" width="190px" height="190px" onmousedown="selectDrawing(id)" onmouseover="drawingHover(id)" onmouseout="drawingRelease(id)">
+                <img src="/images/drawing_thumbnails/large_pink_flower.jpg" class="traditional drawing" id="index2" width="190px" height="190px" onmousedown="selectDrawing(id)" onmouseover="drawingHover(id)" onmouseout="drawingRelease(id)">
+                <img src="/images/drawing_thumbnails/small_pink_flower.jpg" class="traditional drawing" id="index3" width="190px" height="190px" onmousedown="selectDrawing(id)" onmouseover="drawingHover(id)" onmouseout="drawingRelease(id)">
+                <img src="/images/drawing_thumbnails/portrait_woman.png" class="digital drawing" id="index4" width="190px" height="190px" onmousedown="selectDrawing(id)" onmouseover="drawingHover(id)" onmouseout="drawingRelease(id)">
+                <img src="/images/drawing_thumbnails/olive_and_pigeon.png" class="digital drawing" id="index5" width="190px" height="190px" onmousedown="selectDrawing(id)" onmouseover="drawingHover(id)" onmouseout="drawingRelease(id)">
+            </div>
+        </div>
+        <a href="/" id="clickReturn"><u>C</u>lick here to return</a>
+    </div>
+    </div>
+</body>
+
+</html>
