@@ -54,6 +54,30 @@
         #randomFact:hover {
             cursor: pointer;
         }
+        @keyframes stampDark {
+            0% {content: url("/images/frames/stamp1_d.png");}
+            20% {content: url("/images/frames/stamp2_d.png");}
+            40% {content: url("/images/frames/stamp3_d.png");}
+            60% {content: url("/images/frames/stamp4_d.png");}
+            80% {content: url("/images/frames/stamp5_d.png");}
+        }
+        #stampDark {
+            animation-name: stampDark;
+            animation-iteration-count: infinite;
+            animation-duration: 1s;
+        }
+        @keyframes stampLight {
+            0% {content: url("/images/frames/stamp1_l.png");}
+            20% {content: url("/images/frames/stamp2_l.png");}
+            40% {content: url("/images/frames/stamp3_l.png");}
+            60% {content: url("/images/frames/stamp4_l.png");}
+            80% {content: url("/images/frames/stamp5_l.png");}
+        }
+        #stampLight {
+            animation-name: stampLight;
+            animation-iteration-count: infinite;
+            animation-duration: 1s;
+        }
         @media (max-width: 450px) {
             #container {
                 width: 100% !important;
@@ -61,6 +85,9 @@
             }
             #site-body {
                 height: 100%;
+            }
+            #material {
+                height: 750px;
             }
             .item {
                 height:50%;
@@ -133,7 +160,7 @@
             <div id="material">
                 Hi, my name's Hui (Chinese: 慧; pronounced "hway") and I'm an artist and computer science student. I also like <a href="/other-assets/Mathematician's Lament.pdf" target="_blank" style="color:rgb(66, 153, 194);text-decoration: underline;">math</a>, low-level programming, computer history, abrasive music, rainy weather, "cozy" games, and libraries.
                 <br><br>
-                At the time of writing this, I am somewhat involved in security research while also juggling full-time school, adult life, and messing around on my computer when I feel like it, this site being a product of the latter. I see myself staying in academia for the forseeable future (go figure).
+                At the time of writing this, I am somewhat involved in security research while also juggling full-time school, adult life, and messing around on my computer when I feel like it, this site being a product of the latter.
                 <br><br>
                 <span id="randomFact" onclick="randomFact()" style="color:rgb(66, 153, 194);text-decoration: underline;">Click this text for a random fact about me.</span>
                 <br><br>
@@ -143,6 +170,11 @@
                 What does “Project C190” mean?
                 <br><br>
                 At age 9, I started messing around on kids' programming website Scratch, publishing my work under the username Crafty190. Before I knew it, I went from making Warrior Cats RPGs in blocks to dabbling in stuff like assembly language, and now I'm studying computer science in university. This website is named "Project C190" after "Crafty190" as a tribute to how my time on Scratch has shaped my interests. Also, fun fact, some of the graphics are drawn in Scratch with a mouse just as I would have done as a kid.
+                <hr>
+                Here are my site buttons! Click for links to the gif versions, and please avoid <a href="https://simple.wikipedia.org/wiki/Hotlinking" target="_blank" style="color:rgb(66, 153, 194);text-decoration: underline;">hotlinking</a>.
+                <br>
+                <a href="/button_code.txt" target="_blank"><img src="/images/frames/stamp1_d.png" id="stampDark" width="88px" height="31px"></a> <a href="/button_code.txt" target="_blank"><img src="/images/frames/stamp1_l.png" id="stampLight" width="88px" height="31px"></a>
+
             </div>
         </div>
         <div id="buttons" style="width:100%;margin-top:20px;margin-bottom:20px;">
