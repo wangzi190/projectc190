@@ -101,6 +101,7 @@
     </style>
     <script>
         var prevFact = -1;
+        var prevPrevFact = -1;
         function randomFact() {
             const factBank = [
                 "I generally like to use MS Paint and KolourPaint (the Linux equivalent of MS Paint) for digital art.",
@@ -125,12 +126,14 @@
                 "I think white Monster is the best flavor of Monster Energy.",
                 "I like fermented drinks and desserts such as kombucha and jiuniang.",
                 "My first pet was a Lutino parakeet.",
-                "I have been drawing for as long as I can remember."
+                "I have been drawing for as long as I can remember.",
+                "My motto is: Better to be challenged than to be bored."
             ];
             var num = Math.floor(Math.random() * factBank.length);
-            while (num == prevFact) {
+            while (num == prevFact || num == prevPrevFact) {
                 num = Math.floor(Math.random() * factBank.length);
             }
+            prevPrevFact = prevFact;
             prevFact = num;
             document.getElementById("randomFact").innerHTML = factBank[num];
         }
@@ -158,8 +161,15 @@
                 <a href="/outlinks"><mark>&nbsp;Outlinks&nbsp;</mark></a>&nbsp;
             </div>
             <div id="material">
+                <div style="display:flex;flex-direction:row;">
+                <div>
                 Hi, my name's Hui (Chinese: 慧; pronounced "hway") and I'm an artist and computer science student. I also like <a href="/other-assets/Mathematician's Lament.pdf" target="_blank" style="color:rgb(66, 153, 194);text-decoration: underline;">math</a>, low-level programming, computer history, abrasive music, rainy weather, "cozy" games, and libraries.
-                <br><br>
+                </div>
+                <div>
+                    <img src="/images/baps u.png" width="150px">
+                </div>
+                </div>
+                <!--<br><br>-->
                 At the time of writing this, I am somewhat involved in security research while also juggling full-time school, adult life, and messing around on my computer when I feel like it, this site being a product of the latter.
                 <br><br>
                 <span id="randomFact" onclick="randomFact()" style="color:rgb(66, 153, 194);text-decoration: underline;">Click this text for a random fact about me.</span>
