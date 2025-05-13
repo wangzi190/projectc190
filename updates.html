@@ -37,6 +37,7 @@
             height: calc(100vh-20);
         }
         #container {
+            position:relative;
             margin-top:20px !important;
             width: 600px !important;
             margin:auto;
@@ -52,10 +53,6 @@
             background-color: rgb(255, 255, 255);
             padding: 5px;
         }
-        a {
-            color: #779608;
-            text-decoration: underline;
-        }
         mark {
             background-color:#72803f;
             color: white;
@@ -65,6 +62,16 @@
             height: 650px;
             overflow-x:hidden;
             overflow-y:auto;
+        }
+        a {
+            text-decoration: none;
+        }
+        .abacus:hover {
+            cursor: pointer;
+        }
+        .date {
+            color: #779608;
+            font-weight: bold;
         }
         @media (max-width: 450px) {
             #container {
@@ -76,9 +83,6 @@
             }
             #material {
                 height: 700px;
-            }
-            .abacus {
-                height: calc(4.5*(100vw/15));
             }
             #pageart {
                 width: 85%;
@@ -99,37 +103,27 @@
 <body>
     <div id="container">
         <div id="header">
-            <a href="/index"><img src="/images/title.png" id="title" width="350px" height="36px"></a>
+            <a href="/"><img src="/images/title.png" id="title" width="350px" height="36px"></a>
         </div>
         <div id="site-body">
             <div id="nav">
-                <a href="/index" style="text-decoration: none;"><mark>&nbsp;Index&nbsp;</mark></a>&nbsp;
-                <a href="/about" style="text-decoration: none;"><mark>&nbsp;About&nbsp;</mark></a>&nbsp;
-                <a href="/projects" style="text-decoration: none;"><mark>&nbsp;Projects&nbsp;</mark></a>&nbsp;
-                <a href="/artwork" style="text-decoration: none;"><mark>&nbsp;Artwork&nbsp;</mark></a>&nbsp;
-                <a href="/cache" style="text-decoration: none;"><mark style="color:white;background-color: #393f34;">&nbsp;Cache&nbsp;</mark></a>&nbsp;
-                <a href="/journal" style="text-decoration: none;"><mark>&nbsp;Journal&nbsp;</mark></a>&nbsp;
-                <a href="https://abacist.atabook.org/" style="text-decoration: none;"><mark>&nbsp;Guestbook&nbsp;</mark></a>&nbsp;
-                <a href="/outlinks" style="text-decoration: none;"><mark>&nbsp;Outlinks&nbsp;</mark></a>&nbsp;
+                <a href="/index"><mark style="color:white;background-color: #393f34;">&nbsp;Index&nbsp;</mark></a>&nbsp;
+                <a href="/about"><mark>&nbsp;About&nbsp;</mark></a>&nbsp;
+                <a href="/projects"><mark>&nbsp;Projects&nbsp;</mark></a>&nbsp;
+                <a href="/artwork"><mark>&nbsp;Artwork&nbsp;</mark></a>&nbsp;
+                <a href="/cache"><mark>&nbsp;Cache&nbsp;</mark></a>&nbsp;
+                <a href="/journal"><mark>&nbsp;Journal&nbsp;</mark></a>&nbsp;
+                <a href="https://abacist.atabook.org/"><mark>&nbsp;Guestbook&nbsp;</mark></a>&nbsp;
+                <a href="/outlinks"><mark>&nbsp;Outlinks&nbsp;</mark></a>&nbsp;
             </div>
             <div id="material">
-                Welcome to what is essentially my site's "miscellaneous" page, which I call the "cache" because it seems more cool, on-theme, and important.
+                <a href="/" style="color: #779608;text-decoration:underline;">Return</a>
                 <hr>
-                <b><a href="/cache/reading.html">Reading</a></b> <span style="font-size:10px;color:#779608">Top pick!</span>
-                <br>My page dedicated to reading, with book reviews and more.
-                <hr>
-                <b><a href="/cache/how-i-study.html">How I Study as an 'Academic Weapon'</a></b>
-                <br>Tips and strategies for in-depth learning and acing your exams based on my personal experiences as a high-performing computer science student.
-                <hr>
-                <b><a href="/cache/graphics-hoard.html">Graphics Hoard</a></b>
-                <br>Stamps, buttons, blinkies, and more. From time to time, I update this page with new graphics that I've found.
-                <hr>
-                <b><a href="/cache/visiting-chm.html">Visiting the Computer History Museum</a></b>
-                <br>I visited the Computer History Museum in the summer of 2023 and talk about it here.
-                <hr>
-                <b><a href="https://catbox.moe/c/oedx1y" target="_blank">Life Makeover Gallery ↗</a></b>
-                <br>My photos on the Chinese dress-up game 以闪亮之名, aka Life Makeover.
-                I play very casually, so don't expect much.
+                All Updates
+                <br><span class="date">[05.11.25]</span> I should probably actually update my updates box, shouldn't I? Well, since uploading my site overhaul in February, I've written a bunch of journal entries and added a "cache" page to link a bunch of miscellaneous pages on. Today, I added a couple new pages—Reading, How I Study as an 'Academic Weapon', and more—to the cache page, and uploaded a bunch of new graphics to the Graphics Hoard page. I've got more cooking up in my drafts right now, so please look forward to it! 
+                <br><br><span class="date">[02.21.25]</span> The new site overhaul is finally live! I decided to go for a clean, focused look, where I am free to write as much as I like without having to worry about annoying textcutoffs or whatnot. I hope that lessening the emphasis on the design of the site by making it more of a container for my work than anything else will enable me to focus more on activities that matter to me.
+                You can view an archived version of the old index page <a href="/archived.html" style="color: #779608;text-decoration:underline;">here</a>, just note that most of the links have been removed.
+                <br><br><span class="date">[00.00.00]</span> Lorem ipsum dolor sit amet consectetur adipiscing elit. Faucibus ex sapien vitae pellentesque sem placerat in. Cursus mi pretium tellus duis convallis tempus leo. Aenean sed diam urna tempor pulvinar vivamus fringilla. Nec metus bibendum egestas iaculis massa nisl malesuada. Integer nunc posuere ut hendrerit semper vel class. Taciti sociosqu ad litora torquent per conubia nostra. Himenaeos orci varius natoque penatibus et magnis dis. Montes nascetur ridiculus mus donec rhoncus eros.
             </div>
         </div>
         <div id="buttons" style="width:100%;margin-top:20px;margin-bottom:20px;">
