@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="icon" href="/images/favicon.png">
+    <title>project c190</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <style>
+        body {
+            font-family:'Courier New', monospace;
+            font-size: 16px;
+            margin: 0px !important;
+            padding: 0px !important;
+            background-image: url("/images/tile_background_for_about_2.png");
+        }
+        #header {
+            height:120px;
+            width: 1015px;
+            background-color: #72803f;
+        }
+        #title {
+            color:#f1e4bb;
+            margin-left:5px;
+            font-size: 42px;
+            text-decoration: none;
+        }
+        #container {
+            position: absolute;
+        }
+        #site-body {
+            display: flex;
+            height: calc(100vh - 120px);
+            width: 100vw;
+            align-items: stretch;
+        }
+        #site-body > div {
+            background-color: #f1e4bb;
+            line-height: 1.6;
+        }
+        a {
+            color:#72803f;
+        }
+        #sidebar {
+            width: 250px;
+            padding: 5px;
+            overflow-x:auto;
+            overflow-y:auto;
+        }
+        #material {
+            width: 750px;
+            padding-right: 5px;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            overflow-x:hidden;
+            overflow-y:auto;
+        }
+        ul {
+            list-style-type: none;
+            margin:0;
+            padding:0;
+        }
+        li {
+            margin-left:14px;
+        }
+        summary:hover {
+            cursor: pointer;
+        }
+        #pagedoll {
+            position:absolute;
+            left: 980px;
+            top:calc(100vh - 448px);
+            margin-bottom:0px;
+        }
+        .emote {
+            vertical-align:middle;
+            width:18px;
+        }
+        .indicator {
+            font-size:10px;
+            color:#779608;
+        }
+        @media (max-width: 500px) {
+            #sidebar {
+                width: calc(100% - 10px);
+            }
+            #site-body {
+                flex-direction: column;
+                height: 100%;
+            }
+            #material {
+                width: calc(100% - 10px);
+                padding-left: 5px;
+                padding-right:5px;
+            }
+            #pageart {
+                width: 85%;
+            }
+            .abacus {
+                height: calc(4.5*(100vw/15));
+            }
+        }
+        @media (max-width: 1020px) {
+            #header {
+                width: calc(100%);
+            }
+            #pagedoll {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+    <div id="header">
+        <a href="/" id="title"><b>project c190</b></a>
+    </div>
+    <div id="site-body">
+        <div id="sidebar">
+        navigation
+        <ul>
+            <li><a href="/">index</a></li>
+            <li><a href="/about.html">about</a></li>
+            <li><a href="/projects.html">projects</a> <span class="indicator">top pick!</span></li>
+            <li><a href="/artwork.html">artwork</a> <span class="indicator">top pick!</span></li>
+            <li><a href="/reading.html">reading</a> <span class="indicator">top pick!</span></li>
+            <li><a href="/mahjong.html">mahjong</a></li>
+            <li><a href="/journal.html">journal</a></li>
+            <li><a href="/miscellany.html">miscellany</a></li>
+            <li><a href="/outlinks.html">outlinks</a></li>
+        </ul> 
+        <br>
+        <ul>
+            contact
+            <li>
+                <a href="https://abacist.atabook.org">guestbook</a>
+            </li>
+            <li>
+                <a href="mailto:abacist@disroot.org"><span title="abacist@disroot.org">e-mail</span></a> <a href="/hui 🐱.asc"><span title="For encrypting e-mails">PGP</span></a>
+            </li>
+        </ul>
+        <br>
+        <details>
+            <summary>webrings, etc.</summary>
+            <div style="width:250px;">
+            <div id='linuxring'>
+            <script type="text/javascript" src="https://teethinvitro.neocities.org/webring/linuxring/script/onionring-variables.js"></script>
+            <script type="text/javascript" src="https://teethinvitro.neocities.org/webring/linuxring/script/onionring-widget.js"></script>
+            </div>
+            <table style="width:100%;margin-bottom: 5px; text-align: center; border: #3f822e ridge 4px; background-color: #d0e975;">
+                <tr>
+                    <th colspan="3" style="text-shadow: 5px 5px #a2b94f;"><a href="https://starry-knight.neocities.org/webring/verdant-webring" alt="Verdantville Home Page" title="Verdantville Home Page" style="color: #044810; text-decoration: none;">⚘ Verdantville ⚘</a></th>
+                </tr>
+                <tr>
+                    <td><a href="https://webri.ng/webring/verdantville/previous?via=https%3A%2F%2Fprojectc190.neocities.org" alt="Previous site" title="Previous site" style="color: #044810;">⬻ Back</a></td>
+                    <td><a href="https://webri.ng/webring/verdantville/random?via=https%3A%2F%2Fprojectc190.neocities.org" alt="Random site" title="Random site" style="color: #044810;">Random</a></td>
+                    <td><a href="https://webri.ng/webring/verdantville/next?via=https%3A%2F%2Fprojectc190.neocities.org" alt="Next site" title="Next site" style="color: #044810;">Next ⤖</a></td>
+                </tr>
+            </table>
+            <script src="https://snewberry.neocities.org/catfolk/webstring.js"></script>
+            <a href="https://theatregirl.net/cats" target="_blank"><img src="/images/wrlistings_etc/cats.png"></a><a href="https://fan.leilukin.com/programming" target="_blank"><img src="https://fan.leilukin.com/programming/buttons/50x50-1.png"></a><a href="https://mahjong.dead-ish.net" target="_blank"><img src="/images/wrlistings_etc/jong.jpg"></a><a href="https://fan.wings.nu/tamagotchi/index.php" target="_blank"><img src="/images/wrlistings_etc/gotchi.png"></a><a href="https://fan.after-death.org/magica" target="_blank"><img src="/images/wrlistings_etc/madoka.png"></a><a href="https://lovesick.cafe/grrrl" target="_blank"><img src="/images/wrlistings_etc/mbag.png"></a>
+            </div>
+        </details>
+        <br>
+        </div>
+        <div id="material" style="position:relative;">
+            {{ content }}
+        </div>
+    </div>
+    <img src="/images/doodly_hwui.png" width="259px" height="444px" id="pagedoll">
+    </div>
+</body>
+
+</html>

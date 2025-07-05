@@ -1,205 +1,93 @@
-<!DOCTYPE html>
-<html>
-
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
-
-    <link rel="icon" href="/images/favicon.png">
-    <title>project c190</title>
-    <style>
-        @font-face {
-            font-family: 'Mx437 IBM VGA 9x16';
-            src: url('/font/Mx437_IBM_VGA_9x16.woff2') format('woff2'), url('/font/Mx437_IBM_VGA_9x16.woff') format('woff');
-            font-weight: normal;
-            font-style: normal;
+---
+layout: main/about_lo
+---
+<style>
+    .clickable {
+        color: #72803f;
+        text-decoration: underline;
+    }
+    .clickable:hover {
+        cursor: pointer;
+    }
+    @keyframes stampDark {
+        0% {content: url("/images/frames/stamp1_d.png");}
+        20% {content: url("/images/frames/stamp2_d.png");}
+        40% {content: url("/images/frames/stamp3_d.png");}
+        60% {content: url("/images/frames/stamp4_d.png");}
+        80% {content: url("/images/frames/stamp5_d.png");}
+    }
+    #stampDark {
+        animation-name: stampDark;
+        animation-iteration-count: infinite;
+        animation-duration: 1s;
+    }
+    @keyframes stampLight {
+        0% {content: url("/images/frames/stamp1_l.png");}
+        20% {content: url("/images/frames/stamp2_l.png");}
+        40% {content: url("/images/frames/stamp3_l.png");}
+        60% {content: url("/images/frames/stamp4_l.png");}
+        80% {content: url("/images/frames/stamp5_l.png");}
+    }
+    #stampLight {
+        animation-name: stampLight;
+        animation-iteration-count: infinite;
+        animation-duration: 1s;
+    }
+</style>
+<script>
+    var prevFact = -1;
+    var prevPrevFact = -1;
+    function randomFact() {
+        const factBank = [
+            "I generally like to use MS Paint and KolourPaint (the Linux equivalent of MS Paint) for digital art.",
+            "My favorite band is Nine Inch Nails.",
+            "I used to be a major dinosaur kid, and my favorite dinosaurs were the archaeopteryx and oviraptor.",
+            "I like Sichuan and Xinjiang cuisine.",
+            "I hated math until high school calculus.",
+            "I'm an INTP and an Aquarius, if that means anything to you.",
+            "Panda Express makes some of the best (albeit oily) kung pao chicken I've ever tasted, and I will die on that hill.",
+            "My favorite historical figure is Alan Turing, and he's inspired me since I was little.",
+            "I honestly think most of my successes are because I am a stubborn person that refuses to quit.",
+            "I don't like sweeteners in my tea or coffee.",
+            "My favorite color combo is blue and orange.",
+            "I'd like to own a cat or pigeon in the future, but for now, I have cats and pigeons in Stardew Valley.",
+            "My art has been featured on the front page of Chicken Smoothie twice (Does this give me street cred with Internet furries? I hope so).",
+            "One of my friends' labmates knew me from Scratch, which is mortifying but also kind of cool.",
+            "I can play two musical instruments. You can probably guess which ones.",
+            "When I was a big fan of the series, my favorite Warrior Cats character was Moth Flight.",
+            "I think white Monster is the best flavor of Monster Energy.",
+            "I like fermented drinks and desserts such as kombucha and jiuniang.",
+            "My first pet was a Lutino parakeet.",
+            "I have been drawing for as long as I can remember.",
+            "My motto is: Better to be challenged than to be bored."
+        ];
+        var num = Math.floor(Math.random() * factBank.length);
+        while (num == prevFact || num == prevPrevFact) {
+            num = Math.floor(Math.random() * factBank.length);
         }
-        body {
-            font-family: sans-serif;
-            font-size: 14px;
-            background-image: url("/images/tile_background_for_about.png");
-            margin:0px !important;
-            padding:0px !important;
-            width:100%;
-            height: calc(100vh-20);
-        }
-        #container {
-            margin-top:20px !important;
-            width: 600px !important;
-            margin:auto;
-        }
-        #header {
-            position: relative;
-            height: 110px;
-            width: 100%;
-            margin: auto;
-        }
-        #site-body {
-            background-color: rgb(255, 255, 255);
-            padding: 5px;
-        }
-        mark {
-            background-color:rgb(50, 140, 182);
-            color: white;
-        }
-        #material {
-            margin-top:5px;
-            height: 650px;
-            overflow-x:hidden;
-            overflow-y:auto;
-        }
-        a {
-            text-decoration: none;
-        }
-        #randomFact:hover {
-            cursor: pointer;
-        }
-        @keyframes stampDark {
-            0% {content: url("/images/frames/stamp1_d.png");}
-            20% {content: url("/images/frames/stamp2_d.png");}
-            40% {content: url("/images/frames/stamp3_d.png");}
-            60% {content: url("/images/frames/stamp4_d.png");}
-            80% {content: url("/images/frames/stamp5_d.png");}
-        }
-        #stampDark {
-            animation-name: stampDark;
-            animation-iteration-count: infinite;
-            animation-duration: 1s;
-        }
-        @keyframes stampLight {
-            0% {content: url("/images/frames/stamp1_l.png");}
-            20% {content: url("/images/frames/stamp2_l.png");}
-            40% {content: url("/images/frames/stamp3_l.png");}
-            60% {content: url("/images/frames/stamp4_l.png");}
-            80% {content: url("/images/frames/stamp5_l.png");}
-        }
-        #stampLight {
-            animation-name: stampLight;
-            animation-iteration-count: infinite;
-            animation-duration: 1s;
-        }
-        .clickable, a.clickable {
-            color:rgb(66, 153, 194);
-            text-decoration: underline;
-        }
-        .clickable:hover, a.clickable:hover {
-            color: rgb(228, 147, 27);
-        }
-        @media (max-width: 450px) {
-            #container {
-                width: 100% !important;
-                margin-top:0px !important;
-            }
-            #site-body {
-                height: 100%;
-            }
-            #material {
-                height: 700px;
-            }
-            .item {
-                height:50%;
-                width:15%;
-            }
-            #title {
-                width: 90vw !important;
-                height: calc((36/350)*90vw) !important;
-            }
-        }
-    </style>
-    <script>
-        var prevFact = -1;
-        var prevPrevFact = -1;
-        function randomFact() {
-            const factBank = [
-                "I generally like to use MS Paint and KolourPaint (the Linux equivalent of MS Paint) for digital art.",
-                "My favorite band is Nine Inch Nails.",
-                "I used to be a major dinosaur kid, and my favorite dinosaurs were the archaeopteryx and oviraptor.",
-                "I like Sichuan and Xinjiang cuisine.",
-                "I hated math until high school calculus.",
-                "I'm an INTP and an Aquarius, if that means anything to you.",
-                "Panda Express makes some of the best (albeit oily) kung pao chicken I've ever tasted, and I will die on that hill.",
-                "My favorite historical figure is Alan Turing, and he's inspired me since I was little.",
-                "I honestly think most of my successes are because I am a stubborn person that refuses to quit.",
-                "I don't like sweeteners in my tea or coffee.",
-                "My favorite color combo is blue and orange.",
-                "I'd like to own a cat or pigeon in the future, but for now, I have cats and pigeons in Stardew Valley.",
-                "My art has been featured on the front page of Chicken Smoothie twice (Does this give me street cred with Internet furries? I hope so).",
-                "One of my friends' labmates knew me from Scratch, which is mortifying but also kind of cool.",
-                "I can play two musical instruments. You can probably guess which ones.",
-                "When I was a big fan of the series, my favorite Warrior Cats character was Moth Flight.",
-                "I think white Monster is the best flavor of Monster Energy.",
-                "I like fermented drinks and desserts such as kombucha and jiuniang.",
-                "My first pet was a Lutino parakeet.",
-                "I have been drawing for as long as I can remember.",
-                "My motto is: Better to be challenged than to be bored."
-            ];
-            var num = Math.floor(Math.random() * factBank.length);
-            while (num == prevFact || num == prevPrevFact) {
-                num = Math.floor(Math.random() * factBank.length);
-            }
-            prevPrevFact = prevFact;
-            prevFact = num;
-            document.getElementById("randomFact").innerHTML = factBank[num];
-        }
-    </script>
-</head>
-
-<body>
-    <div id="container">
-        <div id="header">
-                <span title="Crayons and colored pencils"><img src="/images/drawing_supps.png" class="item" width="104px" style="margin-top:5px;margin-right:5px;"></span>
-                <span title="Chicken plush"><img src="/images/piyo.png" style="margin-right:5px;margin-top:10px;" class="item" width="99px"></span>
-                <span title="Pencil and eraser"><img src="/images/pencil_eraser.png" class="item" width="48px" style="margin-top:5px;margin-right:5px;"></span>
-                <span title="Sketchbook and computer"><img src="/images/sketch_comp.png" class="item" width="122px" style="margin-top:5px;margin-right:2px;"></span>
-                <span title="Japanese abacus"><img src="/images/abacus.png" class="item" width="82px" style="margin-right:5px;margin-top:20px;"></span>
-        </div>
-        <div id="site-body">
-            <div style="text-align:bottom;">
-                <a href="/"><mark>&nbsp;Index&nbsp;</mark></a>&nbsp;
-                <a href="/about"><mark style="color:white;background-color: rgb(228, 147, 27);">&nbsp;About&nbsp;</mark></a>&nbsp;
-                <a href="/projects"><mark>&nbsp;Projects&nbsp;</mark></a>&nbsp;
-                <a href="/artwork"><mark>&nbsp;Artwork&nbsp;</mark></a>&nbsp;
-                <a href="/reading"><mark>&nbsp;Reading&nbsp;</mark></a>&nbsp;
-                <a href="/cache"><mark>&nbsp;Cache&nbsp;</mark></a>&nbsp;
-                <a href="/journal"><mark>&nbsp;Journal&nbsp;</mark></a>&nbsp;
-                <a href="https://abacist.atabook.org/"><mark>&nbsp;Guestbook&nbsp;</mark></a>&nbsp;
-                <a href="/outlinks"><mark>&nbsp;Outlinks&nbsp;</mark></a>&nbsp;
-            </div>
-            <div id="material">
-                <div style="display:flex;flex-direction:row;">
-                <div>
-                Hi, my name's Hui (Chinese: 慧; pronounced "hway") and I'm an artist and computer science student. I also like <a href="/other-assets/Mathematician's Lament.pdf" target="_blank" class="clickable">math</a>, <a href="https://en.wikipedia.org/wiki/Low-level_programming_language" target="_blank" class="clickable">low-level programming</a>, reading, computer history, abrasive music, rainy weather, and strategy games.
-                </div>
-                <div>
-                    <a href="/unserious-about.html"><img src="/images/baps u.png" width="150px"></a>
-                </div>
-                </div>
-                <!--<br><br>-->
-                At the time of writing this, I am somewhat involved in security research while also juggling full-time school, life, and messing around on my computer when I feel like it, this site being a product of the latter.
-                <br><br>
-                <span id="randomFact" onclick="randomFact()" class="clickable">Click this text for a random fact about me.</span>
-                <br><br>
-                If you'd like to contact me, my e-mail and XMPP is abacist@disroot.org, and my Discord is @abacist. I can speak Mandarin Chinese reasonably well, but I will keep correspondence in English unless you contact me in Chinese first. <a href="/hui 🐱.asc" class="clickable">PGP key</a>
-                <br>
-                <hr>
-                What does “Project C190” mean?
-                <br><br>
-                At age 9, I started messing around on kids' programming website Scratch, publishing my work under the username Crafty190. Before I knew it, I went from making Warrior Cats RPGs in blocks to dabbling in stuff like assembly language, and now I'm studying computer science in university. This website is named "Project C190" after "Crafty190" as a tribute to how my time on Scratch has shaped my interests. Also, fun fact, some of the graphics are drawn in Scratch with a mouse just as I would have done as a kid.
-                <hr>
-                Here are my site buttons! Click for links to the gif versions, and please avoid <a href="https://simple.wikipedia.org/wiki/Hotlinking" target="_blank" class="clickable">hotlinking</a>.
-                <br>
-                <a href="/button_code.txt" target="_blank"><img src="/images/frames/stamp1_d.png" id="stampDark" width="88px" height="31px"></a> <a href="/button_code.txt" target="_blank"><img src="/images/frames/stamp1_l.png" id="stampLight" width="88px" height="31px"></a>
-
-            </div>
-        </div>
-        <div id="buttons" style="width:100%;margin-top:20px;margin-bottom:20px;">
-            <a href="https://archive.org" target="_blank"><img src="/images/web-stuff/internet_archive.gif" style="margin-right:2.5px;"></a>
-            <a href="https://linuxmint.com" target="_blank"><img src="/images/web-stuff/linux_mint.gif" style="margin-right:2.5px;margin-left:2.5px;"></a>
-            <a href="https://neocities.org" target="_blank"><img src="/images/web-stuff/hosted_on_neocities.gif" style="margin-right:2.5px;margin-left:2.5px;"></a>
-            <a href="https://duckduckgo.com" target="_blank"><img src="/images/web-stuff/duckduckgo.png" style="margin-right:2.5px;margin-left:2.5px;"></a>
-            <a href="https://www.mozilla.org/en-US/firefox/new" target="_blank"><img src="/images/web-stuff/getfirefox.gif" style="margin-left:2.5px;"></a>
-        </div>
-    </div>
-</body>
-
-</html>
+        prevPrevFact = prevFact;
+        prevFact = num;
+        document.getElementById("randomFact").innerHTML = factBank[num];
+    }
+</script>
+<div style="display:flex;flex-direction:row;">
+<div>
+Hi, my name's Hui (Chinese: 慧; pronounced "hway") and I'm an artist and computer science student. I also like <a href="/other-assets/Mathematician's Lament.pdf" target="_blank" class="clickable">math</a>, <a href="https://en.wikipedia.org/wiki/Low-level_programming_language" target="_blank" class="clickable">low-level programming</a>, reading, computer history, abrasive music, rainy weather, and strategy games.
+</div>
+<div>
+    <span title="Image kept at Val request"><a href="/unserious-about.html"><img src="/images/baps u.png" width="150px"></a></span>
+</div>
+</div>
+At the time of writing this, I am somewhat involved in security research while also juggling full-time school, life, and messing around on my computer when I feel like it, this site being a product of the latter.
+<br><br>
+<span id="randomFact" onclick="randomFact()" class="clickable">Click this text for a random fact about me.</span>
+<br><br>
+<span title="Crayons and colored pencils"><img src="/images/drawing_supps.png" class="item" width="104px" style="margin-right:5px;"></span><span title="Chicken plush"><img src="/images/piyo.png" style="margin-right:5px;margin-top:5px;" class="item" width="99px"></span><span title="Pencil and eraser"><img src="/images/pencil_eraser.png" class="item" width="48px" style="margin-right:5px;"></span><span title="Sketchbook and computer"><img src="/images/sketch_comp.png" class="item" width="122px" style="margin-right:2px;"></span><span title="Japanese abacus"><img src="/images/abacus.png" class="item" width="82px" style="margin-right:5px;margin-top:15px;"></span>
+<hr>
+What does “Project C190” mean?
+<br><br>
+At age 9, I started messing around on kids' programming website Scratch, publishing my work under the username Crafty190. Before I knew it, I went from making Warrior Cats RPGs in blocks to dabbling in stuff like assembly language, and now I'm studying computer science in university. This website is named "Project C190" after "Crafty190" as a tribute to how my time on Scratch has shaped my interests. Also, fun fact, some of the graphics are drawn in Scratch with a mouse just as I would have done as a kid.
+<hr>
+Here are my site buttons! Click for links to the gif versions, and please avoid <a href="https://simple.wikipedia.org/wiki/Hotlinking" target="_blank" class="clickable">hotlinking</a>.
+<br>
+<a href="/button_code.txt" target="_blank"><img src="/images/frames/stamp1_d.png" id="stampDark" width="88px" height="31px"></a> <a href="/button_code.txt" target="_blank"><img src="/images/frames/stamp1_l.png" id="stampLight" width="88px" height="31px"></a>

@@ -1,152 +1,19 @@
-<!DOCTYPE html>
-<html>
-
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
-
-    <link rel="icon" href="/images/favicon.png">
-    <title>project c190</title>
-    <style>
-        @font-face {
-            font-family: 'Mx437 IBM VGA 9x16';
-            src: url('/font/Mx437_IBM_VGA_9x16.woff2') format('woff2'), url('/font/Mx437_IBM_VGA_9x16.woff') format('woff');
-            font-weight: normal;
-            font-style: normal;
-        }
-        @keyframes titleWiggle {
-            from {content: url("/images/title.png");}
-            to {content: url("/images/title2.png");}
-        }
-        #title {
-            position: absolute;
-            left: 5px;
-            bottom: 5px;
-            animation-name: titleWiggle;
-            animation-duration: 1.5s;
-            animation-iteration-count: infinite;
-            animation-timing-function: linear;
-        }
-        body {
-            font-family: sans-serif;
-            font-size: 14px;
-            background-image: url("/images/tile_background.png");
-            margin:0px !important;
-            padding:0px !important;
-            width:100%;
-            height: calc(100vh-20);
-        }
-        #container {
-            position:relative;
-            margin-top:20px !important;
-            width: 600px !important;
-            margin:auto;
-        }
-        #header {
-            position: relative;
-            height: 110px;
-            width: 100%;
-            background: #72803f;
-            margin: auto;
-        }
-        #site-body {
-            background-color: rgb(255, 255, 255);
-            padding: 5px;
-        }
-        mark {
-            background-color:#72803f;
-            color: white;
-        }
-        #material {
-            margin-top:5px;
-            height: 650px;
-            overflow-x:hidden;
-            overflow-y:auto;
-        }
-        a.nav {
-            text-decoration: none;
-        }
-        a {
-            color: #779608;
-            text-decoration:underline;
-        }
-        .abacus:hover {
-            cursor: pointer;
-        }
-        .date {
-            color: #779608;
-            font-weight: bold;
-        }
-        @media (max-width: 450px) {
-            #container {
-                width: 100% !important;
-                margin-top:0px !important;
-            }
-            #site-body {
-                height: 100%;
-            }
-            #material {
-                height: 700px;
-            }
-            #pageart {
-                width: 85%;
-            }
-            #title {
-                width: 90vw !important;
-                height: calc((36/350)*90vw) !important;
-            }
-        }
-        @media (max-width: 900px) {
-            #pagedoll {
-                display: none;
-            }
-        }
-    </style>
-</head>
-
-<body>
-    <div id="container">
-        <div id="header">
-            <a href="/"><img src="/images/title.png" id="title" width="350px" height="36px"></a>
-        </div>
-        <div id="site-body">
-            <div id="nav">
-                <a href="/index" class="nav"><mark style="color:white;background-color: #393f34;">&nbsp;Index&nbsp;</mark></a>&nbsp;
-                <a href="/about" class="nav"><mark>&nbsp;About&nbsp;</mark></a>&nbsp;
-                <a href="/projects" class="nav"><mark>&nbsp;Projects&nbsp;</mark></a>&nbsp;
-                <a href="/artwork" class="nav"><mark>&nbsp;Artwork&nbsp;</mark></a>&nbsp;
-                <a href="/reading" class="nav"><mark>&nbsp;Reading&nbsp;</mark></a>&nbsp;
-                <a href="/cache" class="nav"><mark>&nbsp;Cache&nbsp;</mark></a>&nbsp;
-                <a href="/journal" class="nav"><mark>&nbsp;Journal&nbsp;</mark></a>&nbsp;
-                <a href="https://abacist.atabook.org/" class="nav"><mark>&nbsp;Guestbook&nbsp;</mark></a>&nbsp;
-                <a href="/outlinks" class="nav"><mark>&nbsp;Outlinks&nbsp;</mark></a>&nbsp;
-            </div>
-            <div id="material">
-                <a href="/">Return</a>
-                <hr>
-                All Updates
-                <br><span class="date">[06.27.25]</span> 3.7k words and 20 diagrams later, I've decided to finally release my most gargantuan article yet, "<a href="/projects/2025/06/27/trees.html">Binary search trees, 2-3-4 trees, and red-black trees</a>". Also new on the <a href="/projects.html">projects</a> page is MIPS Tetris documentation post "<a href="/projects/2025/06/27/cleaning-and-optimizing.html">Cleaning and optimizing the program</a>" and a <a href="/projects/2025/06/27/closure-nand2tetris.html">closure</a> post for Nand2Tetris.
-                <br><br><span class="date">[06.25.25]</span> Reworked the information on my <a href="/cache/mahjong-log.html">mahjong log</a> page.
-                <br><br><span class="date">[06.23.25]</span> Made an <a href="/unserious-about.html">unserious about</a> page you can navigate to by clicking the cat doodle on the regular about page,
-                and added a bare-bones, <a href="/artwork-!js.html">JS-free version</a> of the artwork page.
-                (Mr. President, another form of procrastination has hit the expository article.)
-                <br><br><span class="date">[06.08.25]</span> Decided to push a bunch of smaller changes today so they don't overshadow my upcoming changes to the projects page.
-                I moved the reading page to the main navbar, made some changes to the <a href="/reading">reading</a>, <a href="/cache">cache</a>, and <a href="/outlinks">outlinks</a> pages, and added a new page, "<a href="/cache/mahjong-log.html">Mahjong Progress Log</a>", to the cache page.
-                <br><br><span class="date">[05.11.25]</span> Since uploading my site overhaul in February, I've written a bunch of journal entries and added a "<a href="/cache">cache</a>" page to link a bunch of miscellaneous pages on.
-                Today, I added a couple new pages, "<a href="/reading">Reading</a>" and "<a href="/cache/how-i-study.html">How I Study as an Academic Weapon</a>", to the cache page, and uploaded a bunch of new graphics to the <a href="/cache/graphics-hoard.html">graphics hoard</a>. I've got more cooking up in my drafts right now, so please look forward to it!
-                <br><br><span class="date">[02.21.25]</span> The new site overhaul is finally live! I decided to go for a clean, focused look, where I am free to write as much as I like without having to worry about annoying textcutoffs or whatnot. I hope that lessening the emphasis on the design of the site by making it more of a container for my work than anything else will enable me to focus more on activities that matter to me.
-                You can view an archived version of the old index page <a href="/archived.html" style="color: #779608;text-decoration:underline;">here</a>, just note that most of the links have been removed.
-            </div>
-        </div>
-        <div id="buttons" style="width:100%;margin-top:20px;margin-bottom:20px;">
-            <a href="https://archive.org" target="_blank"><img src="/images/web-stuff/internet_archive.gif" style="margin-right:2.5px;"></a>
-            <a href="https://linuxmint.com" target="_blank"><img src="/images/web-stuff/linux_mint.gif" style="margin-right:2.5px;margin-left:2.5px;"></a>
-            <a href="https://neocities.org" target="_blank"><img src="/images/web-stuff/hosted_on_neocities.gif" style="margin-right:2.5px;margin-left:2.5px;"></a>
-            <a href="https://duckduckgo.com" target="_blank"><img src="/images/web-stuff/duckduckgo.png" style="margin-right:2.5px;margin-left:2.5px;"></a>
-            <a href="https://www.mozilla.org/en-US/firefox/new" target="_blank"><img src="/images/web-stuff/getfirefox.gif" style="margin-left:2.5px;"></a>
-        </div>
-        <img src="/images/pagedoll.png" width="310px" id="pagedoll" style="position:relative;bottom:425px;margin-bottom:-425px;left:530px;">
-    </div>
-</body>
-
-</html>
+---
+layout: main/layout
+---
+"I'm happy to report that this [website] ... will never be finished. It is a living document that grows and matures, just like most of real life. It is not a 'work in progress', for this would imply not much intrinsic value until that magic day it is completed."
+<br>—via <a href="https://www.wendycarlos.com" target="_blank">www.wendycarlos.com</a>
+<hr>
+All Updates
+<br>[07.05.25] Did a layout change for some of the pages (and a few other adjustments), so clear your cache! Also, the "cache" page has been renamed to "miscellany", which I find more descriptive, but otherwise the site is still largely the same in terms of material.
+<br><br><span class="date">[06.27.25]</span> 3.7k words and 20 diagrams later, I've decided to finally release my most gargantuan article yet, "<a href="/projects/2025/06/27/trees.html">Binary search trees, 2-3-4 trees, and red-black trees</a>". Also new on the <a href="/projects.html">projects</a> page is MIPS Tetris documentation post "<a href="/projects/2025/06/27/cleaning-and-optimizing.html">Cleaning and optimizing the program</a>" and a <a href="/projects/2025/06/27/closure-nand2tetris.html">closure</a> post for Nand2Tetris.
+<br><br><span class="date">[06.25.25]</span> Reworked the information on my <a href="/mahjong.html">mahjong log</a> page.
+<br><br><span class="date">[06.23.25]</span> Made an <a href="/unserious-about.html">unserious about</a> page you can navigate to by clicking the cat doodle on the regular about page,
+and added a bare-bones, <a href="/artwork-!js.html">JS-free version</a> of the artwork page.
+(Mr. President, another form of procrastination has hit the expository article.)
+<br><br><span class="date">[06.08.25]</span> Decided to push a bunch of smaller changes today so they don't overshadow my upcoming changes to the projects page.
+I moved the reading page to the main navbar, made some changes to the <a href="/reading">reading</a>, <a href="/miscellany.html">cache</a>, and <a href="/outlinks.html">outlinks</a> pages, and added a new page, "<a href="/mahjong.html">Mahjong Progress Log</a>", to the cache page.
+<br><br><span class="date">[05.11.25]</span> Since uploading my site overhaul in February, I've written a bunch of journal entries and added a "<a href="/miscellany.html">cache</a>" page to link a bunch of miscellaneous pages on.
+Today, I added a couple new pages, "<a href="/reading">Reading</a>" and "<a href="/miscellany/how-i-study.html">How I Study as an Academic Weapon</a>", to the cache page, and uploaded a bunch of new graphics to the <a href="/miscellany/graphics-hoard.html">graphics hoard</a>. I've got more cooking up in my drafts right now, so please look forward to it!
+<br><br><span class="date">[02.21.25]</span> The new site overhaul is finally live! I decided to go for a clean, focused look, where I am free to write as much as I like without having to worry about annoying textcutoffs or whatnot. I hope that lessening the emphasis on the design of the site by making it more of a container for my work than anything else will enable me to focus more on activities that matter to me.
+You can view an archived version of the old index page <a href="/archived.html" style="color: #779608;text-decoration:underline;">here</a>, just note that most of the links have been removed.
