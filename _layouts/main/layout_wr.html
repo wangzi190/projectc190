@@ -9,11 +9,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
     <style>
         body {
-            font-family:'Courier New', monospace;
+            font-family: "DejaVu Sans Mono", "dejaVuSansMono";
             font-size: 16px;
             margin: 0px !important;
             padding: 0px !important;
             background-image: url("/images/tile_background_for_about_2.png");
+        }
+        @font-face {
+            font-family: "dejaVuSansMono";
+            src: url("/font/DejaVuSansMono.woff");
         }
         #header {
             height:120px;
@@ -21,6 +25,7 @@
             background-color: #72803f;
         }
         #title {
+            font-weight: bold;
             color:#f1e4bb;
             margin-left:5px;
             font-size: 42px;
@@ -72,6 +77,7 @@
             left: 980px;
             top:calc(100vh - 448px);
             margin-bottom:0px;
+            pointer-events: none;
         }
         .emote {
             vertical-align:middle;
@@ -79,7 +85,7 @@
         }
         .indicator {
             font-size:10px;
-            color:#779608;
+            color:#72803f;
         }
         @media (max-width: 500px) {
             #sidebar {
@@ -114,7 +120,7 @@
 <body>
     <div id="container">
     <div id="header">
-        <a href="/" id="title"><b>project c190</b></a>
+        <a href="/" id="title">project c190</a>
     </div>
     <div id="site-body">
         <div id="sidebar">
