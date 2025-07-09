@@ -40,7 +40,7 @@ Think it's worth mentioning that I had the most fun figuring this one out :)
 <i>Simplifying Circuits</i>
 <br><br>
 I read on EE StackExchange that someone used truth tables and DeMorgan's laws to simplify all the chips as much as possible, and want to figure out the specifics of how to do that.
-<br><br>UPDATE: Continued <a href="/projectlog/2023/05/02/simplifying-circuits.html" target="frame"><u>h</u>ere</a>.
+<br><br>UPDATE: Continued <a href="/projects/nand2tetris/simplifying-circuits.html"><u>h</u>ere</a>.
 <br><br>
 <i>NAND vs NOR</i>
 <br><br>I'd like to rewrite the basic boolean operations I constructed from NAND gates in NOR gates to see which is more efficient. I figure if the OR operation could be done in 2 NOR gates instead of 3 NAND gates, there might also be better ways to write the other operations. However, the Nand2Tetris software suite doesn't come with a built-in NOR the way it has built in NANDs, so I'll see if I can come back to this once I'm familiar enough with the Nand2Tetris software to set it up myself.

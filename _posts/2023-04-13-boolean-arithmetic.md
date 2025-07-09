@@ -4,7 +4,7 @@ title: Nand2Tetris - 02 | Boolean Arithmetic
 categories: projects
 permalink: /projects/nand2tetris/boolean-arithmetic
 ---
-Building an incrementer, half adder, full adder, and ALU using the gates from the <a href="/projectlog/2023/03/28/boolean-logic.html">previous project</a>.
+Building an incrementer, half adder, full adder, and ALU using the gates from the <a href="/projects/nand2tetris/boolean-logic.html">previous project</a>.
 <br><br>
 <a href="https://www.nand2tetris.org/project02" target="_blank">Project specifications</a> | <a href="https://github.com/wangzi190/nand2tetris/tree/master/02" target="_blank">My work</a>
 <br><br><b>Concepts</b>

@@ -16,7 +16,7 @@ Before you read, here is <a href="https://github.com/wangzi190/mips_tetris/commi
 <hr>
 <b>Preliminary Draw Function</b>
 
-Since I'd previously (see <a href="/projectlog/2024/09/22/falling-blocks.html">Falling blocks, movement keys, & MARS hackfixes</a>) only drawn the square Tetris piece to test basic program elements like animation and movement controls, before proceeding to enable rotating blocks I needed a function to select a block type at random and draw it at the top of the screen.
+Since I'd previously (see <a href="/projects/mips-tetris/falling-blocks.html">Falling blocks, movement keys, & MARS hackfixes</a>) only drawn the square Tetris piece to test basic program elements like animation and movement controls, before proceeding to enable rotating blocks I needed a function to select a block type at random and draw it at the top of the screen.
 
 (Disclaimer: I say "function" to refer to the general concept of a segment of code that performs a specified task. I did not define some "functions" formally as MIPS functions if it felt less intuitive.)
 
