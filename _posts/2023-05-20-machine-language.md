@@ -2,6 +2,7 @@
 layout: project-post
 title: Nand2Tetris - 04 | Machine Language
 categories: projects
+permalink: /projects/nand2tetris/machine-language
 ---
 Writing two Hack assembly language programs, one which multiplies two values and another which blackens the screen when a key is pressed and clears it otherwise.
 <br><br>

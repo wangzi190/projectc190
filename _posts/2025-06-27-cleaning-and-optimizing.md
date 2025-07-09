@@ -2,6 +2,7 @@
 layout: project-post
 title: Cleaning and optimizing the program
 categories: projects
+permalink: /projects/mips-tetris/cleaning-and-optimizing
 ---
 <!--Initial post date: 06.26.25-->
 It's been some time since I've completed the steps of the project I'm about to describe, so, for the record, I am summarizing them here more for the purpose of re-familiarizing myself with my progress rather than documenting something I've recently completed.

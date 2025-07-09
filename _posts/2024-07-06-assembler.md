@@ -2,6 +2,7 @@
 layout: project-post
 title: Nand2Tetris - 06 | Assembler
 categories: projects
+permalink: /projects/nand2tetris/assembler
 ---
 Writing an assembler for the Hack assembly language.
 <br><br>

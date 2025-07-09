@@ -2,6 +2,7 @@
 layout: project-post
 title: Falling blocks, movement keys, & MARS hackfixes
 categories: projects
+permalink: /projects/mips-tetris/falling-blocks
 ---
 Funnily enough, grinding out MIPS programs for class in the library until midnight last week reminded me that I actually really enjoy assembly language. I would love to know more about it, and reading my books only gets me so far, so I thought why not make a game in MIPS as a nice exercise? Snake seemed really overdone, and Centipede seemed a little ambitious, so I went with something I considered pretty reasonable for a casual, personal project: Tetris.
 

@@ -2,6 +2,7 @@
 layout: project-post
 title: Nand2Tetris - 01 | Boolean Logic
 categories: projects
+permalink: /projects/nand2tetris/boolean-logic
 ---
 Building a set of elementary logic gates and their bitwise counterparts.
 <br><br>

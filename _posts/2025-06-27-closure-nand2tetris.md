@@ -2,6 +2,7 @@
 layout: project-post
 title: Closure
 categories: projects
+permalink: /projects/nand2tetris/closure
 ---
 <!--Initial post date: 06.10.25-->
 When I started Nand2Tetris, I was a 4th year high school student determined to understand more about how computers really worked, because I couldn't help but feel that what I'd already learned was information in significant isolation. Though I had been coding for long enough for it to feel fairly natural, everything in the realm of programming is so abstracted I couldn't clearly and concretely grasp how the code I wrote was being processed, and I wanted to change that. I'd dabbled in some assembly language as well, but it was not more than Just Another Thing I Knew, and the overall structure of a computer and where my current knowledge fits into the puzzle was completely arcane to me. So, Nand2Tetris was the course of my dreams at the time. Beginning from the most rudimentary circuits that make up a computer's hardware platform, it educates students about every layer of the computer in a brilliant, hands-on way, and I had a blast working on it (My best friend liked to call it "Hui cocaine", lmao). As you might know (or not, the dates on the projects aren't exactly accurate), I did a few of the projects in high school, and a few more in the summer after my first year of college, leaving off just at part 2 of the VM unit.

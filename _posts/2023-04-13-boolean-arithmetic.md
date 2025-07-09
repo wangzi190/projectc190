@@ -2,6 +2,7 @@
 layout: project-post
 title: Nand2Tetris - 02 | Boolean Arithmetic
 categories: projects
+permalink: /projects/nand2tetris/boolean-arithmetic
 ---
 Building an incrementer, half adder, full adder, and ALU using the gates from the <a href="/projectlog/2023/03/28/boolean-logic.html">previous project</a>.
 <br><br>

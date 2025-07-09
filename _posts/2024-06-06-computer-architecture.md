@@ -2,6 +2,7 @@
 layout: project-post
 title: Nand2Tetris - 05 | Computer Architecture
 categories: projects
+permalink: /projects/nand2tetris/computer-architecture
 ---
 Building the memory and CPU of the Nand2Tetris Hack computer and completing its hardware platform using components from the previous projects. 
 <br><br>

@@ -2,6 +2,7 @@
 layout: project-post
 title: Spotting patterns and rotating blocks
 categories: projects
+permalink: /projects/mips-tetris/rotating-blocks
 ---
 <style>
     .emote {
