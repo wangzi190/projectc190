@@ -1,208 +1,29 @@
 <!DOCTYPE html>
 <html>
-
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
     <title>project c190</title>
     <link rel="icon" href="/images/favicon.png">
-
     <style>
         body {
-            background-color: black;
-            margin:0px !important;
-            width:100%;height:100%; /* <-- prob non essential */
+            font-family: "DejaVu Sans Mono", "dejaVuSansMono";
             font-size: 16px;
-            font-family: 'Arial';
+            background-color: #f1e4bb;
         }
-        #container {
-            padding-top:5px;
-            padding-bottom:5px;
-            padding-left:10px;
-            padding-right:10px;
-            width:750px;
-            background-color:white;
-            margin: auto;
-            display: flex;
-            flex-direction: row;
-            margin-top:20px;
-            margin-bottom:20px;
-        }
-        #left {
-            width:490px;
-            text-align:left;
-        }
-        #scroll-box {
-            overflow-x:hidden;
-            overflow-y:auto;
-            height: 686px;
-        }
-        a:link {
-            color: #779608;
-        }
-        a:visited {
-            color: #779608;
-        }
-        ul {
-            list-style-type: none;
-            margin:0;
-            padding:0;
-        }
-        li {
-            margin-left:15px;
-        }
-        .emote {
-            vertical-align:middle;
-            width:18px;
-        }
-
-        @media (max-width: 450px) {
-            body {
-                font-size:16px;
-                background-color: white;
-            }
-            #container {
-                margin-top: 0px;
-                margin-bottom: 0px;
-                width: calc(100% - 20px);
-                height:100%;
-            }
-            #right {
-                display: none;
-            }
-            #left {
-                height: 100%;
-            }
-            #scroll-box {
-                height:100%;
-            }
+        @font-face {
+            font-family: "dejaVuSansMono";
+            src: url("/font/DejaVuSansMono.woff");
         }
     </style>
 </head>
-<div id="container">
-    <div id="left">
-        <img src="/images/journal.png" width="130px" style="margin-top:-5px;">
-        
-<div id="scroll-box">
-    All of the swearing on this website is concentrated on this very page. The newest posts are listed first.
-    <hr>
-    [06.01.25] Summertime
-    <br>I can't be the only one that feels like a husk of a person at my parents' house, right? Idk, I guess it just feels like life's on pause and I've never really been one to enjoy feeling that way.
-    It's not as if I don't have things to do, but the summer heat makes me feel so lazy. I really took library AC for granted...  
-    <br>I also often quickly miss school once I'm on break.
-    I can't say I've ever particularly liked school before moving out, but something about the balance of lenience and structure offered by higher education works incredibly well for me.
-    It's not as if it's devoid of frustration, but at least I'm offered just enough structure to easily slot my plans into place and execute them, whereas in summer, the vast number of ways I <i>could</i> be spending my time often intimidates me out of doing anything at all.
-    Though, I guess it's not as bad as I say it is. Aside from my usual repertoire of Computer Hobby, I've started studying for the GRE (Which is... also on the computer, but that's besides the point. I'm working toward my long-term goals, okay! That's good!). The math doesn't seem intimidating and the language section doesn't seem too wishy-washy, so if I put in the time and effort I'm sure I'll do well.
-    I've also got research starting up again this week; might have to do some investigation into some fairly novel hardware as part of my project. Anyways, hopefully these things are enough to serve as my "structure". If I feel less aimless overall, doing nothing sometimes will feel a lot better I think lol.
-    <br>Hmm, what else. I've also been watching Better Call Saul, and I'm about halfway through as of now.
-    I'm liking Saul a bit more than Breaking Bad because I feel like Jimmy is a truly morally grey character who I actually like seeing win, whereas I hated Walt (as a person, not as a character) and just wanted to see his downfall throughout most of the show.
-    Idk, or maybe it's that the legal drama and advanced social engineering simply interests me more.
-    Both are great, though; I'd recommend either show to pretty much anyone.
-    <hr>
-    [05.11.25] Leetss goooo
-    <br>I took my last final this past Thursday and managed to revive my Thinkpad by replacing the battery. I wasn't sure if the cheap eBay battery I bought would actually work, so I'm really happy that it did :')
-    My computer's new battery life is amazing too.
-    <br><br>Here's a list of my achievements this semester just because, lmao.
-    <br><br>- Sighted and photographed every cat in Neko Atsume.
-    <br>- Read 6 books in the 2nd half of the semester.
-    <br>- Became better friends with the people I met last semester, including my research advisor.
-    <br>- Got a 100% overall in what's probably the most difficult class of my entire degree (hacking), with a ~2% curve but still.
-    <br>- Cited myself like a true academic
-    <br>- Survived the worst-rated professor in the entire computer science department. I seriously improved my ability to tolerate profoundly frustrating people.
-    <br>- Got a cool new lanyard so I don't have to dig through my backpack full of loose cables for my wallet in the line at the store
-    <br>- Reworked my site (duh) and made pretty good progress on new material for it.
-    <br>- Got one year closer to being of legal drinking age in the U.S.
-    <br>- Didn't fumble any grades despite obsessively reading political theory for a week for no reason
-    <br>- Had a picture of the Madoka Magica OP playing on the monitor in my professor's office prominently featured on my research poster because yes it was relevant and no I am not explaining how
-    <hr>
-    [04.25.25] Nice day & stuff lately
-    <br>My fit for today's poster session <img src="/images/emotes/nukoNerd2.gif" class="emote">
-    <br><img src="/images/for-posts/fire_fit.jpg" width="412px">
-    <br>I'm done with my research-related work for the semester so I'm pretty happy about that. My project still has a long way to go but that just means summer will be more exciting.
-    <br>My beloved Thinkpad died on me two weeks ago though :( I thankfully had the sense to make a backup of everything important on it, but I can't be bothered to set everything up the way I had it before on my spare. I am going to try to revive my original laptop with a battery replacement, and if I really can't I'm thinking about selling my spare to get a T480.
-    <br>Anyways, I've been working on some informative articles and book reviews and whatnot for my site (Hui work on something and not talk about it challenge failed...). You'll probably see me become increasingly relaxed on my journal page as I put the sort of more serious stuff elsewhere on the site lol.
-    <hr>
-    [04.16.25] Wednesdays
-    <br>Adderall? Try White Monster.
-    <br>Study area that doesnt smell like vape or piss? Try abusing your lab access.
-    <br>There is always a natural alternative to everything.
-    <hr>
-    [04.07.25] Maybe we were the Victorian child all along
-    <br>Sometimes I feel like I don't have control over my own life. It's crazy how lobotomized the Internet can make me feel; am I insane for still thoroughly believing this despite not even being on social media, where most people seem to think distraction begins and ends? I've had someone unironically tell me that I tend to do "high attention span activities" which seems really stupid given how constantly I feel distracted and unable to get a fucking grip.
-    <br>I said a few weeks ago that I'm sick of the way I live my life. I wake up and sit at the computer and that's really all I do pretty much every day. I keep telling myself I want to do things differently, but sometimes all I can think about is how any positive changes I've made are dwarfed by the thousands of days I've spent living my life in a way I don't want and I just don't get how I'm supposed to keep going. It doesn't help that people don't tend to believe that I'm struggling if I admit it (It's almost as if feelings and experiences are ultimately more important than looking good on paper!) and that most have embraced ubiquitous distraction as normal (How people can spend half an hour on Instagram or whatever and not feel like their brain is turning to mush is seriously beyond me).
-    <br>I guess I'm just frustrated. I'm going to go take a walk. In other news, I have some pretty neat stuff in the works right now that I hope to release sometime in the next few months.
-    <hr>
-    [03.22.25] Untitled-1
-    <br>The other day I made myself a cup of tieguanyin tea in the morning, and as I sat drinking it, I found myself mesmirized by the leaves in the water. I sat staring at it for some time and felt strangely warm; vivid. The layers of leaves floating in the water created a stunning interplay of shadow and light that I couldn't look away from. I tried to jot down some phrases to capture what I felt in that moment, which I later cobbled into something slightly more coherent, but I still don't think what I wrote described it meaningfully.
-    <br>--
-    <br>debugging tips :
-    <br>assume nothing
-    <br>isolate and test every step
-    <br>take breaks
+<body>
+    🌱 📝
     <br>
-    <br>I jotted this down while whittling away at hacking class homework over the break. I probably should have taken my own advice recently, when I lost hours and hours of my life to the world's most seemingly innocuous bugs <img src="/images/emotes/nukoCrySitting.gif" class="emote">
-    <br>--
-    <br>One afternoon I spent a few hours reading security papers (Alice, Eve, Bob, Alice, Eve, Bob...) and then told the cashier at the pizza place that my name was Alice.
-    <br>--
-    <br>Today I decided to treat myself to some orange marble soda before going to the library to read and work on homework, which was unfortunate because the subsequent chapter of the book I was reading described the detriments of consuming sugary, processed foods in uncomfortable detail.
-    <br>--
-    <br>I've started reading on the bus.
-    <hr>
-    [03.12.25] Is science research cooked
-    <br>
-    I really try not to be negative on here if I can, but I am reaching my limit not going to lie.
-    <br>
-    Yesterday I and other students in undergraduate research received an email from management telling us for the first time that we need to book in-person appointments to show a certifier a bunch of legal documents within a few days, otherwise our research positions will be terminated. Except everyone is on spring break, many people are traveling, and some cannot readily access their documents (e.g., who brings their birth ceritificate on a roadtrip?). We only get paid once at the end of the semester, which means that if we get terminated partway through (We are halfway through the semester by the way), we do not get paid at all. I have a sneaking suspicion that they have made this unreasonable demand so that they do not have to pay as many of us. But in the moment, I am mostly pissed off that I have this looming over my head during the break I was so looking forward to. The only thing that was helping me cope with that one godawful professor I have for weeks was imagining myself relaxing, reading, and drawing as much as I want over the break. And to rub more salt in the wound, I am almost certain that I have been rejected from the summer research program I applied to due to funding shortages. Oh well play the cards that I'm given..
+    I've decided to (somewhat unceremoniously) take my journalling to an offline and private sphere for the time being.
+    Nothing bad happened or anything; I just think it'd be best.
+    <br>In the meantime, I will still be responding to e-mails and guestbook messages.
     <br><br>
-    Update: My school's HR department was super efficient when I contacted them the next morning, so I am no longer facing imminent termination :')
-    I also later found out that the undergrad research program is managed in part by a business undergrad and that the deadline they gave me was totally arbitrary which is pretty irritating but whatever LMAO
-    <hr>
-    [02.28.25] Utterly losing it
-    <br>
-    Could I just be writing more on here lately because I uploaded my site overhaul recently, or because actually interesting things are happening? Both, to be honest.
-<br>It might have been a little irresponsible of me to apply to only one very prestegious and highly selective summer program. To be fair, it was the only program I'd heard about and almost immediately decided I needed to apply to, though.
-<br>Anyways, I recently received an e-mail that I got waitlisted from the program, which was actually a pleasant surprise because I kind of felt like I was just applying to get outright rejected. From this I figured there's a higher-ranked applicant who received the offer, and if they decline it, I might be pulled up from the list—because that's usually how it works, isn't it?
-<br>I e-mailed the PhD students on both of the research projects I applied to for more information, and one of them responded to me astonishingly fast. They stated that they were currently unsure about funding, that no one had gotten or accepted an offer for the project... and moreover, that I was ranked "very high 😉". Yes, <i>with</i> the winky face emote. Like, forreal?? I feel like I am going insane right now. Am I delusional for thinking I could've been ranked first, but got deferred for now because of uncertain funding?? I've been tossing and turning in my sleep because of this. How am I just supposed to wake up every day and do everything like normal, knowing that my results are very likely to come out any time between right now and next week <img src="/images/emotes/nukoAgitated.gif" class="emote">
-<br>I am trying not to get too hopeful as not to set myself up for a more upsetting rejection, because the reality is that I still don't know what is going to happen. And the fact that I'm even being highly considered for a program like this definitely means there are more great opportunities waiting for me, even if I'm rejected this time, right? In the meantime, the anticipation is killing me. I'd like to think I've waited all this time to <i>not</i> get rejected, but who knows... I'll really try to stomach it as a rejection now so I'm not let down later.
-    <hr>
-    [02.24.25] Untitled
-    <br>I have to be experiencing academic sunk cost fallacy or something. I don't get what's wrong with me.
-    <br>--
-    <br>Thoughts on <i>Into the Wild</i>:
-    <br>It's not that I don't like the book, it just makes me upset. Is it jealousy? I don't know.
-    <br>--
-    <br>Sometimes I wish my commute was long enough that I could comfortably read on the bus.
-    <br>--
-    <br>My 10-year-old Thinkpad lags or freezes when I have 15+ tabs open and has barely 1/4th the space of recent computers. Somehow I feel like that's better for me.
-    <br>--
-    <br>I watched <a href="https://www.youtube.com/watch?v=UfBso0Y4ETI&list=LL" target="_blank">this YouTube video</a> recently.
-    <br>
-    <i>"If we don't stop seeing each other as disposable, we'll build a world where none of us matter."</i>
-    <hr>
-    [02.17.25] My 20th birthday
-    <br>
-    I know the previous iteration of my website featured generally longer posts in a list of URLs, but to be honest, I don't think my life is interesting enough for me to sustainably keep that up. So, I'm going to try a feed sort of thing to take off the pressure to write a certain amount. I think I like my journal page more this way anyway.
-    <br>
-    I celebrated my 20th birthday yesterday with my friends from school. It was probably the most excited I'd felt for my birthday since I was a child (Which is seriously saying something, because I probably stopped feeling holiday spirit past the age of 15).
-    <br>
-    We played riichi mahjong using the mini mahjong set I bought at a Chinese New Year festival a few weeks back, and went out to a nearby restaurant to have some of my favorite foods. I was so relieved that my friends were willing to learn mahjong despite its somewhat convoluted rules (Shoutout to the friend who spent the entire morning learning the game; you are utterly insane). It definitely has a learning curve, but it's very fun once you get the hang of it. We also had plenty of time to just chat and relax, and it was just a blast in every way. I've been feeling pretty drained from school lately so it was a very welcome break.
-    <br>
-    My birthday last year was really different. For the most part, I was near crashing out after exams and essay assignments and whatnot. I'd just barely mustered the energy to go to math club in the evening, and that was pretty much the highlight of the day. I think that day we were discussing real analysis or something? I don't remember too well. I just wanted to get shit done and then sleep.
-    <br>
-    It's crazy how much can change in a year. I never could've imagined I'd meet such friendly and understanding people who I feel are similar enough to me that we click well, but can also offer me a lot of new perspectives.
-    <br>
-    I don't think I would've thought to plan something nice for my birthday at all if I hadn't gotten it into my thick skull that I should care about having fun. When I accepted my offer to the school I'm at now, I didn't care for anything about it other than the fact that it has a decent CS program. I didn't think I needed friends or anything like that (I remember reading a forum thread about graduating with no friends, and thinking that would be me...), and I expected to spend my time here alone studying. I do spend a decent chunk of my time that way, to be fair, but it's a lot nicer having friends to remind me that there's more to life than that. Human connection is pretty cool or something.
-    <hr>
-    <a href="/archive/journal.html">Archive</a>
-<br><br>
-
-</div>
-<div>
-    <a href="/">Index</a> | <a href="#" onclick="history.back()">Return</a>
-</div>
-    </div>
-    <div id="right">
-        <img src="/images/hamd.png" width="250px" style="margin-top:10px;margin-left:5px;">
-    </div>
-</div>
+    <a href="/" style="color:#72803f">Return</a>
+</body>
 </html>
