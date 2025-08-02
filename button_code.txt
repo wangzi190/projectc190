@@ -1,5 +1,0 @@
-Spinning floppy disk (dark):
-https://user-images.githubusercontent.com/57303754/278845965-f2f5943f-0ed2-4025-8cb1-1f9163894103.gif
-
-Spinning floppy disk (light):
-https://user-images.githubusercontent.com/57303754/278845967-82e5bfc1-a3a0-476c-870c-c62b729f94ab.gif
