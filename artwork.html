@@ -111,6 +111,7 @@
                 
                 document.getElementById("selectedDrawing").src = "";
                 document.getElementById("selectedDrawing").src = "/images/drawings/".concat(drawingsArray[index].image);
+                document.getElementById("selectedDrawingURL").href = "/images/drawings/".concat(drawingsArray[index].image);
                 document.getElementById("selectedDrawing").style.width = drawingsArray[index].width;
                 
                 document.getElementById("name").innerHTML = drawingsArray[index].name;
@@ -270,7 +271,7 @@
 
         <div id="displayBox">
             <div id="selected" hidden="true" style="text-align:center;">
-                <img src="" width="100%" id="selectedDrawing" style="z-index: 50;">
+                <a href="#" id="selectedDrawingURL" target="_blank"><img src="" width="100%" id="selectedDrawing" style="z-index: 50;"></a>
                 <table style="color:#7b8a48"><tr>
                     <td width="50%" style="vertical-align:text-top; text-align:left;">
                         <b>Details</b>
