@@ -1,6 +1,6 @@
 ---
 layout: project-post
-title: Falling blocks, movement keys, & MARS hackfixes
+title: Falling blocks, movement keys, and MARS hackfixes
 categories: projects
 permalink: /projects/mips-tetris/falling-blocks
 ---
