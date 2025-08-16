@@ -17,7 +17,7 @@
         }
         #container {
             padding-top:5px;
-            padding-bottom:10px;
+            padding-bottom:5px;
             padding-left:10px;
             padding-right:10px;
             width:750px;
@@ -35,7 +35,7 @@
         #scroll-box {
             overflow-x:hidden;
             overflow-y:auto;
-            height: 700px;
+            height: 686px;
         }
         a:link {
             color: #779608;
@@ -79,13 +79,14 @@
     <div id="left">
         <img src="/images/projects.png" width="150px">
         
-<div id="scroll-box">
-    {{ page.title }}
-    <br>{{ page.date| date: "%m.%d.%Y" }}
-    <br>{{ content }}
-<a href="/projects.html" target="_parent">Return</a>
-
-</div>
+        <div id="scroll-box">
+            {{ page.title }}
+            <br>{{ page.date| date: "%m.%d.%Y" }}
+            <br>{{ content }}
+        </div>
+        <div>
+            <a href="/projects.html">Return</a>
+        </div>
     </div>
     <div id="right">
         <img src="/images/hamd.png" width="250px" style="margin-top:10px;margin-left:5px;">
