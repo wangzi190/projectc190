@@ -1,6 +1,6 @@
 ---
 layout: project-post
-title: 3 pieces of advice that will save you 3 hours
+title: 3 blunt pieces of advice that will save you countless hours
 categories: projects
 permalink: /projects/loose-leaf/debugging
 ---

@@ -8,10 +8,12 @@
     <link rel="icon" href="/images/favicon.png">
 
     <style>
+        html, body {
+            margin:0px !important;
+            padding:0px !important;
+        }
         body {
             background-color: black;
-            margin:0px !important;
-            width:100%;height:100%; /* <-- prob non essential */
             font-size: 16px;
             font-family: 'Arial';
         }
@@ -25,8 +27,8 @@
             margin: auto;
             display: flex;
             flex-direction: row;
-            margin-top:20px;
-            margin-bottom:20px;
+            /* margin-top:20px;
+            margin-bottom:20px; */
         }
         #left {
             width:490px;
@@ -35,7 +37,7 @@
         #scroll-box {
             overflow-x:hidden;
             overflow-y:auto;
-            height: 686px;
+            height: calc(100vh - 83px);
         }
         a:link {
             color: #779608;
@@ -90,9 +92,9 @@
 Explainers
 <br><i>Articles about various semi-niche computer science concepts intended for people with no CS background</i>
 <ul>
-    <li><a href="/projects/explainers/trees.html">Binary search trees, 2-3-4 trees, and red-black trees</a> <span style="font-size:10px;color:#779608">New!</span></li>
+    <li><a href="/projects/explainers/trees.html">Binary search trees, 2-3-4 trees, and red-black trees</a></li>
 </ul>
-<span id="tentative">Tentative future topics: Padding oracle attack, Turing's main contributions to CS</span>
+<span id="tentative">Tentative future topic(s): Padding oracle attack</span>
 
 <hr>
 Esolang Escapades<br>
@@ -135,8 +137,7 @@ Nand2Tetris (<a href="https://nand2tetris.org/course" target="_blank">Course</a>
 Loose-leaf
 <br><i>Miscellaneous computer-related things</i>
 <br><ul>
-    <!--<li><a href="#WIP">Installing Linux and dual booting</a> <span style="font-size:10px;"><b>WIP</b></span></li>-->
-    <li><a href="/projects/loose-leaf/debugging.html">3 pieces of advice that will save you 3 hours</a></li>
+    <li><a href="/projects/loose-leaf/debugging.html">3 blunt pieces of advice that will save you countless hours</a></li>
     <li><a href="/projects/unfinished.html">Unfinished projects list</a></li>
 </ul>
 <hr>
