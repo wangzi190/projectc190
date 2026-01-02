@@ -1,43 +1,37 @@
-<!DOCTYPE html>
-<html>
-
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
     <title>project c190</title>
     <link rel="icon" href="/images/favicon.png">
-
     <style>
         html, body {
             margin:0px !important;
             padding:0px !important;
         }
         body {
-            background-color: black;
-            font-size: 16px;
-            font-family: 'Arial';
+            background-color: #0a0a0a;
+            font-family: Georgia, serif;
+            font-size:16px;
         }
-        #container {
-            padding-top:5px;
-            padding-bottom:5px;
-            padding-left:10px;
-            padding-right:10px;
-            width:750px;
-            background-color:white;
-            margin: auto;
-            display: flex;
+        #container{
+            display:flex;
             flex-direction: row;
-            /* margin-top:20px;
-            margin-bottom:20px; */
+            justify-content: center;
         }
         #left {
-            width:490px;
-            text-align:left;
+            background-color: white;
+            color: black;
+            width: 700px;
+            height: 100vh;
+        }
+        #right {
+            background-color: white;
         }
         #scroll-box {
             overflow-x:hidden;
             overflow-y:auto;
-            height: calc(100vh - 83px);
+            height: calc(100vh - 93px);
+            padding: 5px;
         }
         a:link {
             color: #779608;
@@ -56,16 +50,9 @@
         #tentative {
             font-size: 12px;
         }
-        @media (max-width: 450px) {
+        @media (max-width: 700px) {
             body {
-                font-size:16px;
                 background-color: white;
-            }
-            #container {
-                margin-top: 0px;
-                margin-bottom: 0px;
-                width: calc(100% - 20px);
-                height:100%;
             }
             #right {
                 display: none;
@@ -79,78 +66,82 @@
         }
     </style>
 </head>
-<div id="container">
-    <div id="left">
-        <img src="/images/projects.png" width="150px">
-        
-<div id="scroll-box">
-    This is my page for everything computers and computer science!
-    Here, I record my process to learn and for personal reference. I hope to improve at meaningfully explaining detailed technical ideas, and that those who are intrigued by the topics I've explored might find my notes helpful.
-    Regardless of your knowledge or skill level, there is something here for you as long as you're simply intrigued.
-    <!--This page also includes articles I've written with the express purpose of helping others learn, so there's something here for everyone as long as you're simply intrigued.-->
-<hr>
-Explainers
-<br><i>Articles about various semi-niche computer science concepts intended for people with no CS background</i>
-<ul>
-    <li><a href="/projects/explainers/trees.html">Binary search trees, 2-3-4 trees, and red-black trees</a></li>
-</ul>
-<span id="tentative">Tentative future topic(s): Padding oracle attack</span>
 
-<hr>
-Esolang Escapades<br>
-<i>Programming in impractical but interesting languages</i>
-<ul>
-    <li><a href="/projects/esolangs/playing-sic-1.html">Programming and Pro Gaming: Playing SIC-1</a> <span style="font-size:10px;color:#779608">New!</span></li>
-</ul>
-<hr>
-Tetris in MIPS and MARS<br>
-<i>Programming the classic arcade game in MIPS assembly</i>
-<br>
-<ul>
-    <li><a href="https://files.catbox.moe/3blbia.mp4" target="_blank">Brief demo</a> <span style="font-size:10px;color:#779608">New!</span></li>
-    <li><a href="/projects/mips-tetris/stopping-blocks.html">Stopping blocks, clearing rows, and ending the game</a> <span style="font-size:10px;color:#779608">New!</span></li>
-    <li><a href="/projects/mips-tetris/cleaning-and-optimizing.html">Cleaning and optimizing the program</a></li> 
-    <li><a href="/projects/mips-tetris/rotating-blocks.html">Spotting patterns and rotating blocks</a></li>
-    <li><a href="/projects/mips-tetris/falling-blocks.html">Falling blocks, movement keys, and MARS hackfixes</a></li>
-</ul>
-<hr>
-Nand2Tetris (<a href="https://nand2tetris.org/course" target="_blank">Course</a>)
-<br><i>Building the 16-bit "Hack" computer from the ground up</i>
-<br>
-<ul>
-    <li><a href="/projects/nand2tetris/closure.html">Closure</a></li>
-</ul>
-<details>
-    <summary><span style="cursor: pointer;">Posts</span></summary>
-<ul>
-    <li><a href="/projects/nand2tetris/stack-arithmetic.html">07 | VM I: Stack Arithmetic</a></li>
-    <li><a href="/projects/nand2tetris/assembler.html">06 | Assembler</a></li>
-    <li><a href="/projects/nand2tetris/computer-architecture.html">05 | Computer Architecture</a></li>
-    <li><a href="/projects/nand2tetris/machine-language.html">04 | Machine Language</a></li>
-    <li><a href="/projects/nand2tetris/memory.html">03 | Memory</a></li>
-    <li><a href="/projects/nand2tetris/simplifying-circuits.html">Follow-up: Simplifying Circuits</a></li>
-    <li><a href="/projects/nand2tetris/boolean-arithmetic.html">02 | Boolean Arithmetic</a></li>
-    <li><a href="/projects/nand2tetris/boolean-logic.html">01 | Boolean Logic</a></li>
-</ul>
-</details>
-<hr>
-Loose-leaf
-<br><i>Miscellaneous computer-related things</i>
-<br><ul>
-    <li><a href="/projects/loose-leaf/debugging.html">3 blunt pieces of advice that will save you countless hours</a></li>
-    <li><a href="/projects/unfinished.html">Unfinished projects list</a></li>
-</ul>
-<hr>
-Out of my project records, anything marked <span style="font-size:10px;"><b>WIP</b></span> is something I've already done but have not yet finished writing about. Please stay tuned if you're interested!
-<br>Also, feel free to chat, ask questions, or let me know about any mistakes I might've made <a href="/e-mail.txt" target="_blank">via e-mail</a>.
-<br><br>
-</div>
-<div>
-    <a href="/">Return</a>
-</div>
+<body>
+    <div id="container">
+        <div id="left">
+            <div>
+                <img src="/images/projects.png" width="150px" style="margin-left:5px;margin-top:5px;">
+            </div>
+
+            <div id="scroll-box">
+                This is my page for everything computers and computer science!
+                Here, I record my process to learn and for personal reference. I hope to improve at meaningfully explaining detailed technical ideas, and that those who are intrigued by the topics I've explored might find my notes helpful.
+                Regardless of your knowledge or skill level, there is something here for you as long as you're simply intrigued.
+                <hr>
+                Explainers
+                <br><i>Articles about various semi-niche computer science concepts intended for people with no CS background</i>
+                <ul>
+                    <li><a href="/projects/explainers/trees.html">Binary search trees, 2-3-4 trees, and red-black trees</a></li>
+                </ul>
+                <span id="tentative">Tentative future topic(s): Padding oracle attack</span>
+
+                <hr>
+                Esolang Escapades<br>
+                <i>Programming in impractical but interesting languages</i>
+                <ul>
+                    <li><a href="/projects/esolangs/playing-sic-1.html">Programming and Pro Gaming: Playing SIC-1</a> <span style="font-size:10px;color:#779608">New!</span></li>
+                </ul>
+                <hr>
+                Tetris in MIPS and MARS<br>
+                <i>Programming the classic arcade game in MIPS assembly</i>
+                <br>
+                <ul>
+                    <li><a href="https://files.catbox.moe/3blbia.mp4" target="_blank">Brief demo</a> <span style="font-size:10px;color:#779608">New!</span></li>
+                    <li><a href="/projects/mips-tetris/stopping-blocks.html">Stopping blocks, clearing rows, and ending the game</a> <span style="font-size:10px;color:#779608">New!</span></li>
+                    <li><a href="/projects/mips-tetris/cleaning-and-optimizing.html">Cleaning and optimizing the program</a></li> 
+                    <li><a href="/projects/mips-tetris/rotating-blocks.html">Spotting patterns and rotating blocks</a></li>
+                    <li><a href="/projects/mips-tetris/falling-blocks.html">Falling blocks, movement keys, and MARS hackfixes</a></li>
+                </ul>
+                <hr>
+                Nand2Tetris (<a href="https://nand2tetris.org/course" target="_blank">Course</a>)
+                <br><i>Building the 16-bit "Hack" computer from the ground up</i>
+                <br>
+                <ul>
+                    <li><a href="/projects/nand2tetris/closure.html">Closure</a></li>
+                </ul>
+                <details>
+                    <summary><span style="cursor: pointer;">Posts</span></summary>
+                <ul>
+                    <li><a href="/projects/nand2tetris/stack-arithmetic.html">07 | VM I: Stack Arithmetic</a></li>
+                    <li><a href="/projects/nand2tetris/assembler.html">06 | Assembler</a></li>
+                    <li><a href="/projects/nand2tetris/computer-architecture.html">05 | Computer Architecture</a></li>
+                    <li><a href="/projects/nand2tetris/machine-language.html">04 | Machine Language</a></li>
+                    <li><a href="/projects/nand2tetris/memory.html">03 | Memory</a></li>
+                    <li><a href="/projects/nand2tetris/simplifying-circuits.html">Follow-up: Simplifying Circuits</a></li>
+                    <li><a href="/projects/nand2tetris/boolean-arithmetic.html">02 | Boolean Arithmetic</a></li>
+                    <li><a href="/projects/nand2tetris/boolean-logic.html">01 | Boolean Logic</a></li>
+                </ul>
+                </details>
+                <hr>
+                Loose-leaf
+                <br><i>Miscellaneous on-theme stuff</i>
+                <br><ul>
+                    <li><a href="/projects/loose-leaf/debugging.html">3 blunt pieces of advice that will save you countless hours</a></li>
+                    <li><a href="/projects/unfinished.html">Unfinished projects list</a></li>
+                </ul>
+                <hr>
+                Out of my project records, anything marked <span style="font-size:10px;"><b>WIP</b></span> is something I've already done but have not yet finished writing about. Please stay tuned if you're interested!
+                <br>Also, feel free to chat, ask questions, or let me know about any mistakes I might've made <a href="/e-mail.txt" target="_blank">via e-mail</a>.
+            </div>
+
+            <div>
+                <a href="/" style="margin-left:5px;">Return</a>
+            </div>
+
+        </div>
+        <div id="right">
+            <img src="/images/hamd.png" width="250px" style="margin-top:5px;margin-right:5px;">
+        </div>
     </div>
-    <div id="right">
-        <img src="/images/hamd.png" width="250px" style="margin-top:10px;margin-left:5px;">
-    </div>
-</div>
-</html>
+</body>

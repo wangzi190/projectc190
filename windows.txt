@@ -1,2 +1,0 @@
-If you are on Windows, zoom out until the character to the right of the site body looks crisp and pixelated, not blurred.
-You should be able to see the 88x31 buttons on the index page without needing to scroll. That's the intended view of the site!

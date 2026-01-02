@@ -1,93 +1,162 @@
----
-layout: main/about_lo
----
-<style>
-    .clickable {
-        color: #72803f;
-        text-decoration: underline;
-    }
-    .clickable:hover {
-        cursor: pointer;
-    }
-    @keyframes stampDark {
-        0% {content: url("/images/frames/stamp1_d.png");}
-        20% {content: url("/images/frames/stamp2_d.png");}
-        40% {content: url("/images/frames/stamp3_d.png");}
-        60% {content: url("/images/frames/stamp4_d.png");}
-        80% {content: url("/images/frames/stamp5_d.png");}
-    }
-    #stampDark {
-        animation-name: stampDark;
-        animation-iteration-count: infinite;
-        animation-duration: 1s;
-    }
-    @keyframes stampLight {
-        0% {content: url("/images/frames/stamp1_l.png");}
-        20% {content: url("/images/frames/stamp2_l.png");}
-        40% {content: url("/images/frames/stamp3_l.png");}
-        60% {content: url("/images/frames/stamp4_l.png");}
-        80% {content: url("/images/frames/stamp5_l.png");}
-    }
-    #stampLight {
-        animation-name: stampLight;
-        animation-iteration-count: infinite;
-        animation-duration: 1s;
-    }
-</style>
-<script>
-    var prevFact = -1;
-    var prevPrevFact = -1;
-    function randomFact() {
-        const factBank = [
-            "My all-time favorite band is Nine Inch Nails.",
-            "I used to be a major dinosaur kid, and my favorite dinosaurs were the archaeopteryx and oviraptor.",
-            "I like Sichuan and Xinjiang cuisine.",
-            "I hated math until high school calculus.",
-            "I'm an INTP and an Aquarius, if that means anything to you.",
-            "Panda Express makes some of the best (albeit oily) kung pao chicken I've ever tasted, and I will die on that hill.",
-            "My favorite historical figure is Alan Turing, and he's inspired me since I was little.",
-            "I honestly think most of my successes are because I am a stubborn person that refuses to quit.",
-            "I don't like sweeteners in my tea or coffee. I also I don't like boba.",
-            "My favorite color combo is blue and orange.",
-            "I'd like to own a cat or pigeon in the future, but for now, I have cats and pigeons in Stardew Valley.",
-            "My art has been featured on the front page of Chicken Smoothie twice (Does this give me street cred with Internet furries? I hope so).",
-            "One of my friends' labmates knew me from Scratch, which is mortifying but also kind of cool.",
-            "I can play two musical instruments. You can probably guess which ones.",
-            "When I was a big fan of the series, my favorite Warrior Cats character was Moth Flight.",
-            "I think white Monster is the best flavor of Monster Energy.",
-            "I like fermented drinks and desserts such as kombucha and jiuniang.",
-            "My first pet was a Lutino parakeet.",
-            "If I couldn't study computer science, I'd study mathematics. If I couldn't study mathematics, I'd become a tattoo artist.",
-            "I have been drawing for as long as I can remember.",
-            "My motto is: Better to be challenged than to be bored."
-        ];
-        var num = Math.floor(Math.random() * factBank.length);
-        while (num == prevFact || num == prevPrevFact) {
-            num = Math.floor(Math.random() * factBank.length);
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="icon" href="/images/favicon.png">
+    <title>project c190</title>
+    <style>
+        @font-face {
+            font-family: 'Mx437 IBM VGA 9x16';
+            src: url('/font/Mx437_IBM_VGA_9x16.woff2') format('woff2'), url('/font/Mx437_IBM_VGA_9x16.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
         }
-        prevPrevFact = prevFact;
-        prevFact = num;
-        document.getElementById("randomFact").innerHTML = factBank[num];
-    }
-</script>
-<div style="display:flex;flex-direction:row;">
-<div>
-Hi, my name's Hui (Chinese: 慧; pronounced "hway") and I'm an artist and computer science student. I also like <a href="/other-assets/Mathematician's Lament.pdf" target="_blank" class="clickable">math</a>, reading, <a href="https://en.wikipedia.org/wiki/Low-level_programming_language" target="_blank" class="clickable">low-level programming</a>, computer history, mahjong, and far too many other things.
+        body {
+            background-color: #0A0A0A;
+            color: #7d8d48;
+            font-family: 'Mx437 IBM VGA 9x16';
+        }
+        .clickable {
+            color: #7d8d48;
+            text-decoration: underline;
+        }
+        .smry {
+            cursor: pointer;
+        }
+        .dtls {
+            border: 1px solid #7d8d48;
+            padding: 5px;
+        }
+        .gpoy {
+            vertical-align: middle;
+            width: 370px;
+        }
+        .item {
+            filter: brightness(80%);
+        }
+        .item:hover {
+            filter: brightness(100%);
+        }
+        .button {
+            filter: brightness(80%);
+        }
+        .button:hover {
+            filter: brightness(100%);
+        }
+        @keyframes stampDark {
+            0% {content: url("/images/frames/stamp1_d.png");}
+            20% {content: url("/images/frames/stamp2_d.png");}
+            40% {content: url("/images/frames/stamp3_d.png");}
+            60% {content: url("/images/frames/stamp4_d.png");}
+            80% {content: url("/images/frames/stamp5_d.png");}
+        }
+        #stampDark {
+            animation-name: stampDark;
+            animation-iteration-count: infinite;
+            animation-duration: 1s;
+        }
+        @keyframes stampLight {
+            0% {content: url("/images/frames/stamp1_l.png");}
+            20% {content: url("/images/frames/stamp2_l.png");}
+            40% {content: url("/images/frames/stamp3_l.png");}
+            60% {content: url("/images/frames/stamp4_l.png");}
+            80% {content: url("/images/frames/stamp5_l.png");}
+        }
+        #stampLight {
+            animation-name: stampLight;
+            animation-iteration-count: infinite;
+            animation-duration: 1s;
+        }
+        #abody {
+            border: 1px solid #7d8d48;
+            padding:5px;
+        }
+        #material {
+            margin-top: 20px;
+            width:800px;
+        }
+        @media screen and (max-width: 810px) {
+            #material {
+                margin-top: 20px;
+                width:100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+<div id="material">
+    <span style="font-size:24px;">about the webmaster</span>
+    <br><br>
+    <div id="abody">
+    ♀ / 20s
+    <br>
+    My name's Hui (pronounced "hway") and I'm an artist and computer science student. I also like reading, <a href="https://en.wikipedia.org/wiki/Low-level_programming_language" target="_blank" class="clickable">low-level programming</a>, mahjong, <a href="/other-assets/Mathematician's Lament.pdf" target="_blank" class="clickable">mathematics</a>, computer history, and far too many other things.
+    <br>I intend for this website to be slow and thoughtful.
+    <!--<br><br>At the time of writing this, I am somewhat involved in security research while also juggling full-time school, life, and messing around on my computer when I feel like it, this site being a product of the latter.-->
+    <br>
+    <span title="Crayons and colored pencils"><img src="/images/drawing_supps.png" class="item" width="104px" style="margin-right:5px;"></span><span title="Chicken plush"><img src="/images/piyo.png" style="margin-right:5px;margin-top:5px;" class="item" width="99px"></span><span title="Pencil and eraser"><img src="/images/pencil_eraser.png" class="item" width="48px" style="margin-right:5px;"></span><span title="Sketchbook and laptop"><img src="/images/sketch_comp.png" class="item" width="122px" style="margin-right:2px;margin-top:5px;"></span><span title="Abacus"><img src="/images/abacus.png" class="item" width="82px" style="margin-right:5px;margin-top:15px;"></span>
+    <br><br>
+    <details>
+        <summary>
+        <span class="smry">Favorites</span>
+        </summary>
+        <div class="dtls">
+        Music: Nine Inch Nails, Femtanyl, KMFDM, Infected Mushroom, Molchat Doma
+        <br><br>
+        Movies & TV: Better Call Saul, Serial Experiments Lain, Madoka Magica (especially Rebellion)
+        <br><br>
+        Foods: Fuqi feipian, mouthwatering chicken, Xinjiang lamb skewers, poke, chicken shawarma, tikka masala
+        <br><br>
+        Video games: Stardew Valley, MahjongSoul, VA-11 Hall-A, Webfishing
+        <br><br>
+        Animals: Cats, chickens, pigeons, barn owls, sharks, crows, bats, dinosaurs
+        <br><br>
+        See <a href="/reading.html" class="clickable">here</a> for books.
+        </div>
+    </details>
+    <details>
+        <summary>
+        <span class="smry">GPOY</span>
+        </summary>
+        <div class="dtls">
+            <img src="/images/gpoy/putercat.jpg" class="gpoy">
+            <img src="/images/gpoy/mindpalace.jpg" class="gpoy">
+            <img src="/images/gpoy/recursivemug.jpg" class="gpoy">
+            <img src="/images/gpoy/to_learn.jpg" class="gpoy">
+            <img src="/images/gpoy/twistedcat.jpeg" class="gpoy">
+            <img src="/images/gpoy/L1cache.png" class="gpoy">
+            <img src="/images/gpoy/panelswires.png" class="gpoy">
+            <img src="/images/gpoy/tomatofruit.png" class="gpoy">
+            <img src="/images/gpoy/yumbattery.jpg" class="gpoy">
+            <img src="/images/gpoy/yeah.jpg" class="gpoy">
+            <img src="/images/gpoy/mahjongwin.jpg" class="gpoy">
+            <img src="/images/gpoy/unreadpapers.jpg" class="gpoy">
+            <img src="/images/gpoy/bucha.png" class="gpoy">
+            <img src="/images/gpoy/carpaltunnel.png" class="gpoy">
+            <img src="/images/gpoy/npforum.jpg" class="gpoy">
+            <img src="/images/gpoy/petsgato.png" class="gpoy">
+            <img src="/images/gpoy/yuricat.png" class="gpoy">
+            <a href="https://picrew.me/en/image_maker/2033441" target="_blank"><img src="/images/gpoy/hwuipc.png" class="gpoy"></a>
+            <img src="/images/gpoy/laoganma.jpeg" class="gpoy">
+            <img src="/images/gpoy/realmisojiny.jpeg" class="gpoy">
+        </div>
+    </details>
+    <details>
+        <summary>
+        <span class="smry">What does "Project C190" mean?</span>
+        </summary>
+
+        <div class="dtls">
+        At age 9, I started messing around on kids' programming website Scratch, publishing my work under the username C<span style="color:#7d8d48;background:#7d8d48;">█████</span>190. Before I knew it, I went from making Warrior Cats RPGs in blocks to dabbling in stuff like assembly language, and now I'm studying computer science in university. This website is named "Project C190" as a tribute to how my time on Scratch has shaped my interests. Also, fun fact, some of the graphics are drawn in Scratch with a mouse just as I would have done as a kid.
+        </div>
+    </details>
+    <br>
+    Here are my site buttons. Click to open in a new tab, and please do not <a href="https://simple.wikipedia.org/wiki/Hotlinking" target="_blank" class="clickable">hotlink</a>.
+    <br>
+    <a href="/images/do_not_hotlink/floppy1.gif" target="_blank"><img src="/images/frames/stamp1_d.png" id="stampDark" class="button" width="88px" height="31px"></a> <a href="/images/do_not_hotlink/floppy2.gif" target="_blank"><img src="/images/frames/stamp1_l.png" id="stampLight" class="button" width="88px" height="31px"></a> <a href="/images/do_not_hotlink/pixelcat.gif" target="_blank"><img src="/images/huicat_pixel.gif" class="button"></a>
+    </div>
+    <br>
+    <a href="/" class="clickable">Return</a>
 </div>
-<div>
-    <span title="Click for more!"><a href="/extended-about.html"><img src="/images/baps u.png" width="150px"></a></span>
-</div>
-</div>
-At the time of writing this, I am somewhat involved in security research while also juggling full-time school, life, and messing around on my computer when I feel like it, this site being a product of the latter.
-<br><br>
-<span id="randomFact" onclick="randomFact()" class="clickable">Click this text for a random fact about me.</span>
-<br>
-<span title="Crayons and colored pencils (My favorite art supplies)"><img src="/images/drawing_supps.png" class="item" width="104px" style="margin-right:5px;"></span><span title="Chicken plush (I love chickens)"><img src="/images/piyo.png" style="margin-right:5px;margin-top:5px;" class="item" width="99px"></span><span title="Pencil and eraser (Disclaimer: I mostly use mechanical pencils)"><img src="/images/pencil_eraser.png" class="item" width="48px" style="margin-right:5px;"></span><span title="Sketchbook and laptop (Shoutout if you also use an ancient Thinkpad)"><img src="/images/sketch_comp.png" class="item" width="122px" style="margin-right:2px;margin-top:5px;"></span><span title="Abacus (Yes, I carry one with me and know how to use it)"><img src="/images/abacus.png" class="item" width="82px" style="margin-right:5px;margin-top:15px;"></span>
-<hr>
-What does “Project C190” mean?
-<br><br>
-At age 9, I started messing around on kids' programming website Scratch, publishing my work under the username C<span style="color:black;background:black;">_____</span>190. Before I knew it, I went from making Warrior Cats RPGs in blocks to dabbling in stuff like assembly language, and now I'm studying computer science in university. This website is named "Project C190" as a tribute to how my time on Scratch has shaped my interests. Also, fun fact, some of the graphics are drawn in Scratch with a mouse just as I would have done as a kid.
-<hr>
-Here are my site buttons! Click to open in a new tab, and please avoid <a href="https://simple.wikipedia.org/wiki/Hotlinking" target="_blank" class="clickable">hotlinking</a>.
-<br>
-<a href="https://files.catbox.moe/4879x4.gif" target="_blank"><img src="/images/frames/stamp1_d.png" id="stampDark" width="88px" height="31px"></a> <a href="https://files.catbox.moe/s1yfo1.gif" target="_blank"><img src="/images/frames/stamp1_l.png" id="stampLight" width="88px" height="31px"></a> <a href="https://files.catbox.moe/msc0tm.gif" target="_blank"><img src="/images/huicat_pixel.gif"></a>
+</body>

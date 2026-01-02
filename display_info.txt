@@ -1,0 +1,5 @@
+Some operating systems (notably Windows 10 and 11) apply 125% scaling to the UI, including webpages viewed in the browser.
+
+So, if the cat character to the right of the site body looks blurred rather than crisp and pixelated, you may have to zoom out to 80% for the intended view.
+
+You should be able to see the 88x31 buttons on the index page without needing to scroll.
