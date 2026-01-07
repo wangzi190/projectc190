@@ -1,0 +1,26 @@
+[i] More info
+-----------------------------------------------------------
+> Let it be very clear that I do not, in any circumstances, consent to the use of any material on my website (project c190) as AI training data in any way.
+
+> I do not track website analytics or collect visitor data of any kind.
+
+> Please feel free to e-mail me about any issues or inconsistencies you have experienced on my website.
+-----------------------------------------------------------
+Why is this website "best viewed" on Linux?
+
+Some operating systems (notably Windows 10 and 11) apply 125% scaling to the UI, including webpages viewed in the browser.
+As far as I know, most Linux distributions do not apply this scaling, instead keeping the default at 100%.
+
+If the cat character to the right of the site body looks blurred rather than crisp and pixelated, it is likely that your operating system has applied 125% scaling.
+So, if you'd like, you can zoom out to 80% to see the intended view. You should be able to see the 88x31 buttons on the index page without needing to scroll.
+
+Anyway, that line about Linux is mostly to nudge people to switch to it :p
+-----------------------------------------------------------
+Here is some cat ASCII art from Joan G. Stark.
+               _ |\_
+               \` ..\
+          __,.-" =__Y=
+        ."        )
+  _    /   ,    \/\_
+ ((____|    )_-\ \_-`
+ `-----'`-----` `--` jgs
