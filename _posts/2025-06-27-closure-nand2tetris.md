@@ -11,6 +11,6 @@ Now, though, I feel like if I were to continue, it'd merely be for completionist
 
 I guess there's no reason for me to be writing this note at all. Why bother justifying why I haven't finished a certain Coursera course to Internet strangers? Regardless, I still think it's better to give closure. I feel kind of disappointed in myself for having incomplete stuff strewn about on my projects page (but don't see myself revisiting Nand2Tetris for numerous reasons), so I suppose I'm stating this to feel more content and without guilt about going onto better things. And I mean, I technically did finish building the Hack computer, it'd just take significant hardware knowledge to operate it...
 
-Ultimately, I'm happy with what I've done with Nand2Tetris, and I'm ready to consider it <i>done</i>. I hope a computer engineer out there has fun reading my project notes or something lol. And if you relate to my description of my earlier self, you might want to check out Nand2Tetris for yourself.
+Ultimately, I'm happy with what I've done with Nand2Tetris, and I'm ready to consider it <i>done</i>. I hope a computer engineer out there has fun reading my project notes or something lol. And if you relate to my description of my earlier self, you might want to check out Nand2Tetris for yourself!
 
 <a href="https://www.nand2tetris.org/course" target="_blank">https://www.nand2tetris.org/course</a>
