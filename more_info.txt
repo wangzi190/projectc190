@@ -1,10 +1,11 @@
 [i] More info
 -----------------------------------------------------------
-> Let it be very clear that I do not, in any circumstances, consent to the use of any material on my website (project c190) as AI training data in any way.
+I do not, in any circumstances, consent to the use of any material on this website as AI training data in any way.
+This website is proudly 100% human-made.
 
-> I do not track website analytics or collect visitor data of any kind.
+I do not track website analytics or collect visitor data of any kind, and I do not plan to for the forseeable future.
 
-> Please feel free to e-mail me about any issues or inconsistencies you have experienced on my website.
+This website is built to be fully compatible with mobile devices. Nevertheless, if you have experienced any issues or inconsistencies, please let me know via e-mail!
 -----------------------------------------------------------
 Why is this website "best viewed" on Linux?
 
