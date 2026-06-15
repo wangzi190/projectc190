@@ -42,9 +42,9 @@ Ultimately, it is a lot cleaner to discern between positive numbers and 0, and t
 
 <b>subleq @zero, @negated_num, @terminate</b>
 <hr>
-Probably the most interesting aspect of Subleq (that I know of so far) is its capacity for self-modification, which opens up new avenues for all sorts of wacky solves. Self-modifying code is also necessary to create essential functionalities.
+Probably the most interesting aspect of Subleq (that I know of so far) is its capacity for self-modification, which opens up possibilities for all kinds of wacky solves. Self-modifying code is also necessary for enabling an important functionality.
 
-Each operand in a Subleq instruction represents a memory address, and instructions only use and change the values <i>at</i> those memory addresses. Unlike conventional assembly languages, there exist no instructions that enable loading and saving bytes from memory using the value at a certain memory address as a pointer to a different address. This necessitates program self-modification; otherwise, there would be no pointer functionality to speak of, and with it, none of the nifty functionalities that pointers enable.
+Each operand in a Subleq instruction represents a memory address, and instructions only use and change the values <i>at</i> those memory addresses. Unlike conventional assembly languages, there exist no instructions that enable loading and saving bytes from memory using the value at a certain memory address as a pointer to a different address. This necessitates program self-modification; otherwise, there would be no pointer functionality to speak of.
 
 <span class="comments">; a simple demonstration of pointers in subleq<br>; the 0 in the 1st instruction will be modified by the 2nd</span>
 <br><b>@loop:</b>
@@ -54,10 +54,10 @@ Each operand in a Subleq instruction represents a memory address, and instructio
 <br><b>subleq @zero, @zero, @loop</b>   <span class="comments">; unconditional branch to @loop</span>
 <br><span class="comments">; on the next iteration of the loop, the program will output the byte at mem[1] negated, then mem[2] negated, and so on</span>
 
-As seen in the above example, program self-modification enables "pointers" in the sense that it enables you to rewrite the operands of any instruction by incrementing or decrementing it by any value.
+As seen in the above example, program self-modification enables "pointers" in the sense that it allows you to rewrite the operands of any instruction by incrementing or decrementing it by any value. So, instead of being fixed to one set of memory addresses, instructions can refer to different memory addresses at different points of program execution.
 
 Why is this helpful? Consider the "Reverse Sequence" challenge: How would you store a sequence <i>of unspecified length</i> in memory, and then output the sequence in reverse, if you couldn't access memory using pointers?
 <br><img src="/images/for-posts/rev_seq.png">
-<br>Without the pointer functionality enabled by program self-modification, you'd essentially be forced to hard-code memory addresses, which would obviously not be reasonable. A hard-coded Subleq program cannot handle sequences of varying lengths, and keep track of where each sequence starts and ends in memory.
+<br>Without the pointer functionality enabled by program self-modification, you'd essentially be forced to hard-code memory addresses, which wouldn't be great. A hard-coded Subleq program cannot reasonably handle sequences of varying lengths, let alone keep track of where each sequence starts and ends in memory.
 <hr>
 Anyways, I've been having lots of fun with SIC-1 and Subleq so far, and I'm considering making a certain spin-off project after I beat the game. Not only that, but I even have other esolang programming games on my wishlist...

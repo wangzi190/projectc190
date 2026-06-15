@@ -13,14 +13,20 @@
             background-color:#8ea14d;
         }
         #material {
-            width: 700px;
+            width: 1000px;
+        }
+        .postcard {
+            vertical-align:middle;
         }
         a {
             color: #f7eccb;
         }
-        @media (max-width: 700px) {
+        @media (max-width: 900px) {
             #material {
                 width:100%;
+            }
+            .postcard {
+                margin-top:8px;
             }
         }
         img {
@@ -32,12 +38,16 @@
 <div id="material">
     <a href="/">Return</a>
     <br><br>
-    <b>Postcards 💌</b>
-    <br>A gallery of postcards I have received from friends or members of the Postcrossing community.
+    Postcards I have received from friends or members of the <a href="https://www.postcrossing.com/" target="_blank">Postcrossing</a> community 💌
     <br><br>
-    <span title="Taiwan 🇹🇼"><img src="/images/postcards/pikang_cat_island.png" width="350px"></span>
-    <br><br>More on the way!
-    <br>(Actually, I still have a stack on my desk I haven't scanned...)
-    <br><br>
+    <span title="Taiwan 🇹🇼"><img src="/images/postcards/pikang_cat_island.png" width="350px" class="postcard"></span>
+    <span title="Japan 🇯🇵"><img src="/images/postcards/1.jpeg" width="500px" class="postcard"></span>
+    <span title="Germany 🇩🇪"><img src="/images/postcards/2.jpeg" width="420px" class="postcard"></span>
+    <span title="Germany 🇩🇪"><img src="/images/postcards/4.jpeg" width="490px" class="postcard"></span>
+    <span title="Germany 🇩🇪"><img src="/images/postcards/5.jpeg" width="500px" class="postcard"></span>
+    <span title=""><img src="/images/postcards/3.jpeg" width="360px" class="postcard"></span>
+    <!--<span title=""><img src="/images/postcards/6.jpeg" width="350px" class="postcard"></span>
+    <span title=""><img src="/images/postcards/7.jpeg" width="350px" class="postcard"></span>
+    -->
 </div>
 </body>
