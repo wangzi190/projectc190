@@ -23,6 +23,9 @@
         .smry {
             cursor: pointer;
         }
+        .live {
+            cursor: pointer;
+        }
         .dtls {
             border: 1px solid #8fa045;
             padding: 5px;
@@ -100,10 +103,16 @@
             margin-top: 20px;
             width:800px;
         }
+        #liveIndic {
+            display:none;
+        }
         @media screen and (max-width: 810px) {
             #material {
                 margin-top: 20px;
                 width:100%;
+            }
+            #liveIndic {
+                display:inline;
             }
         }
     </style>
@@ -139,7 +148,8 @@
         <span class="smry">Favorites</span>
         </summary>
         <div class="dtls">
-        Music: <a href="/about/nin-songs.html" class="clickable">Nine Inch Nails</a>, KMFDM, Femtanyl, Machine Girl, Master Boot Record, Molchat Doma, Black Kirin
+        Music: <a href="/about/nin-songs.html" class="clickable">Nine Inch Nails</a><span title="Seen live" class="live" style="margin-left:5px;">♪</span>, KMFDM, Femtanyl<span title="Seen live" class="live" style="margin-left:4px;">♪</span>, Machine Girl, Master Boot Record, Molchat Doma, Black Kirin
+        <span id="liveIndic"><br>(♪ = Seen live)</span>
         <br><br>
         Video games: Stardew Valley, Fields of Mistria, programming games, VA-11 Hall-A, Neko Atsume, Meow Tower
         <br><br>
@@ -179,12 +189,20 @@
             <img src="/images/gpoy/carpaltunnel.png" class="gpoy">
             <img src="/images/gpoy/coffeecat.png" class="gpoy">
             <img src="/images/gpoy/ayesha.jpg" class="gpoy">
-            <img src="/images/gpoy/npforum.jpg" class="gpoy">
+            <!--<a href="https://picrew.me/en/image_maker/2033441" target="_blank"><img src="/images/gpoy/hwuipc.png" class="gpoy"></a>-->
+
             <img src="/images/gpoy/petsgato.png" class="gpoy">
-            <img src="/images/gpoy/yuricat.png" class="gpoy">
-            <a href="https://picrew.me/en/image_maker/2033441" target="_blank"><img src="/images/gpoy/hwuipc.png" class="gpoy"></a>
-            <img src="/images/gpoy/laoganma.jpeg" class="gpoy">
+            <img src="/images/gpoy/donut_estimate.jpeg" class="gpoy">
             <img src="/images/gpoy/realmisojiny.jpeg" class="gpoy">
+            <img src="/images/gpoy/emoshit.jpeg" class="gpoy">
+            <img src="/images/gpoy/continues.jpeg" class="gpoy">
+
+            <img src="/images/gpoy/laoganma.jpeg" class="gpoy">
+            <img src="/images/gpoy/yuricat.png" class="gpoy">
+            <!--<img src="/images/gpoy/npforum.jpg" class="gpoy">-->
+            <img src="/images/gpoy/fitting_in.png" class="gpoy">
+            <img src="/images/gpoy/nromal.jpeg" class="gpoy">
+            <img src="/images/gpoy/trve.jpeg" class="gpoy">
         </div>
     </details>
     <details>
