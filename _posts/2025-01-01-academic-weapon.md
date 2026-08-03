@@ -4,7 +4,11 @@ title: "How I Study as an Academic Weapon"
 permalink: /articles/how-i-study
 ---
 Note: This article is from early 2025, but I never marked it with an exact date.
-<br>Also, it's more about studying for school and exams than it is about how to learn in general, which I believe do not necessarily overlap.
+<br>It's more about studying for school and exams than it is about how to learn in general, which honestly don't fully overlap.
+Also, I didn't feel the need to write lead-ins or transitions or whatnot, so it's very cut and dry.
+<br>Why listen to my advice? I have a 4.0/4.0 GPA in college computer science despite great struggle up to and throughout high school, so I probably have something figured out...
+<br><br>Hopefully you find these tips helpful, and remember to take care of yourself so you're equipped to do your best!
+<br><br>~Hui, 2026
 <hr>
 <!--<a href="#1">General Advice</a>
 <br><a href="#2">My A+ Exam Study Method</a>

@@ -6,7 +6,7 @@ permalink: /articles/mips-tetris/cleaning-and-optimizing
 <!--Initial post date: 06.26.25-->
 It's been some time since I've completed the steps of the project I'm about to describe, so, for the record, I am summarizing them here more for the purpose of re-familiarizing myself with my progress rather than documenting something I've recently completed.
 
-In sum, I improved the program code by 1) reducing the number of stalls in the program by spacing branch instructions apart from the instructions setting branch comparison values, 2) formally defining every modular segment of code as a MIPS function, and 3) significantly cutting down the code required for the L and J block rotations by modifying the function to jump to segments of code I noticed I could reuse. Overall, the program is much cleaner, and shorter by a whopping ~55 lines. That's about a 13% reduction, and the program still does just what it did before! I'll explain each change in more detail, and then provide a rough outline of what's to come.
+In sum, I improved the program code by 1) reducing the number of stalls in the program by spacing branch instructions apart from the instructions setting branch comparison values, 2) formally defining every modular segment of code as a MIPS function, and 3) <u>significantly cutting down the code required for the L and J block rotations by modifying the function to jump to segments of code I noticed I could reuse</u>. Overall, the program is much cleaner, and shorter by a whopping ~55 lines. That's about a 13% reduction, and the program still does just what it did before! I'll explain each change in more detail, and then provide a rough outline of what's to come.
 
 <b>Reducing Stalls</b>
 
