@@ -1,0 +1,128 @@
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="icon" href="/images/favicon.png">
+    <title>project c190</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <style>
+        body {
+            font-family: "DejaVu Sans Mono", "dejaVuSansMono";
+            font-size: 16px;
+            color:#f7eccb;
+            background-color: #8ea14d;
+            margin: 0px !important;
+            padding: 0px !important;
+        }
+        @font-face {
+            font-family: "dejaVuSansMono";
+            src: url("/font/DejaVuSansMono.woff");
+        }
+        .box {
+            border-style: solid;
+            border-width: 1px;
+            padding: 5px;
+        }
+        .box-title {
+            font-size:20px;
+            text-transform:lowercase;
+        }
+        a {
+            color:#f7eccb;
+            text-decoration: underline;
+            text-decoration-style: wavy;
+        }
+        .container {
+            display:flex;
+            flex-direction:row;
+            margin: 8px;
+        }
+        #left {
+            margin-right:8px;
+            position: -webkit-sticky;
+            position: sticky;
+            top: 8px;
+            align-self: start;
+        }
+        #right {
+            width: 900px;
+        }
+        .reg {
+            width: 415px;
+            margin-bottom:5px;
+        }
+        hr.dotted {
+            border: 1px dashed;
+            color:#f7eccb;
+        }
+        .nudge {
+            margin-left:5px; 
+        }
+        #hwu {
+            width: 105px;
+        }
+        .date {
+            background-color:#ece3c3;
+            color:#849746;
+            padding: 1px;
+        }
+        @media (max-width: 900px) {
+            .photo {
+                height:auto;
+                width:100%;
+            }
+            .nudge {
+                margin-right:0px;
+                margin-left:0px;
+            }
+            .nudge-vert {
+                margin-top:5px;
+            }
+        }
+        @media (max-width: 475px) {
+            #hwu {
+                width: 80px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+<div class="container">
+    <div id="left">
+        <img src="/images/photos/hwu.png" id="hwu">
+        <br><br><a href="#">Go to top</a>
+        <br><br><a href="/">Return</a>
+    </div>
+    <div id="right">
+        Welcome to my <b>photoblog</b>!
+        <br>Featured here are some photos I've taken, plus whatever commentary I feel like giving.
+        <br><br>
+        <div class="box">
+            <b class="box-title">Germany 2026</b>
+            <br>My 3-month stay in Germany, sponsored by the German Academic Exchange Service
+            <br><img src="/images/photos/burg.jpeg" height="430px" class="photo"><img src="/images/photos/pic2.jpeg" height="430px" class="photo nudge nudge-vert">
+            <br><a>View more</a>**
+            <br><br>
+            **This subpage is a WIP! For now, check out the regular feed.
+        </div>
+
+        <br><b class="box-title">Regular Feed</b>
+<hr class="dotted">
+<img src="/images/photos/femt1.jpeg" class="reg photo"><img src="/images/photos/femt2.jpeg" class="reg photo nudge">
+<br><span class="date">06.2026</span> Femtanyl Man Bites Dog tour : D I actually didn't realize they were touring, and stumbled into the venue right before their show purely coincidentally.
+I am so glad it happened and still cannot believe my luck.
+<hr class="dotted">
+<img src="/images/photos/bulletholes.jpeg" class="reg photo">
+<br><span class="date">05.2026</span> (Center bulletholes are mine!) This is from my second time ever holding a gun. 
+The recoil made it a lot harder to shoot accurately.
+<hr class="dotted">
+<img src="/images/photos/canes.jpeg" class="reg photo">
+<br><span class="date">05.2026</span> Getting Canes at 1am after spending 20 hours in the microprocessors lab. This semester was kind of a shitshow but there were still some good moments.
+<hr class="dotted">
+<img src="/images/photos/latenight.jpeg" class="reg photo">
+<br><span class="date">03.2026</span> Late night drive with <a href="https://zonk.neocities.org" target="_blank">Val</a>. We went to the movies : D
+
+    </div>
+</div>
+</body>
