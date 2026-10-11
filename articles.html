@@ -11,6 +11,7 @@
         body {
             background-color: #0a0a0a;
             font-family: Georgia, serif;
+            line-height: 1.6em;
             font-size:16px;
         }
         #container{
@@ -30,7 +31,7 @@
         #scroll-box {
             overflow-x:hidden;
             overflow-y:auto;
-            height: calc(100vh - 77px);
+            height: calc(100vh - 38px);
             padding: 5px;
         }
         a:link {
@@ -47,8 +48,16 @@
         li {
             margin-left:15px;
         }
-        #tentative {
-            font-size: 12px;
+        hr.dotted {
+            border: 1px dashed;
+            margin-top:0.5em;
+            margin-bottom:0.5em;
+        }
+        hr.underlined-above {
+            margin-top: 0.7em;
+        }
+        b.topic {
+            font-size: 24px;
         }
         @media (max-width: 700px) {
             body {
@@ -73,34 +82,36 @@
 <body>
     <div id="container">
         <div id="left">
-            <div>
-                <img src="/images/articles.png" width="180px" height="30px" style="margin-left:5px;margin-top:5px;margin-bottom:5px;">
-            </div>
+        <div id="scroll-box">
+            Welcome to my <b>articles</b> page!
+            <br>I'm currently shuffling things around a bit; pardon the dust.
+            <!--
+            Here you'll find various kinds of articles, with an overall theme of computer science and adjacent topics. I hope to improve at meaningfully explaining technical ideas, and that someone out there might find my writing interesting or informative.
+            <br>The topics I discuss can be somewhat involved, but I offer friendly material for general audiences as well.
+            Regardless of your knowledge or skill level, there is something here for you as long as you're simply intrigued.
+            <br>
+            P.S. Feel free to chat, ask questions, or let me know of mistakes I might've made <a href="/e-mail.html">via e-mail</a>.
+            <hr>
+            -->
+            <hr>
+                <b class="topic">computing</b>
+                <hr class="dotted">
+                Featured ☆
+                <br>
+                <a href="/articles/explainers/trees.html">Binary search trees, 2-3-4 trees, and red-black trees</a>,
+                <br>a long-form educational article for people with <u><b>zero</b></u> computer science background!
 
-            <div id="scroll-box">
-                Here you'll find various kinds of articles, with an overall theme of computer science and adjacent topics. I hope to improve at meaningfully explaining technical ideas, and that someone out there might find my writing interesting or informative.
-                <br>The topics I discuss can be somewhat involved, but I offer friendly material for general audiences as well.
-                Regardless of your knowledge or skill level, there is something here for you as long as you're simply intrigued.
-                <br>
-                P.S. Feel free to chat, ask questions, or let me know of mistakes I might've made <a href="/e-mail.html">via e-mail</a>.
-                <hr>
-                Explainers
-                <br><i>Articles about semi-niche computer science concepts for people with no background</i>
-                <ul>
-                    <li><a href="/articles/explainers/trees.html">Binary search trees, 2-3-4 trees, and red-black trees</a></li>
-                </ul>
-                <span id="tentative">Tentative future topic(s): Padding oracle attack, P v.s. NP, Tomasulo's algorithm</span>
-                <hr>
-                General
-                <br><ul>
-                    <li><a href="/articles/math-on-the-web.html">Math on the web feat. <i>Joy of Cryptography</i></a></li>
-                    <li><a href="/articles/playing-sic-1.html">Programming and Pro Gaming: Playing SIC-1</a></li>
-                    <li><a href="/articles/visiting-chm.html">Visiting the Computer History Museum</a></li>
-                    <li><a href="/articles/debugging.html">Debugging advice that will save you countless hours</a></li>
-                </ul>
-                <hr>
-                Programming Tetris in MIPS assembly language [Series]
-                <br>
+                <hr class="dotted">
+
+                <!--<a href="#">Notes on pwning</a><br>-->
+                <a href="/articles/math-on-the-web.html">Math on the web feat. <i>Joy of Cryptography</i></a>
+                <br><a href="/articles/playing-sic-1.html">Programming and Pro Gaming: Playing SIC-1</a>
+                <br><a href="/articles/visiting-chm.html">Visiting the Computer History Museum</a>
+                <br><a href="/articles/debugging.html">Debugging advice that will save you countless hours</a>
+
+                <hr class="dotted underlined-above">
+
+                Programming Tetris in MIPS assembly language [Series]<br>
                 <ul>
                     <li><a href="https://files.catbox.moe/3blbia.mp4" target="_blank">Brief demo</a></li>
                     <li><a href="/articles/mips-tetris/stopping-blocks.html">Stopping blocks, clearing rows, and ending the game</a></li>
@@ -108,16 +119,20 @@
                     <li><a href="/articles/mips-tetris/rotating-blocks.html">Spotting patterns and rotating blocks</a></li>
                     <li><a href="/articles/mips-tetris/falling-blocks.html">Falling blocks, movement keys, and MARS hackfixes</a></li>
                 </ul>
-                <hr>
-                Off-topic
-                <br><ul>
-                    <li><a href="/articles/how-i-study.html">How I study as an academic weapon</a></li>
-                </ul>
-                <hr>
+
+            <hr class="underlined-above">
+
+                <b class="topic">miscellaneous</b>
+                <hr class="dotted">
+                <a href="/articles/how-i-study.html">How I study as an academic weapon</a>
+
+            <hr class="underlined-above">
+
+                <b class="topic">archive</b>
+                <hr class="dotted">
                 <details>
-                    <summary><span style="cursor:pointer;">Archive</spa></summary>
-                    Nand2Tetris Coursework [Series]
-                    <br><i>Building the 16-bit <a href="https://en.wikipedia.org/wiki/Hack_computer" target="_blank">Hack computer</a> from the ground up</i>
+                    <summary><span style="cursor:pointer;">Click to view</spa></summary>
+                    Building the <a href="https://en.wikipedia.org/wiki/Hack_computer" target="_blank">Hack computer</a> from the ground up [Series]
                     <br>
                     <ul>
                         <li><a href="/articles/nand2tetris/closure.html">Closure</a></li>
@@ -133,15 +148,15 @@
                         <li><a href="/articles/nand2tetris/boolean-logic.html">01 | Boolean Logic</a></li>
                     </ul>
                 </details>
-            </div>
-
-            <div>
-                <a href="/" style="margin-left:5px;">Return</a>
-            </div>
-
         </div>
-        <div id="right">
-            <img src="/images/hamd.png" width="250px" style="margin-top:5px;margin-right:5px;">
+
+        <div>
+            <a href="/" style="margin-left:5px;">Return</a>
         </div>
+
+    </div>
+    <div id="right">
+        <img src="/images/hamd.png" width="250px" style="margin-top:5px;margin-right:5px;">
+    </div>
     </div>
 </body>

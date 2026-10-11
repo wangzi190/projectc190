@@ -11,6 +11,7 @@
         body {
             background-color: #0a0a0a;
             font-family: Georgia, serif;
+            line-height: 1.6em;
             font-size:16px;
         }
         #container{
@@ -30,7 +31,7 @@
         #scroll-box {
             overflow-x:hidden;
             overflow-y:auto;
-            height: calc(100vh - 77px);
+            height: calc(100vh - 38px);
             padding: 5px;
         }
         a:link {
@@ -38,17 +39,6 @@
         }
         a:visited {
             color: #779608;
-        }
-        ul {
-            list-style-type: none;
-            margin:0;
-            padding:0;
-        }
-        li {
-            margin-left:15px;
-        }
-        #tentative {
-            font-size: 12px;
         }
         @media (max-width: 700px) {
             body {
@@ -73,10 +63,6 @@
 <body>
     <div id="container">
         <div id="left">
-            <div>
-                <img src="/images/articles.png" width="180px" height="30px" style="margin-left:5px;margin-top:5px;margin-bottom:5px;">
-            </div>
-
             <div id="scroll-box">
                 {{ page.title }}
                 <!--<br>{{ page.date| date: "%m.%d.%Y" }}-->
